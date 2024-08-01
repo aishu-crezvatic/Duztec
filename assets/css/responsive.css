@@ -1,0 +1,2310 @@
+/* Normal desktop :1500. */
+@media (min-width: 1501px) and (max-width: 1919px) {
+    .section-title h1 {
+        font-size: 50px;
+    }
+    .section-title h2 {
+        font-size: 50px;
+    }
+    .case-content h2 {
+        font-size: 21px;
+    }
+    .contact-button i {
+        right: 12%;
+    }
+	.brand-section:before {
+		left: 20px;
+		width: 70%;
+	}
+    .style-two.feature-section .feature-shape {
+        right: 47px;
+    }
+    .row.skill-bg {
+        margin-left: 83px;
+    }
+    .style-two.feature-section .feature-shape {
+        right: 24px;
+        bottom: 85px;
+    } 
+    button.btn-control {
+        bottom: 33%;
+        margin-bottom: -12px;
+        right: 17%;
+    }
+    .slider-section-5 .slider-shape {
+        right: 125px;
+    }
+    .style-five.feature-section .feature-thumb img {
+        width: 100%;
+    }
+}
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .section-title h1 {
+        font-size: 50px;
+    }
+    .section-title h2 {
+        font-size: 50px;
+    }
+    .about-text p {
+        width: 88%;
+    }
+    .service-icon i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        top: 170px;
+    }
+    .service-content p {
+        width: 105%;
+    }
+    .service-shape-thumb {
+        left: 1%;
+    }
+    .service-shape-thumb2 {
+        right: 2%;
+    }
+    .feature-content p {
+        width: 96%;
+    }
+    .skill-thumb img {
+        margin-left: 0;
+        width: 100%;
+    }
+    .row.skill-bg {
+        margin-left: 87px;
+    }
+    .skill-section .section-title h1 {
+        font-size: 44px;
+    }
+    .skill-section .section-title h2 {
+        font-size: 44px;
+    }
+    .case-content a {
+        top: 38px;
+        right: 20px;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+    .case-content h2 {
+        font-size: 18px;
+    }
+    .contact-form-msg i {
+        left: 89%;
+    }
+    .contact-button i {
+        right: 10%;
+    }
+    .testi-desc p {
+        width: 83%;
+    }
+    .blog-text p {
+        width: 92%;
+    }
+    .brand-section:before {
+        width: 95%;
+    }
+    input.footer-email {
+        width: 285px;
+    }
+    button.btn-control {
+        right: 15%;
+        bottom: 37%;
+        padding: 7px 10px;
+        margin-bottom: -14px;
+    }
+    .style-two.header-menu-section {
+        margin-bottom: -228px;
+    }
+    .style-two .social-icon {
+        margin-left: 120px;
+    }
+    .style-two.header-menu-section .header-src-btn {
+        margin-left: 40px;
+    }
+    .style-two.about-section .skill-shape {
+        left: 80px;
+    }
+    .service-content p {
+        width: 82%;
+    }
+    .style-two.feature-section .feature-shape {
+        right: -22px;
+        bottom: 204px;
+    }
+    .style-two.feature-section .feature-content p {
+        width: 80%;
+    }
+    .style-two.feature-section .single-feature-box {
+        margin-bottom: 0;
+    }
+    .style-two.feature-section .section-title p {
+        width: 85%;
+    }
+    .dreamit-portfolio-thumb:before {
+        width: 98%;
+        left: 0;
+    }
+    .fortfolio-addrees {
+        right: 50px;
+    }
+    .style2.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 97%;
+    }
+    .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 97%;
+    }  
+     .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 97%;
+    }
+    .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 97%;
+    }
+    .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 97%;
+    }
+    .skill-section .section-title p {
+        width: 100%;
+    }
+    .team-social-icon {
+        right: 20px;
+    }
+    .style-three.feature-section .feature-content span {
+        font-size: 13px;
+    }
+    .style-three.service-section .service-content h2 {
+        font-size: 24px;
+    }
+    .style-three.service-section .service-content p {
+        width: 108%;
+    }
+    .blog-meta-top {
+        bottom: 235px;
+    }
+    .style2 .blog-meta-top { 
+        bottom: 108px;
+    }
+    .style-two.bolg-section .style2 .blog-title h2 a {
+        font-size: 29px;
+    }
+    .style-three.service-section .service-single-box {
+        margin-right: 0px;
+    }
+    .slider-section-4 .slider-thumb {
+        margin-left: -112px;
+    }
+    .style-four.about-section .about-desc h6 {
+        font-size: 16px;
+    }
+    .style-four.service-section .service-content p {
+        width: 94%;
+    }
+    .style-four.service-section .service-single-box:after {
+        left: 178px;
+    }
+    .portfolio-text p {
+        width: 106%;
+    }
+    .portfolio-text p:before {
+        height: 128px;
+    }
+    .icon-content span {
+        font-size: 16px;
+    }
+    .section-title p {
+        width: 76%;
+    }
+    .style-four.testimonial-section .testi-desc span {
+        font-size: 14px;
+    }
+    .style-four.testimonial-section .testi-desc p {
+        font-size: 14px;
+    }
+    .style-two.bolg-section .blog-meta-top {
+        bottom: 235px;
+    }
+    .style-two.bolg-section .style2 .blog-meta-top {
+        bottom: 104px;
+    }
+    .slider-section-5 .slider-shape {
+        right: 11px;
+    }
+    .style-five.feature-section .feature-thumb img {
+        width: 102%;
+    }
+    .style-five.feature-section {
+        padding-top: 75px;
+        padding-bottom: 85px;
+    }
+    .style-five.portfolio_area .fortfolio-title {
+        bottom: 15px;
+    }
+    .style-five.portfolio_area .dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 100px;
+        background: rgba(0,0,0,0.5);
+        top: 563px;
+    }
+    .style-five.portfolio_area .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 35%;
+        background: rgba(0,0,0,0.5);
+        top: 208px;
+    }
+    .style-five.portfolio_area .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 35%;
+        background: rgba(0,0,0,0.5);
+        top: 208px;
+    }
+    .style-five.portfolio_area .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 35%;
+        background: rgba(0,0,0,0.5);
+        top: 208px;
+    }
+    .style-five.portfolio_area .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 35%;
+        background: rgba(0,0,0,0.5);
+        top: 208px;
+    }
+    .tags span {
+        display: block;
+    }
+	.blogs-section  .blog-thumb img {
+		border-radius: 10px;
+		width: 100%;
+	}
+	.blog-single-thumb img {
+    width: 100%;
+    margin-bottom: 30px;
+	}
+	.blog-social-icon ul li a:before {
+    left: -236px;
+	}
+}
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section-title h1 {
+        font-size: 42px;
+    }
+    .section-title h2 {
+        font-size: 42px;
+        margin-top: -10px;
+    }
+    .about-section .section-title p {
+        width: 83%;
+        padding-top: 0;
+        margin-bottom: 25px;
+    }
+    .about-text p {
+        width: 81%;
+    }
+    .service-shape-thumb {
+        left: 2%;
+    }
+    .service-shape-thumb2 {
+        right: 1%;
+    }
+    .feature-content p {
+        width: 88%;
+    }
+    .row.skill-bg {
+        margin-left: -13px;
+    }
+    .skill-thumb img {
+        margin-left: 0;
+        width: 100%;
+    }
+    .skill-section .section-title h1 {
+        font-size: 37px;
+    }
+    .skill-section .section-title h2 {
+        font-size: 37px;
+    }
+    .work-single-content:before {
+        height: 20px;
+        left: 135px;
+        top: 17px;
+    }
+    .work-title span {
+        font-size: 14px;
+    }
+    .contact-form-msg i {
+        left: 88%;
+    }
+    .contact-button i {
+        right: 9%;
+        margin-right: 18px;
+    }
+    .testi-desc p {
+        width: 95%;
+    }
+    .blog-title h2 a {
+        font-size: 22px;
+        margin-bottom: -21px;
+    }
+    .blog-text p {
+        width: 89%;
+    }
+    .brand-section:before {
+        width: 96%;
+    }
+    .footer-social-icon ul li a {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+    }
+    .footer-text p {
+        width: 99%;
+    }
+    input.footer-email {
+        width: 233px;
+    }
+    button.btn-control {
+        right: 2%;
+        bottom: 35%;
+        padding: 2px 7px;
+        margin-bottom: -6px;
+        margin-right: -9px;
+        font-size: 12px;
+    }
+    .style-two.header-menu-section {
+        margin-bottom: -197px;
+    }
+    .style-two .social-icon {
+        margin-left: 60px;
+    }
+    .style-two.header-menu-section .search-box-btn.search-box-outer i {
+        margin-left: -40px;
+        background: #D00A2B;
+        text-align: center;
+        padding: 10px 13px;
+        color: #fff;
+        display: inline-block;
+    }
+    .style-two.header-menu-section .header-menu ul {
+        display: inline-block;
+        margin-left: -23px;
+    }
+    .header-menu ul li a {
+        margin-right: 25px;
+    }
+    .style-two.header-menu-section .header-src-btn {
+        margin-left: 50px;
+    }
+    .style-two.header-menu-section .header-button a {
+        margin-left: 0;
+    }
+    .style-two.header-menu-section ul li .sub-menu {
+        top: 58px;
+    }
+    .style-two.about-section .skill-shape {
+        left: 60px;
+    }
+    .style-two.service-section .service-content p {
+        width: 101%;
+    }
+    .style-two.service-section .service-single-box:after {
+        left: 50px;
+    }
+    .style-two.feature-section .feature-shape {
+        display: none;
+    }
+    .style-two.feature-section .feature-thumb img {
+        width: 100%;
+    }
+    .style-two.feature-section .single-feature-box {
+        margin-bottom: 0;
+    }
+    .dreamit-portfolio-thumb img {
+        width: 93%;
+    }
+    .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .style2.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        width: 93%;
+    }
+    .fortfolio-addrees {
+        right: 60px;
+    }
+    .team-thumb img {
+        transition: 1s;
+        width: 100%;
+    }
+    .team-social-icon {
+        right: 19px;
+    }
+    button.btn-control {
+        bottom: 26%;
+        margin-bottom: -2px;
+        right: -7px;
+    }
+    .slider-content h1 {
+        font-size: 60px;
+        margin: 22px 0 30px 0;
+    }
+    .slider-content h2 {
+        font-size: 60px;
+        margin-top: 0;
+    }
+    .style-three.feature-section .feature-content h2 {
+        font-size: 19px;;
+    }
+    .style-three.about-section .section-title p {
+        width: 80%;
+    }
+    .style-two.service-section .service-content p {
+        width: 98%;
+    }
+    .style-three.service-section .service-single-box {
+        margin-right: -8px;
+    }
+    .style-three.service-section .service-content h2 {
+        font-size: 20px;
+    }
+    .style-three.service-section .service-desc-2 p {
+        width: 97%;
+    }
+    .progress-section .section-title p {
+        width: 81%;
+    }
+    .btn-control2 {
+        right: 12%;
+    }
+    .style-two.feature-section .section-title p {
+        width: 80%;
+    }
+    .prticing-icon span {
+        padding: 3px 10px;
+    }
+    .blog-meta-top {
+        bottom: 180px;
+    }
+    .style2 .blog-meta-top {
+        bottom: 70px;
+    }
+    .style-two.bolg-section .blog-title h2 a {
+        font-size: 34px;
+    }
+    .style-two.bolg-section .style2 .blog-title h2 a {
+        font-size: 24px;
+    }
+    .slider-section-4 .slider-thumb img {
+        width: 100%;
+    }
+    .slider-section-4 .slider-content {
+        margin-top: 269px;
+    }
+    .slider-section-4 .slider-content h1 {
+        font-size: 60px;
+        margin: 31px 0 28px;
+    }
+    .header-button a {
+        padding: 8px 13px;
+    }
+    .style-four.about-section .about-thumb-content {
+        padding: 35px 35px 19px;
+    }
+    .style-four.about-section .section-title h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .style-four.service-section .service-single-box {
+        padding: 30px 20px;;
+    }
+    .style-four.about-section .section-title p {
+        width: 93%;
+    }
+    .style-four.about-section .scetion-text-2 p {
+        width: 107%;
+    }
+    .style-four.service-section .service-content p {
+        width: 101%;
+    }
+    .style-four.service-section .service-single-box:after {
+        left: 140px;
+    }
+    .style-two.portfolio_area .portfolio-text p:before {
+        height: 158px;
+    }
+    .style-two.portfolio_area .fortfolio-addrees {
+        right: 0;
+    }
+    .style-four.feature-section .icon-content span {
+        font-size: 16px;
+    }
+    .style-four.feature-section .feature-thumb img {
+        width: inherit;
+    }
+    .style-four.progress-section .section-title p {
+        width: 89%;
+    }
+    .style-four.testimonial-section .testi-desc p {
+        font-size: 15px;
+        width: 107%;
+    }
+    .style-four.testimonial-section .testi-desc p {
+        font-size: 15px;
+        width: 107%;
+    }
+    .style-four.testimonial-section .testi-desc span {
+        font-size: 15px;
+    }
+    .style-two.bolg-section .blog-meta-top {
+        bottom: 178px;
+    }
+    .style-two.bolg-section .style2 .blog-meta-top {
+        bottom: 68px;
+    }
+    input.footer-email::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+    button.btn-control {
+        bottom: 19%;
+        right: -7px;
+        padding: 5px 16px;
+    }
+    .style-five.feature-section .feature-thumb img {
+        width: 102%;
+    }
+    .style-five.feature-section {
+        padding-top: 75px;
+        padding-bottom: 85px;
+    }
+    .style-five.portfolio_area .fortfolio-title {
+        bottom: 15px;
+    }
+    .style-five.portfolio_area .dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 100px;
+        background: rgba(0,0,0,0.5);
+        top: 82%;
+    }
+    .style-five.portfolio_area .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 46%;
+        background: rgba(0,0,0,0.5);
+        top: 161px;
+    }
+    .style-five.portfolio_area .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 46%;
+        background: rgba(0,0,0,0.5);
+        top: 161px;
+    }
+    .style-five.portfolio_area .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 46%;
+        background: rgba(0,0,0,0.5);
+        top: 161px;
+    }
+    .style-five.portfolio_area .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+        height: 46%;
+        background: rgba(0,0,0,0.5);
+        top: 161px;
+    }
+    .slider-section-5 .slider-shape {
+        display: none;
+    }
+    .slider-section-5 .slider-thumb img {
+        width: inherit;
+        margin-top: 187px;
+    }
+    .brand-thumb {
+        padding-left: 50px;
+    }
+    .tags span {
+        display: block;
+    }
+	.blogs-section  .blog-thumb img {
+    width: 100%;
+	}
+	.blog-single-thumb img {
+    width: 100%;
+	margin-bottom:30px;
+	}
+	.blog-social-icon ul li a:before {
+    width: 49px;
+    left: -208px;
+	}
+	label.checkbox-control {
+    font-size: 13px;
+	}
+	.style3 .blog-button {
+    width: 38%;
+	}
+}
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+/*Start Mobile menu*/
+.header-top-section {
+    display: none;
+}
+a.menu-logo {
+    text-align: center;
+    display: block;
+}
+.header-button a {
+    display: none;
+}
+.search-box-btn.search-box-outer i {
+    display: none;
+}
+.sticky {
+    display: none;
+}
+.slider-section2 .slider-content h5:before {
+    left: -315px;
+}
+.slider-content h1 {
+    font-size: 55px;
+}
+.slider-content h2 {
+    font-size: 55px;
+    margin-top: -30px;
+}
+.slider-circle-thumb.rotateme {
+    top: 25%;
+}
+.about-video-icon a {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+}
+.about-section .section-title {
+    padding-top: 0;
+}
+.section-title h1 {
+    font-size: 32px;
+}
+.section-title h2 {
+    font-size: 32px;
+    margin-top: -25px;
+}
+.about-section .section-title p {
+    width: 98%;
+    padding-top: 0;
+}
+.about-title h2 {
+    font-size: 17px;
+}
+.about-text p {
+    width: 100%;
+}
+.service-content p {
+    width: 82%;
+}
+.call-video-icon a {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.feature-content p {
+    font-size: 15px;
+}
+.row.skill-bg {
+    margin-left: 0;
+}
+.skill-thumb img {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+.skill-section .section-title p {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.work-counterup h1 {
+    font-size: 34px;
+}
+.work-counterup span {
+    font-size: 34px;
+}
+.case-content h2 {
+    font-size: 18px;
+}
+.case-content {
+    padding: 7px 0 10px 29px;
+}
+.case-content a {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    top: 29px;
+    right: 24px;
+}
+.contact-button i {
+    margin-right: -37px;
+}
+.testi-desc p {
+    font-size: 20px;
+    width: 90%;
+}
+.blog-text p {
+    width: 49%;
+}
+.brand-section:before {
+    width: 93%;
+}
+.footer-title {
+    padding-top: 15px;
+}
+button.btn-control {
+    right: 9%;
+    bottom: 20%;
+    margin-bottom: -4px;
+    margin-right: -9px;
+}
+.slider-section-2 .slider-content h5:before {
+    left: -104%;
+}
+.style-two.about-section .skill-shape {
+    display: none;
+}
+.style-two.call-do-action .call-thumb {
+    margin-left: -45px;
+}
+.style-two.feature-section .feature-shape {
+    display: none;
+}
+.dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.dreamit-single-portfolio {
+    margin-right: 20px;
+}
+.style2.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.fortfolio-addrees {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    z-index: 1;
+}
+.portfolio_menu ul li {
+    font-size: 14px;
+}
+.team-items {
+    margin-bottom: 30px;
+}
+.style-two.testimonial-section .testi-desc p {
+    width: 105%;
+}
+.blog-text p {
+    width: 92%;
+}
+button.btn-control {
+    bottom: 17%;
+    margin-bottom: -6px;
+}
+.slider-section-3 {
+    height: 701px;
+}
+.slider-section-3 .slider-thumb img {
+    width: 65%;
+    padding-top: 0;
+    animation: zoomin 2s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    margin-left: 300px;
+    margin-top: -375px;
+}
+.style-three.feature-section {
+    margin-top: 0;
+}
+.style-three.feature-section .feature-items {
+    margin-bottom: 30px;
+}
+.style-three.about-section .about-thumb {
+    margin-bottom: 40px;
+}
+.style-three.about-section .section-title p {
+    width: 149%;
+}
+.style-three.about-section .about-title h2 {
+    font-size: 13px;
+}
+.style-three.about-section .style2.about-title h2 {
+    font-size: 12px;
+}
+.service-btn a {
+    margin-bottom: 30px;
+}
+.style-three.service-section .section-title h2 {
+    margin-top: 0;
+    line-height: 42px;
+}
+.style-three.service-section .service-desc p {
+    width: 157%;
+}
+.style-three.service-section .service-desc-2 p {
+    width: 180%;
+}
+.count-items:before {
+    right: -13px;
+}
+.progressbar {
+    margin-top: 70px;
+}
+.pricing-items {
+    margin-bottom: 30px;
+}
+.blog-meta-top {
+    bottom: 260px;
+}
+.style2 .blog-meta-top {
+    bottom: 303px;
+}
+.style-two.bolg-section .blog-title h2 a {
+    font-size: 21px;
+    line-height: 36px;
+}
+.style-two.bolg-section .blog-text p {
+    width: 99%;
+}
+.style-two.bolg-section .style2 .blog-title h2 a {
+    font-size: 19px;
+    line-height: 28px;
+}
+.slider-section-4 {
+    height: 850px;
+}
+.slider-section-4 .slider-content {
+    margin-top: 0;
+}
+.slider-button {
+    margin-top: 30px;
+}
+.slider-section-4 .slider-content h1 {
+    font-size: 65px;
+    margin: 26px 0 67px;
+}
+.slider-section-4 .slider-content h2 {
+    font-size: 65px;
+}
+.slider-section-4 .slider-thumb {
+    display: none;
+}
+.style-four.about-section {
+    padding-bottom: 43px;
+}
+.style-four.about-section .about-bottom-thumb {
+    top: -85px;
+    left: 195px;
+}
+.style-four.about-section .scetion-text-2 p {
+    width: 167%;
+}
+.style-four.service-section .service-content p {
+    width: 102%;
+}
+.portfolio-text p {
+    width: 103%;
+}
+.section-title h1 {
+    margin-top: 0;
+}
+.style-four.feature-section .feature-thumb {
+    margin-left: -36px;
+    margin-top: 30px;
+}
+.feature-video {
+    top: 50%;
+}
+.progressbar {
+    display: inherit;
+}
+.style-four.contact-us .section-title p {
+    width: 125%;
+}
+.style-four.testimonial-section .testi-desc p {
+    margin-top: 0;
+}
+.style-four.testimonial-section .testi-desc span {
+    font-size: 16px;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 76px;
+}
+.style-two.bolg-section .blog-meta-top h6 {
+    font-size: 18px;
+}
+.style-two.bolg-section .blog-meta-top {
+    padding: 0px 23px;
+}
+.style-two.bolg-section .blog-meta-top h2 {
+    font-size: 30px;;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 85px;
+}
+.style-two.bolg-section .style2 .blog-meta-top {
+    bottom: 104px;
+}
+.style-two.bolg-section .blog-title h2 a {
+    line-height: 0;
+}
+.style-four.call-do-action .call-content h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 15px 40px;
+}
+.style-five.feature-section .feature-thumb img {
+    width: 102%;
+}
+.style-five.feature-section {
+    padding-top: 75px;
+    padding-bottom: 85px;
+}
+.style-five.portfolio_area .fortfolio-title {
+    bottom: 15px;
+}
+.style-five.portfolio_area .dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    top: 84%;
+}
+.style-five.portfolio_area .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 46%;
+    background: rgba(0,0,0,0.5);
+    top: 161px;
+}
+.style-five.portfolio_area .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 46%;
+    background: rgba(0,0,0,0.5);
+    top: 161px;
+}
+.style-five.portfolio_area .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 46%;
+    background: rgba(0,0,0,0.5);
+    top: 161px;
+}
+.style-five.portfolio_area .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 46%;
+    background: rgba(0,0,0,0.5);
+    top: 161px;
+}
+.slider-section-5 .slider-shape {
+    display: none;
+}
+.slider-section-5 .slider-thumb img {
+    width: inherit;
+    margin-top: 187px;
+}
+.brand-thumb {
+    padding-left: 50px;
+}
+.slider-section-5 .slider-thumb img {
+    width: 100%;
+    margin-top: 187px;
+    display: none;
+}
+.slider-section-5 {
+    height: 850px;
+}
+.service-section .section-title h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.style-five.progress-section .skill-content h2 {
+    font-size: 20px;
+}
+.latest-blog {
+    margin-top: 40px;
+}
+input.blog-control {
+    width: 100%;
+}
+.tags span {
+    padding: 2px 17px 2px;
+}
+br {
+    display: none;
+}
+.blogs-section  .blog-thumb img {
+    width: 100%;
+}
+.blog-single-thumb img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+}
+/* Large Mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+/*Start Mobile menu*/
+.header-top-section {
+    display: none;
+}
+a.menu-logo {
+    text-align: center;
+    display: block;
+}
+.header-button a {
+    display: none;
+}
+.search-box-btn.search-box-outer i {
+    display: none;
+}
+.sticky {
+    display: none;
+}
+.slider-content h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.slider-content h2 {
+    font-size: 40px;
+}
+.slider-section2 .slider-content h5:before {
+    left: -128px;
+}
+.section-title h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.section-title h2 {
+    font-size: 40px;
+}
+.service-icon i {
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    top: 173px;
+}
+.service-content p {
+    width: 93%;
+}
+.row.skill-bg {
+    margin-left: 0;
+}
+.skill-thumb img {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+.work-single-content {
+    float: left;
+}
+.work-single-content:before {
+    left: 191px;
+    top: 21px;
+}
+.testi-desc p {
+    width: 97%;
+}
+.brand-section:before {
+    width: 89%;
+}
+input.footer-email {
+    width: 100%;
+}
+button.btn-control {
+    right: 10%;
+    bottom: 9%;
+    margin-bottom: -14px;
+}
+.copy-right-text {
+    text-align: center;
+}
+.footer-menu-right ul {
+    text-align: center;
+}
+.slider-section-2 .slider-content h5:before {
+    left: -106%;
+}
+.call-shape {
+    display: none;
+}
+.style-two.call-do-action .call-thumb {
+    margin-top: 0;
+}
+.portfolio_menu ul li {
+    font-size: 13px;
+}
+.team-items {
+    margin-bottom: 30px;
+}
+.slider-section-2 {
+    height: 710px;
+}
+.style-two.header-menu-section {
+    margin-bottom: -193px;
+}
+.style-two.header-menu-section .header-src-btn {
+    display: none;
+}
+.header-top-section {
+    display: none;
+}
+.portfolio_menu ul li {
+    margin-right: 12px;
+}
+.dreamit-portfolio-thumb:before {
+    width: 70%;
+}
+.fortfolio-addrees {
+    right: 195px;
+}
+.style2.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 69%;
+}
+.style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 69%;
+}
+.style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 69%;
+}
+.style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 69%;
+}
+.style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 69%;
+}
+.team-social-icon {
+    right: 125px;
+}
+.slider-section-3 {
+    height: 600px;
+}
+.slider-section-3 .slider-thumb img {
+    width: 65%;
+    padding-top: 0;
+    animation: zoomin 2s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    margin-left: 300px;
+    margin-top: -375px;
+}
+.style-three.feature-section {
+    margin-top: 0;
+    padding-top: 50px;
+}
+.style-three.feature-section .feature-items {
+    margin-bottom: 30px;
+}
+.style-three.about-section .about-thumb {
+    margin-bottom: 40px;
+}
+.style-three.about-section .section-title p {
+    width: 149%;
+}
+.style-three.about-section .about-title h2 {
+    font-size: 13px;
+}
+.slider-section-3 .slider-thumb img {
+    width: 85%;
+    margin-left: 241px;
+    margin-top: -390px;
+}
+.style-three.service-section .service-desc p {
+    width: 84%;
+}
+.style-three.service-section .service-desc-2 p {
+    width: 94%;
+}
+.style-three.service-section .service-single-box {
+    margin-top: 50px;
+}
+.count-items {
+    margin-bottom: 30px;
+}
+.count-items:before {
+    display: none;
+}
+.progress-section .section-title p {
+    width: 79%;
+}
+.progressbar {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+.style-two.feature-section .feature-shape {
+    display: none;
+}
+.pricing-items {
+    margin-bottom: 30px;
+}
+.style-two.bolg-section .blog-title h2 a {
+    font-size: 32px;
+}
+.blog-meta-top {
+    bottom: 170px;
+}
+.style2 .blog-meta-top {
+    bottom: 195px;
+}
+button.btn-control {
+    right: 14%;
+    bottom: 33%;
+}
+.slider-section-4 {
+    height: 700px;
+}
+.slider-section-4 .slider-content {
+    margin-top: 120px;
+}
+.slider-button {
+    margin-top: 30px;
+}
+.slider-section-4 .slider-content h1 {
+    font-size: 55px;
+    margin: 18px 0 30px;
+}
+.slider-section-4 .slider-content h2 {
+    font-size: 55px;
+}
+.slider-section-4 .slider-thumb {
+    display: none;
+}
+.style-four.brand-section .row.brand-bg_2 {
+    padding: 50px 10px 50px 143px;
+}
+.style-four.about-section {
+    padding-bottom: 43px;
+}
+.style-four.about-section .about-bottom-thumb {
+    top: -25px;
+    left: 17px;
+}
+.style-four.about-section .about-desc h6 {
+    font-size: 12px;
+}
+.style-four.about-section .about-count h3 {
+    font-size: 60px;
+}
+.style-four.about-section .scetion-text-2 p {
+    width: 111%;
+}
+.style-four.service-section .service-content p {
+    width: 102%;
+}
+.portfolio-text p {
+    width: 103%;
+}
+.section-title h1 {
+    margin-top: 0;
+}
+.style-four.feature-section .feature-thumb {
+    margin-left: -36px;
+    margin-top: 30px;
+}
+.feature-video {
+    top: 50%;
+}
+.progressbar {
+    display: inherit;
+}
+.style-four.contact-us .section-title p {
+    width: 88%;
+}
+.style-four.testimonial-section .testi-desc p {
+    margin-top: 0;
+    width: 79%;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 76px;
+}
+.style-two.bolg-section .blog-meta-top h6 {
+    font-size: 18px;
+}
+.style-two.bolg-section .blog-meta-top {
+    padding: 0px 23px;
+}
+.style-two.bolg-section .blog-meta-top h2 {
+    font-size: 30px;;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 175px;
+}
+.style-two.bolg-section .style2 .blog-meta-top {
+    bottom: 200px;
+}
+.style-two.bolg-section .blog-title h2 a {
+    line-height: 40px;
+}
+.style-four.call-do-action .call-content h2 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 15px 40px;
+}
+.style-two.portfolio_area .portfolio-text {
+    margin-top: 30px;
+}
+.style-four.team-member-section .team-social-icon {
+    right: 40px;
+}
+.style-four.call-do-action .call-content span {
+    font-size: 13px;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 12px 16px;
+    font-size: 16px;
+}
+.style-five.feature-section {
+    padding-top: 75px;
+    padding-bottom: 85px;
+}
+.style-five.portfolio_area .fortfolio-title {
+    bottom: 15px;
+}
+.style-five.portfolio_area .dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    top: 90%;
+}
+.style-five.portfolio_area .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 25%;
+    background: rgba(0,0,0,0.5);
+    top: 351px;
+}
+.style-five.portfolio_area .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 25%;
+    background: rgba(0,0,0,0.5);
+    top: 351px;
+}
+.style-five.portfolio_area .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 25%;
+    background: rgba(0,0,0,0.5);
+    top: 351px;
+}
+.style-five.portfolio_area .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 25%;
+    background: rgba(0,0,0,0.5);
+    top: 351px;
+}
+.slider-section-5 .slider-shape {
+    display: none;
+}
+.slider-section-5 .slider-thumb img {
+    width: inherit;
+    margin-top: 187px;
+}
+.slider-section-5 .slider-thumb img {
+    width: 100%;
+    margin-top: 187px;
+    display: none;
+}
+.slider-section-5 {
+    height: 700px;
+}
+.service-section .section-title h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.style-five.progress-section .skill-content h2 {
+    font-size: 20px;
+}
+.slider-section-5 .slider-content h1 {
+    margin: 28px 0 27px;
+}
+.style-four.about-section .section-title p {
+    width: 91%;
+}
+.style-five.feature-section .section-title {
+    padding-top: 50px;
+}
+.call-content h1 {
+    font-size: 40px;
+}
+.call-content h2 {
+    font-size: 40px;
+    margin-top: 15px;
+}
+.breadcumn-content h2 {
+    font-size: 50px;
+}
+.blogs-section .blog-text p {
+    width: 80%;
+}
+.pagination {
+    margin-left: 128px;
+}
+input.blog-control {
+    width: 100%;
+}
+br {
+    display: none;
+}
+label.checkbox-control {
+    font-size: 11px;
+}
+.style3.contact-form-msg-2 i {
+    left: 14%;
+}
+.style3 .blog-button {
+    width: 45%;
+}
+.blog-src-bar .blog-btn {
+    right: -390px;
+}
+.contact-form-msg-2 i {
+    left: 13%;
+}
+.tags span {
+    width: 100%;
+}
+.style3 .blog-button {
+    width: 101%;
+}
+.style3.contact-form-msg-2 i {
+    left: 25%;
+}
+.blog-comment-title h2 {
+    display: block;
+}
+.blog-comment-title span {
+    margin-left: 5px;
+    margin-bottom: 14px;
+}
+
+
+
+
+
+
+
+
+
+}
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+a.menu-logo {
+    text-align: center;
+    display: block;
+}
+.row.brand-bg {
+    padding: 31px 0 40px 14px;
+}
+.header-button a {
+    display: none;
+}
+.search-box-btn.search-box-outer i {
+    display: none;
+}
+.sticky {
+    display: none;
+}
+.slider-section {
+    height: 500px;
+}
+.slider-section2 {
+    height: 500px;
+}
+.slider-content h5 {
+    margin-bottom: -22px;
+}
+.slider-section2 .slider-content h5:before {
+    left: 86px;
+}
+.slider-content h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.slider-content h2 {
+    font-size: 30px;
+}
+.slider-circle-thumb.rotateme {
+    top: 19%;
+    right: 14%;
+}
+.slider-button a {
+    margin-bottom: 75px;
+    margin-top: -15px;
+}
+.about-video-icon a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+.section-title h1 {
+    font-size: 27px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.service-section .section-title h1 {
+    font-size: 39px;
+}
+.service-section .section-title h1 {
+    font-size: 35px;
+}
+.section-title h2 {
+    font-size: 27px;
+}
+.about-section .section-title p {
+    width: 95%;
+    margin-bottom: 28px;
+    margin-top: 0;
+}
+.about-title h2 {
+    font-size: 15px;
+}
+.about-text p {
+    width: 102%;
+}
+.row.call-bg {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.call-video-icon a {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.service-icon i {
+    font-size: 23px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+}
+.service-single-box {
+    width: 100%;
+}
+.service-content p {
+    width: 88%;
+}
+.call-do-action {
+    padding-top: 60px;
+}
+.skill-section .section-title h1 {
+    font-size: 18px;
+    margin-bottom: -42px;
+    margin-top: -9px;
+}
+.skill-section .section-title h2 {
+    font-size: 18px;
+    margin-bottom: -34px;
+    margin-top: 35px;
+}
+.skill-section .section-title p {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    width: 119%;
+}
+.row.skill-bg {
+    margin-left: 0;
+}
+.skill-thumb img {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+.count-box {
+    margin-top: 5px;
+    margin-right: -30px;
+}
+.single-case-study {
+    width: 100%;
+}
+.work-single-content {
+    float: left;
+}
+.work-single-content:before {
+    display: none;
+}
+.case-content {
+    width: 92%;
+    padding: 0 0 25px 15px;
+}
+.case-content h2 {
+    font-size: 18px;
+}
+.case-content a {
+    top: 18px;
+    right: 26px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 30px;
+}
+.contact-us .section-title p {
+    width: 102%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.contact-form-msg i {
+    left: 71%;
+}
+.contact-button i {
+    right: 27%;
+}
+.testimonial-section .section-title h2 {
+    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+.testi-desc p {
+    width: 95%;
+}
+.bolg-section .section-title h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+.blog-title h2 a {
+    font-size: 22px;
+}
+.blog-text p {
+    width: 90%;
+}
+.brand-section:before {
+    width: 91%;
+}
+.footer-text p {
+    width: 102%;
+}
+.footer-title h2 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+input.footer-email {
+    width: 100%;
+}
+button.btn-control {
+    right: 9%;
+    bottom: 8%;
+    margin-bottom: -8px;
+}
+.copy-right-text {
+    text-align: center;
+}
+.footer-menu-right ul {
+    text-align: center;
+}
+.slider-section-2 {
+    height: 710px;
+}
+.header-top-section {
+    display: none;
+}
+.style-two.header-menu-section {
+    margin-bottom: -222px;
+}
+.style-two.header-menu-section .header-src-btn {
+    display: none;
+}
+.slider-button a {
+    margin-bottom: -23px;
+}
+.slider-section-2 .slider-content h5:before {
+    left: -110%;
+}
+.slider-section-2 .slider-button a {
+    padding: 12px 18px;
+}
+.slider-section-2 .btn-2.slider-button a {
+    padding: 12px 18px;
+}
+.about-icon i {
+    color: #d00a2b;
+    font-size: 20px;
+}
+.slider-video-icon {
+    display: none;
+}
+.style-two.call-do-action .call-thumb {
+    margin-top: 19px;
+    margin-left: -82px;
+}
+.call-shape {
+    display: none;
+}
+.style-two.feature-section .section-title p {
+    width: 104%;
+}
+.style-two.feature-section .feature-content p {
+    width: 97%;
+}
+.style-two.feature-section .feature-thumb img {
+    width: 100%;
+}
+.style-two.feature-section .feature-shape {
+    display: none;
+}
+.dreamit-portfolio-thumb img {
+    width: 100%;
+}
+.dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style2.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    width: 100%;
+}
+.fortfolio-addrees {
+    right: 35px;
+}
+.team-items {
+    margin-bottom: 30px;
+}
+.style-two.testimonial-section .testi-rating {
+    margin-top: -30px;
+    margin-right: 17px;
+}
+button.btn-control {
+    right: 20%;
+    bottom: 26%;
+}
+.slider-section-3 {
+    height: 400px;
+}
+.slider-section-3 .slider-thumb img {
+    display: none;
+}
+.style-three.feature-section {
+    padding-top: 50px;
+    margin-top: 0;
+}
+.slider-section-3 .slider-content {
+    margin-top: -72px;
+}
+.slider-button a {
+    font-size: 15px;
+    padding: 14px 13px;
+}
+.btn-2.slider-button a {
+    font-size: 15px;
+    padding: 14px 13px;
+}
+.slider-button {
+    margin-top: 40px;
+}
+.style-three.feature-section .feature-content h2 {
+    font-size: 19px;;
+}
+.style-three.feature-section .feature-items {
+    margin-bottom: 30px;
+}
+.style-three.about-section .skill-shape {
+    display: none;
+}
+.style-three.about-section .section-title p {
+    width: 97%;
+}
+.style-three.about-section .about-title h2 {
+    font-size: 11px;
+}
+.style-three.about-section .style2.about-title h2 {
+    font-size: 13px;
+}
+.style-two.service-section .section-title h2 {
+    margin-top: 0px;
+    line-height: 36px;
+}
+.style-three.service-section .service-desc p {
+    width: 98%;
+}
+.style-three.service-section .service-desc-2 p {
+    width: 99%;
+}
+.style-three.service-section .service-single-box {
+    margin-top: 37px;
+}
+.portfolio_menu ul li {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.count-items {
+    margin-bottom: 30px;
+}
+.progressbar {
+    display: block;
+    margin-top: 30px;
+}
+.prticing-icon span {
+    padding: 3px 14px;
+}
+.pricing-items {
+    margin-bottom: 30px;
+}
+.style-two.bolg-section .section-title h2 {
+    font-size: 34px;
+    margin-top: 0;
+}
+.style-two.bolg-section .blog-title h2 a {
+    font-size: 26px;
+    line-height: 36px;
+}
+.blog-meta-top {
+    bottom: 57px;
+    padding: 1px 23px;
+}
+.style-two.bolg-section .style2 .blog-title h2 a {
+    font-size: 24px;
+}
+.style2 .blog-meta-top {
+    bottom: 75px;
+    padding: 1px 23px;
+}
+
+.slider-section-4 {
+    height: 600px;
+}
+.slider-section-4 .slider-content {
+    margin-top: 120px;
+}
+.slider-button {
+    margin-top: 30px;
+}
+.slider-section-4 .slider-content h1 {
+    font-size: 30px;
+    margin: 19px 0 7px;
+}
+.slider-section-4 .slider-content h5:before {
+    left: -110%;
+}
+.slider-section-4 .slider-content h2 {
+    font-size: 30px;
+}
+.slider-section-4 .slider-thumb {
+    display: none;
+}
+.slider_list_2 .owl-nav {
+    display: none;
+}
+.style-four.brand-section .row.brand-bg_2 {
+    padding: 50px 10px 50px 26px;
+}
+.style-four.brand-section .brand-thumb {
+    margin-left: 0;
+    margin-right: 35px;
+}
+.style-four.brand-section .brand-thumb img {
+    transition: .5s;
+    filter: grayscale(1);
+    width: 100%;
+}
+.style-four.about-section {
+    padding-bottom: 43px;
+}
+.style-four.about-section .about-bottom-thumb {
+    top: -8px;
+    left: 36px;
+}
+.style-four.about-section .about-desc h6 {
+    font-size: 12px;
+}
+.style-four.about-section .about-count h3 {
+    font-size: 60px;
+}
+.style-four.about-section .scetion-text-2 p {
+    width: 96%;
+}
+.style-four.service-section .service-content p {
+    width: 106%;
+}
+.portfolio-text p:before {
+    height: 243px;
+}
+.portfolio-text p {
+    width: 103%;
+}
+.style-two.portfolio_area .dreamit-single-portfolio {
+    margin-right: 0;
+}
+.section-title h1 {
+    margin-top: 0;
+}
+.style-four.feature-section .feature-thumb {
+    margin-left: -36px;
+    margin-top: 30px;
+}
+.feature-video {
+    top: 72%;
+    right: -31%;
+}
+.feature-video a {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+}
+.progressbar {
+    display: inherit;
+}
+.style-four.contact-us .section-title p {
+    width: 88%;
+}
+.style-four.testimonial-section .testi-desc p {
+    margin-top: 0;
+    width: 79%;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 76px;
+}
+.style-two.bolg-section .blog-meta-top h6 {
+    font-size: 18px;
+}
+.style-two.bolg-section .blog-meta-top {
+    padding: 0px 23px;
+}
+.style-two.bolg-section .blog-meta-top h2 {
+    font-size: 30px;;
+}
+.style-two.bolg-section .blog-meta-top {
+    bottom: 175px;
+}
+.style-two.bolg-section .style2 .blog-meta-top {
+    bottom: 200px;
+}
+.style-two.bolg-section .blog-title h2 a {
+    line-height: 40px;
+}
+.style-four.call-do-action .call-content h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 15px 40px;
+}
+.style-two.portfolio_area .portfolio-text {
+    margin-top: 30px;
+}
+.style-four.team-member-section .team-social-icon {
+    right: 40px;
+}
+.style-four.call-do-action .call-content span {
+    font-size: 13px;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 12px 16px;
+    font-size: 16px;
+}
+.style-two.service-section .service-content h2 {
+    font-size: 22px;
+}
+.style-four.progress-section .section-title p {
+    width: 92%;
+}
+.style-four.testimonial-section .single-testimonial {
+    padding: 52px 27px 43px;
+}
+.style-four.bolg-section .blog-title h2 {
+    margin-top: -12px;
+}
+.style-four.bolg-section .blog-title h2 a {
+    line-height: 36px;
+}
+.style-four.call-do-action .call-btn {
+    text-align: center;
+}
+.style-four.call-do-action .call-btn a {
+    padding: 12px 40px;
+}
+.style-five.feature-section {
+    padding-top: 75px;
+    padding-bottom: 85px;
+}
+.style-five.portfolio_area .fortfolio-title {
+    bottom: 15px;
+}
+.style-five.portfolio_area .dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 100px;
+    background: rgba(0,0,0,0.5);
+    top: 84%;
+}
+.style-five.portfolio_area .style3.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 36%;
+    background: rgba(0,0,0,0.5);
+    top: 185px;
+}
+.style-five.portfolio_area .style4.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 36%;
+    background: rgba(0,0,0,0.5);
+    top: 185px;
+}
+.style-five.portfolio_area .style5.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 36%;
+    background: rgba(0,0,0,0.5);
+    top: 185px;
+}
+.style-five.portfolio_area .style6.dreamit-single-portfolio .dreamit-portfolio-thumb:before {
+    height: 36%;
+    background: rgba(0,0,0,0.5);
+    top: 185px;
+}
+.slider-section-5 .slider-shape {
+    display: none;
+}
+.slider-section-5 .slider-thumb img {
+    width: inherit;
+    margin-top: 187px;
+}
+.slider-section-5 .slider-thumb img {
+    width: 100%;
+    margin-top: 187px;
+    display: none;
+}
+.slider-section-5 {
+    height: 600px;
+}
+.service-section .section-title h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.style-five.progress-section .skill-content h2 {
+    font-size: 20px;
+}
+.slider-section-5 .slider-content h1 {
+    margin: 28px 0 10px;
+}
+.style-four.about-section .section-title p {
+    width: 91%;
+}
+.style-five.feature-section .section-title {
+    padding-top: 50px;
+}
+.call-content h1 {
+    font-size: 25px;
+}
+.call-content h2 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+.btn-2.slider-button a {
+    display: none;
+}
+.breadcumn-content h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+.breadcumn-content h2 {
+    font-size: 31px;
+}
+.brand-thumb img {
+    transition: .5s;
+    filter: grayscale(1);
+    margin-left: 91px;
+}
+.b-content h3 {
+    font-size: 12px;
+    margin-bottom: -16px;
+}
+.pagination {
+    margin-left: 35px;
+}
+.blogs-section .blog-title h2 {
+    font-size: 18px;
+}
+.blogs-section .blog-text p {
+    width: 92%;
+}
+.pagination ul li a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.bolg-section .blog-title h2 a {
+    font-size: 23px;
+}
+.blog-comment-title span {
+    font-size: 8px;
+}
+.blog-social-icon.text-center {
+    margin-left: -20px;
+}
+.blog-single-thumb img {
+    margin-right: 0;
+    margin-left: -45px;
+    margin-bottom: 20px;
+}
+.blogs-section  .blog-thumb img {
+    width: 100%;
+}
+.blogs-section .blog-title h2 {
+    font-size: 15px;
+}
+.blog-title-2 h2 {
+    font-size: 19px;
+    margin-top: 20px;
+}
+.style3 .blog-button {
+    width: 96%;
+}
+input.blog-control {
+    width: 300px;
+}
+.blog-src-bar .blog-btn {
+    right: -210px;
+}
+.contact-form-msg-2 i {
+    left: 16%;
+}
+.tags span {
+    width: 100%;
+}
+.blog-text5 p {
+    width: 104%;
+}
+}
+
+@media (max-width: 991px) {
+.mobile-menu {
+    background: #D00A2B;
+    padding: 0 35px 0 10px;
+}
+a.mobile-logo {
+    text-align: center;
+    display: block;
+    margin-top: 0;
+    margin-left: 15px;
+}
+.header-menu2.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    background: #f8f8f8;
+    width: 220px;
+    padding: 5px 25px 0 40px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: auto;
+}
+.menu-toggle2 {
+    margin-top: -27px;
+    margin-left: 91%;
+}
+.menu-toggle {
+    display: block;
+    text-align: left;
+    margin-right: -104px;
+}
+.icon {
+    color: #fff;
+    font-size: 25px;
+}
+i.fas.fa-times {
+    display: none;
+}
+.header-menu2.active ul li {
+    display: block;
+    border-bottom: 1px solid#ddd;
+    width: 110%;
+    padding-left: 35px;
+    margin-left: -21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.header-menu2 ul li a {
+    text-transform: capitalize;
+    font-size: 16px;
+    text-decoration: none;
+}
+.logo-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu-toggle .icon.close .fa-times{
+    display: block;
+}
+.menu-toggle .icon.close .fa-bars{
+    display: none;
+}
+.menu-toggle {
+    display: block;
+    text-align: left;
+    margin-right: 0;
+}
+.header-menu2 {
+    display: none;
+}
+.expand.active .minus{
+	display: block;
+}
+.expand.active .plus{
+	display: none;
+}
+#panel, #flip {
+  text-align: right;
+}
+#panel {
+  display: none;
+}
+.expand .minus{
+	display: none;
+}
+ul.menu_open {
+    display: none;
+}
+ul.menu_open2 {
+    display: none;
+}
+ul.menu_open3 {
+    display: none;
+}
+ul.menu_open4 {
+    display: none;
+}
+ul.menu_open5 {
+    display: none;
+}
+span.plus {
+    font-size: 20px;
+}
+span.minus {
+    font-size: 20px;
+    display:none;
+}
+ul.sub-menu2 {
+    margin-bottom: -11px;
+    padding-bottom: 0;
+}
+.header-menu-section {
+    display: none !important;
+}
+.mobile-menu {
+    background: #D00A2B;
+    padding: 0 35px 0 10px;
+    display: block;
+}
+}
