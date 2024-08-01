@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>dreamit-Technology-And-It-Solutions HTML5 Template</title>
+    <title>Duztec</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Gallery css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="assets/css/gallery.css"> -->
     <!-- Favicon -->
     <link rel="icon" sizes="56x56" href="assets/images/fevicon.png">
     <!-- bootstrap CSS -->
@@ -22,6 +26,7 @@
     <!-- theme-default CSS -->
     <link rel="stylesheet" href="assets/css/template-default.css" media="all" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" type="text/css" media="all" />
+
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css" media="all" />
     <!-- transitions CSS -->
@@ -99,10 +104,10 @@
                         <div class="header-menu">
                             <ul>
                                 <li><a href="index"> <i class="fas fa-home"></i></a>
-                                    
+
                                 </li>
                                 <li><a href="about">About Us</a>
-                                    
+
                                 </li>
                                 <li><a href="product_category">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">

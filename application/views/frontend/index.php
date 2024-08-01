@@ -87,7 +87,7 @@
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center">
 					<!-- <h5>// WHAT WE Do</h5> -->
-					<h1>Our project</h1>
+					<h1>OUR PRODUCTS</h1>
 				</div>
 			</div>
 		</div>
@@ -95,47 +95,48 @@
 			<div class="service_list owl-carousel">
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/ProductImage.png" alt="">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
 					</div> -->
 					<div class="service-content">
-						<h2>Corporate Solution</h2>
+						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
 						<a href="single-service.html">Learn More</a>
 					</div>
 				</div>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/ProductImage.png" alt="">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-briefcase"></i>
 					</div> -->
 					<div class="service-content">
-						<h2>Data Security</h2>
+						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
 						<a href="single-service.html">Learn More</a>
 					</div>
 				</div>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/ProductImage.png" alt="">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-mail"></i>
 					</div> -->
 					<div class="service-content">
-						<h2>Backup & Recovery</h2>
+						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
 						<a href="single-service.html">Learn More</a>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
+
 	<div class="shape-thumb">
 		<div class="service-shape-thumb bounce-animate">
 			<img src="assets/images/shape2.png" alt="">
@@ -162,65 +163,182 @@
 			</div>
 		</div>
 	</div> -->
-<!-- ============================================================== -->
+
+	<!-- ============================================================== -->
 <!-- Start - Feature- Section -->
 <!-- ============================================================= -->
 <div class="feature-section">
 	<div class="container">
+
 		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="single-feature-box text-center">
-					<div class="feature-num">
-						<span>01</span>
-					</div>
-					<div class="feature-content">
-						<h2>IT Consultancy</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div>
-					<div class="feature-icon">
-						<i class="flaticon-hand"></i>
-					</div>
-				</div>
+			<div class="section-title text-center">
+				<h1>SECTORS/INDUSTRIES</h1>
 			</div>
-			<div class="col-lg-3 col-md-6">
+			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
-					<div class="feature-num">
-						<span>02</span>
+					<div class="feature-icon">
+						<i class="flaticon-bar-chart"></i>
 					</div>
 					<div class="feature-content">
 						<h2>Marketing Plan</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
-					<div class="feature-icon">
-						<i class="flaticon-bar-chart"></i>
-					</div>
+
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-6">
+			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
-					<div class="feature-num">
-						<span>03</span>
+					<div class="feature-icon">
+						<i class="flaticon-square"></i>
 					</div>
 					<div class="feature-content">
 						<h2>Ios/Macos Apps</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-feature-box text-center">
+					<div class="feature-icon">
+						<i class="flaticon-world"></i>
+					</div>
+					<div class="feature-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-feature-box text-center">
+					<div class="feature-icon">
+						<i class="flaticon-bar-chart"></i>
+					</div>
+					<div class="feature-content">
+						<h2>Marketing Plan</h2>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-feature-box text-center">
 					<div class="feature-icon">
 						<i class="flaticon-square"></i>
 					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="single-feature-box text-center">
-					<div class="feature-num">
-						<span>04</span>
-					</div>
 					<div class="feature-content">
-						<h2>Corporate Solution</h2>
+						<h2>Ios/Macos Apps</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="single-feature-box text-center">
 					<div class="feature-icon">
 						<i class="flaticon-world"></i>
+					</div>
+					<div class="feature-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- Gallery- Section -->
+<!-- ============================================================= -->
+
+<div class="service-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="section-title text-center">
+                    <!-- <h5>// WHAT WE Do</h5> -->
+                    <h1>OUR GALLERY</h1>
+                </div>
+            </div>
+
+			<?php 
+			// $this->load->view('component/gallery');
+			 ?>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- ============================================================== -->
+<!-- Start - Case-Study- Section -->
+<!-- ============================================================= -->
+<div class="case-study-section">
+	<div class="container-fluid">
+	<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="section-title text-center">
+					<!-- <h5>// WHAT WE Do</h5> -->
+					<h1>LATEST BOLGS </h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="case_list owl-carousel">
+				<div class="single-case-study">
+					<div class="case-thumb">
+						<img src="assets/images/blog/blog-image.png" alt="">
+						<div class="case-content">
+							<h2>Data Research Analysis</h2>
+							<h6>Cloud Computing</h6>
+							<a href="case-study-details.html"><span>+</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="single-case-study">
+					<div class="case-thumb">
+						<img src="assets/images/blog/blog-image.png" alt="">
+						<div class="case-content">
+							<h2>Data Research Analysis</h2>
+							<h6>Cloud Computing</h6>
+							<a href="case-study-details.html"><span>+</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="single-case-study">
+					<div class="case-thumb">
+						<img src="assets/images/blog/blog-image.png" alt="">
+						<div class="case-content">
+							<h2>Data Research Analysis</h2>
+							<h6>Cloud Computing</h6>
+							<a href="case-study-details.html"><span>+</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="single-case-study">
+					<div class="case-thumb">
+						<img src="assets/images/blog/blog-image.png" alt="">
+						<div class="case-content">
+							<h2>Data Research Analysis</h2>
+							<h6>Cloud Computing</h6>
+							<a href="case-study-details.html"><span>+</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="single-case-study">
+					<div class="case-thumb">
+						<img src="assets/images/blog/blog-image.png" alt="">
+						<div class="case-content">
+							<h2>Data Research Analysis</h2>
+							<h6>Cloud Computing</h6>
+							<a href="case-study-details.html"><span>+</span></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -228,16 +346,20 @@
 	</div>
 </div>
 <!-- ============================================================== -->
-<!-- Start - Skill- Section -->
+<!-- Start - Contact-Us- Section -->
 <!-- ============================================================= -->
-<div class="skill-section">
+
+
+
+
+
+<!-- <div class="skill-section">
 	<div class="container-fluid">
 		<div class="row skill-bg">
 			<div class="col-lg-5 col-md-12">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="section-title text-left">
-							<!-- <h5>// OUR SKILLSEta</h5> -->
 							<h1>Strategy Is The Heart</h1>
 							<h2>Of What We Do</h2>
 							<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology</p>
@@ -306,16 +428,15 @@
 	<div class="skill-shape bounce-animate">
 		<img src="assets/images/shape5.png" alt="">
 	</div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Start - Working-Progress- Section -->
 <!-- ============================================================= -->
-<div class="working-process-section">
+<!-- <div class="working-process-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
 				<div class="section-title text-left">
-					<!-- <h5>// WORKING PROCEss</h5> -->
 					<h1>Our Working Process</h1>
 					<h2>For Client Work</h2>
 				</div>
@@ -398,77 +519,13 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Start - Case-Study- Section -->
-<!-- ============================================================= -->
-<div class="case-study-section">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="case_list owl-carousel">
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/case2.jpg" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/case1.jpg" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/case2.jpg" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/case3.jpg" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/case3.jpg" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Start - Contact-Us- Section -->
-<!-- ============================================================= -->
-<div class="contact-us">
+</div> -->
+
+<!-- <div class="contact-us">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
 				<div class="section-title text-left">
-					<!-- <h5>// CONTACT US</h5> -->
 					<h1>Get In Touch</h1>
 					<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide</p>
 				</div>
@@ -549,16 +606,15 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Start - Teatimonial- Section -->
 <!-- ============================================================= -->
-<div class="testimonial-section">
+<!-- <div class="testimonial-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center">
-					<!-- <h5>// CLIENT,S Feedback</h5> -->
 					<h1>What Client,s Says</h1>
 				</div>
 			</div>
@@ -644,7 +700,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- ============================================================== -->
 <!-- Start - Blog- Section -->
 <!-- ============================================================= -->
@@ -653,97 +709,14 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center">
-					<!-- <h5>// NEWS & BLOG</h5> -->
-					<h1>Leatest Blogs</h1>
+					<h1>We have much more,</h1>
+					<h1>let's get started</h1>
+
+					<button class="cta_button" type="button">Collaborate with us > </button>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-itmes">
-					<div class="blog-thumb">
-						<img src="assets/images/blog3.jpg" alt="">
-						<div class="blog-meta-top">
-							<span>Tech Love</span>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta-bottom">
-							<img src="assets/images/blog-author3.jpg" alt="">
-							<span>Mehedii.H</span>
-							<span><i class="fas fa-calendar-alt"></i></span>
-							<span>July 27, 2020</span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="blog-details.html">Pure is the most healthy and</a></h2>
-							<h2><a href="blog-details.html"> most nourishing food</a></h2>
-						</div>
-						<div class="blog-text">
-							<p>More off this less hello salamander lied much over tightly circa horse taped mightily</p>
-						</div>
-						<div class="blog-btn">
-							<a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-itmes">
-					<div class="blog-thumb">
-						<img src="assets/images/blog2.jpg" alt="">
-						<div class="blog-meta-top">
-							<span>Virtual</span>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta-bottom">
-							<img src="assets/images/blog-author2.jpg" alt="">
-							<span>Mehedii.H</span>
-							<span><i class="fas fa-calendar-alt"></i></span>
-							<span>July 27, 2020</span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="blog-details.html">Pure is the most healthy and</a></h2>
-							<h2><a href="blog-details.html"> most nourishing food</a></h2>
-						</div>
-						<div class="blog-text">
-							<p>More off this less hello salamander lied much over tightly circa horse taped mightily</p>
-						</div>
-						<div class="blog-btn">
-							<a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-itmes">
-					<div class="blog-thumb">
-						<img src="assets/images/blog.jpg" alt="">
-						<div class="blog-meta-top">
-							<span>Configure</span>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta-bottom">
-							<img src="assets/images/blog-author.jpg" alt="">
-							<span>Mehedii.H</span>
-							<span><i class="fas fa-calendar-alt"></i></span>
-							<span>July 27, 2020</span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="blog-details.html">Pure is the most healthy and</a></h2>
-							<h2><a href="blog-details.html"> most nourishing food</a></h2>
-						</div>
-						<div class="blog-text">
-							<p>More off this less hello salamander lied much over tightly circa horse taped mightily</p>
-						</div>
-						<div class="blog-btn">
-							<a href="blog-details.html">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </div>
 <!-- ============================================================== -->
