@@ -6025,46 +6025,42 @@ button.btn-control {
 
 
 /*!!!!!!!!!!!!!!!!!!!!!!! gallery page !!!!!!!!!!!!!!!!!!!!!!!! */
-#gallery {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
+.gallery {
+    margin-top: 20px;
+  }
+  
+  .grid {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    columns: 4;
     column-gap: 20px;
   }
   
-  @media (max-width: 1200px) {
-    #gallery {
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
-    }
-  }
-  
-  @media (max-width: 800px) {
-    #gallery {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    #gallery {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-    }
-  }
-  
-  #gallery img,
-  #gallery video {
+  .grid .grid-item {
     width: 100%;
-    height: auto;
-    margin: 4% auto;
-    box-shadow: -3px 5px 15px #000;
-    cursor: pointer;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    margin-bottom: 20px;
+    break-inside: avoid;
+  }
+  
+  .grid-item .card img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 1200px) {
+    .grid {
+      columns: 3;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      columns: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      columns: 1;
+    }
   }

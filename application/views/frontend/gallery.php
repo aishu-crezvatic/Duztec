@@ -4,15 +4,14 @@
 
 <?php
 $mediaItems  = [
-    'https://dummyimage.com/300x200/09f/fff',
+    'https://picsum.photos/seed/picsum/200/300',
     'https://dummyimage.com/600x400/000/fff',
-    'https://dummyimage.com/400x600/09f/fff',
     'https://dummyimage.com/300x500/09f/fff',
-    'https://dummyimage.com/500x300/000/fff',
-    'https://dummyimage.com/200x200/09f/fff',
     'https://dummyimage.com/600x300/09f/fff',
+    'https://dummyimage.com/200x200/09f/fff',
     'https://dummyimage.com/300x600/09f/fff',
     'https://dummyimage.com/300x200/09f/fff',
+    'https://picsum.photos/seed/picsum/200/300',
     'https://dummyimage.com/600x400/000/fff',
     'https://dummyimage.com/400x600/09f/fff',
     'https://dummyimage.com/300x500/09f/fff',
@@ -24,17 +23,22 @@ $mediaItems  = [
 ?>
 
 <h1 class="my-5 about-title">Gallery</h1>
-<div id="gallery" class="container-fluid">
+  <div class="grid">
     <?php foreach ($mediaItems as $item): ?>
-        <?php if (strpos($item, '.mp4') !== false): ?>
-            <video class="vid" controls>
-                <source src="<?php echo $item; ?>" type="video/mp4">
-            </video>
-        <?php else: ?>
-            <img src="<?php echo $item; ?>" alt="Gallery Image" class="img-responsive">
-        <?php endif; ?>
+        <div class="grid-item">
+            <div class="card">
+                <?php if (strpos($item, '.mp4') !== false): ?>
+                    <video controls>
+                        <source src="<?php echo $item; ?>" type="video/mp4">
+                    </video>
+                <?php else: ?>
+                    <img src="<?php echo $item; ?>" alt="Gallery Image">
+                <?php endif; ?>
+            </div>
+        </div>
     <?php endforeach; ?>
-</div>
+  </div>
+
 
 
 
