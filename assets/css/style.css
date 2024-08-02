@@ -1125,6 +1125,9 @@ body {
     color: #A6C438 !important;
 
 }
+.navyText{
+    color: #2260A4 !important;
+}
 .breadcumn-section-about::before {
     content: ""; /* Required for pseudo-element */
     position: absolute;
@@ -1236,7 +1239,7 @@ body {
 
 img {
     display: block;
-    width: 100%;
+    width: 100%;    
     height: auto; 
 }
 
@@ -5418,6 +5421,7 @@ label.checkbox-control {
 .brand-thumb img{
     transition: .5s;
     filter: grayscale(1);
+    width: 50% !important;
 }
 .brand-thumb img:hover{
     filter: grayscale(0);
@@ -5875,13 +5879,13 @@ button.btn-control {
 }
 
 .breadcumn-section-sector::before {
-    content: ""; /* Required for pseudo-element */
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 128, 0.5); /* Navy color with 50% opacity */
+    background-color: rgba(0, 0, 128, 0.5); 
 }
 
 .breadcumn-section-sector .container{
@@ -5889,11 +5893,9 @@ button.btn-control {
 }
 .breadcumn-section-sector h2{
     color: #A6C438 !important;
-    /* z-index: 22 !important; */
 }
 .breadcumn-section-sector .sectorStyle2{
     color: #A6C438 !important;
-    /* z-index: 22 !important; */
 }
 #industry-links li {
     list-style-type: none; /* Ensure no default list styling */
@@ -5954,5 +5956,37 @@ button.btn-control {
 }
 
 
+/* Product detail css */
+.breadcumn-section-prodDetail {
+    position: relative; /* Ensure the parent is positioned relatively to contain the pseudo-element */
+    background: url(../images/vlcsnap-2024-07-18-15h43m22s985.png);
+    padding-top: 280px;
+    padding-bottom: 107px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.breadcumn-section-prodDetail::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 128, 0.5); 
+}
+
+.breadcumn-section-prodDetail .container{
+    z-index: 1;
+}
+
+.priceReqBtn{
+    background-color: #2260A4 !important;
+}
+.top-corner{
+   font-size: 100px;
+   position: absolute;
+   top: 0;
+}
 
