@@ -6,7 +6,7 @@
 } */
 
 body {
-    background-image: url("../images/WhiteBGDrops.png");
+    background-image: url("../images/WhiteBGDrops.webp");
   }
 .mobile-menu {
     background: #aac737;
@@ -1010,7 +1010,7 @@ body {
 }
 /* Breadcumn */
 .breadcumn-section {
-    background: url(../images/breadcumn.jpg);
+    background: url(../images/slider.png);
     padding-top: 280px;
     padding-bottom: 107px;
     background-repeat: no-repeat;

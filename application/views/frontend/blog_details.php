@@ -94,11 +94,7 @@
 									<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
 								</ul>
 							</div>
-<<<<<<< HEAD
-							<!-- <div class="blog-comment ">
-=======
 							<div class="blog-comment ">
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 								<h3>Reviews</h3>
 								<div class="single-coments-items d-flex">
 									<div class="blog-comment-thumb">
@@ -120,13 +116,8 @@
 										</div>
 									</div>
 								</div>
-<<<<<<< HEAD
-							</div> -->
-							<!-- <div class="blog-comment br-none">
-=======
 							</div>
 							<div class="blog-comment br-none">
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 								<div class="single-coments-items d-flex">
 									<div class="blog-comment-thumb">
 										<img src="assets/images/bb4.jpg" alt="">
@@ -147,21 +138,13 @@
 										</div>
 									</div>
 								</div>
-<<<<<<< HEAD
-							</div> -->
-=======
 							</div>
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 							<div class="row">
 								<div class="col-lg-12 col-md-12">
 									<form id="contact_form3" action="mail.php" method="POST" >
 										<div class="row">
 											<div class="blog-drop-form style3">
-<<<<<<< HEAD
-												<h2>Drop Messege For Book</h2>
-=======
 												<h2>Write A Review</h2>
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 											</div>
 											<div class="col-lg-6 col-md-6">
 												<div class="contact-form_2">
@@ -195,11 +178,7 @@
 											</div>
 											<div class="col-lg-12">
 												<div class="contact-button style3 text-right">
-<<<<<<< HEAD
-													<input class="blog-button" type="submit" value="Send Message"></i>
-=======
 													<input class="blog-button" type="submit" value="Post Comment"></i>
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 												</div>
 											</div>
 										</div>
@@ -211,11 +190,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12">
-<<<<<<< HEAD
-					<!-- <div class="latest-blog">
-=======
 					<div class="latest-blog">
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 						<div class="about-me text-center">
 							<div class="about-me-thumb">
 								<img src="assets/images/b3.png" alt="">
@@ -251,11 +226,7 @@
 								<button class="blog-btn" type="submit"><i class="fas fa-search"></i></button>
 							</form>
 						</div>
-<<<<<<< HEAD
-					</div> -->
-=======
 					</div>
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<form id="contact_form3" action="mail.php" method="POST" >
@@ -357,11 +328,7 @@
 							<a href="#"><i class="fab fa-pinterest"></i></a>
 						</div>
 					</div>
-<<<<<<< HEAD
-					<!-- <div class="tags">
-=======
 					<div class="tags">
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 						<h2>Tags</h2>
 						<span>Business</span>
 						<span>Offices</span>
@@ -370,11 +337,7 @@
 						<span>pastas</span>
 						<span>Business</span>
 						<span>Topics</span>
-<<<<<<< HEAD
-					</div> -->
-=======
 					</div>
->>>>>>> fb913eef3a5da76c4ed39be08bda69183534e897
 				</div>
 			</div>
 		</div>

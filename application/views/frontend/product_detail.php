@@ -10,12 +10,12 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
-						<h2>Case Study Details</h2>
+						<h2>Product Details</h2>
 						<ul>
 							<li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
 							<li class="style2">Page</li>
 							<li><i class="fas fa-chevron-right"></i></li>
-							<li class="style2">Case Study Details</li>
+							<li class="style2">Product Details</li>
 						</ul>
 					</div>
 				</div>
@@ -70,6 +70,81 @@
 			</div>
 		</div>
 	</div>
+
+<!-- ============================================================== -->
+<!-- Start -our product -->
+<!-- ============================================================= -->
+<div class="service-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="section-title text-center">
+					<!-- <h5>// WHAT WE Do</h5> -->
+					<h1>OUR PRODUCTS</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="service_list owl-carousel">
+				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
+					</div>
+					<!-- <div class="service-icon">
+						<i class="flaticon-business-and-finance"></i>
+					</div> -->
+					<div class="service-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<a href="single-service.html">Learn More</a>
+					</div>
+				</div>
+				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
+					</div>
+					<!-- <div class="service-icon">
+						<i class="flaticon-briefcase"></i>
+					</div> -->
+					<div class="service-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<a href="single-service.html">Learn More</a>
+					</div>
+				</div>
+				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="assets/images/products/ProductImageSection.webp" alt="">
+					</div>
+					<!-- <div class="service-icon">
+						<i class="flaticon-mail"></i>
+					</div> -->
+					<div class="service-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<a href="single-service.html">Learn More</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="shape-thumb">
+		<div class="service-shape-thumb bounce-animate">
+			<img src="assets/images/shape2.png" alt="">
+		</div>
+		<div class="service-shape-thumb2 bounce-animate">
+			<img src="assets/images/shape4.png" alt="">
+		</div>
+		<div class="service-shape-thumb3 rotateme">
+			<img src="assets/images/service-shape.png" alt="">
+		</div>
+	</div>
+</div>
+
+
+
 	<!-- ============================================================== -->
 	<!-- Start - Brand- Section -->
 	<!-- ============================================================= -->
@@ -105,6 +180,9 @@
 			</div>
 		</div>
 	</div>
+
+
+	
 
 
 <!-- Footer start  -->

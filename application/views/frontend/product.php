@@ -10,12 +10,12 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
-						<h2>Portfolio Page</h2>
+						<h2>All Product</h2>
 						<ul>
 							<li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
 							<li class="style2">Page</li>
 							<li><i class="fas fa-chevron-right"></i></li>
-							<li class="style2">Service Page</li>
+							<li class="style2">All Product Page</li>
 						</ul>
 					</div>
 				</div>
@@ -29,9 +29,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 xol-md-12">
-					<div class="section-title text-center">
-						<h5>// Tech Portfolio</h5>
-						<h1>Our Work History</h1>
+					<div class="section-title text-center"> 
+						<h1>Category Name</h1>
 					</div>
 				</div>
 			</div>
@@ -39,11 +38,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p1.jpg" alt="">
+							<img src="assets/images/all-product/DBProductImageNew.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -51,11 +50,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p2.jpg" alt="">
+							<img src="assets/images/all-product/SB_New ProductImage.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -63,11 +62,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p3.jpg" alt="">
+							<img src="assets/images/all-product/DBProductImageNew.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -75,11 +74,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p4.jpg" alt="">
+						<img src="assets/images/all-product/SB_New ProductImage.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -87,11 +86,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p5.jpg" alt="">
+						<img src="assets/images/all-product/DBProductImageNew.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -99,11 +98,11 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/p6.jpg" alt="">
+						<img src="assets/images/all-product/SB_New ProductImage.webp" alt="">
 							<div class="thumb-content">
-								<span>It Solutions</span>
-								<h2>Machine Learning</h2>
-								<a href="#">View Projects <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>category</span>
+								<h2>Product Name</h2>
+								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
