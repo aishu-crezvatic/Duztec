@@ -1205,7 +1205,7 @@ body {
 }
 
 
-/* contact us about page */
+/* contact us section of  about page */
 
 .overText{
     position: absolute;
@@ -5990,3 +5990,81 @@ button.btn-control {
    top: 0;
 }
 
+/* !!!!!!!!!!!!!!! !  Contact us page   !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.addressBg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-om-map {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+.content-om-map p{
+    font-size: 1.5em;
+}
+
+.breadcumn-section-contact {
+    position: relative; /* Ensure the parent is positioned relatively to contain the pseudo-element */
+    background: url(../images/contact-us-banner.png);
+    padding-top: 400px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:425px) {
+    .content-om-map p{
+        font-size: 1em;
+    }
+    
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!! gallery page !!!!!!!!!!!!!!!!!!!!!!!! */
+#gallery {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+  
+  @media (max-width: 1200px) {
+    #gallery {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #gallery {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #gallery {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+  
+  #gallery img,
+  #gallery video {
+    width: 100%;
+    height: auto;
+    margin: 4% auto;
+    box-shadow: -3px 5px 15px #000;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
