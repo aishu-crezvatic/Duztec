@@ -1808,7 +1808,7 @@ a.btn2 i {
 .service-section {
     padding-top: 92px;
     padding-bottom: 120px;
-    background: #F5F6F9;
+    /* background: #F5F6F9; */
     position: relative;
     z-index: 1;
 }
@@ -5989,6 +5989,75 @@ button.btn-control {
    position: absolute;
    top: 0;
 }
+
+.tab-container {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+.tab-container {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 2px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: #83992E;
+}
+
+.tab:last-child {
+    margin-right: 0;
+}
+
+.tab.active {
+    background-color: #0056b3;
+    color: white;
+}
+
+.tab-content {
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@media (max-width:600px) {
+    .tab-container {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .tab {
+        padding: 0px;
+    }
+
+}
+
+
 
 /* !!!!!!!!!!!!!!! !  Contact us page   !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 

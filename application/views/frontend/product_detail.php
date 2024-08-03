@@ -83,12 +83,113 @@
 						<div class="btn px-2 text-white fw-bold priceReqBtn">PRICE REQUEST</div>
 					</div>
 				</div>
-				
+
 
 			</div>
 		</div>
 	</div>
 </div>
+
+<!-- ============================================================== -->
+<!-- Start -informaition of  product -->
+<!-- ============================================================= -->
+<!-- <style>
+	.tab-container {
+		width: 80%;
+		margin: 50px auto;
+		border-radius: 8px;
+		padding: 20px;
+	}
+
+	.tabs {
+		display: flex;
+		margin-bottom: 20px;
+		background-color: #fff;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	}
+
+	.tab {
+		flex: 1;
+		text-align: center;
+		padding: 8px;
+		cursor: pointer;
+		margin-right: 2px;
+		transition: background-color 0.3s ease;
+		font-weight: bold;
+		color: #83992E;
+	}
+
+	.tab:last-child {
+		margin-right: 0;
+	}
+
+	.tab.active {
+		background-color: #0056b3;
+		color: white;
+	}
+
+	.tab-content {
+		padding: 20px;
+		border-radius: 0 0 8px 8px;
+	}
+
+	.tab-pane {
+		display: none;
+	}
+
+	.tab-pane.active {
+		display: block;
+	}
+
+	@media (max-width:600px) {
+		.tab-container {
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.tab {
+			padding: 0px;
+		}
+
+	}
+</style> -->
+
+<div class="tab-container">
+	<div class="tabs">
+		<div class="tab active" data-tab="description">Description</div>
+		<div class="tab" data-tab="additional-info">Additional Information</div>
+		<div class="tab" data-tab="videos">Videos</div>
+	</div>
+	<div class="tab-content">
+		<div id="description" class="tab-pane active">
+			<p class="fw-bold">The Duztec Double Barrel-DB boasts dual functionality, deploying Mist cannons or fog
+				cannons at identical
+				angles to simultaneously address two crucial aspects of slag management. One barrel efficiently cools
+				the heated slag, promoting effective quenching, while the other focuses on suppressing the dust
+				generated during the process. This dual-action approach not only enhances the overall efficiency of slag
+				management but also contributes to a cleaner and safer working environment.</p>
+		</div>
+		<div id="additional-info" class="tab-pane">
+			<p>Here is some additional information.</p>
+		</div>
+		<div id="videos" class="tab-pane">
+			<p>Here are some videos.</p>
+		</div>
+	</div>
+</div>
+<!-- <script>
+	document.querySelectorAll('.tab').forEach(tab => {
+		tab.addEventListener('click', function () {
+			document.querySelectorAll('.tab').forEach(item => item.classList.remove('active'));
+			document.querySelectorAll('.tab-pane').forEach(content => content.classList.remove('active'));
+
+			this.classList.add('active');
+			document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+		});
+	});
+</script> -->
 
 <!-- ============================================================== -->
 <!-- Start -our product -->
