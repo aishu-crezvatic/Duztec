@@ -148,7 +148,7 @@
 	<!-- ============================================================== -->
 	<!-- Start - Brand- Section -->
 	<!-- ============================================================= -->
-	<div class="brand-section">
+	<!-- <div class="brand-section">
 		<div class="container">
 			<div class="row brand-bg">
 				<div class="brand_list owl-carousel">
@@ -179,7 +179,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	

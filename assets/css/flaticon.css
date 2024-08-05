@@ -99,18 +99,79 @@
 .flaticon-home:before { content: "\f112"; }
 .flaticon-lifebuoy:before { content: "\f113"; }
 .flaticon-time:before { content: "\f114"; }
+
 .flaticon-square:before {
-  content: "\f101";
+  /* content: "\f101"; */
+
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/MiningIndustry-Icon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
 }
 .flaticon-hand:before {
   content: "\f102";
 }
 .flaticon-bar-chart:before {
-  content: "\f103";
+  /* content: "\f103"; */
+  content: "";
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    background-image: url('../images/Animated_Icons/Cement Industry Icon.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Adjust this based on your layout */
 }
 .flaticon-world:before {
-  content: "\f104";
+  /* content: "\f104"; */
+
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/ConstructionDemolition.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
 }
+.flaticon-metal-industry:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/Metal_Industry.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+
+.flaticon-ports-terminals-industry:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/PortIcon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+
+.feature-waste-recycling-industry:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/RecyclingIcon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+
+
 .flaticon-mail:before {
   content: "\f101";
 }

@@ -341,7 +341,6 @@ body {
     padding: 8px 0 8px;
     right: 0;
     background: #fff;
-    z-index: 999;
 }
 .sticky .header-menu ul li a:hover {
     color: #aac737;
@@ -1116,15 +1115,6 @@ body {
 
     /* z-index: 22 !important; */
 }
-.about-title{
-    color: #A6C438 !important;
-    text-shadow: 2px 2px black;
-
-}
-.greenText{
-    color: #A6C438 !important;
-
-}
 .breadcumn-section-about::before {
     content: ""; /* Required for pseudo-element */
     position: absolute;
@@ -1155,117 +1145,17 @@ body {
     padding-top: 13px;
     margin-bottom: 28px;
 }
-
-/* vision mission */
-.call-do-action-about{
-    background: url(../images/Homepage-Blue-Droplet-Bg.webp);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-}
-
-/* service boxes of about  */
-.sBox{
-    background-color: #E6E6E6 !important;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-}
-.sBox:hover h1, .sBox:hover p{
-    color: white;
-}
-
-/*  our team on about us page */
-
-
-.our_Team h1{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    font-size: 15vw;
-    /* letter-spacing: 12px; */
-    color: black;
-    opacity: 30%;
-    -webkit-text-stroke: 2px #ffffff;
-}
-.our_Team p{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    font-size: 4.2vw;
-}
-
-
-/* contact us about page */
-
-.overText{
-    position: absolute;
-    /* width: 100%; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.position-relative {
-    position: relative;
-}
-
-.Blackoverlay::before,
-.Blueoverlay::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; 
-}
-
-.Blackoverlay::before {
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.Blueoverlay::before {
-    background-color: rgba(0, 0, 128, 0.5); 
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: auto; 
-}
-
-.overText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; 
-    text-align: center;
-    color: white;
-}
-
-.bg-1 img{
-    opacity: 0.7;
-
-}
-
-
-
 .about-thumb {
     position: relative;
 }
 .about-thumb img {
     width: 100%;
-    animation: zoomin 0.5s linear;
-    animation-delay: 1s;
+    animation: zoomin 1s linear;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
     visibility: hidden;
+    border-radius: 28px;
+    box-shadow: rgb(158 186 54) 5px 5px, rgb(158 186 54) 10px 10px, rgb(158 186 54 / 49%) 15px 15px;
 }
 @keyframes zoomin{
     0%{
@@ -1275,6 +1165,31 @@ img {
     100%{
         transform: scale(1);
         visibility: visible;
+    }
+}
+.about-video-icon a {
+    position: absolute;
+    top: 43%;
+    right: 48%;
+    background: #aac737;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    animation: 1s linear 0s infinite normal none running white-blue;
+    transition: all 0.5s ease 0s;
+}
+.about-video-icon a i {
+    font-size: 22px;
+}
+@keyframes white-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgb(161 193 56 / 62%), 0 0 0 10px rgb(161 193 56 / 60%), 0 0 0 20px rgb(161 193 56 / 60%);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgb(161 193 56 / 62%), 0 0 0 10px rgb(161 193 56 / 60%), 0 0 0 20px rgb(161 193 56 / 60%);
     }
 }
 .section-title h5 {
@@ -2445,7 +2360,7 @@ a.btn2 i {
     margin: 9px auto 0;
 }
 .feature-icon i {
-    display: inline-block;
+    /* display: inline-block;
     font-size: 55px;
     color: #aac737;
     margin-top: 29px;
@@ -2456,13 +2371,13 @@ a.btn2 i {
     transition: .5s;
     position: relative;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 .single-feature-box:hover .feature-icon i{
-    color: #fff;
+    /* color: #fff; */
 }
 .feature-icon i:after{
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -2473,7 +2388,7 @@ a.btn2 i {
     transform: scale(0);
     transition: .5s;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 .single-feature-box:hover .feature-icon i:after{
     transform: scale(1);
@@ -4134,6 +4049,14 @@ input.email-control::placeholder{
     border: none;
     outline: 0;
 }
+.cta_button{
+    color: #fff;
+    border: none;
+    /* margin: 10px 10px; */
+    padding: 10px 20px;
+    background-image: linear-gradient(#3888DC, #2260a4);
+    font-weight: 700;
+}
 .button {
     float: right;
     font-size: 16px;
@@ -5398,7 +5321,7 @@ label.checkbox-control {
     margin-bottom: -67px;
     z-index: 1;
     border-radius: 5px;
-    background-image: url("../images/Drops.png");
+    background-image: url("../images/Drops.webp");
 }
 .brand_list .owl-dots {
     display: none;
