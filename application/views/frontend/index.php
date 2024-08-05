@@ -180,7 +180,7 @@
 						<i class="flaticon-bar-chart"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Marketing Plan</h2>
+						<h2>Cement Industry</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -192,7 +192,7 @@
 						<i class="flaticon-square"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Ios/Macos Apps</h2>
+						<h2>Mining Industry</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -204,7 +204,7 @@
 						<i class="flaticon-world"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Double Barrel System</h2>
+						<h2>Construction & Demolition Industry</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -213,10 +213,10 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
-						<i class="flaticon-bar-chart"></i>
+						<i class="flaticon-metal-industry"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Marketing Plan</h2>
+						<h2>Metal Industry</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -225,10 +225,10 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
-						<i class="flaticon-square"></i>
+						<i class="flaticon-ports-terminals-industry"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Ios/Macos Apps</h2>
+						<h2>Ports & Terminals Industry:</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -237,10 +237,10 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
-						<i class="flaticon-world"></i>
+						<i class="feature-waste-recycling-industry"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Double Barrel System</h2>
+						<h2>Waste & Recycling Industry:</h2>
 						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 					</div>
 
@@ -722,7 +722,7 @@
 <!-- ============================================================== -->
 <!-- Start - Brand- Section -->
 <!-- ============================================================= -->
-<div class="brand-section">
+<!-- <div class="brand-section">
 	<div class="container">
 		<div class="row brand-bg">
 			<div class="brand_list owl-carousel">
@@ -753,7 +753,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>

@@ -1,3 +1,43 @@
+
+
+<!-- ============================================================== -->
+<!-- Start - Brand- Section -->
+<!-- ============================================================= -->
+<div class="brand-section">
+    <div class="container">
+        <div class="row brand-bg">
+            <div class="brand_list owl-carousel">
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+                </div>
+				<div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+                </div>
+
+				
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ============================================================== -->
 <!-- Start - Footer- Section -->
 <!-- ============================================================= -->

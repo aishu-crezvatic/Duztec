@@ -341,7 +341,6 @@ body {
     padding: 8px 0 8px;
     right: 0;
     background: #fff;
-    z-index: 999;
 }
 .sticky .header-menu ul li a:hover {
     color: #aac737;
@@ -1265,10 +1264,12 @@ img {
 }
 .about-thumb img {
     width: 100%;
-    animation: zoomin 0.5s linear;
-    animation-delay: 1s;
+    animation: zoomin 1s linear;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
     visibility: hidden;
+    border-radius: 28px;
+    box-shadow: rgb(158 186 54) 5px 5px, rgb(158 186 54) 10px 10px, rgb(158 186 54 / 49%) 15px 15px;
 }
 @keyframes zoomin{
     0%{
@@ -1278,6 +1279,31 @@ img {
     100%{
         transform: scale(1);
         visibility: visible;
+    }
+}
+.about-video-icon a {
+    position: absolute;
+    top: 43%;
+    right: 48%;
+    background: #aac737;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    animation: 1s linear 0s infinite normal none running white-blue;
+    transition: all 0.5s ease 0s;
+}
+.about-video-icon a i {
+    font-size: 22px;
+}
+@keyframes white-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgb(161 193 56 / 62%), 0 0 0 10px rgb(161 193 56 / 60%), 0 0 0 20px rgb(161 193 56 / 60%);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgb(161 193 56 / 62%), 0 0 0 10px rgb(161 193 56 / 60%), 0 0 0 20px rgb(161 193 56 / 60%);
     }
 }
 .section-title h5 {
@@ -2448,7 +2474,7 @@ a.btn2 i {
     margin: 9px auto 0;
 }
 .feature-icon i {
-    display: inline-block;
+    /* display: inline-block;
     font-size: 55px;
     color: #aac737;
     margin-top: 29px;
@@ -2459,13 +2485,13 @@ a.btn2 i {
     transition: .5s;
     position: relative;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 .single-feature-box:hover .feature-icon i{
-    color: #fff;
+    /* color: #fff; */
 }
 .feature-icon i:after{
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -2476,7 +2502,7 @@ a.btn2 i {
     transform: scale(0);
     transition: .5s;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 .single-feature-box:hover .feature-icon i:after{
     transform: scale(1);
@@ -4137,6 +4163,14 @@ input.email-control::placeholder{
     border: none;
     outline: 0;
 }
+.cta_button{
+    color: #fff;
+    border: none;
+    /* margin: 10px 10px; */
+    padding: 10px 20px;
+    background-image: linear-gradient(#3888DC, #2260a4);
+    font-weight: 700;
+}
 .button {
     float: right;
     font-size: 16px;
@@ -5401,7 +5435,7 @@ label.checkbox-control {
     margin-bottom: -67px;
     z-index: 1;
     border-radius: 5px;
-    background-image: url("../images/Drops.png");
+    background-image: url("../images/Drops.webp");
 }
 .brand_list .owl-dots {
     display: none;
