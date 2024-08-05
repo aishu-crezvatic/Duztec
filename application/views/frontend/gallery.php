@@ -1,19 +1,85 @@
 <!-- header start  -->
 <?php $this->load->view('layout/header'); ?>
-<!-- Main Style CSS -->
-<link rel="stylesheet" href="assets/css/gallery.css" media="all" />
 <!-- header end  -->
-<div class="container">
-    <div class="row">
-    <main class='gallery'>
-  <div class='item' data-pos='0'><img src='https://images.unsplash.com/photo-1708247874023-f6d71a45113a?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-  <div class='item' data-pos='1'><img src='https://images.unsplash.com/photo-1437751059337-ea72d4f73fcf?q=80&w=2322&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-  <div class='item' data-pos='2'><img src='https://images.unsplash.com/photo-1515594515116-863345d8507c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-  <div class='item' data-pos='3'><img src='https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-  <div class='item' data-pos='4'><img src='https://images.unsplash.com/photo-1517953377824-516f2dca803b?q=80&w=2378&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'></div>
-</main>
+
+<?php
+$mediaItems  = [
+    'https://picsum.photos/seed/picsum/200/300',
+    'https://dummyimage.com/600x400/000/fff',
+    'https://dummyimage.com/300x500/09f/fff',
+    'https://dummyimage.com/600x300/09f/fff',
+    'https://dummyimage.com/200x200/09f/fff',
+    'https://dummyimage.com/300x600/09f/fff',
+    'https://dummyimage.com/300x200/09f/fff',
+    'https://picsum.photos/seed/picsum/200/300',
+    'https://dummyimage.com/600x400/000/fff',
+    'https://dummyimage.com/400x600/09f/fff',
+    'https://dummyimage.com/300x500/09f/fff',
+    'https://dummyimage.com/500x300/000/fff',
+    'https://dummyimage.com/200x200/09f/fff',
+    'https://dummyimage.com/600x300/09f/fff',
+    'https://dummyimage.com/300x600/09f/fff',
+];
+?>
+
+<h1 class="my-5 about-title">Gallery</h1>
+  <div class="grid">
+    <?php foreach ($mediaItems as $item): ?>
+        <div class="grid-item">
+            <div class="card">
+                <?php if (strpos($item, '.mp4') !== false): ?>
+                    <video controls>
+                        <source src="<?php echo $item; ?>" type="video/mp4">
+                    </video>
+                <?php else: ?>
+                    <img src="<?php echo $item; ?>" alt="Gallery Image">
+                <?php endif; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+  </div>
+
+
+
+
+
+<!-- ============================================================== -->
+<!-- Start - Brand- Section -->
+<!-- ============================================================= -->
+<div class="brand-section">
+    <div class="container">
+        <div class="row brand-bg">
+            <div class="brand_list owl-carousel">
+                <div class="brand-thumb">
+                    <img src="assets/images/item_01.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_02.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_03.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_04.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_01.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_02.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_03.png" alt="">
+                </div>
+                <div class="brand-thumb">
+                    <img src="assets/images/item_04.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<!-- start footer  -->
+
+
+<!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>
-<!-- footer end  -->
+<!-- Footer end  -->

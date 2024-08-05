@@ -1115,6 +1115,18 @@ body {
 
     /* z-index: 22 !important; */
 }
+.about-title{
+    color: #A6C438 !important;
+    text-shadow: 2px 2px black;
+
+}
+.greenText{
+    color: #A6C438 !important;
+
+}
+.navyText{
+    color: #2260A4 !important;
+}
 .breadcumn-section-about::before {
     content: ""; /* Required for pseudo-element */
     position: absolute;
@@ -1145,6 +1157,108 @@ body {
     padding-top: 13px;
     margin-bottom: 28px;
 }
+
+/* vision mission */
+.call-do-action-about{
+    background: url(../images/Homepage-Blue-Droplet-Bg.webp);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+/* service boxes of about  */
+.sBox{
+    background-color: #E6E6E6 !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+.sBox:hover h1, .sBox:hover p{
+    color: white;
+}
+
+/*  our team on about us page */
+
+
+.our_Team h1{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    /* letter-spacing: 12px; */
+    color: black;
+    opacity: 30%;
+    -webkit-text-stroke: 2px #ffffff;
+}
+.our_Team p{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 4.2vw;
+}
+
+
+/* contact us section of  about page */
+
+.overText{
+    position: absolute;
+    /* width: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.position-relative {
+    position: relative;
+}
+
+.Blackoverlay::before,
+.Blueoverlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.Blackoverlay::before {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.Blueoverlay::before {
+    background-color: rgba(0, 0, 128, 0.5); 
+}
+
+img {
+    display: block;
+    width: 100%;    
+    height: auto; 
+}
+
+.overText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    text-align: center;
+    color: white;
+}
+
+.bg-1 img{
+    opacity: 0.7;
+
+}
+
+
+
 .about-thumb {
     position: relative;
 }
@@ -1720,7 +1834,7 @@ a.btn2 i {
 .service-section {
     padding-top: 92px;
     padding-bottom: 120px;
-    background: #F5F6F9;
+    /* background: #F5F6F9; */
     position: relative;
     z-index: 1;
 }
@@ -5341,6 +5455,7 @@ label.checkbox-control {
 .brand-thumb img{
     transition: .5s;
     filter: grayscale(1);
+    width: 50% !important;
 }
 .brand-thumb img:hover{
     filter: grayscale(0);
@@ -5798,13 +5913,13 @@ button.btn-control {
 }
 
 .breadcumn-section-sector::before {
-    content: ""; /* Required for pseudo-element */
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 128, 0.5); /* Navy color with 50% opacity */
+    background-color: rgba(0, 0, 128, 0.5); 
 }
 
 .breadcumn-section-sector .container{
@@ -5812,11 +5927,9 @@ button.btn-control {
 }
 .breadcumn-section-sector h2{
     color: #A6C438 !important;
-    /* z-index: 22 !important; */
 }
 .breadcumn-section-sector .sectorStyle2{
     color: #A6C438 !important;
-    /* z-index: 22 !important; */
 }
 #industry-links li {
     list-style-type: none; /* Ensure no default list styling */
@@ -5877,5 +5990,180 @@ button.btn-control {
 }
 
 
+/* Product detail css */
+.breadcumn-section-prodDetail {
+    position: relative; /* Ensure the parent is positioned relatively to contain the pseudo-element */
+    background: url(../images/vlcsnap-2024-07-18-15h43m22s985.png);
+    padding-top: 280px;
+    padding-bottom: 107px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.breadcumn-section-prodDetail::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 128, 0.5); 
+}
+
+.breadcumn-section-prodDetail .container{
+    z-index: 1;
+}
+
+.priceReqBtn{
+    background-color: #2260A4 !important;
+}
+.top-corner{
+   font-size: 100px;
+   position: absolute;
+   top: 0;
+}
+
+.tab-container {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+.tab-container {
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 2px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: #83992E;
+}
+
+.tab:last-child {
+    margin-right: 0;
+}
+
+.tab.active {
+    background-color: #0056b3;
+    color: white;
+}
+
+.tab-content {
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@media (max-width:600px) {
+    .tab-container {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .tab {
+        padding: 0px;
+    }
+
+}
 
 
+
+/* !!!!!!!!!!!!!!! !  Contact us page   !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.addressBg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-om-map {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+.content-om-map p{
+    font-size: 1.5em;
+}
+
+.breadcumn-section-contact {
+    position: relative; /* Ensure the parent is positioned relatively to contain the pseudo-element */
+    background: url(../images/contact-us-banner.png);
+    padding-top: 400px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:425px) {
+    .content-om-map p{
+        font-size: 1em;
+    }
+    
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!! gallery page !!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery {
+    margin-top: 20px;
+  }
+  
+  .grid {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 20px;
+  }
+  
+  .grid .grid-item {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+  }
+  
+  .grid-item .card img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 1200px) {
+    .grid {
+      columns: 3;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      columns: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      columns: 1;
+    }
+  }

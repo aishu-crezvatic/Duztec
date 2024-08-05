@@ -164,6 +164,8 @@
 
 <!-- Add other scripts as necessary -->
  <script src="assets/js/gallery.js"></script> 
+<script src="assets/js/sectors.js"></script>
+<script src="assets/js/prod_detail.js"></script>
  
 
 <!-- bootstrap js -->
@@ -201,7 +203,6 @@
 <script src="assets/js/jquery.scrollUp.js"></script>
 <!-- theme js -->
 <script src="assets/js/theme.js"></script>
-<script src="assets/js/sectors.js"></script>
 <script>
         let index = 0;
         const slides = document.querySelectorAll('.slide');
