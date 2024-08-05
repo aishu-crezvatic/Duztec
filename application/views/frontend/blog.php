@@ -31,7 +31,7 @@
 				<div class="col-lg-8 col-md-12 col-sm-12">
 					<div class="single-blog-items">
 						<div class="blog-thumb">
-							<img src="assets/images/b2.jpg" alt="">
+							<img src="assets/images/Blog_Image_01 (1).webp" alt="">
 						</div>
 						<div class="single-blog-content">
 							<div class="blog-meta-top2">
@@ -54,7 +54,7 @@
 					</div>
 					<div class="single-blog-items">
 						<div class="blog-thumb">
-							<img src="assets/images/b1.jpg" alt="">
+							<img src="assets/images/Blog_Image_02 (1).webp" alt="">
 						</div>
 						<div class="single-blog-content">
 							<div class="blog-meta-top2">
@@ -77,7 +77,7 @@
 					</div>
 					<div class="single-blog-items">
 						<div class="blog-thumb">
-							<img src="assets/images/b3.jpg" alt="">
+							<img src="assets/images/Blog_Image_01 (1).webp" alt="">
 						</div>
 						<div class="single-blog-content">
 							<div class="blog-meta-top2">
@@ -98,7 +98,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="single-blog-items">
+					<!-- <div class="single-blog-items">
 						<div class="blog-thumb">
 							<img src="assets/images/b4.jpg" alt="">
 						</div>
@@ -120,8 +120,8 @@
 								<a href="blog-details.html">Read More</a>
 							</div>
 						</div>
-					</div>
-					<div class="single-blog-items">
+					</div> -->
+					<!-- <div class="single-blog-items">
 						<div class="blog-thumb">
 							<img src="assets/images/b5.jpg" alt="">
 						</div>
@@ -143,8 +143,8 @@
 								<a href="blog-details.html">Read More</a>
 							</div>
 						</div>
-					</div>
-					<div class="row">
+					</div> -->
+					<!-- <div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12">
 							<div class="pagination">
 								<ul>
@@ -157,7 +157,7 @@
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12">
 					<!-- <div class="latest-blog">

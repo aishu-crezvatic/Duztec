@@ -30,13 +30,13 @@
 				<div class="col-lg-8 col-md-12 col-sm-12">
 					<div class="single-blog-items style-2">
 						<div class="blog-thumb">
-							<img src="assets/images/b1.jpg" alt="">
+							<img src="assets/images/Blog_Image_02 (1).webp" alt="">
 						</div>
 						<div class="single-blog-content">
 							<div class="blog-meta-top2">
 								<span class="color"><i class="fas fa-calendar-alt"></i></span>
 								<span>July 27, 2022</span>
-								<span class="color"><i class="fas fa-comment"></i> 1 Comments</span>
+								<!-- <span class="color"><i clas	s="fas fa-comment"></i> 1 Comments</span> -->
 							</div>
 							<div class="blog-title">
 								<h2> Lorem Ipsum is simply dummy text of the <br>
@@ -83,8 +83,8 @@
 									inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 							</div>
 							<div class="blog-single-thumb">
-								<img src="assets/images/bb1.jpg" alt="blog-thumb">
-								<img src="assets/images/bb2.jpg" alt="blog-thumb"">
+								<img src="assets/images/Blog_Image_02 (1).webp" alt="blog-thumb">
+								<img src="assets/images/Blog_Image_01 (1).webp" alt="blog-thumb">
 							</div>
 							<div class="blog-social-icon text-center">
 								<ul>
@@ -94,57 +94,14 @@
 									<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
 								</ul>
 							</div>
-							<div class="blog-comment ">
-								<h3>Reviews</h3>
-								<div class="single-coments-items d-flex">
-									<div class="blog-comment-thumb">
-										<img src="assets/images/bb3.jpg" alt="">
-									</div>
-									<div class="blog-comment-title">
-										<h2>Tom Wilson</h2>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span class="cor"><i class="far fa-star"></i></span>
-										<div class="blog-date">
-											<span>June 26, 2020</span>
-										</div>
-										<div class="blog-comment-text">
-											<p>The second bedroom is a corner room with double windows. The kitchen has fabulous space
-												new appliances, and a laundry area. Other features include rich herringbone floors</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="blog-comment br-none">
-								<div class="single-coments-items d-flex">
-									<div class="blog-comment-thumb">
-										<img src="assets/images/bb4.jpg" alt="">
-									</div>
-									<div class="blog-comment-title">
-										<h2>Tom Wilson</h2>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span><i class="fas fa-star"></i></span>
-										<span class="cor"><i class="far fa-star"></i></span>
-										<div class="blog-date">
-											<span>June 26, 2020</span>
-										</div>
-										<div class="blog-comment-text">
-											<p>The second bedroom is a corner room with double windows. The kitchen has fabulous space
-												new appliances, and a laundry area. Other features include rich herringbone floors</p>
-										</div>
-									</div>
-								</div>
-							</div>
+							
+							
 							<div class="row">
 								<div class="col-lg-12 col-md-12">
 									<form id="contact_form3" action="mail.php" method="POST" >
 										<div class="row">
 											<div class="blog-drop-form style3">
-												<h2>Write A Review</h2>
+												<h2>Get in Touch</h2>
 											</div>
 											<div class="col-lg-6 col-md-6">
 												<div class="contact-form_2">
@@ -171,14 +128,14 @@
 												</div>
 											</div>
 											<div class="col-lg-12 col-md-12">
-												<div class="blog-checkbox">
+												<!-- <div class="blog-checkbox">
 													<input type="checkbox" class="checkbox-control2" name="vehicle1" value="Bike">
 													<label class="checkbox-control" for="vehicle1">Save my name, email, and website in this browser for the next time I comment.</label><br>
-												</div>
+												</div> -->
 											</div>
 											<div class="col-lg-12">
 												<div class="contact-button style3 text-right">
-													<input class="blog-button" type="submit" value="Post Comment"></i>
+													<input class="blog-button" type="submit" value="Send message"></i>
 												</div>
 											</div>
 										</div>
@@ -190,43 +147,6 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12">
-					<div class="latest-blog">
-						<div class="about-me text-center">
-							<div class="about-me-thumb">
-								<img src="assets/images/b3.png" alt="">
-							</div>
-							<div class="about-me-content">
-								<h3>Jehnny Rose</h3>
-								<span>Traveller/Photographer</span>
-								<div class="review">
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span class="cor"><i class="far fa-star"></i></span>
-									<span class="cor">(1 Review)</span>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore</p>
-							</div>
-							<div class="about-me-soical">
-								<a href="#"><i class="fab fa-facebook-f"></i></a>
-								<a href="#"><i class="fab fa-youtube"></i></a>
-								<a href="#"><i class="fab fa-linkedin-in"></i></a>
-								<a href="#"><i class="fab fa-pinterest"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="blog-src-bar">
-						<h2>Search Bar</h2>
-						<div class="src-bar">
-							<form id="contact_form2" action="mail2.php" method="POST">
-								<input type="email" placeholder="Search Blogs" class="blog-control" required>
-								<button class="blog-btn" type="submit"><i class="fas fa-search"></i></button>
-							</form>
-						</div>
-					</div>
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<form id="contact_form3" action="mail.php" method="POST" >
