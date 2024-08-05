@@ -27,7 +27,7 @@
 	<!-- ============================================================= -->
 	<div class="blogs-section">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-start">
 				<div class="col-lg-8 col-md-12 col-sm-12">
 					<div class="single-blog-items">
 						<div class="blog-thumb">
@@ -160,43 +160,7 @@
 					</div> -->
 				</div>
 				<div class="col-lg-4 col-md-12 col-sm-12">
-					<!-- <div class="latest-blog">
-						<div class="about-me text-center">
-							<div class="about-me-thumb">
-								<img src="assets/images/b3.png" alt="">
-							</div>
-							<div class="about-me-content">
-								<h3>Jehnny Rose</h3>
-								<span>Traveller/Photographer</span>
-								<div class="review">
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span><i class="fas fa-star"></i></span>
-									<span class="cor"><i class="far fa-star"></i></span>
-									<span class="cor">(1 Review)</span>
-								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore</p>
-							</div>
-							<div class="about-me-soical">
-								<a href="#"><i class="fab fa-facebook-f"></i></a>
-								<a href="#"><i class="fab fa-youtube"></i></a>
-								<a href="#"><i class="fab fa-linkedin-in"></i></a>
-								<a href="#"><i class="fab fa-pinterest"></i></a>
-							</div>
-						</div>
-					</div> -->
-					<!-- <div class="blog-src-bar">
-						<h2>Search Bar</h2>
-						<div class="src-bar">
-							<form id="contact_form2" action="mail2.php" method="POST">
-								<input type="email" placeholder="Search Blogs" class="blog-control" required>
-								<button class="blog-btn" type="submit"><i class="fas fa-search"></i></button>
-							</form>
-						</div>
-					</div> -->
+				
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<form id="contact_form3" action="mail.php" method="POST" >
