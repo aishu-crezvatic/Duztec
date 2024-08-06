@@ -1,41 +1,56 @@
+<!-- ============================================================== -->
+<!-- Floating icons of social media  Section -->
+<!-- ============================================================= -->
+
+<div class="floating-social-icons align-items-center">
+	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
+	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
+	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
+	<a href="#"><i class="fab fa-linkedin-in fs-3 navyText "></i></a>
+	<a href="#"><i class="fab fa-instagram fs-3 navyText " ></i></a>
+
+	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
+	<span></span>
+</div>
+
 
 
 <!-- ============================================================== -->
 <!-- Start - Brand- Section -->
 <!-- ============================================================= -->
 <div class="brand-section">
-    <div class="container">
-        <div class="row brand-bg">
-            <div class="brand_list owl-carousel">
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
-                </div>
+	<div class="container">
+		<div class="row brand-bg">
+			<div class="brand_list owl-carousel">
 				<div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
-                </div>
+					<img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+				</div>
 
-				
-            </div>
-        </div>
-    </div>
+
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- ============================================================== -->
@@ -49,7 +64,9 @@
 					<h2>About Us.</h2>
 				</div>
 				<div class="footer-text">
-					<p>We are experienced professionals who understand that It services is changing, and are true partners who care about your future business success.We are experienced professionals who understand that It services is changing,</p>
+					<p>We are experienced professionals who understand that It services is changing, and are true
+						partners who care about your future business success.We are experienced professionals who
+						understand that It services is changing,</p>
 				</div>
 				<div class="footer-address">
 					<div class="footer-social-icon">
@@ -159,14 +176,18 @@
 <!-- Load jQuery -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 <!-- Load jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Add other scripts as necessary -->
- <script src="assets/js/gallery.js"></script> 
+<script src="assets/js/gallery.js"></script>
 <script src="assets/js/sectors.js"></script>
 <script src="assets/js/prod_detail.js"></script>
- 
+
 
 <!-- bootstrap js -->
 <script src="assets/js/bootstrap.min.js"></script>
@@ -204,24 +225,24 @@
 <!-- theme js -->
 <script src="assets/js/theme.js"></script>
 <script>
-        let index = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slider = document.querySelector('.slider');
+	let index = 0;
+	const slides = document.querySelectorAll('.slide');
+	const slider = document.querySelector('.slider');
 
-        document.querySelector('.prev').addEventListener('click', () => {
-            index = (index > 0) ? index - 1 : slides.length - 1;
-            updateSlider();
-        });
+	document.querySelector('.prev').addEventListener('click', () => {
+		index = (index > 0) ? index - 1 : slides.length - 1;
+		updateSlider();
+	});
 
-        document.querySelector('.next').addEventListener('click', () => {
-            index = (index < slides.length - 1) ? index + 1 : 0;
-            updateSlider();
-        });
+	document.querySelector('.next').addEventListener('click', () => {
+		index = (index < slides.length - 1) ? index + 1 : 0;
+		updateSlider();
+	});
 
-        function updateSlider() {
-            slider.style.transform = `translateX(${-index * 100}%)`;
-        }
-    </script>
+	function updateSlider() {
+		slider.style.transform = `translateX(${-index * 100}%)`;
+	}
+</script>
 
 
 </body>

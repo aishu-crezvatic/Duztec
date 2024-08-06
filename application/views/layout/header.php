@@ -63,6 +63,10 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 right-side">
+                    <form class="d-inline">
+                        <input type="text" name="search" placeholder="Search..">
+                    </form>
+
                     <div class="social-icon">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-behance-square"></i></a>
@@ -84,6 +88,7 @@
                             </select>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -95,13 +100,16 @@
         <div class="container">
             <div class="menu-wrapper">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12">
+                    <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 55px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt=""
+                                    style="height: 55px; width:auto "></a>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-10 col-md-12">
+
                         <div class="header-menu">
+
                             <ul>
                                 <li><a href="index"> <i class="fas fa-home"></i></a>
 
@@ -154,7 +162,8 @@
                 <div class="col-lg-3">
                     <div class="logo-container">
                         <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img src="assets/images/fav-icon/transparent-logo.png" alt=""></a>
+                            <a class="mobile-logo" href="index.html"><img
+                                    src="assets/images/fav-icon/transparent-logo.png" alt=""></a>
                         </div>
                         <div class="menu-toggle">
                             <div class="icon">
