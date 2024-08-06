@@ -132,9 +132,9 @@
                                 </li>
                                 <li><a href="contact_us">Contact</a></li>
                             </ul>
-                            <div class="header-src-btn">
+                            <!-- <div class="header-src-btn">
                                 <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
-                            </div>
+                            </div> -->
                             <div class="header-button text-right">
                                 <a href="#">Enquire Now</a>
                             </div>
