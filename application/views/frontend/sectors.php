@@ -25,7 +25,7 @@
 <!-- ============================================================== -->
 <!-- Start - Service- Section -->
 <!-- ============================================================= -->
-<div class="portfolio-details single-style">
+<div class="portfolio-details single-style pt-4">
     <div class="container">
         <div class="row justify-content-between h-75">
             <div class="col-lg-7 col-md-12">
@@ -33,21 +33,21 @@
                     <img id="industry-main-image" src="assets/images/default.jpg" alt="" style="width:100%">
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 card">
+            <div class="col-lg-4 col-md-12 card col-12 p-0">
                 <div class="blog-content">
                     <h2 class="py-2 heading">All Sectors</h2>
                 </div>
-                <div class="single-content">
+                <div class="single-content m-0">
                     <ul id="industry-links">
                         <!-- Links will be populated dynamically -->
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="row mt-5 align-items-start">
-            <div class="col-lg-8 col-md-8 col-8">
+        <div class="row mt-5 align-items-start ">
+            <div class="col-lg-8 col-md-8 col-12">
                 <div class="text1">
-                    <h2 id="industry-subtitle" class="py-4 heading">Industry</h2>
+                    <h2 id="industry-subtitle" class="py-4 heading" >Industry</h2>
                     <p id="industry-description" class="p-0 m-0">Description will be updated dynamically.</p>
                 </div>
             </div>
@@ -57,10 +57,8 @@
             </div>
         </div>
 
-
-        <!--!!!!!!!!!!!!!!!!!!!!!!!!! Related products !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-        <div class="service-section">
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! Related products !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <div class="service-section pt-4">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
@@ -77,8 +75,8 @@
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                             <!-- <div class="service-icon">
-                        <i class="flaticon-business-and-finance"></i>
-                    </div> -->
+						<i class="flaticon-business-and-finance"></i>
+					</div> -->
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -90,8 +88,8 @@
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                             <!-- <div class="service-icon">
-                        <i class="flaticon-briefcase"></i>
-                    </div> -->
+						<i class="flaticon-briefcase"></i>
+					</div> -->
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -103,8 +101,8 @@
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                             <!-- <div class="service-icon">
-                        <i class="flaticon-mail"></i>
-                    </div> -->
+						<i class="flaticon-mail"></i>
+					</div> -->
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -129,20 +127,15 @@
             </div>
         </div>
 
-
-
-
-
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <!-- Our workd -->
+        <!-- Our Work -->
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
         <div class="container row mt-5 justify-content-center gap-5">
-            <h2 class="heading">Our Work</h2>
-            <div class="col-4">
+            <h1 class="headin fs-1">Our Work</h1>
+            <div class="col-12 col-md-4">
                 <div class="slider-container" id="slider1">
                     <div class="slider">
-                        <!-- Slides will be populated dynamically -->
+                        <!-- Slides for Slider 1 will be populated dynamically -->
                     </div>
                     <div class="navigation">
                         <button class="prev" data-slider="slider1">&#10094;</button>
@@ -150,10 +143,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="slider-container" id="slider2">
                     <div class="slider">
-                        <!-- Slides will be populated dynamically -->
+                        <!-- Slides for Slider 2 will be populated dynamically -->
                     </div>
                     <div class="navigation">
                         <button class="prev" data-slider="slider2">&#10094;</button>
@@ -165,10 +158,9 @@
     </div>
 </div>
 
-
 <!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->
 
 <!-- Include the JavaScript file -->
-<script src="<?php echo base_url('assets/js/industry_details.js'); ?>"></script>
+<script src="<?php echo base_url() ?>assets/js/sectors.js"></script>

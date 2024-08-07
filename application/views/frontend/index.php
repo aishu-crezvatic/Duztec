@@ -32,7 +32,7 @@
 <!-- ============================================================== -->
 <!-- Start - About- Section -->
 <!-- ============================================================= -->
-<div class="about-section">
+<div class="about-section pb-0 ">
 	<div class="section-title">
 		<h1 class="text-center">ABOUT US</h1>
 	</div>
@@ -81,7 +81,7 @@
 <!-- ============================================================== -->
 <!-- Start -our product -->
 <!-- ============================================================= -->
-<div class="service-section">
+<div class="service-section pt-0 pt-md-4">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -167,7 +167,7 @@
 	<!-- ============================================================== -->
 <!-- Start - Feature- Section -->
 <!-- ============================================================= -->
-<div class="feature-section">
+<div class="feature-section pb-0">
 	<div class="container">
 
 		<div class="row">
@@ -256,14 +256,14 @@
 <div class="service-section pt-0">
     <div class="container">
         <div class="row">
-            <!-- <div class="col-lg-12 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="section-title text-center">
                     <h1>OUR GALLERY</h1>
                 </div>
-            </div> -->
+            </div>
 
 			<?php 
-			// $this->load->view('component/gallery');
+			$this->load->view('component/gallery');
 			 ?>
         </div>
     </div>
@@ -277,7 +277,7 @@
 <!-- ============================================================== -->
 <!-- Start - Case-Study- Section -->
 <!-- ============================================================= -->
-<div class="case-study-section">
+<div class="case-study-section pt-0">
 	<div class="container-fluid">
 	<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -756,7 +756,7 @@
 
 
 <!-- Popup HTML -->
-<div id="auto-popup" class="popup">
+<!-- <div id="auto-popup" class="popup">
     <div class="popup-content">
         <span id="close-popup" class="close">&times;</span>
         <h2>Contact Us</h2>
@@ -780,7 +780,7 @@
             <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
-</div>
+</div> -->
 
 
 

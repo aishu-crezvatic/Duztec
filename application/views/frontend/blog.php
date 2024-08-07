@@ -25,7 +25,7 @@
 	<!-- ============================================================== -->
 	<!-- Start - Blog- Section -->
 	<!-- ============================================================= -->
-	<div class="blogs-section">
+	<div class="blogs-section pt-4">
 		<div class="container">
 			<div class="row align-items-start">
 				<div class="col-lg-8 col-md-12 col-sm-12">

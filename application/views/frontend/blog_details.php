@@ -24,7 +24,7 @@
 	<!-- ============================================================== -->
 	<!-- Start - Blog- Section -->
 	<!-- ============================================================= -->
-	<div class="blogs-section">
+	<div class="blogs-section pt-4">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-12 col-sm-12">
@@ -97,51 +97,7 @@
 							
 							
 							<div class="row">
-								<div class="col-lg-12 col-md-12">
-									<form id="contact_form3" action="mail.php" method="POST" >
-										<div class="row">
-											<div class="blog-drop-form style3">
-												<h2>Get in Touch</h2>
-											</div>
-											<div class="col-lg-6 col-md-6">
-												<div class="contact-form_2">
-													<form action="post">
-														<input class="contact-style_2" type="text" name="name" placeholder="Frist Name*" required>
-														<i class="fas fa-user"></i>
-													</form>
-												</div>
-											</div>
-											<div class="col-lg-6 col-md-6">
-												<div class="contact-form_2">
-													<form action="post">
-														<input class="contact-style_2" type="text" name="name" placeholder="Enter Email*" required>
-														<i class="fas fa-envelope"></i>
-													</form>
-												</div>
-											</div>
-											<div class="col-lg-12 col-md-12">
-												<div class="contact-form-msg-2 style3">
-													<form action="post">
-														<textarea name="text" class="contact-style-msg2" name="message" id="text" placeholder="Enter Message" cols="30" rows="10"></textarea>
-														<i class="fas fa-comment"></i>
-													</form>
-												</div>
-											</div>
-											<div class="col-lg-12 col-md-12">
-												<!-- <div class="blog-checkbox">
-													<input type="checkbox" class="checkbox-control2" name="vehicle1" value="Bike">
-													<label class="checkbox-control" for="vehicle1">Save my name, email, and website in this browser for the next time I comment.</label><br>
-												</div> -->
-											</div>
-											<div class="col-lg-12">
-												<div class="contact-button style3 text-right">
-													<input class="blog-button" type="submit" value="Send message"></i>
-												</div>
-											</div>
-										</div>
-									</form>
-									<p class="form-message"></p>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -262,42 +218,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- ============================================================== -->
-	<!-- Start - Brand- Section -->
-	<!-- ============================================================= -->
-	<div class="brand-section">
-		<div class="container">
-			<div class="row brand-bg">
-				<div class="brand_list owl-carousel">
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 <!-- Footer start  -->
  <?php $this->load->view('layout/footer'); ?>

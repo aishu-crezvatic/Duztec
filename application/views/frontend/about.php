@@ -26,16 +26,16 @@
 <!-- ============================================================== -->
 <!-- Start - About- Section -->
 <!-- ============================================================= -->
-<div class="about-section style-two style-three style-four style-five single-style">
+<div class="about-section style-two style-three style-four style-five single-style pt-0 pt-md-4 pt-lg-4">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-6 col-md-12">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-lg-4 col-md-12 ">
 				<div class="about-thumb">
-					<img src="assets/images/About Us Product Image.png" alt="">
+					<img src="assets/images/About Us Product Image.png" alt="" >
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
-				<div class="section-title p-0">
+				<div class="section-title p-">
 					<!-- <h5>// ABOUT COMPANY</h5> -->
 					<h1 class="lh-1">WE ARE QUALIFIELD & PROFESSIONAL</h1>
 					<!-- <h1>& Industries!</h1> -->
@@ -57,7 +57,7 @@
 <div class="call-do-action-about style-two">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-2 col-md-6">
+			<div class="col-lg-2 col-md-6 col-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>
 			<div class="col-lg-7 col-md-6 col-sm-12">
@@ -70,7 +70,7 @@
 
 			</div>
 			<div class="row justify-content-center mt-5">
-				<div class="col-lg-7 col-md-6 col-sm-12">
+				<div class="col-lg-7 col-md-6 col-sm-12 order-2 order-md-1 order-lg-1">
 					<h2 class="fw-bold about-title fs-1 py-2">OUR MISSION</h2>
 					<p class="text-white ">To focus on continuous product development, rapid delivery & long-term
 						cooperation with our customers. Our mission is to ensure that in every project we deliver
@@ -78,7 +78,7 @@
 						our partners, our customers, and the people in the communities where we operate.</p>
 
 				</div>
-				<div class="col-lg-2 col-md-6">
+				<div class="col-lg-2 col-md-6 col-6 order-1">
 					<!-- <div class="w-50"> -->
 					<img src="assets/images/MIssion.gif" alt="" class="w-100">
 					<!-- </div> -->
@@ -278,7 +278,7 @@
 					<h1>Contact Us</h1>
 				</div>
 			</div>
-			<div class="col-6 bg-1 position-relative Blackoverlay">
+			<div class="col-12 col-md-6 col-lg-6 bg-1 position-relative Blackoverlay">
 				<img src="assets/images/contact-bg-1.png" alt="">
 				<div class="overText text-start ">
 					<h2 class="text-white">We have much more, </h2>
@@ -286,7 +286,7 @@
 					<div class="btn bg-white fw-bold mt-2 px-2 rounded greenText">Collabrate with us &gt;</div>
 				</div>
 			</div>
-			<div class="col-6 position-relative Blueoverlay">
+			<div class="col-12 col-md-6 col-lg-6 position-relative Blueoverlay">
 				<img src="assets/images/contact-bg.png" alt="">
 				<div class="overText text-start">
 					<h2 class="text-white greenText">We are happy to help you </h2>

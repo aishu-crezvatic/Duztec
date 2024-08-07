@@ -46,7 +46,7 @@
 				</div>
 
 
-				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden" style="height:25vh">
+				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden">
 					<div class="item1 ">
 						<img src="assets/images/DB Product Image01.png" alt="Thumbnail 1">
 					</div>
@@ -61,7 +61,7 @@
 			</div>
 			<div class="col-lg-5 col-md-12">
 				<div class="blog-content">
-					<h2 class="fs-1">DOUBLE BARREL SYSTEM</h2>
+					<h2 class="fs-1 m-0">DOUBLE BARREL SYSTEM</h2>
 					<p class="fw-bold pt-4">Introducing the revolutionary <span class="navyText">Duztec Double
 							Barrel-DB</span> model, a cutting-edge solution for
 						efficient dust suppression and quenching in slag management. Engineered to tackle the challenges
@@ -93,71 +93,10 @@
 <!-- ============================================================== -->
 <!-- Start -informaition of  product -->
 <!-- ============================================================= -->
-<!-- <style>
-	.tab-container {
-		width: 80%;
-		margin: 50px auto;
-		border-radius: 8px;
-		padding: 20px;
-	}
 
-	.tabs {
-		display: flex;
-		margin-bottom: 20px;
-		background-color: #fff;
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-	}
-
-	.tab {
-		flex: 1;
-		text-align: center;
-		padding: 8px;
-		cursor: pointer;
-		margin-right: 2px;
-		transition: background-color 0.3s ease;
-		font-weight: bold;
-		color: #83992E;
-	}
-
-	.tab:last-child {
-		margin-right: 0;
-	}
-
-	.tab.active {
-		background-color: #0056b3;
-		color: white;
-	}
-
-	.tab-content {
-		padding: 20px;
-		border-radius: 0 0 8px 8px;
-	}
-
-	.tab-pane {
-		display: none;
-	}
-
-	.tab-pane.active {
-		display: block;
-	}
-
-	@media (max-width:600px) {
-		.tab-container {
-			width: 100%;
-			margin: 0px;
-			padding: 0px;
-		}
-
-		.tab {
-			padding: 0px;
-		}
-
-	}
-</style> -->
 
 <div class="tab-container">
-	<div class="tabs">
+	<div class="tabs align-items-center">
 		<div class="tab active" data-tab="description">Description</div>
 		<div class="tab" data-tab="additional-info">Additional Information</div>
 		<div class="tab" data-tab="videos">Videos</div>
@@ -194,7 +133,7 @@
 <!-- ============================================================== -->
 <!-- Start -our product -->
 <!-- ============================================================= -->
-<div class="service-section">
+<div class="service-section pt-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -262,46 +201,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
-<div class="brand-section">
-	<div class="container">
-		<div class="row brand-bg">
-			<div class="brand_list owl-carousel">
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
 
 
 
