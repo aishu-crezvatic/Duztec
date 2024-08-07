@@ -2313,6 +2313,7 @@ ul.sub-menu2 {
 }
 .header-menu-section {
     display: none !important;
+    /* display: none !important; */
 }
 .mobile-menu {
     background: transparent !important;
