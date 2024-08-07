@@ -102,8 +102,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt=""
-                                    style="height: 55px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 55px; width:auto "></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-12">
@@ -159,13 +158,17 @@
     <div class="mobile-menu">
         <div class="conainer">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="logo-container">
-                        <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img
-                                    src="assets/images/fav-icon/transparent-logo.png" alt=""></a>
+                <div class="col-lg-3 m-0 p-0">
+                    <div class="logo-container row justify-content-evenly ">
+                        <div class="header-logo col-4 col-md-4">
+                            <a class="mobile-logo  m-0" href="index.html"><img src="assets/images/data_tech_logo.png" alt=""></a>
                         </div>
-                        <div class="menu-toggle">
+                        <div class="col-4 overflow-hidde">
+                            <form class="d-inline">
+                                <input type="text" name="search" placeholder="Search..">
+                            </form>
+                        </div>
+                        <div class="menu-toggle col-2 text-end">
                             <div class="icon">
                                 <i class="fas fa-bars"></i>
                                 <i class="fas fa-times"></i>

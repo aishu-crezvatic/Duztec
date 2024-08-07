@@ -6376,13 +6376,16 @@ label.checkbox-control {
 --<	dreamit Footer Section Css -->
 ======================================================*/
 
+
 .floating-social-icons{
-    display: grid;
-    justify-content: end;
+
     position: fixed !important;
-    top: 65%;
-    right: 3%;
-    z-index: 99;
+    top: 50%;
+    right: 0%;
+    z-index: 2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 

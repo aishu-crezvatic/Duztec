@@ -2199,13 +2199,13 @@ a.mobile-logo {
 .header-menu2.active {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 45px;
     background: #f8f8f8;
     width: 220px;
     padding: 5px 25px 0 40px;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     height: auto;
 }
 .menu-toggle2 {
@@ -2241,7 +2241,7 @@ i.fas.fa-times {
 }
 .logo-container{
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: center;
 }
 .menu-toggle .icon.close .fa-times{
@@ -2249,6 +2249,12 @@ i.fas.fa-times {
 }
 .menu-toggle .icon.close .fa-bars{
     display: none;
+}
+.fa-bars:before {
+    color:red !important;
+}
+.fa-times:before{
+    color: red !important;
 }
 .menu-toggle {
     display: block;
@@ -2303,7 +2309,7 @@ ul.sub-menu2 {
     display: none !important;
 }
 .mobile-menu {
-    background: #D00A2B;
+    background: transparent !important;
     padding: 0 35px 0 10px;
     display: block;
 }

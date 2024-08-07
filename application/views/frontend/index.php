@@ -253,7 +253,7 @@
 <!-- Gallery- Section -->
 <!-- ============================================================= -->
 
-<div class="service-section">
+<div class="service-section pt-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">

@@ -2,12 +2,12 @@
 <!-- Floating icons of social media  Section -->
 <!-- ============================================================= -->
 
-<div class="floating-social-icons align-items-center">
+<div class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
 	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
 	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
 	<a href="#"><i class="fab fa-linkedin-in fs-3 navyText "></i></a>
-	<a href="#"><i class="fab fa-instagram fs-3 navyText " ></i></a>
+	<a href="#"><i class="fab fa-instagram fs-3 navyText "></i></a>
 
 	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
 	<span></span>
@@ -176,12 +176,8 @@
 <!-- Load jQuery -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 <!-- Load jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Add other scripts as necessary -->
 <script src="assets/js/gallery.js"></script>
