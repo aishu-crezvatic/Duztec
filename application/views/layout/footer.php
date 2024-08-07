@@ -211,9 +211,9 @@
 <!-- Wow Js -->
 <script src="assets/js/wow.min.js"></script>
 <!-- venobox js -->
-<script src="venobox/venobox.js"></script>
+<!-- <script src="venobox/venobox.js"></script> -->
 <!-- venobox min js -->
-<script src="venobox/venobox.min.js"></script>
+<!-- <script src="venobox/venobox.min.js"></script> -->
 <!-- jquery js -->
 <script src="assets/js/jquery.meanmenu.js"></script>
 <script src="assets/js/jquery.nav.js"></script>
@@ -221,9 +221,9 @@
 <!-- theme js -->
 <script src="assets/js/theme.js"></script>
 <script>
-	let index = 0;
-	const slides = document.querySelectorAll('.slide');
-	const slider = document.querySelector('.slider');
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.querySelector('.slider');
 
 	document.querySelector('.prev').addEventListener('click', () => {
 		index = (index > 0) ? index - 1 : slides.length - 1;
@@ -235,12 +235,67 @@
 		updateSlider();
 	});
 
+<!-- Popup -->
+<script>
+    // Function to show the popup
+	   function showPopup() {
+        document.getElementById('auto-popup').classList.add('show');
+    }
+    function showPopup() {
+        // document.getElementById('a');
+		// uto-popup').classList.add('show');
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        document.getElementById('auto-popup').classList.remove('show');
+    }
+
+    // Show the popup after 1-2 seconds
+    window.onload = function() {
+        setTimeout(showPopup, 1000); // 1500 milliseconds = 1.5 seconds
+    };
+
+    // Close the popup when the close button is clicked
+    document.getElementById('close-popup').onclick = function() {
+        hidePopup();
+    };
+
+    // Optionally close the popup if the user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('auto-popup')) {
+            hidePopup();
+        }
+    };
+
+    // Handle form submission (for demo purposes, just log the data)
+    document.getElementById('popup-form').onsubmit = function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        // Retrieve form data
+        const name = document.getElementById('name').value;
+        const contact = document.getElementById('contact').value;
+        const email = document.getElementById('email').value;
+        const comment = document.getElementById('comment').value;
+
+        // Log the data or send it via AJAX
+        console.log({
+            name: name,
+            contact: contact,
+            email: email,
+            comment: comment
+        });
+
+        // Hide the popup after form submission (optional)
+        hidePopup();
+
+        // You can also add AJAX form submission here if needed
+    };
+</script>
 	function updateSlider() {
 		slider.style.transform = `translateX(${-index * 100}%)`;
 	}
 </script>
-
-
 </body>
 
 </html>

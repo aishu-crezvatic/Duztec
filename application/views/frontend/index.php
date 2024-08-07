@@ -21,7 +21,7 @@
 						<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 					</div>
 					<div class="slider-video-icon">
-						<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
+						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
 						<!-- <span class="top">Watch Video</span> -->
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 				<div class="about-thumb">
 					<img src="assets/images/about-video-thumbnail.png" alt="">
 					<div class="about-video-icon">
-						<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
+						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
 					</div>
 				</div>
 			</div>
@@ -256,12 +256,11 @@
 <div class="service-section pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12">
+            <!-- <div class="col-lg-12 col-md-12">
                 <div class="section-title text-center">
-                    <!-- <h5>// WHAT WE Do</h5> -->
                     <h1>OUR GALLERY</h1>
                 </div>
-            </div>
+            </div> -->
 
 			<?php 
 			// $this->load->view('component/gallery');
@@ -754,6 +753,40 @@
 		</div>
 	</div>
 </div> -->
+
+
+<!-- Popup HTML -->
+<div id="auto-popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup" class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="popup-form">
+            <div class="form-group">
+                <label class="popup-label" for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label class="popup-label" for="contact">Contact Number</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label class="popup-label" for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label class="popup-label" for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
 
 <!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>

@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const industryDescription = document.getElementById('industry-description');
     const industryGalleryImage = document.getElementById('industry-gallery-image');
 
-    function populateIndustryLinks() {
-        industryLinksContainer.innerHTML = industries.map(industry => 
-            `<li class="py-3"><a href="#" data-id="${industry.id}" class="industry-link">${industry.name}</a></li>`
-        ).join('');
-    }
+    // function populateIndustryLinks() {
+    //     industryLinksContainer.innerHTML = industries.map(industry => 
+    //         `<li class="py-3"><a href="#" data-id="${industry.id}" class="industry-link">${industry.name}</a></li>`
+    //     ).join('');
+    // }
 
     function updateIndustryDetails(industry) {
         industryMainImage.src = industry.image;
@@ -130,18 +130,18 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(index);
     }
 
-    industryLinksContainer.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (event.target.classList.contains('industry-link')) {
-            const industryId = parseInt(event.target.getAttribute('data-id'));
-            const industry = industries.find(ind => ind.id === industryId);
-            updateIndustryDetails(industry);
-        }
-    });
+    // industryLinksContainer.addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     if (event.target.classList.contains('industry-link')) {
+    //         const industryId = parseInt(event.target.getAttribute('data-id'));
+    //         const industry = industries.find(ind => ind.id === industryId);
+    //         updateIndustryDetails(industry);
+    //     }
+    // });
 
     // Populate the industry links on page load and show the first industry's details
-    populateIndustryLinks();
-    if (industries.length > 0) {
-        updateIndustryDetails(industries[0]);
-    }
+    // populateIndustryLinks();
+    // if (industries.length > 0) {
+    //     updateIndustryDetails(industries[0]);
+    // }
 });
