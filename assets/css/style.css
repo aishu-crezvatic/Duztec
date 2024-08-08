@@ -5,6 +5,8 @@
     background-image: url("assets/images/WhiteBGDrops.png");
 } */
 
+
+
 body {
     background-image: url("../images/WhiteBGDrops.webp");
 }
@@ -210,6 +212,9 @@ body {
 /*====================================================
 --<	dreamit Header Menu Section Css -->
 ======================================================*/
+
+
+
 .header-menu-section {
     padding: 15px 0 5px;
 }
@@ -308,6 +313,54 @@ body {
     color: #fff;
 }
 
+
+/* Product dropdown */
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.position-relative:hover .sub-menu {
+    display: block;
+}
+
+.sub-prod {
+    display: none !important; 
+    position: absolute;
+    top: -10px;
+    left: 100%; 
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    list-style: none;
+    z-index: 1000;
+    width: 100%;
+}
+
+.drop-cat:hover ~ .sub-prod,
+.sub-prod:hover {
+    display: block !important;
+}
+
+.sub-menu a, .sub-prod a {
+    display: block !important;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.sub-menu a:hover, .sub-prod a:hover {
+    background-color: #f1f1f1;
+}
+
+
 .header-menu ul li .sub-menu {
     text-align: left;
     position: absolute;
@@ -389,7 +442,6 @@ body {
 .sticky .header-menu ul li a {
     color: #0a2c3d;
 }
-
 .sticky {
     left: 0;
     margin: auto;

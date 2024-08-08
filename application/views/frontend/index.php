@@ -12,7 +12,9 @@
 			<div class="col-lg-12 col-md-12">
 				<div class="slider-content text-center">
 					<!-- <h5 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">Optimized It System</h5>  -->
-					<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST <span>DUST SUPPRESSION SOLUTION</span></h2>
+					<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
+						<span>DUST SUPPRESSION SOLUTION</span>
+					</h2>
 					<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
 					<div class="slider-circle-thumb rotateme">
 						<img src="assets/images/shape3.png" alt="">
@@ -21,7 +23,8 @@
 						<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 					</div>
 					<div class="slider-video-icon">
-						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
+						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
+							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
 						<!-- <span class="top">Watch Video</span> -->
 					</div>
 				</div>
@@ -42,7 +45,8 @@
 				<div class="about-thumb">
 					<img src="assets/images/about-video-thumbnail.png" alt="">
 					<div class="about-video-icon">
-						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
+						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
+							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
 					</div>
 				</div>
 			</div>
@@ -57,7 +61,13 @@
 							<h2>DUST SUP­PRES­SION SYSTEMS</h2>
 						</div>
 						<div class="about-text">
-							<p>Established in 2018 & serving as market leader in Industrial Dust Control Solutions Duztec Engineering Pvt. Ltd. Is all about making the environment better by suppressing dust with high-end technologies. We serve first rate aid and give effective solutions for controlling dust emissions with our latest technologies. What sets us apart from the rest is that we bring in the proven Swedish technology! Offer site study, detailed engineering report for mitigating the dust emissions and ensure a clean environment for the entire community.</p>
+							<p>Established in 2018 & serving as market leader in Industrial Dust Control Solutions
+								Duztec Engineering Pvt. Ltd. Is all about making the environment better by suppressing
+								dust with high-end technologies. We serve first rate aid and give effective solutions
+								for controlling dust emissions with our latest technologies. What sets us apart from the
+								rest is that we bring in the proven Swedish technology! Offer site study, detailed
+								engineering report for mitigating the dust emissions and ensure a clean environment for
+								the entire community.</p>
 						</div>
 					</div>
 				</div>
@@ -164,7 +174,7 @@
 		</div>
 	</div> -->
 
-	<!-- ============================================================== -->
+<!-- ============================================================== -->
 <!-- Start - Feature- Section -->
 <!-- ============================================================= -->
 <div class="feature-section pb-0">
@@ -181,7 +191,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Cement Industry</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -193,7 +204,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Mining Industry</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -205,7 +217,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Construction & Demolition Industry</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -217,7 +230,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Metal Industry</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -229,7 +243,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Ports & Terminals Industry:</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -241,7 +256,8 @@
 					</div>
 					<div class="feature-content">
 						<h2>Waste & Recycling Industry:</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
+						</p>
 					</div>
 
 				</div>
@@ -253,20 +269,22 @@
 <!-- Gallery- Section -->
 <!-- ============================================================= -->
 
-<div class="service-section pt-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="section-title text-center">
-                    <h1>OUR GALLERY</h1>
-                </div>
-            </div>
+<div class="service-section pt-0 pt-md-5">
+	<div class="container">
+		<div class="row justify-content-center" >
+			<div class="col-lg-12 col-md-12">
+				<div class="section-title text-center pb-5">
+					<h1>OUR GALLERY</h1>
+				</div>
+			</div>
+			<div class="col-md-10 col-12">
+				<?php
+				$this->load->view('component/gallery');
+				?>
+			</div>
 
-			<?php 
-			$this->load->view('component/gallery');
-			 ?>
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
 
 
@@ -279,7 +297,7 @@
 <!-- ============================================================= -->
 <div class="case-study-section pt-0">
 	<div class="container-fluid">
-	<div class="row">
+		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center">
 					<!-- <h5>// WHAT WE Do</h5> -->
@@ -715,7 +733,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 <!-- ============================================================== -->
@@ -757,29 +775,29 @@
 
 <!-- Popup HTML -->
 <!-- <div id="auto-popup" class="popup">
-    <div class="popup-content">
-        <span id="close-popup" class="close">&times;</span>
-        <h2>Contact Us</h2>
-        <form id="popup-form">
-            <div class="form-group">
-                <label class="popup-label" for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label class="popup-label" for="contact">Contact Number</label>
-                <input type="text" id="contact" name="contact" required>
-            </div>
-            <div class="form-group">
-                <label class="popup-label" for="email">Email ID</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label class="popup-label" for="comment">Comment</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-    </div>
+	<div class="popup-content">
+		<span id="close-popup" class="close">&times;</span>
+		<h2>Contact Us</h2>
+		<form id="popup-form">
+			<div class="form-group">
+				<label class="popup-label" for="name">Name</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label class="popup-label" for="contact">Contact Number</label>
+				<input type="text" id="contact" name="contact" required>
+			</div>
+			<div class="form-group">
+				<label class="popup-label" for="email">Email ID</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label class="popup-label" for="comment">Comment</label>
+				<textarea id="comment" name="comment" rows="4" required></textarea>
+			</div>
+			<button type="submit" class="submit-btn">Submit</button>
+		</form>
+	</div>
 </div> -->
 
 

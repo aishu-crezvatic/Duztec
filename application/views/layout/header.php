@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/flaticon.css" media="all" />
     <!-- theme-default CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/template-default.css" media="all" />
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css"
+        media="all" />
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" media="all" />
@@ -41,6 +42,9 @@
     <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- responsive CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
 
 </head>
 
@@ -102,7 +106,8 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 55px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt=""
+                                    style="height: 55px; width:auto "></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-12">
@@ -116,21 +121,41 @@
                                 <li><a href="about">About Us</a>
 
                                 </li>
-                                <li><a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                <li class="position-relative">
+                                    <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
+                                        <li class="position-relative">
+                                            <div class="drop-cat">
+                                                <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
+                                            </div>
+                                            <ul class="sub-prod">
+                                                <li><a href="product">Mosquito</a></li>
+                                                <li><a href="product">Godust</a></li>
+                                                <li><a href="product">Mist Beams</a></li>
+                                                <li><a href="product">Double Barrel System</a></li>
+                                                <li><a href="product">HPDS</a></li>
+                                                <li><a href="product">SFDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="product">Odur Control System</a></li>
+                                        <li><a href="product">Waste Water Evaporation</a></li>
+                                        <li><a href="product">Road Washing System</a></li>
+                                        <li><a href="product">Fog Curtain</a></li>
+                                        <li><a href="product">Truck Mounted Mist Beams</a></li>
+                                        <li><a href="product">Trolly Mounted Mist Beams</a></li>
+                                        <li><a href="product">Cooling and Humidification</a></li>
                                     </ul>
                                 </li>
+
+
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="sectors">Sector</a></li>
                                     </ul>
                                 </li>
+
+                                <li><a href="gallery">Gallery</a></li>
+
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
@@ -161,7 +186,8 @@
                 <div class="col-lg-3 m-0 p-0">
                     <div class="logo-container row justify-content-evenly ">
                         <div class="header-logo col-4 col-md-4">
-                            <a class="mobile-logo m-0" href="index"><img src="assets/images/data_tech_logo.png" alt=""></a>
+                            <a class="mobile-logo m-0" href="index"><img src="assets/images/data_tech_logo.png"
+                                    alt=""></a>
                         </div>
                         <div class="col-6">
                             <form class="d-inline">
@@ -186,7 +212,7 @@
                             <li class="expand"><a class="menu_hide2" href="about">About Us
 
                                 </a>
-                                
+
                             </li>
                             <li class="expand"><a class="menu_hide3" href="#">products
                                     <div class="menu-toggle2">
@@ -197,18 +223,18 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open3 sub-menu2">
-                                <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
+                                    <li><a href="product">category</a></li>
                                 </ul>
                             </li>
                             <li class="expand"><a class="menu_hide4" href="sectors">Sectors
-                                    
+
                                 </a>
-                               
+
                             </li>
                             <li class="expand"><a class="menu_hide5" href="blog">Blog
                                     <!-- <div class="menu-toggle2">
