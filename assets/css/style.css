@@ -5,6 +5,8 @@
     background-image: url("assets/images/WhiteBGDrops.png");
 } */
 
+
+
 body {
     background-image: url("../images/WhiteBGDrops.webp");
 }
@@ -210,6 +212,9 @@ body {
 /*====================================================
 --<	dreamit Header Menu Section Css -->
 ======================================================*/
+
+
+
 .header-menu-section {
     padding: 15px 0 5px;
 }
@@ -308,6 +313,54 @@ body {
     color: #fff;
 }
 
+
+/* Product dropdown */
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.position-relative:hover .sub-menu {
+    display: block;
+}
+
+.sub-prod {
+    display: none !important; 
+    position: absolute;
+    top: -10px;
+    left: 100%; 
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    list-style: none;
+    z-index: 1000;
+    width: 100%;
+}
+
+.drop-cat:hover ~ .sub-prod,
+.sub-prod:hover {
+    display: block !important;
+}
+
+.sub-menu a, .sub-prod a {
+    display: block !important;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.sub-menu a:hover, .sub-prod a:hover {
+    background-color: #f1f1f1;
+}
+
+
 .header-menu ul li .sub-menu {
     text-align: left;
     position: absolute;
@@ -389,7 +442,6 @@ body {
 .sticky .header-menu ul li a {
     color: #0a2c3d;
 }
-
 .sticky {
     left: 0;
     margin: auto;
@@ -592,15 +644,38 @@ body {
 --<	dreamit Slider Menu Section Css -->
 ======================================================*/
 .slider-section {
-    background: linear-gradient(to left, rgba(2, 45, 98, 0) 0, #022d62 100%), linear-gradient(to left, rgba(2, 45, 98, 0) 0, #022d62 100%), transparent url(../images/slider.png);
+    position: relative;
+    height: 798px;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 798px;
-    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video stays behind other content */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 0; /* Ensure the overlay stays behind the content but above the video */
 }
 
 .slider-content {
+    position: relative;
+    z-index: 1;
     color: #fff;
 }
 
@@ -608,7 +683,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: Nunito;
+    font-family: 'Nunito', sans-serif;
     position: relative;
     color: #fff;
 }
@@ -628,15 +703,15 @@ body {
 .slider-content h1 {
     font-size: 80px;
     font-weight: bold;
-    font-family: Rajdhani;
+    font-family: 'Rajdhani', sans-serif;
     color: #fff;
-    /* margin: 28px 0 62px; */
+    margin: 28px 0 62px;
 }
 
 .slider-content h2 {
     font-size: 50px;
     font-weight: bold;
-    font-family: Rajdhani;
+    font-family: 'Rajdhani', sans-serif;
     margin-top: 32px;
     color: #fff;
 }
@@ -644,6 +719,16 @@ body {
 .slider-content h2 span {
     color: #A6C438;
 }
+
+
+
+
+
+
+
+
+
+
 
 .slider-circle-thumb.rotateme {
     position: absolute;
@@ -1280,7 +1365,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 219px;
+    top: 0px;
     left: 0;
 }
 
@@ -6882,6 +6967,10 @@ button.btn-control {
 /* ==========================================
     start sectors page  css
 =========================================*/
+
+.sectors-industries{
+    background-image: url("../images/Homepage-Blue-Droplet-Bg.webp");
+}
 .breadcumn-section-sector {
     position: relative;
     /* Ensure the parent is positioned relatively to contain the pseudo-element */
