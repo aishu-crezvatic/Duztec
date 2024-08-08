@@ -13,34 +13,34 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- <link rel="stylesheet" href="assets/css/gallery.css"> -->
     <!-- Favicon -->
-    <link rel="icon" sizes="56x56" href="assets/images/fevicon.png">
+    <link rel="icon" sizes="56x56" href="<?php echo base_url() ?>assets/images/fevicon.png">
     <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" media="all" />
     <!-- carousel CSS -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.min.css" media="all" />
     <!-- Animate Css -->
-    <link rel="stylesheet" href="assets/css/animate.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css" media="all" />
     <!-- font-awesome CSS -->
-    <link rel="stylesheet" href="assets/css/all.min.css" media="all" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/all.min.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/flaticon.css" media="all" />
     <!-- theme-default CSS -->
-    <link rel="stylesheet" href="assets/css/template-default.css" media="all" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/template-default.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css" media="all" />
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" media="all" />
     <!-- transitions CSS -->
-    <link rel="stylesheet" href="assets/css/owl.transitions.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.transitions.css" media="all" />
     <!-- venobox CSS -->
-    <!-- <link rel="stylesheet" href="venobox/venobox.css" media="all" /> -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>venobox/venobox.css" media="all" />
     <!-- animated CSS -->
-    <link rel="stylesheet" href="assets/css/animated-text.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animated-text.css" media="all" />
     <!-- widget CSS -->
-    <link rel="stylesheet" href="assets/css/widget.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/widget.css" media="all" />
     <!-- modernizr js -->
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- responsive CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
 
 </head>
 
@@ -102,8 +102,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt=""
-                                    style="height: 55px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 55px; width:auto "></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-12">
@@ -159,13 +158,17 @@
     <div class="mobile-menu">
         <div class="conainer">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="logo-container">
-                        <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img
-                                    src="assets/images/fav-icon/transparent-logo.png" alt=""></a>
+                <div class="col-lg-3 m-0 p-0">
+                    <div class="logo-container row justify-content-evenly ">
+                        <div class="header-logo col-4 col-md-4">
+                            <a class="mobile-logo m-0" href="index"><img src="assets/images/data_tech_logo.png" alt=""></a>
                         </div>
-                        <div class="menu-toggle">
+                        <div class="col-6">
+                            <form class="d-inline">
+                                <input type="text" name="search" placeholder="Search.." class="w-100 h-25 mobileSearch">
+                            </form>
+                        </div>
+                        <div class="menu-toggle col-2 text-end">
                             <div class="icon">
                                 <i class="fas fa-bars"></i>
                                 <i class="fas fa-times"></i>
@@ -176,43 +179,16 @@
                 <div class="col-lg-9 col-md-12">
                     <div class="header-menu2">
                         <ul>
-                            <li class="expand"><a class="menu_hide" href="#">Home
-                                    <div class="menu-toggle2">
-                                        <div class="icon2">
-                                            <span class="plus">+</span>
-                                            <span class="minus">-</span>
-                                        </div>
-                                    </div>
+                            <li class=""><a class="menu_hide" href="index">Home
+
                                 </a>
-                                <ul class="menu_open sub-menu2">
-                                    <li><a href="index.html">Home Page One</a></li>
-                                    <li><a href="index-2.html">Home Page Two</a></li>
-                                    <li><a href="index-3.html">Home Page Three</a></li>
-                                    <li><a href="index-4.html">Home Page Four</a></li>
-                                    <li><a href="index-5.html">Home Page Five</a></li>
-                                    <li><a href="landing-1.html">Landing Page One</a></li>
-                                    <li><a href="landing-2.html">Landing Page Two</a></li>
-                                </ul>
                             </li>
-                            <li class="expand"><a class="menu_hide2" href="#">Pages
-                                    <div class="menu-toggle2">
-                                        <div class="icon2">
-                                            <span class="plus">+</span>
-                                            <span class="minus">-</span>
-                                        </div>
-                                    </div>
+                            <li class="expand"><a class="menu_hide2" href="about">About Us
+
                                 </a>
-                                <ul class="menu_open2 sub-menu2">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="service.html">It Service</a></li>
-                                    <li><a href="single-service.html">Service Details</a></li>
-                                    <li><a href="case-study-details.html">Case Study</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                </ul>
+                                
                             </li>
-                            <li class="expand"><a class="menu_hide3" href="#">Service
+                            <li class="expand"><a class="menu_hide3" href="#">products
                                     <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
@@ -221,36 +197,33 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open3 sub-menu2">
-                                    <li><a href="service.html">It Service</a></li>
-                                    <li><a href="single-service.html">Service Details</a></li>
+                                <li><a href="product">category</a></li>
+                                        <li><a href="product">category</a></li>
+                                        <li><a href="product">category</a></li>
+                                        <li><a href="product">category</a></li>
+                                        <li><a href="product">category</a></li>
+                                        <li><a href="product">category</a></li>
                                 </ul>
                             </li>
-                            <li class="expand"><a class="menu_hide4" href="#">Case Study
-                                    <div class="menu-toggle2">
+                            <li class="expand"><a class="menu_hide4" href="sectors">Sectors
+                                    
+                                </a>
+                               
+                            </li>
+                            <li class="expand"><a class="menu_hide5" href="blog">Blog
+                                    <!-- <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
                                             <span class="minus">-</span>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </a>
-                                <ul class="menu_open4 sub-menu2">
-                                    <li><a href="case-study-details.html">Case Study</a></li>
-                                </ul>
-                            </li>
-                            <li class="expand"><a class="menu_hide5" href="#">Blog
-                                    <div class="menu-toggle2">
-                                        <div class="icon2">
-                                            <span class="plus">+</span>
-                                            <span class="minus">-</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <ul class="menu_open5 sub-menu2">
+                                <!-- <ul class="menu_open5 sub-menu2">
                                     <li><a href="blog.html">Blog</a></li>
                                     <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li><a href="contact-us.html">Contact</a>
+                            <li><a href="contact_us">Contact</a>
                             </li>
                         </ul>
                     </div>

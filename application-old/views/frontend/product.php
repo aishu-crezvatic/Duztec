@@ -25,12 +25,12 @@
 	<!-- ============================================================== -->
 	<!-- Start - Service- Section -->
 	<!-- ============================================================= -->
-	<div class="portfolio-section single-style">
+	<div class="portfolio-section single-style py-0 py-md-5 py-lg-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 xol-md-12">
 					<div class="section-title text-center"> 
-						<h1>Category Name</h1>
+						<h1 class="lh-1 mb-lg-5 mb-md-5 mb-0">Category Name</h1>
 					</div>
 				</div>
 			</div>

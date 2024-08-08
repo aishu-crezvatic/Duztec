@@ -1472,7 +1472,7 @@ img {
 .about-thumb img {
     width: 100%;
     animation: zoomin 1s linear;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     visibility: hidden;
     border-radius: 28px;
@@ -1560,7 +1560,7 @@ img {
 }
 
 .about-content {
-    margin-top: -12px;
+    margin-top: 12px;
     margin-left: 12px;
 }
 
@@ -1915,7 +1915,7 @@ img {
 }
 
 .single-style .about-thumb img {
-    width: inherit;
+    /* width: inherit; */
 }
 
 .single-style .section-title h5 {
@@ -1925,7 +1925,7 @@ img {
 .single-style.about-section .about-thumb {
     position: relative;
     z-index: 1;
-    left: 24%;
+    /* left: 24%; */
 }
 
 .single-style.about-section .section-title h1 {
@@ -5660,7 +5660,7 @@ input.email-control::placeholder {
     box-shadow: 6px 5px 16px 0px rgb(0 0 0 / 15%);
     position: relative;
     width: 90%;
-    top: -136px;
+    top: -48px;
     left: 0;
     right: 0;
     margin: auto;
@@ -6376,13 +6376,16 @@ label.checkbox-control {
 --<	dreamit Footer Section Css -->
 ======================================================*/
 
+
 .floating-social-icons{
-    display: grid;
-    justify-content: end;
+
     position: fixed !important;
-    top: 65%;
-    right: 3%;
-    z-index: 99;
+    top: 50%;
+    right: 0%;
+    z-index: 2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -6925,7 +6928,16 @@ button.btn-control {
     color: inherit;
     /* Optional: Inherit color from parent, or set a specific color */
 }
+#industry-links li {
+    padding: 10px;
+    list-style: none; 
+}
 
+#industry-links .active {
+    background-color: #A6C438;
+    color: white;
+    font-weight:900;
+}
 .portfolio-details .heading {
     color: #1C5093 !important;
 }

@@ -2199,13 +2199,13 @@ a.mobile-logo {
 .header-menu2.active {
     display: block;
     position: absolute;
-    top: 70px;
+    /* top: 45px; */
     background: #f8f8f8;
     width: 220px;
     padding: 5px 25px 0 40px;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     height: auto;
 }
 .menu-toggle2 {
@@ -2239,9 +2239,15 @@ i.fas.fa-times {
     font-size: 16px;
     text-decoration: none;
 }
+
+.mobileSearch{
+    border:none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .logo-container{
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: center;
 }
 .menu-toggle .icon.close .fa-times{
@@ -2249,6 +2255,12 @@ i.fas.fa-times {
 }
 .menu-toggle .icon.close .fa-bars{
     display: none;
+}
+.fa-bars:before {
+    color:red !important;
+}
+.fa-times:before{
+    color: red !important;
 }
 .menu-toggle {
     display: block;
@@ -2301,10 +2313,32 @@ ul.sub-menu2 {
 }
 .header-menu-section {
     display: none !important;
+    /* display: none !important; */
 }
 .mobile-menu {
-    background: #D00A2B;
+    background: transparent !important;
     padding: 0 35px 0 10px;
     display: block;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+}
+
+@media (max-width: 600px) {
+    #industry-links li {
+        padding:5px 10px !important;    
+    }
+}
+
+@media (max-width: 422px) {
+.overText{
+    /* width: 100% !important; */
+    /* padding: 0 10px !important; */
+}
+.overText h2{
+    font-size: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.overText btn{
+    font-size: 13px !important;
 }
 }

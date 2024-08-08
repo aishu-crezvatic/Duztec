@@ -24,7 +24,7 @@
 <!-- ============================================================== -->
 <!-- Start - Contact-Us- Section -->
 <!-- ============================================================= -->
-<div class="contact-us single-style">
+<div class="contact-us single-style pb-4"  >
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-4 col-md-6">
@@ -66,7 +66,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
-							<div class="row">
+							<div class="row justify-content-center">
 								<div class="col-lg-6 col-md-6">
 									<div class="contact-form">
 										<form action="post">
@@ -119,10 +119,10 @@
 										</form>
 									</div>
 								</div>
-								<div class="col-lg-12">
+								<div class="col-lg-12 col-6 ">
 									<div class="contact-button text-right ">
-										<input class="button py-2 priceReqBtn px-4" type="submit" value="Submit"><i
-											class="fas fa-arrow-right"></i>
+										<input class="button py-2 priceReqBtn px-4" type="submit" value="Submit">
+										<!-- <i class="fas fa-arrow-right"></i> -->
 									</div>
 								</div>
 							</div>
