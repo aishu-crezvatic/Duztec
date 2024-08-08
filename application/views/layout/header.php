@@ -118,21 +118,40 @@
                                 <li><a href="about">About Us</a>
 
                                 </li>
-                                <li><a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                <li class="position-relative">
+                                    <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
+                                        <li class="position-relative">
+                                            <div class="drop-cat">
+                                                <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
+                                            </div>
+                                            <ul class="sub-prod">
+                                                <li><a href="product">Mosquito</a></li>
+                                                <li><a href="product">Godust</a></li>
+                                                <li><a href="product">Mist Beams</a></li>
+                                                <li><a href="product">Double Barrel System</a></li>
+                                                <li><a href="product">HPDS</a></li>
+                                                <li><a href="product">SFDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="product">Odur Control System</a></li>
+                                        <li><a href="product">Waste Water Evaporation</a></li>
+                                        <li><a href="product">Road Washing System</a></li>
+                                        <li><a href="product">Fog Curtain</a></li>
+                                        <li><a href="product">Truck Mounted Mist Beams</a></li>
+                                        <li><a href="product">Trolly Mounted Mist Beams</a></li>
+                                        <li><a href="product">Cooling and Humidification</a></li>
                                     </ul>
                                 </li>
+
+
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="sectors">Sector</a></li>
                                     </ul>
                                 </li>
+
+                                <li><a href="gallery">Gallery</a></li>
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
