@@ -285,7 +285,7 @@
 				</div>
 			</div>
 
-			<h3 class="text-center"> Add Gallery Slider</h3>
+			<?php $this->load->view('component/Gallery') ?>
 
 		</div>
 	</div>
