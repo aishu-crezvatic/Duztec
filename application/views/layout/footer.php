@@ -31,8 +31,6 @@
                 <div class="brand-thumb">
                     <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
                 </div>
-
-				
             </div>
         </div>
     </div>
@@ -94,7 +92,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-logo">
-					<img style="width: 100%;" src="assets/images/duztecLogo-PNG.PNG" alt="">
+					<img style="width: 100%;" src="assets/images/duztecLogo.png" alt="">
 					<!-- <img src="assets/images/fav-icon/transparent-logo.png" alt=""> -->
 				</div>
 				<div class="footer-right-text">

@@ -41,45 +41,6 @@ $mediaItems  = [
 
 
 
-
-
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
-<div class="brand-section">
-    <div class="container">
-        <div class="row brand-bg">
-            <div class="brand_list owl-carousel">
-                <div class="brand-thumb">
-                    <img src="assets/images/item_01.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_02.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_03.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_04.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_01.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_02.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_03.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/item_04.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

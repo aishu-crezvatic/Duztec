@@ -1257,7 +1257,14 @@ img {
 
 }
 
-
+.bg-blue{
+    background-image: url('../images/rectangle-bg-blue.webp'); /* Replace with your image URL */
+    background-size: cover; /* Adjusts the background image to cover the entire area */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center; /* Centers the background image */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 .about-thumb {
     position: relative;
@@ -1268,8 +1275,12 @@ img {
     animation-delay: 3s;
     animation-fill-mode: forwards;
     visibility: hidden;
+   
+}
+
+.about-thumb-border img{
     border-radius: 28px;
-    box-shadow: rgb(158 186 54) 5px 5px, rgb(158 186 54) 10px 10px, rgb(158 186 54 / 49%) 15px 15px;
+    box-shadow: rgb(158 186 54) 5px 5px, rgb(158 186 54) 10px 10px;
 }
 @keyframes zoomin{
     0%{

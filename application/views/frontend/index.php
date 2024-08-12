@@ -39,7 +39,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
-				<div class="about-thumb">
+				<div class="about-thumb about-thumb-border">
 					<img src="assets/images/about-video-thumbnail.png" alt="">
 					<div class="about-video-icon">
 						<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
@@ -169,11 +169,12 @@
 <!-- ============================================================= -->
 <div class="feature-section">
 	<div class="container">
-
-		<div class="row">
-			<div class="section-title text-center">
+	<div class="section-title text-center">
 				<h1>SECTORS/INDUSTRIES</h1>
 			</div>
+		<div class="row bg-blue">
+			
+			
 			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
@@ -245,7 +246,7 @@
 					</div>
 
 				</div>
-			</div>
+			</div> 
 		</div>
 	</div>
 </div>
@@ -253,22 +254,21 @@
 <!-- Gallery- Section -->
 <!-- ============================================================= -->
 
-<div class="service-section">
+<!-- <div class="service-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="section-title text-center">
-                    <!-- <h5>// WHAT WE Do</h5> -->
                     <h1>OUR GALLERY</h1>
                 </div>
-            </div>
+            </div> -->
 
 			<?php 
 			// $this->load->view('component/gallery');
 			 ?>
-        </div>
+        <!-- </div>
     </div>
-</div>
+</div> -->
 
 
 

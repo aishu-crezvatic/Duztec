@@ -57,9 +57,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-8">
                     <div class="dreamit-top-address">
-                        <span>Call Us: +1 800 123 456 789 </span>
+                        <span>Call Us: +91 9137657039 </span>
                         <span>-</span>
-                        <span>Mail Us: Example@gmail.com </span>
+                        <span>Mail Us: sales@duztec.in </span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 right-side">
@@ -74,7 +74,7 @@
                     <div class="option-form-thumb">
                         <img src="assets/images/flag.png" alt="">
                     </div>
-                    <div class="option-form">
+                    <!-- <div class="option-form">
                         <form action="action">
                             <select class="option">
                                 <option class="form-option" value="volvo">EN</option>
@@ -83,7 +83,7 @@
                                 <option class="form-option" value="audi">AR</option>
                             </select>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 55px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-12">
@@ -130,6 +130,7 @@
                                         <li><a href="blog_details">Blog Details</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="gallery">Gallery</a></li>
                                 <li><a href="contact_us">Contact</a></li>
                             </ul>
                             <div class="header-src-btn">
@@ -154,7 +155,7 @@
                 <div class="col-lg-3">
                     <div class="logo-container">
                         <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img src="assets/images/fav-icon/transparent-logo.png" alt=""></a>
+                            <a class="mobile-logo" href="index.html"><img src="assets/images/data_tech_logo.png" alt=""></a>
                         </div>
                         <div class="menu-toggle">
                             <div class="icon">
