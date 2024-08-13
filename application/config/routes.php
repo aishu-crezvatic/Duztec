@@ -57,3 +57,5 @@ $route['product'] = 'Product';
 $route['sector'] = 'Sec­tors';
 
 $route['translate_uri_dashes'] = FALSE;
+// Product detail page
+$route['product_detail/(:any)'] = "product_detail/index/$1"; 

@@ -3,6 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product_category extends CI_Controller {
 
+	public function __construct()
+    {
+        parent::__construct();
+        // Load the Frontend_model
+        $this->load->model('frontend_model');
+        
+    }
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +28,8 @@ class Product_category extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('frontend/product_category');
+		$data['category_data'] = $this->frontend_model->productCategory();
+
+		$this->load->view('frontend/product_category', $data); 
 	}
 }

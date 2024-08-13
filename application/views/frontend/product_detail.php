@@ -1,5 +1,10 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); 
+// echo '<pre>';
+//          print_r($product_detail_data);
+//         exit;
+?>
+
 <!-- header end  -->
 
 <!-- ============================================================== -->
@@ -24,6 +29,12 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="all-products-section">
+<?php if (!empty($product_detail_data)) : ?>
+<?php foreach ($product_detail_data as $product): ?>
+	
 <!-- ============================================================== -->
 <!-- Start - Service- Section -->
 <!-- ============================================================= -->
@@ -34,10 +45,10 @@
 				<div class=" position-relative">
 					<div class="main-carousel owl-carousel">
 						<div class="item ">
-							<img src="assets/images/DB Product Image01.png" alt="Image 1">
+							<img src="<?php echo base_url() ?>assets/images/category_image.png" alt="Image 1">
 						</div>
 						<div class="item">
-							<img src="assets/images/DB Product Image03.png" alt="Image 2">
+							<img src="<?php echo base_url() ?>assets/images/DB Product Image03.png" alt="Image 2">
 						</div>
 
 						<!-- Add more items as needed -->
@@ -48,10 +59,10 @@
 
 				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden" style="height:25vh">
 					<div class="item1 ">
-						<img src="assets/images/DB Product Image01.png" alt="Thumbnail 1">
+						<img src="<?php echo base_url() ?>assets/images/DB Product Image01.png" alt="Thumbnail 1">
 					</div>
 					<div class="item1  ">
-						<img src="assets/images/DB Product Image03.png" alt="Thumbnail 2">
+						<img src="<?php echo base_url() ?>assets/images/DB Product Image03.png" alt="Thumbnail 2">
 					</div>
 
 					<!-- Add more thumbnails as needed -->
@@ -61,8 +72,8 @@
 			</div>
 			<div class="col-lg-5 col-md-12">
 				<div class="blog-content">
-					<h2 class="fs-1">DOUBLE BARREL SYSTEM</h2>
-					<p class="fw-bold pt-4">Introducing the revolutionary <span class="navyText">Duztec Double
+					<h2 class="fs-1"><?php echo $product['name']; ?></h2>
+					<!-- <p class="fw-bold pt-4">Introducing the revolutionary <span class="navyText">Duztec Double
 							Barrel-DB</span> model, a cutting-edge solution for
 						efficient dust suppression and quenching in slag management. Engineered to tackle the challenges
 						of dust emissions during industrial processes, this innovative system incorporates specially
@@ -73,7 +84,8 @@
 						the heated slag, promoting effective quenching, while the other focuses on suppressing the dust
 						generated during the process. This dual-action approach not only enhances the overall efficiency
 						of slag management but also contributes to a cleaner and safer working environment.
-					</p>
+					</p> -->
+					<p class="fw-bold pt-4"><?php echo $product['description']; ?></p>
 					<div><span class="navyText fw-semibold">SKU :</span> lorem ipsum</div>
 					<div><span class="navyText fw-semibold">Category : </span>lorem ipsum</div>
 
@@ -83,78 +95,11 @@
 						<div class="btn px-2 text-white fw-bold priceReqBtn">PRICE REQUEST</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
 </div>
 
-<!-- ============================================================== -->
-<!-- Start -informaition of  product -->
-<!-- ============================================================= -->
-<!-- <style>
-	.tab-container {
-		width: 80%;
-		margin: 50px auto;
-		border-radius: 8px;
-		padding: 20px;
-	}
-
-	.tabs {
-		display: flex;
-		margin-bottom: 20px;
-		background-color: #fff;
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-	}
-
-	.tab {
-		flex: 1;
-		text-align: center;
-		padding: 8px;
-		cursor: pointer;
-		margin-right: 2px;
-		transition: background-color 0.3s ease;
-		font-weight: bold;
-		color: #83992E;
-	}
-
-	.tab:last-child {
-		margin-right: 0;
-	}
-
-	.tab.active {
-		background-color: #0056b3;
-		color: white;
-	}
-
-	.tab-content {
-		padding: 20px;
-		border-radius: 0 0 8px 8px;
-	}
-
-	.tab-pane {
-		display: none;
-	}
-
-	.tab-pane.active {
-		display: block;
-	}
-
-	@media (max-width:600px) {
-		.tab-container {
-			width: 100%;
-			margin: 0px;
-			padding: 0px;
-		}
-
-		.tab {
-			padding: 0px;
-		}
-
-	}
-</style> -->
 
 <div class="tab-container">
 	<div class="tabs">
@@ -179,17 +124,13 @@
 		</div>
 	</div>
 </div>
-<!-- <script>
-	document.querySelectorAll('.tab').forEach(tab => {
-		tab.addEventListener('click', function () {
-			document.querySelectorAll('.tab').forEach(item => item.classList.remove('active'));
-			document.querySelectorAll('.tab-pane').forEach(content => content.classList.remove('active'));
-
-			this.classList.add('active');
-			document.getElementById(this.getAttribute('data-tab')).classList.add('active');
-		});
-	});
-</script> -->
+<?php endforeach; ?>
+			<?php else : ?>
+				<div class="col-lg-12">
+					<p>No product found.</p>
+				</div>
+			<?php endif; ?>
+</div>
 
 <!-- ============================================================== -->
 <!-- Start -our product -->
@@ -208,7 +149,7 @@
 			<div class="service_list owl-carousel">
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
+						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
@@ -221,7 +162,7 @@
 				</div>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
+						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-briefcase"></i>
@@ -234,7 +175,7 @@
 				</div>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
+						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-mail"></i>
@@ -252,55 +193,16 @@
 
 	<div class="shape-thumb">
 		<div class="service-shape-thumb bounce-animate">
-			<img src="assets/images/shape2.png" alt="">
+			<img src="<?php echo base_url() ?>assets/images/shape2.png" alt="">
 		</div>
 		<div class="service-shape-thumb2 bounce-animate">
-			<img src="assets/images/shape4.png" alt="">
+			<img src="<?php echo base_url() ?>assets/images/shape4.png" alt="">
 		</div>
 		<div class="service-shape-thumb3 rotateme">
-			<img src="assets/images/service-shape.png" alt="">
+			<img src="<?php echo base_url() ?>assets/images/service-shape.png" alt="">
 		</div>
 	</div>
 </div>
-
-
-
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
-<div class="brand-section">
-	<div class="container">
-		<div class="row brand-bg">
-			<div class="brand_list owl-carousel">
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
 
 
 

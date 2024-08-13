@@ -3,6 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product_detail extends CI_Controller {
 
+	public function __construct()
+    {
+        parent::__construct();
+        // Load the Frontend_model
+        $this->load->model('frontend_model');
+    }
+
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -18,8 +26,10 @@ class Product_detail extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function index()
+	public function index($c_id)
 	{
-		$this->load->view('frontend/product_detail');
+		$data['product_detail_data'] = $this->frontend_model->product($c_id);
+
+		$this->load->view('frontend/product_detail', $data);
 	}
 }

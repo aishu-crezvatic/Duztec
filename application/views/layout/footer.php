@@ -1,35 +1,49 @@
+<!-- ============================================================== -->
+<!-- Floating icons of social media  Section -->
+<!-- ============================================================= -->
+
+<div class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
+	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
+	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
+	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
+	<a href="#"><i class="fab fa-linkedin-in fs-3 navyText "></i></a>
+	<a href="#"><i class="fab fa-instagram fs-3 navyText "></i></a>
+
+	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
+	<span></span>
+</div>
 
 
 <!-- ============================================================== -->
 <!-- Start - Brand- Section -->
 <!-- ============================================================= -->
 <div class="brand-section">
-    <div class="container">
-        <div class="row brand-bg">
-            <div class="brand_list owl-carousel">
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
-                </div>
+	<div class="container">
+		<div class="row brand-bg">
+			<div class="brand_list owl-carousel">
 				<div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
                 </div>
                 <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
                 </div>
                 <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
                 </div>
                 <div class="brand-thumb">
-                    <img src="assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -47,7 +61,9 @@
 					<h2>About Us.</h2>
 				</div>
 				<div class="footer-text">
-					<p>We are experienced professionals who understand that It services is changing, and are true partners who care about your future business success.We are experienced professionals who understand that It services is changing,</p>
+					<p>We are experienced professionals who understand that It services is changing, and are true
+						partners who care about your future business success.We are experienced professionals who
+						understand that It services is changing,</p>
 				</div>
 				<div class="footer-address">
 					<div class="footer-social-icon">
@@ -92,7 +108,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-logo">
-					<img style="width: 100%;" src="assets/images/duztecLogo.png" alt="">
+					<img style="width: 100%;" src="<?php echo base_url(); ?>assets/images/duztecLogo.png" alt="">
 					<!-- <img src="assets/images/fav-icon/transparent-logo.png" alt=""> -->
 				</div>
 				<div class="footer-right-text">
@@ -157,70 +173,211 @@
 <!-- Load jQuery -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 <!-- Load jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Add other scripts as necessary -->
- <script src="assets/js/gallery.js"></script> 
-<script src="assets/js/sectors.js"></script>
-<script src="assets/js/prod_detail.js"></script>
- 
+<script src="<?php echo base_url(); ?>assets/js/gallery.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/sectors.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/prod_detail.js"></script>
+
 
 <!-- bootstrap js -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 <!-- particles Js -->
-<script src="assets/js/particles.min.js"></script>
-<script src="assets/js/stats.js"></script>
-<script src="assets/js/jquery.appear.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/particles.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/stats.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.appear.js"></script>
 <!-- Ajax Mail -->
-<script src="assets/js/ajax-mail.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/ajax-mail.js"></script>
 <!-- carousel js -->
-<script src="assets/js/owl.carousel.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>
 <!-- counterup js -->
-<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.counterup.min.js"></script>
 <!-- Swiper JS -->
 <!-- waypoints js -->
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/waypoints.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.counterup.min.js"></script>
 <!-- Testimonial js -->
 <!-- imagesloaded js -->
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/imagesloaded.pkgd.min.js"></script>
 <!-- isotope js -->
-<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/isotope.pkgd.min.js"></script>
 <!-- animated js -->
-<script src="assets/js/animated-text.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/animated-text.js"></script>
 <!-- Wow Js -->
-<script src="assets/js/wow.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script>
 <!-- venobox js -->
-<script src="venobox/venobox.js"></script>
+<script src="<?php echo base_url(); ?>venobox/venobox.js"></script>
 <!-- venobox min js -->
-<script src="venobox/venobox.min.js"></script>
+<script src="<?php echo base_url(); ?>venobox/venobox.min.js"></script>
 <!-- jquery js -->
-<script src="assets/js/jquery.meanmenu.js"></script>
-<script src="assets/js/jquery.nav.js"></script>
-<script src="assets/js/jquery.scrollUp.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.meanmenu.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.nav.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.scrollUp.js"></script>
 <!-- theme js -->
-<script src="assets/js/theme.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/theme.js"></script>
 <script>
-        let index = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slider = document.querySelector('.slider');
+	let index = 0;
+	const slides = document.querySelectorAll('.slide');
+	const slider = document.querySelector('.slider');
 
-        document.querySelector('.prev').addEventListener('click', () => {
-            index = (index > 0) ? index - 1 : slides.length - 1;
-            updateSlider();
-        });
+	document.querySelector('.prev').addEventListener('click', () => {
+		index = (index > 0) ? index - 1 : slides.length - 1;
+		updateSlider();
+	});
 
-        document.querySelector('.next').addEventListener('click', () => {
-            index = (index < slides.length - 1) ? index + 1 : 0;
-            updateSlider();
-        });
+	document.querySelector('.next').addEventListener('click', () => {
+		index = (index < slides.length - 1) ? index + 1 : 0;
+		updateSlider();
+	});
 
-        function updateSlider() {
-            slider.style.transform = `translateX(${-index * 100}%)`;
+	function updateSlider() {
+		slider.style.transform = `translateX(${-index * 100}%)`;
+	}
+</script>
+
+
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "image",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "./assets/images/fevicon.png",
+                "width": 10,
+                "height": 15
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            // "value": 32,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
         }
-    </script>
-
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 300,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                // "size": 20,
+				"size": 50,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+</script>
 
 </body>
 

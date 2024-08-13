@@ -11,36 +11,37 @@
     <!-- Gallery css -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <!-- <link rel="stylesheet" href="assets/css/gallery.css"> -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/gallery.css">
     <!-- Favicon -->
-    <link rel="icon" sizes="56x56" href="assets/images/fevicon.png">
+    <link rel="icon" sizes="56x56" href="<?php echo base_url()?>assets/images/fevicon.png">
     <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" media="all" />
     <!-- carousel CSS -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.min.css" media="all" />
     <!-- Animate Css -->
-    <link rel="stylesheet" href="assets/css/animate.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css" media="all" />
     <!-- font-awesome CSS -->
-    <link rel="stylesheet" href="assets/css/all.min.css" media="all" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/all.min.css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/flaticon.css" media="all" />
     <!-- theme-default CSS -->
-    <link rel="stylesheet" href="assets/css/template-default.css" media="all" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/template-default.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css" media="all" />
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" media="all" />
     <!-- transitions CSS -->
-    <link rel="stylesheet" href="assets/css/owl.transitions.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.transitions.css" media="all" />
     <!-- venobox CSS -->
-    <link rel="stylesheet" href="venobox/venobox.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>venobox/venobox.css" media="all" />
     <!-- animated CSS -->
-    <link rel="stylesheet" href="assets/css/animated-text.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animated-text.css" media="all" />
     <!-- widget CSS -->
-    <link rel="stylesheet" href="assets/css/widget.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/widget.css" media="all" />
     <!-- modernizr js -->
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- responsive CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css" media="all" />
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
 
 </head>
 
@@ -63,6 +64,10 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 right-side">
+                    <form class="d-inline">
+                        <input type="text" name="search" placeholder="Search..">
+                    </form>
+
                     <div class="social-icon">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-behance-square"></i></a>
@@ -72,7 +77,7 @@
                         <span></span>
                     </div>
                     <div class="option-form-thumb">
-                        <img src="assets/images/flag.png" alt="">
+                        <img src="<?php echo base_url() ?>assets/images/flag.png" alt="">
                     </div>
                     <!-- <div class="option-form">
                         <form action="action">
@@ -95,13 +100,15 @@
         <div class="container">
             <div class="menu-wrapper">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12">
+                    <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
+                            <a class="menu-logo" href="index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-10 col-md-12">
+
                         <div class="header-menu">
+
                             <ul>
                                 <li><a href="index"> <i class="fas fa-home"></i></a>
 
@@ -109,21 +116,40 @@
                                 <li><a href="about">About Us</a>
 
                                 </li>
-                                <li><a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                <li class="position-relative">
+                                    <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
-                                        <li><a href="product">category</a></li>
+                                        <li class="position-relative">
+                                            <div class="drop-cat">
+                                                <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
+                                            </div>
+                                            <ul class="sub-prod">
+                                                <li><a href="product">Mosquito</a></li>
+                                                <li><a href="product">Godust</a></li>
+                                                <li><a href="product">Mist Beams</a></li>
+                                                <li><a href="product">Double Barrel System</a></li>
+                                                <li><a href="product">HPDS</a></li>
+                                                <li><a href="product">SFDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="product">Odur Control System</a></li>
+                                        <li><a href="product">Waste Water Evaporation</a></li>
+                                        <li><a href="product">Road Washing System</a></li>
+                                        <li><a href="product">Fog Curtain</a></li>
+                                        <li><a href="product">Truck Mounted Mist Beams</a></li>
+                                        <li><a href="product">Trolly Mounted Mist Beams</a></li>
+                                        <li><a href="product">Cooling and Humidification</a></li>
                                     </ul>
                                 </li>
+
+
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="sectors">Sector</a></li>
                                     </ul>
                                 </li>
+
+                                <li><a href="gallery">Gallery</a></li>
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
@@ -133,9 +159,9 @@
                                 <li><a href="gallery">Gallery</a></li>
                                 <li><a href="contact_us">Contact</a></li>
                             </ul>
-                            <div class="header-src-btn">
+                            <!-- <div class="header-src-btn">
                                 <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
-                            </div>
+                            </div> -->
                             <div class="header-button text-right">
                                 <a href="#">Enquire Now</a>
                             </div>
@@ -155,7 +181,7 @@
                 <div class="col-lg-3">
                     <div class="logo-container">
                         <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img src="assets/images/data_tech_logo.png" alt=""></a>
+                            <a class="mobile-logo" href="index.html"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt=""></a>
                         </div>
                         <div class="menu-toggle">
                             <div class="icon">
