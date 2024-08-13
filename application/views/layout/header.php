@@ -43,13 +43,51 @@
     <!-- responsive CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
 
+    <style>
+        /* Style for the loader */
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            /* You can change this to suit your design */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 <body class="bg-water">
 
-    <div id="preloader">
-        <div id="loader"></div>
+    <div id="loader">
+        <video id="loader-video" autoplay muted loop>
+            <source src="assets/video/DuztecPreloaderForWebsite.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+
+    <script>
+        // JavaScript to hide the loader after at least 4 seconds
+        window.addEventListener('load', function() {
+            // Minimum display time for the loader (in milliseconds)
+            const minLoaderTime = 4000;
+
+            // Get the loader and content elements
+            var loader = document.getElementById('loader');
+            var content = document.getElementById('content');
+
+            // Set a timeout to ensure the loader shows for at least 4 seconds
+            setTimeout(function() {
+                loader.style.display = 'none'; // Hide the loader
+                content.style.display = 'block'; // Show the content
+            }, minLoaderTime);
+        });
+    </script>
+
     <!-- ============================================================== -->
     <!-- Start - Header-Top- Section -->
     <!-- ============================================================= -->
