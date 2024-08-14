@@ -19,6 +19,30 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+    
+    public function productSubCategory()
+    {
+        $data = $this->db->select('*')
+            ->from('sub_category')
+            ->where('status = 1')
+            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    
+    public function product_with_cat_sub_cat()
+    {
+        $data = $this->db->select('*')
+            ->from('sub_category')
+            ->where('status = 1')
+            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
 
     public function product($c_id)
     {
