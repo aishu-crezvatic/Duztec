@@ -2,7 +2,8 @@
 <!-- Floating icons of social media  Section -->
 <!-- ============================================================= -->
 
-<div class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
+<div
+	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
 	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
 	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
@@ -34,26 +35,26 @@
 					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
 				</div>
 				<div class="brand-thumb">
-                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
-                </div>
-                <div class="brand-thumb">
-                    <img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/JSWSteel_Logo.png" alt="">
+				</div>
+				<div class="brand-thumb">
+					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- ============================================================== -->
 <!-- Start - Footer- Section -->
 <!-- ============================================================= -->
-<div class="footer-section">
+<div class="footer-section pb-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
@@ -132,14 +133,17 @@
 			</div>
 		</div>
 	</div>
+	<div class="footerImg">
+		<img src="assets/images/image_2024-08-13_171650657.png" alt="">
+	</div>
 </div>
 <!-- footer-copyright-section -->
-<div class="footer-bottom">
-	<div class="container">
-		<div class="row">
+<div class="footer-bottom p-0 ">
+	<div class="container ">
+		<div class="row align-items-center">
 			<div class="col-lg-6 col-md-6">
 				<div class="copy-right-text">
-					<p>© Dream-It 2022 All rights reserved.</p>
+					<p class="p-0">© Crezvatic 2024 All rights reserved.</p>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
@@ -249,134 +253,134 @@
 <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
 <script>
-particlesJS("particles-js", {
-    "particles": {
-        "number": {
-            "value": 80,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#ffffff"
-        },
-        "shape": {
-            "type": "image",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-            "image": {
-                "src": "./assets/images/fevicon.png",
-                "width": 10,
-                "height": 15
-            }
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            // "value": 32,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 300,
-                "line_linked": {
-                    "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                // "size": 20,
-				"size": 50,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": true
-});
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
+	particlesJS("particles-js", {
+		"particles": {
+			"number": {
+				"value": 80,
+				"density": {
+					"enable": true,
+					"value_area": 800
+				}
+			},
+			"color": {
+				"value": "#ffffff"
+			},
+			"shape": {
+				"type": "image",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 5
+				},
+				"image": {
+					"src": "./assets/images/fevicon.png",
+					"width": 10,
+					"height": 15
+				}
+			},
+			"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+					"enable": false,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				}
+			},
+			"size": {
+				// "value": 32,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": true,
+				"distance": 150,
+				"color": "#ffffff",
+				"opacity": 0.4,
+				"width": 1
+			},
+			"move": {
+				"enable": true,
+				"speed": 6,
+				"direction": "none",
+				"random": false,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 1200
+				}
+			}
+		},
+		"interactivity": {
+			"detect_on": "canvas",
+			"events": {
+				"onhover": {
+					"enable": true,
+					"mode": "repulse"
+				},
+				"onclick": {
+					"enable": true,
+					"mode": "push"
+				},
+				"resize": true
+			},
+			"modes": {
+				"grab": {
+					"distance": 300,
+					"line_linked": {
+						"opacity": 1
+					}
+				},
+				"bubble": {
+					"distance": 400,
+					// "size": 20,
+					"size": 50,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 3
+				},
+				"repulse": {
+					"distance": 200,
+					"duration": 0.4
+				},
+				"push": {
+					"particles_nb": 4
+				},
+				"remove": {
+					"particles_nb": 2
+				}
+			}
+		},
+		"retina_detect": true
+	});
+	var count_particles, stats, update;
+	stats = new Stats;
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	document.body.appendChild(stats.domElement);
+	count_particles = document.querySelector('.js-count-particles');
+	update = function () {
+		stats.begin();
+		stats.end();
+		if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+			count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+		}
+		requestAnimationFrame(update);
+	};
+	requestAnimationFrame(update);
 </script>
 
 </body>
