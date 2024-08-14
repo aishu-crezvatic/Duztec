@@ -56,6 +56,18 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+    public function about($id)
+    {
+        $data = $this->db->select('*')
+            ->from('about')
+            ->where('status = 1')
+            ->where('id', id)
+            ->order_by('id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
     // Blog
     public function blog($b_id)
     {
@@ -83,5 +95,6 @@ class Frontend_model extends CI_Model
         return $data;
     }
 
+    
 }
 /* End of file Index_model.php */
