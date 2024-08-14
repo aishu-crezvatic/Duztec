@@ -1,5 +1,9 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); 
+		//  echo '<pre>';
+		//           print_r($blog_derail);
+		//         exit;
+?>
 <!-- header end  -->
 <!-- ============================================================== -->
 	<!-- Start - Slider- Section -->

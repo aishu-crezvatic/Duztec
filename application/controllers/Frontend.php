@@ -8,14 +8,14 @@ class Frontend extends CI_Controller
         parent::__construct();
         // Load the Frontend_model
         $this->load->model('frontend_model');
-        
     }
 
-    public function index()
-    {
-        // Retrieve all data from the productCategory method
-       
-    }
+	public function index($b_id)
+	{
+		$data['blog_derail'] = $this->frontend_model->product($b_id);
+
+		$this->load->view('frontend/blog_details', $data);
+	}
 }
 
 /* End of file Frontend.php */

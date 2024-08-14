@@ -16,7 +16,7 @@ class Frontend_model extends CI_Model
             ->order_by('c_id ', 'asc')
             ->get()
             ->result_array();
-            // print_r($data);
+        // print_r($data);
         return $data;
     }
 
@@ -26,11 +26,38 @@ class Frontend_model extends CI_Model
             ->from('product')
             ->where('status = 1')
             ->where('c_id', $c_id)
-            ->order_by('p_id ', 'asc')
+            ->order_by('c_id ', 'asc')
             ->get()
             ->result_array();
-            // print_r($data);
+        // print_r($data);
         return $data;
     }
+    // Blog
+    public function blog($b_id)
+    {
+        $data = $this->db->select('*')
+            ->from('blogs')
+            ->where('status = 1')
+            ->where('b_id', $b_id)
+            ->order_by('b_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    // Blog_category
+    public function blog_caegory($b_id)
+    {
+        $data = $this->db->select('*')
+            ->from('blogs')
+            ->where('status = 1')
+            ->where('b_id', $b_id)
+            ->order_by('b_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+
 }
 /* End of file Index_model.php */
