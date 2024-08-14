@@ -56,10 +56,9 @@
 					</div>
 				</div>
 
-
 				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden" style="height:25vh">
 					<div class="item1 ">
-						<img src="<?php echo base_url() ?>assets/images/DB Product Image01.png" alt="Thumbnail 1">
+						<img src="<?php echo base_url() ?>assets/images/category_image.png" alt="Thumbnail 1">
 					</div>
 					<div class="item1  ">
 						<img src="<?php echo base_url() ?>assets/images/DB Product Image03.png" alt="Thumbnail 2">
