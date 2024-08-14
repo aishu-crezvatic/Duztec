@@ -136,7 +136,7 @@
 	<div class="footerImg">
 		<img src="assets/images/image_2024-08-13_171650657.png" alt="">
 	</div>
-</div>	
+</div>
 <!-- footer-copyright-section -->
 <div class="footer-bottom p-0 ">
 	<div class="container ">
@@ -157,22 +157,137 @@
 		</div>
 	</div>
 </div>
-<!--==================================================-->
-<!-- Start Search Popup Area -->
-<!--==================================================-->
-<div class="search-popup">
-	<button class="close-search style-two"><i class="fas fa-times"></i></button>
-	<button class="close-search"><i class="fas fa-arrow-up"></i></button>
-	<form method="post" action="#">
-		<div class="form-group">
-			<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-			<button type="submit"><i class="fas fa-search"></i></button>
+<!-- ============================================================== -->
+<!-- Start - Popup Form -->
+<!-- ============================================================= -->
+
+<style>
+	/* Popup Form Styles */
+	.popup-form {
+		display: none;
+		/* Hidden by default */
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+	}
+</style>
+</head>
+<div class="popup-form " id="popupForm">
+	<div class="container popup-content bg-white p-4 rounded shadow">
+
+		<div class="d-flex justify-content-between">
+			<h2>Request A Quote</h2>
+			<button class="close-popup bg-danger border-hidden rounded shadow" id="closePopup">X</button>
 		</div>
-	</form>
+		<form id="quoteForm" class="row">
+			<div class="form-group col-12 col-md-6 col-lg-6">
+				<label for="name" class="navyText fw-bold">Name:</label>
+				<input type="text" id="name" name="name" class="form-control" required>
+			</div>
+			<div class="form-group col-12 col-md-6 col-lg-6">
+				<label for="email" class="navyText fw-bold">Email:</label>
+				<input type="email" id="email" name="email" class="form-control" required>
+			</div>
+			<div class="form-group col-12 col-md-6 col-lg-6">
+				<label for="product" class="navyText fw-bold">Product:</label>
+				<select id="product" name="product" class="form-control " required>
+					<option value="" disabled selected>Select from below</option>
+					<option value="Dust Suppression">Dust Suppression</option>
+					<option value="Wastewater Evaporation">Wastewater Evaporation</option>
+					<option value="Odour Control System">Odour Control System</option>
+					<option value="Road Washing System">Road Washing System</option>
+					<option value="Fog Curtains">Fog Curtains</option>
+					<option value="Vehicle Mounted">Vehicle Mounted</option>
+					<option value="Cooling and Humidification">Cooling and Humidification</option>
+					<option value="Slag Management">Slag Management</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+			<div class="form-group col-12 col-md-6 col-lg-6">
+				<label for="phone" class="navyText fw-bold">Phone:</label>
+				<input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 9876543210">
+			</div>
+			<div class="form-group col-12">
+				<label for="comment" class="navyText fw-bold">Comment:</label>
+				<textarea id="comment" name="comment" rows="4" class="form-control"></textarea>
+			</div>
+			<div class="form-group col-12 col-md-6 col-lg-6">
+				<label class="navyText fw-bold">Captcha:</label>
+				<div class="captcha ">
+					<span id="captchaQuestion">Loading...</span>
+					<input type="text" id="captcha" name="captcha" class="form-control" required>
+				</div>
+			</div>
+			<div class="form-group col-12 mt-2">
+				<button class="btn btn-success w-100" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
 </div>
-<!--==================================================-->
-<!-- End Search Popup Area -->
-<!--==================================================-->
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const popupForm = document.getElementById('popupForm');
+        const closePopup = document.getElementById('closePopup');
+        const captchaQuestion = document.getElementById('captchaQuestion');
+        let captchaAnswer;
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+            const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+            captchaAnswer = num1 + num2;
+            captchaQuestion.textContent = `${num1} + ${num2} =`;
+        }
+
+        function showPopup() {
+            popupForm.style.display = 'flex';
+            generateCaptcha(); // Generate captcha when popup is shown
+        }
+
+        // Show popup on page load
+        showPopup();
+
+        // Close popup when the close button is clicked
+        closePopup.addEventListener('click', () => {
+            popupForm.style.display = 'none';
+        });
+
+        // Show popup only if the user hasn't visited in the past 2 minutes
+        const lastVisit = localStorage.getItem('lastVisit');
+        const now = new Date().getTime();
+
+        if (lastVisit !== null && now - lastVisit > 120000) { // 120000 milliseconds = 2 minutes
+            showPopup();
+        }
+
+        localStorage.setItem('lastVisit', new Date().getTime());
+
+        // Form submission handling
+        document.getElementById('quoteForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const captchaInput = document.getElementById('captcha').value;
+            if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
+                alert('Captcha is incorrect.');
+                return;
+            }
+            // Form submission logic here (e.g., send data to server)
+            alert('Form submitted successfully!');
+            popupForm.style.display = 'none'; // Hide popup after submission
+        });
+    });
+</script>
+
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+
 <!-- gallery js -->
 <!-- Load jQuery -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
