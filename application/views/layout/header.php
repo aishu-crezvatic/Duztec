@@ -74,7 +74,7 @@
         // JavaScript to hide the loader after at least 4 seconds
         window.addEventListener('load', function() {
             // Minimum display time for the loader (in milliseconds)
-            const minLoaderTime = 4000;
+            const minLoaderTime = 3500;
 
             // Get the loader and content elements
             var loader = document.getElementById('loader');
