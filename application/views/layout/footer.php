@@ -136,7 +136,7 @@
 	<div class="footerImg">
 		<img src="assets/images/image_2024-08-13_171650657.png" alt="">
 	</div>
-</div>
+</div>	
 <!-- footer-copyright-section -->
 <div class="footer-bottom p-0 ">
 	<div class="container ">
