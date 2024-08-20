@@ -65,7 +65,7 @@
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop>
-            <source src="assets/video/DuztecPreloaderForWebsite.MP4" type="video/mp4">
+            <source src="<?php echo base_url()?>assets/video/DuztecPreloaderForWebsite.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -106,17 +106,17 @@
                         <input type="text" name="search" placeholder="Search..">
                     </form>
 
-                    <div class="social-icon">
+                    <!-- <div class="social-icon">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-behance-square"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-pinterest"></i></a>
                         <span></span>
-                    </div>
+                    </div> 
                     <div class="option-form-thumb">
-                        <img src="<?php echo base_url() ?>assets/images/flag.png" alt="">
-                    </div>
+                        <img src="<?php echo base_url()?>assets/images/flag.png" alt="">
+                    </div>-->
                     <!-- <div class="option-form">
                         <form action="action">
                             <select class="option">
@@ -140,7 +140,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-12">
                         <div class="header-logo">
-                            <a class="menu-logo" href="index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
+                            <a class="menu-logo" href="<?php echo base_url()?>index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-12">
@@ -148,42 +148,42 @@
                         <div class="header-menu">
 
                             <ul>
-                                <li><a href="index"> <i class="fas fa-home"></i></a>
+                                <li><a href="<?php echo base_url()?>index"> <i class="fas fa-home"></i></a>
 
                                 </li>
-                                <li><a href="about">About Us</a>
+                                <li><a href="<?php echo base_url() ?>about">About Us</a>
 
                                 </li>
                                 <li class="position-relative">
-                                    <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                    <a href="<?php echo base_url() ?>product">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li class="position-relative">
                                             <div class="drop-cat">
                                                 <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
                                             </div>
                                             <ul class="sub-prod">
-                                                <li><a href="product">Mosquito</a></li>
-                                                <li><a href="product">Godust</a></li>
-                                                <li><a href="product">Mist Beams</a></li>
-                                                <li><a href="product">Double Barrel System</a></li>
-                                                <li><a href="product">HPDS</a></li>
-                                                <li><a href="product">SFDS</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mosquito</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Godust</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mist Beams</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Double Barrel System</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">HPDS</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">SFDS</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="product">Odur Control System</a></li>
-                                        <li><a href="product">Waste Water Evaporation</a></li>
-                                        <li><a href="product">Road Washing System</a></li>
-                                        <li><a href="product">Fog Curtain</a></li>
-                                        <li><a href="product">Truck Mounted Mist Beams</a></li>
-                                        <li><a href="product">Trolly Mounted Mist Beams</a></li>
-                                        <li><a href="product">Cooling and Humidification</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Odur Control System</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Waste Water Evaporation</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Road Washing System</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Fog Curtain</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Truck Mounted Mist Beams</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Trolly Mounted Mist Beams</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Cooling and Humidification</a></li>
                                     </ul>
                                 </li>
 
 
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="sectors">Sector</a></li>
+                                        <li><a href="<?php echo base_url() ?>sectors">Sector</a></li>
                                     </ul>
                                 </li>
 
@@ -191,7 +191,7 @@
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
-                                        <li><a href="blog_details">Blog Details</a></li>
+                                        <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="gallery">Gallery</a></li>

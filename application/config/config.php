@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/duztec/';
+// $config['base_url'] = 'https://labindiadigital.com/duztec/';
 
 /*
 |--------------------------------------------------------------------------

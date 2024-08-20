@@ -1,9 +1,9 @@
 <!-- header start  -->
 <?php $this->load->view('layout/header');
 
-echo '<pre>';
-print_r($blog_category);
-exit;
+// echo '<pre>';
+// print_r($blog_category);
+// exit;
 ?>
 <!-- header end  -->
 
