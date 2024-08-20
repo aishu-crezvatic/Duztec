@@ -79,6 +79,12 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => 'duztec',
+
+    // 'username' => 'digitallab_duztec',
+	// 'password' => 'mKzxRgkx]A~@',
+	// 'database' => 'digitallab_duztec',
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

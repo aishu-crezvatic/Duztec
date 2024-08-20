@@ -12,7 +12,7 @@
 	</video>
 	<!-- </div> -->
 	<!-- particles.js container -->
-	<div id="particles-js"></div>
+	<!-- <div id="particles-js"></div> -->
 
 	<div class="container">
 		<div class="row">
@@ -30,11 +30,11 @@
 					<div class="slider-button text-center">
 						<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 					</div>
-					<div class="slider-video-icon">
+					<!-- <div class="slider-video-icon">
 						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
 							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
-						<!-- <span class="top">Watch Video</span> -->
-					</div>
+						<span class="top">Watch Video</span>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -285,7 +285,7 @@
 				</div>
 			</div>
 
-			<?php $this->load->view('component/Gallery') ?>
+			<?php $this->load->view('component/gallery') ?> 
 
 		</div>
 	</div>
