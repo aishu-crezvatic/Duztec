@@ -35,10 +35,10 @@ class Frontend_model extends CI_Model
     public function product_with_cat_sub_cat() //not used yet
     {
 //         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
-         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image');
+         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
         $this->db->from('product');
         $this->db->join('category', 'product.c_id = category.c_id', 'left');
-//        $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
+        $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
         $this->db->where(
                 array(
                     'product.status' => 1, 
