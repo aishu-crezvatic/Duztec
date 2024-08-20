@@ -255,15 +255,15 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="gallery">Gallery</a></li>
+                                <li><a href="<?php echo base_url() ?>="gallery">Gallery</a></li>
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
                                         <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="gallery">Gallery</a></li>
-                                <li><a href="contact_us">Contact</a></li>
+                                <!-- <li><a href="gallery">Gallery</a></li> -->
+                                <li><a href="<?php echo base_url() ?>contact_us">Contact</a></li>
                             </ul>
                             <!-- <div class="header-src-btn">
                                 <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
