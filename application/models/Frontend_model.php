@@ -32,24 +32,41 @@ class Frontend_model extends CI_Model
         return $data;
     }
     
-    public function product_with_cat_sub_cat()
+    public function product_with_cat_sub_cat() //not used yet
     {
-        $data = $this->db->select('*')
-            ->from('sub_category')
-            ->where('status = 1')
-            ->order_by('sc_id ', 'asc')
-            ->get()
-            ->result_array();
-        // print_r($data);
-        return $data;
+//         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image');
+        $this->db->from('product');
+        $this->db->join('category', 'product.c_id = category.c_id', 'left');
+//        $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
+        $this->db->where(
+                array(
+                    'product.status' => 1, 
+                    'category.status' => 1
+//                    'sub_category.status' => 1
+                    )
+                );
+//        $this->db->limit(24,  $start);
+//        $this->db->order_by('dv_id', 'DESC');
+        $query = $this->db->get();
+        return $query->result_array();
+        
+//        $data = $this->db->select('*')
+//            ->from('sub_category')
+//            ->where('status = 1')
+//            ->order_by('sc_id ', 'asc')
+//            ->get()
+//            ->result_array();
+//        // print_r($data);
+//        return $data;
     }
 
-    public function product($c_id)
+    public function product($p_id)
     {
         $data = $this->db->select('*')
             ->from('product')
             ->where('status = 1')
-            ->where('c_id', $c_id)
+            ->where('p_id', $p_id)
             ->order_by('c_id ', 'asc')
             ->get()
             ->result_array();
