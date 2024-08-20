@@ -19,6 +19,30 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+    
+    public function productSubCategory()
+    {
+        $data = $this->db->select('*')
+            ->from('sub_category')
+            ->where('status = 1')
+            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    
+    public function product_with_cat_sub_cat()
+    {
+        $data = $this->db->select('*')
+            ->from('sub_category')
+            ->where('status = 1')
+            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
 
     public function product($c_id)
     {
@@ -27,6 +51,18 @@ class Frontend_model extends CI_Model
             ->where('status = 1')
             ->where('c_id', $c_id)
             ->order_by('c_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    public function about($id)
+    {
+        $data = $this->db->select('*')
+            ->from('about')
+            ->where('status = 1')
+            ->where('id', id)
+            ->order_by('id ', 'asc')
             ->get()
             ->result_array();
         // print_r($data);
@@ -59,5 +95,6 @@ class Frontend_model extends CI_Model
         return $data;
     }
 
+    
 }
 /* End of file Index_model.php */

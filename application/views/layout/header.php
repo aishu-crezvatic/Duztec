@@ -1,67 +1,67 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Duztec</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Duztec</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Gallery css -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/gallery.css">
-    <!-- Favicon -->
-    <link rel="icon" sizes="56x56" href="<?php echo base_url()?>assets/images/fevicon.png">
-    <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" media="all" />
-    <!-- carousel CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.min.css" media="all" />
-    <!-- Animate Css -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css" media="all" />
-    <!-- font-awesome CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/all.min.css" media="all" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/flaticon.css" media="all" />
-    <!-- theme-default CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/template-default.css" media="all" />
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css" media="all" />
+        <!-- Gallery css -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/gallery.css">
+        <!-- Favicon -->
+        <link rel="icon" sizes="56x56" href="<?php echo base_url() ?>assets/images/fevicon.png">
+        <!-- bootstrap CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css" media="all" />
+        <!-- carousel CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.min.css" media="all" />
+        <!-- Animate Css -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css" media="all" />
+        <!-- font-awesome CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/all.min.css" media="all" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/flaticon.css" media="all" />
+        <!-- theme-default CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/template-default.css" media="all" />
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.default.min.css" type="text/css" media="all" />
 
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" media="all" />
-    <!-- transitions CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.transitions.css" media="all" />
-    <!-- venobox CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>venobox/venobox.css" media="all" />
-    <!-- animated CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animated-text.css" media="all" />
-    <!-- widget CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/widget.css" media="all" />
-    <!-- modernizr js -->
-    <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- responsive CSS -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css" media="all" />
+        <!-- transitions CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.transitions.css" media="all" />
+        <!-- venobox CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>venobox/venobox.css" media="all" />
+        <!-- animated CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animated-text.css" media="all" />
+        <!-- widget CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/widget.css" media="all" />
+        <!-- modernizr js -->
+        <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- responsive CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css" media="all" />
 
-    <style>
-        /* Style for the loader */
-        #loader {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            /* You can change this to suit your design */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-    </style>
-</head>
+        <style>
+            /* Style for the loader */
+            #loader {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                /* You can change this to suit your design */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            }
+        </style>
+    </head>
 
-<body class="bg-water">
+    <body class="bg-water">
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop>
@@ -70,41 +70,41 @@
         </video>
     </div>
 
-    <script>
-        // JavaScript to hide the loader after at least 4 seconds
-        window.addEventListener('load', function() {
-            // Minimum display time for the loader (in milliseconds)
-            const minLoaderTime = 3500;
+        <script>
+            // JavaScript to hide the loader after at least 4 seconds
+            window.addEventListener('load', function () {
+                // Minimum display time for the loader (in milliseconds)
+                const minLoaderTime = 3500;
 
-            // Get the loader and content elements
-            var loader = document.getElementById('loader');
-            var content = document.getElementById('content');
+                // Get the loader and content elements
+                var loader = document.getElementById('loader');
+                var content = document.getElementById('content');
 
-            // Set a timeout to ensure the loader shows for at least 4 seconds
-            setTimeout(function() {
-                loader.style.display = 'none'; // Hide the loader
-                content.style.display = 'block'; // Show the content
-            }, minLoaderTime);
-        });
-    </script>
+                // Set a timeout to ensure the loader shows for at least 4 seconds
+                setTimeout(function () {
+                    loader.style.display = 'none'; // Hide the loader
+                    content.style.display = 'block'; // Show the content
+                }, minLoaderTime);
+            });
+        </script>
 
-    <!-- ============================================================== -->
-    <!-- Start - Header-Top- Section -->
-    <!-- ============================================================= -->
-    <div class="header-top-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-md-8">
-                    <div class="dreamit-top-address">
-                        <span>Call Us: +91 9137657039 </span>
-                        <span>-</span>
-                        <span>Mail Us: sales@duztec.in </span>
+        <!-- ============================================================== -->
+        <!-- Start - Header-Top- Section -->
+        <!-- ============================================================= -->
+        <div class="header-top-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="dreamit-top-address">
+                            <span>Call Us: +91 9137657039 </span>
+                            <span>-</span>
+                            <span>Mail Us: sales@duztec.in </span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 right-side">
-                    <form class="d-inline">
-                        <input type="text" name="search" placeholder="Search..">
-                    </form>
+                    <div class="col-lg-4 col-md-4 right-side">
+                        <form class="d-inline">
+                            <input type="text" name="search" placeholder="Search..">
+                        </form>
 
                     <!-- <div class="social-icon">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="col-lg-10 col-md-12">
 
-                        <div class="header-menu">
+                            <div class="header-menu">
 
                             <ul>
                                 <li><a href="<?php echo base_url()?>index"> <i class="fas fa-home"></i></a>
