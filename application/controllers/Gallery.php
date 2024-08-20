@@ -11,9 +11,12 @@ class Gallery extends CI_Controller {
     }
 
     public function index() {
-        $data['product_category'] = $this->frontend_model->productCategory();
+//        $data['product_category'] = $this->frontend_model->productCategory();
         $data['product_sub_category'] = $this->frontend_model->productSubCategory();
-
+        $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+//        echo "<pre>";
+//        print_r($data);
+//        exit;
         $this->load->view('frontend/gallery', $data);
     }
 }

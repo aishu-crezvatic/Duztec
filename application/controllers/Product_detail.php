@@ -25,13 +25,14 @@ class Product_detail extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
-    public function index($c_id) {
-        $data['product_category'] = $this->frontend_model->productCategory();
+    public function index($p_id) {
+//        $data['product_category'] = $this->frontend_model->productCategory();
         $data['product_sub_category'] = $this->frontend_model->productSubCategory();
+        $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
 //        echo "<pre>";
 //        print_r($data);
 //        exit;
-        $data['product_detail_data'] = $this->frontend_model->product($c_id);
+        $data['product_detail_data'] = $this->frontend_model->product($p_id);
 
         $this->load->view('frontend/product_detail', $data);
     }

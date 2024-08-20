@@ -22,7 +22,8 @@
 						<li><a href="index.html"> <i class="fas fa-home fs-4"></i> </a></li>
 						<li class="style2 fs-4 text-white">Product</li>
 						<li><i class="fas fa-chevron-right fs-4 text-white"></i></li>
-						<li class="style2 greenText fs-4">Double Barrel System</li>
+						<!--<li class="style2 greenText fs-4">Double Barrel System</li>-->
+						<li class="style2 greenText fs-4"><?php echo $product_detail_data[0]['name']; ?></li>
 					</ul>
 				</div>
 			</div>

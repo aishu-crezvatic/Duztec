@@ -147,6 +147,7 @@
 
                             <div class="header-menu">
 
+
                             <ul>
                                 <li><a href="<?php echo base_url()?>index"> <i class="fas fa-home"></i></a>
 
@@ -154,7 +155,7 @@
                                 <li><a href="<?php echo base_url() ?>about">About Us</a>
 
                                 </li>
-                                <li class="position-relative">
+<!--                                <li class="position-relative">
                                     <a href="<?php echo base_url() ?>product">Products <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li class="position-relative">
@@ -178,9 +179,58 @@
                                         <li><a href="<?php echo base_url() ?>product_detail/index/2" >Trolly Mounted Mist Beams</a></li>
                                         <li><a href="<?php echo base_url() ?>product_detail/index/2" >Cooling and Humidification</a></li>
                                     </ul>
+                                </li>-->
+
+                                                                    <li class="position-relative">
+                                        <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                        <ul class="sub-menu">
+
+                                            <?php 
+                                             $sub_cat_count = 0; 
+                                            foreach ($product_with_cat_sub_cat as $product) { ?>
+
+                                                <?php
+                                                $search_c_id = $product['c_id'];
+                                                $c_id_exists = false;
+                                                      
+                                                foreach ($product_sub_category as $sub_category) {
+                                                    if ($sub_category['c_id'] == $search_c_id) {
+                                                        $c_id_exists = true;
+                                                        $sub_cat_count++;
+                                                        break;  // Stop the loop if found
+                                                    }
+                                                }
+
+                                                if ($c_id_exists) {
+//                                            echo "Value exists in c_id key.";
+                                                    ?>
+                                                    <li class="position-relative">
+                                                        <?php if ($sub_cat_count == 1) { ?>
+                                                        <div class="drop-cat">
+                                                            <a href="<?php echo base_url() . 'sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
+                                                        </div>
+                                                <?php } ?>
+                                                        <ul class="sub-prod">
+                                                            <?php //  foreach ($product_sub_category as $sub_category) { ?>
+                                                            <?php //  foreach ($product_sub_category as $sub_category) { ?>
+                                                                <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
+                                                                <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['name']; ?></a></li>
+                                                            <?php //  } ?>
+<!--                                                            <li><a href="product">Mosquito</a></li>
+                                                            <li><a href="product">Godust</a></li>
+                                                            <li><a href="product">Mist Beams</a></li>
+                                                            <li><a href="product">Double Barrel System</a></li>
+                                                            <li><a href="product">HPDS</a></li>
+                                                            <li><a href="product">SFDS</a></li>-->
+                                                        </ul>
+                                                    </li>
+                                                <?php } else { ?>
+                                                    <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
+                                                <?php } ?>
+                                            <?php } ?>
+                                                    
+                                                    </ul>
                                 </li>
-
-
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="<?php echo base_url() ?>sectors">Sector</a></li>
