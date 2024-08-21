@@ -112,6 +112,23 @@ class Frontend_model extends CI_Model
         return $data;
     }
 
+
+    public function sector_detail()
+    {
+        $data = $this->db->select('*')
+            ->from('sector_detail')
+            ->where('status = 1')
+            // ->where('b_id', $b_id)
+            ->order_by('sd_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+
+
+
+
     
 }
 /* End of file Index_model.php */

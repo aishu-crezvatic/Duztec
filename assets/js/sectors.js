@@ -83,17 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     ];
     
-    const industryLinksContainer = document.getElementById('industry-links');
+    // const industryLinksContainer = document.getElementById('industry-links');
     const industryMainImage = document.getElementById('industry-main-image');
     const industrySubtitle = document.getElementById('industry-subtitle');
     const industryDescription = document.getElementById('industry-description');
     const industryGalleryImage = document.getElementById('industry-gallery-image');
 
-    function populateIndustryLinks() {
-        industryLinksContainer.innerHTML = industries.map(industry => 
-            `<li class="py-3 ps-3" data-id="${industry.id}"><a href="#" data-id="${industry.id}" class="industry-link">${industry.name}</a></li>`
-        ).join('');
-    }
+    // function populateIndustryLinks() {
+    //     industryLinksContainer.innerHTML = industries.map(industry => 
+    //         `<li class="py-3 ps-3" data-id="${industry.id}"><a href="#" data-id="${industry.id}" class="industry-link">${industry.name}</a></li>`
+    //     ).join('');
+    // }
 
     function updateIndustryDetails(industry) {
         industryMainImage.src = industry.image;
@@ -132,21 +132,21 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(index);
     }
 
-    industryLinksContainer.addEventListener('click', function(event) {
-        event.preventDefault();
-        if (event.target.classList.contains('industry-link')) {
-            const industryId = parseInt(event.target.getAttribute('data-id'));
+    // industryLinksContainer.addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     if (event.target.classList.contains('industry-link')) {
+    //         const industryId = parseInt(event.target.getAttribute('data-id'));
 
-            // Remove active class from all li elements
-            document.querySelectorAll('#industry-links li').forEach(li => li.classList.remove('active'));
+    //         // Remove active class from all li elements
+    //         document.querySelectorAll('#industry-links li').forEach(li => li.classList.remove('active'));
 
-            // Add active class to the li element containing the clicked link
-            event.target.parentElement.classList.add('active');
+    //         // Add active class to the li element containing the clicked link
+    //         event.target.parentElement.classList.add('active');
 
-            const industry = industries.find(ind => ind.id === industryId);
-            updateIndustryDetails(industry);
-        }
-    });
+    //         const industry = industries.find(ind => ind.id === industryId);
+    //         updateIndustryDetails(industry);
+    //     }
+    // });
 
     populateIndustryLinks();
     if (industries.length > 0) {
@@ -154,4 +154,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set the first li as active by default
         document.querySelector('#industry-links li').classList.add('active');
     }
+});
+
+
+
+$(document).ready(function() {
+    // Initially display the first industry's content
+    $('.industry-content').first().show();
+
+    // Add click event to the industry links
+    $('.industry-link').click(function(event) {
+        event.preventDefault(); // Prevent default action (link navigation)
+        
+        var id = $(this).data('id'); // Get the id of the selected industry
+
+        // Hide all industry contents
+        $('.industry-content').hide();
+
+        // Show the selected industry's content
+        $('#industry-' + id).show();
+    });
 });
