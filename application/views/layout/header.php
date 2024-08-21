@@ -91,7 +91,7 @@
         <!-- ============================================================== -->
         <!-- Start - Header-Top- Section -->
         <!-- ============================================================= -->
-        <div class="header-top-section">
+        <!-- <div class="header-top-section">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-8">
@@ -106,7 +106,7 @@
                             <input type="text" name="search" placeholder="Search..">
                         </form>
 
-                    <!-- <div class="social-icon">
+                   <div class="social-icon">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-behance-square"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
@@ -129,23 +129,33 @@
                     </div> -->
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
     <!-- ============================================================== -->
     <!-- Start - Header-Menu- Area -->
     <!-- ============================================================= -->
     <div id="sticky-header" class="header-menu-section">
-        <div class="container">
+        <div class="containe px-3">
             <div class="menu-wrapper">
-                <div class="row">
-                    <div class="col-lg-2 col-md-12">
+                
+                <div class="row  justify-content-evenly align-items-center">
+                    
+                    <div class="col-lg-2 col-md-2">
                         <div class="header-logo">
                             <a class="menu-logo" href="<?php echo base_url()?>index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
                         </div>
                     </div>
-                    <div class="col-lg-10 col-md-12">
 
-                            <div class="header-menu">
+                    <div class="col-2 text-end">
+                    <form >
+                            <input type="text" name="search" placeholder="Search..">
+                        </form>
+                    </div>
+                   
+                    <div class="col-lg-7 col-md-7">
+                   
+                            <div class="header-menu text-cente">
+                    
 
 
                             <ul>
@@ -255,7 +265,7 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="<?php echo base_url() ?>="gallery">Gallery</a></li>
+                                <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
@@ -285,7 +295,7 @@
         <div class="conainer">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="logo-container">
+                    <div class="logo-container justify-content-between">
                         <div class="header-logo">
                             <a class="mobile-logo" href="index.html"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt=""></a>
                         </div>

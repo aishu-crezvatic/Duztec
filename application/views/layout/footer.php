@@ -134,7 +134,7 @@
 		</div>
 	</div>
 	<div class="footerImg">
-		<img src="assets/images/image_2024-08-13_171650657.png" alt="">
+		<img src="assets/images/Product With City02-01.png" alt="">
 	</div>
 </div>
 <!-- footer-copyright-section -->
@@ -176,16 +176,22 @@
 		align-items: center;
 		z-index: 1000;
 	}
+	@media (max-width:600px) {
+		.popup-form .container{
+			width: 100% !important;
+		}
+		
+	}
 </style>
 </head>
 <div class="popup-form " id="popupForm">
-	<div class="container popup-content bg-white p-4 rounded shadow">
+	<div class="container popup-content bg-white p-4 rounded shadow w-50">
 
 		<div class="d-flex justify-content-between">
 			<h2>Request A Quote</h2>
-			<button class="close-popup bg-danger border-hidden rounded shadow" id="closePopup">X</button>
+			<button class="close-popup text-danger border-0 rounded shadow" id="closePopup">X</button>
 		</div>
-		<form id="quoteForm" class="row">
+		<form id="quoteForm" class="row ">
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" class="form-control" required>
@@ -233,56 +239,56 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const popupForm = document.getElementById('popupForm');
-        const closePopup = document.getElementById('closePopup');
-        const captchaQuestion = document.getElementById('captchaQuestion');
-        let captchaAnswer;
+	document.addEventListener("DOMContentLoaded", function () {
+		const popupForm = document.getElementById('popupForm');
+		const closePopup = document.getElementById('closePopup');
+		const captchaQuestion = document.getElementById('captchaQuestion');
+		let captchaAnswer;
 
-        function generateCaptcha() {
-            const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-            const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-            captchaAnswer = num1 + num2;
-            captchaQuestion.textContent = `${num1} + ${num2} =`;
-        }
+		function generateCaptcha() {
+			const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+			const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+			captchaAnswer = num1 + num2;
+			captchaQuestion.textContent = `${num1} + ${num2} =`;
+		}
 
-        function showPopup() {
-            popupForm.style.display = 'flex';
-            generateCaptcha(); // Generate captcha when popup is shown
-        }
+		function showPopup() {
+			popupForm.style.display = 'flex';
+			generateCaptcha(); // Generate captcha when popup is shown
+		}
 
-        // Show popup on page load
-        showPopup();
+		// Show popup only if it hasn't been shown in this session
+		if (!localStorage.getItem('popupShown')) {
+			showPopup();
+			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+		}
 
-        // Close popup when the close button is clicked
-        closePopup.addEventListener('click', () => {
-            popupForm.style.display = 'none';
-        });
+		// Close popup when the close button is clicked
+		closePopup.addEventListener('click', () => {
+			popupForm.style.display = 'none';
+		});
 
-        // Show popup only if the user hasn't visited in the past 2 minutes
-        const lastVisit = localStorage.getItem('lastVisit');
-        const now = new Date().getTime();
+		// Form submission handling
+		document.getElementById('quoteForm').addEventListener('submit', function (event) {
+			event.preventDefault();
+			const captchaInput = document.getElementById('captcha').value;
+			if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
+				alert('Captcha is incorrect.');
+				return;
+			}
+			// Form submission logic here (e.g., send data to server)
+			alert('Form submitted successfully!');
+			popupForm.style.display = 'none'; // Hide popup after submission
+		});
 
-        if (lastVisit !== null && now - lastVisit > 120000) { // 120000 milliseconds = 2 minutes
-            showPopup();
-        }
-
-        localStorage.setItem('lastVisit', new Date().getTime());
-
-        // Form submission handling
-        document.getElementById('quoteForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const captchaInput = document.getElementById('captcha').value;
-            if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
-                alert('Captcha is incorrect.');
-                return;
-            }
-            // Form submission logic here (e.g., send data to server)
-            alert('Form submitted successfully!');
-            popupForm.style.display = 'none'; // Hide popup after submission
-        });
-    });
+		// // Clear popupShown flag on page unload (e.g., reload or close)
+		window.addEventListener('beforeunload', function () {
+			localStorage.removeItem('popupShown');
+		});
+	});
 </script>
+
+
 
 <!-- ============================================================== -->
 
