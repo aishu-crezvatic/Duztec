@@ -1,5 +1,9 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); 
+// echo '<pre>';
+        //  print_r($sector_detail);
+        // exit;
+?>
 <!-- header end  -->
 
 <!-- ============================================================== -->
@@ -15,7 +19,7 @@
                         <li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
                         <li class="style2 text-white">Home</li>
                         <li><i class="fas fa-chevron-right"></i></li>
-                        <li class="style2 sectorStyle2">Industry Details</li>
+                        <li class="style2 sectorStyle2"><?php echo $sector_detail[$selected_sector_index]['name']; ?></li>
                     </ul>
                 </div>
             </div>
@@ -40,6 +44,9 @@
                 <div class="single-content m-0">
                     <ul id="industry-links">
                         <!-- Links will be populated dynamically -->
+                        <?php foreach($sector_detail as $sector){ ?>
+                        <li class="py-3 ps-3" data-id="1"><a href="<?php echo base_url()?>sectors/<?php echo$sector['sd_id'] ?>" data-id="1" class="industry-link"><?php echo $sector['name']; ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -47,8 +54,10 @@
         <div class="row mt-5 align-items-start ">
             <div class="col-lg-8 col-md-8 col-12">
                 <div class="text1">
-                    <h2 id="industry-subtitle" class="py-4 heading" >Industry</h2>
-                    <p id="industry-description" class="p-0 m-0">Description will be updated dynamically.</p>
+                <?php foreach($sector_detail as $sector){ ?>
+                    <h2 id="industry-subtitle" class="py-4 heading"><?php echo $sector['name']; ?></h2>
+                    <p id="industry-description" class="p-0 m-0"><?php echo $sector['description']; ?></p>
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-lg-4">

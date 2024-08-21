@@ -4,34 +4,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sectors extends CI_Controller {
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     * 	- or -
-     * 		http://example.com/index.php/welcome/index
-     * 	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/userguide3/general/urls.html
-     */
     public function __construct() {
         parent::__construct();
         // Load the Frontend_model
         $this->load->model('frontend_model');
     }
 
-    public function index() {
-//        $data['product_category'] = $this->frontend_model->productCategory();
-        $data['product_sub_category'] = $this->frontend_model->productSubCategory();
-        $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
-//        echo "<pre>";
-//        print_r($data);
-//        exit;
+    public function index($sd_id = NULL) {
+
+       $data['sector_detail'] = $this->frontend_model->sector_detail();
+        // $data['product_sub_category'] = $this->frontend_model->productSubCategory();
+        // $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+    //    echo "<pre>";
+    //    print_r($data);
+    //    exit;
+
+    $data['selected_sector_index'] = 0;
+        if(!empty($sd_id) && $sd_id != null && $sd_id != 0){
+            $data['selected_sector_index'] = ($sd_id-1);
+        }
+        
+        //access data from array
+        // $sector_details[$selected_sector_index]['name'];
         $this->load->view('frontend/sectors', $data);
     }
 }
