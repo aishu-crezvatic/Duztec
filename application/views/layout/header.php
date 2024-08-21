@@ -191,6 +191,7 @@
 
                                                 <?php
                                                 $search_c_id = $product['c_id'];
+                                                $search_sc_id = $product['sc_id'];
                                                 $c_id_exists = false;
                                                       
                                                 foreach ($product_sub_category as $sub_category) {
@@ -201,6 +202,8 @@
                                                     }
                                                 }
 
+//                                                echo "Value exists in c_id_exists key.".$c_id_exists.' product name '.$product['name'].'</br>';
+//                                                exit;
                                                 if ($c_id_exists) {
 //                                            echo "Value exists in c_id key.";
                                                     ?>
@@ -209,13 +212,27 @@
                                                         <div class="drop-cat">
                                                             <a href="<?php echo base_url() . 'sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
                                                         </div>
-                                                <?php } ?>
+                                                    <?php // }else{ ?>
                                                         <ul class="sub-prod">
                                                             <?php //  foreach ($product_sub_category as $sub_category) { ?>
-                                                            <?php //  foreach ($product_sub_category as $sub_category) { ?>
+                                                            <?php 
+                                                            $search_c_id = $product['c_id'];
+                                                            foreach ($product_sub_category as $sub_category2) { 
+                                                                if($sub_category2['sc_id'] == $search_c_id && $search_sc_id > 0) {
+//                                                                    echo "Value exists in sc_id_exists key.".$search_sc_id.' product name '.$product['name'].'</br>';
+                                                                    foreach ($product_with_cat_sub_cat as $product2) {
+                                                                        $search_sc_id2 = $product2['sc_id'];
+//                                                                        echo "<pre> shankar ".$search_sc_id2.' </br>';
+                                                                        if($search_sc_id2 > 0 ) {
+                                                                ?>
                                                                 <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
-                                                                <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['name']; ?></a></li>
-                                                            <?php //  } ?>
+                                                                <li><a href="<?php echo base_url() . 'product_detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
+                                                            <?php 
+                                                                
+                                                                        }
+                                                                        }
+                                                                }
+                                                                } ?>
 <!--                                                            <li><a href="product">Mosquito</a></li>
                                                             <li><a href="product">Godust</a></li>
                                                             <li><a href="product">Mist Beams</a></li>
@@ -223,6 +240,7 @@
                                                             <li><a href="product">HPDS</a></li>
                                                             <li><a href="product">SFDS</a></li>-->
                                                         </ul>
+                                                        <?php } ?>
                                                     </li>
                                                 <?php } else { ?>
                                                     <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
