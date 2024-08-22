@@ -74,7 +74,7 @@
             // JavaScript to hide the loader after at least 4 seconds
             window.addEventListener('load', function () {
                 // Minimum display time for the loader (in milliseconds)
-                const minLoaderTime = 3500;
+                const minLoaderTime = 2000;
 
                 // Get the loader and content elements
                 var loader = document.getElementById('loader');
@@ -261,7 +261,9 @@
                                 </li>
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="<?php echo base_url() ?>sectors">Sector</a></li>
+                                        <?php foreach ($sectors as $sector) {  ?>
+                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
 

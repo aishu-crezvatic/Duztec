@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'duztec-3',
+	'database' => 'duztec',
 
     // 'username' => 'digitallab_duztec',
 	// 'password' => 'mKzxRgkx]A~@',

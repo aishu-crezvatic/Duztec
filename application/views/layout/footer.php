@@ -337,7 +337,7 @@ $(document).ready(function() {
 
 <!-- Add other scripts as necessary -->
 <script src="<?php echo base_url(); ?>assets/js/gallery.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/sectors.js"></script>
+<!--<script src="<?php echo base_url(); ?>assets/js/sectors.js"></script>-->
 <script src="<?php echo base_url(); ?>assets/js/prod_detail.js"></script>
 
 

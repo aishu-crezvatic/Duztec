@@ -45,7 +45,7 @@
                     <ul id="industry-links">
                         <!-- Links will be populated dynamically -->
                         <?php foreach($sector_detail as $sector){ ?>
-                        <li class="py-3 ps-3" data-id="1"><a href="<?php echo base_url()?>sectors/<?php echo$sector['sd_id'] ?>" data-id="1" class="industry-link"><?php echo $sector['name']; ?></a></li>
+                        <a href="<?php echo base_url()?>sectors/<?php echo $sector['sd_id'] ?>" class="industry-link" style="text-decoration: none;"><li class="py-3 ps-3"><?php echo $sector['name']; ?></li></a>
                         <?php } ?>
                     </ul>
                 </div>
@@ -54,10 +54,10 @@
         <div class="row mt-5 align-items-start ">
             <div class="col-lg-8 col-md-8 col-12">
                 <div class="text1">
-                <?php foreach($sector_detail as $sector){ ?>
-                    <h2 id="industry-subtitle" class="py-4 heading"><?php echo $sector['name']; ?></h2>
-                    <p id="industry-description" class="p-0 m-0"><?php echo $sector['description']; ?></p>
-                    <?php } ?>
+                <?php //foreach($sector_detail as $sector){ ?>
+                    <h2 id="industry-subtitle" class="py-4 heading"><?php echo $sector_detail[$selected_sector_index]['name']; ?></h2>
+                    <p id="industry-description" class="p-0 m-0"><?php echo $sector_detail[$selected_sector_index]['description']; ?></p>
+                    <?php //} ?>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -78,14 +78,65 @@
                     </div>
                 </div>
                 <div class="row">
+			<div class="service_list owl-carousel">
+                            <?php foreach ($product_with_cat_sub_cat as $product) { 
+                                $images = explode(',', $product['images']);
+                                ?>
+				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="">
+					</div>
+					<!-- <div class="service-icon">
+						<i class="flaticon-business-and-finance"></i>
+					</div> -->
+					<div class="service-content">
+						<h2><?php echo $product['name']; ?></h2>
+						<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+						<!--<p><?php echo $product['conclusion']; ?></p>-->
+                                                <a href="<?php echo base_url().'product_detail/'.$product['p_id'] ?>">Learn More</a>
+					</div>
+				</div>
+                            <?php } ?>
+<!--				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
+					</div>
+					 <div class="service-icon">
+						<i class="flaticon-briefcase"></i>
+					</div> 
+					<div class="service-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<a href="single-service.html">Learn More</a>
+					</div>
+				</div>
+				<div class="service-single-box">
+					<div class="service-thumb">
+						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
+					</div>
+					 <div class="service-icon">
+						<i class="flaticon-mail"></i>
+					</div> 
+					<div class="service-content">
+						<h2>Double Barrel System</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<a href="single-service.html">Learn More</a>
+					</div>
+				</div>-->
+
+			</div>
+		</div>
+                
+                
+<!--                <div class="row">
                     <div class="service_list owl-carousel">
                         <div class="service-single-box">
                             <div class="service-thumb">
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
-                            <!-- <div class="service-icon">
+                             <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
-					</div> -->
+					</div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -96,9 +147,9 @@
                             <div class="service-thumb">
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
-                            <!-- <div class="service-icon">
+                             <div class="service-icon">
 						<i class="flaticon-briefcase"></i>
-					</div> -->
+					</div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -109,9 +160,9 @@
                             <div class="service-thumb">
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
-                            <!-- <div class="service-icon">
+                             <div class="service-icon">
 						<i class="flaticon-mail"></i>
-					</div> -->
+					</div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -120,7 +171,8 @@
                         </div>
 
                     </div>
-                </div>
+                </div>-->
+                
             </div>
 
             <div class="shape-thumb">
@@ -139,7 +191,7 @@
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
         <!-- Our Work -->
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        <div class="container row mt-5 justify-content-center gap-5">
+        <div class="container row mt-5 justify-content-center gap-5 d-none">
             <h1 class="headin fs-1">Our Work</h1>
             <div class="col-12 col-md-4">
                 <div class="slider-container" id="slider1">
@@ -172,4 +224,4 @@
 <!-- Footer end  -->
 
 <!-- Include the JavaScript file -->
-<script src="<?php echo base_url() ?>assets/js/sectors.js"></script>
+<!--<script src="<?php //echo base_url() ?>assets/js/sectors.js"></script>-->

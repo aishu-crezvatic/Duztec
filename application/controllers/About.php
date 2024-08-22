@@ -13,8 +13,11 @@ class About extends CI_Controller {
 
     public function index() {
 //        $data['product_category'] = $this->frontend_model->productCategory();
-        $data['about_us'] = $this->frontend_model->about_us();
-        // $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+//        $data['about_us'] = $this->frontend_model->about_us();
+        $data['product_sub_category'] = $this->frontend_model->productSubCategory();
+         $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+         $data['clientele'] = $this->frontend_model->get_clientele();
+         $data['sectors'] = $this->frontend_model->get_sectors();
     //    echo "<pre>";
     //    print_r($data);
     //    exit;
