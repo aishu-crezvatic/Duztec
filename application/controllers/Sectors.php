@@ -23,7 +23,7 @@ class Sectors extends CI_Controller {
         if(!empty($sd_id) && $sd_id != null && $sd_id != 0){
             $data['selected_sector_index'] = ($sd_id-1);
         }
-        
+        $data['clientele'] = $this->frontend_model->get_clientele();
         //access data from array
         // $sector_details[$selected_sector_index]['name'];
         $this->load->view('frontend/sectors', $data);

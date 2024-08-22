@@ -32,6 +32,18 @@ class Frontend_model extends CI_Model
         return $data;
     }
     
+    public function get_clientele()
+    {
+        $data = $this->db->select('*')
+            ->from('clientele')
+            ->where('status = 1')
+//            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    
     public function product_with_cat_sub_cat() //not used yet
     {
 //         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');

@@ -22,10 +22,13 @@
 	<div class="container">
 		<div class="row brand-bg">
 			<div class="brand_list owl-carousel">
+                            <?php foreach ($clientele as $client) { ?>
+                            <?php //echo "shankar ".$client['image']; ?>
 				<div class="brand-thumb">
-					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Dalmia_Logo.png" alt="">
+					<img src="<?php echo base_url(); ?>uploads/clientele/<?php echo $client['image']; ?>" alt="">
 				</div>
-				<div class="brand-thumb">
+                            <?php } ?>
+<!--				<div class="brand-thumb">
 					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
 				</div>
 				<div class="brand-thumb">
@@ -45,7 +48,7 @@
 				</div>
 				<div class="brand-thumb">
 					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Lechler_Logo.png" alt="">
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
