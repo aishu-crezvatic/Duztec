@@ -44,6 +44,18 @@ class Frontend_model extends CI_Model
         return $data;
     }
     
+    public function get_blog_categories()
+    {
+        $data = $this->db->select('*')
+            ->from('blog_category')
+            ->where('status = 1')
+//            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+    
     public function get_clientele()
     {
         $data = $this->db->select('*')

@@ -25,6 +25,7 @@ class Sectors extends CI_Controller {
         }
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
+        $data['blog_categories'] = $this->frontend_model->get_blog_categories();
         //access data from array
         // $sector_details[$selected_sector_index]['name'];
         $this->load->view('frontend/sectors', $data);

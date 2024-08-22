@@ -16,6 +16,7 @@ class Frontend extends CI_Controller {
         $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
+        $data['blog_categories'] = $this->frontend_model->get_blog_categories();
 //        echo "<pre>";
 //        print_r($data);
 //        exit;
