@@ -363,25 +363,270 @@
 </div>
 <?php } ?>
 <!------------------------>
+<!----------------------------->
+<?php if($product['page_type'] == 5){ ?>
+<div class="call-do-action-abou style-two" style="padding-top: 30px;"> 
+    <!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
+	<div class="">
+		<div class="row justify-content-center gap-5">
+<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2">Technology</h2>
+				<p class="text-black"><?php echo $product['technology']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2">Benefits Of System</h2>
+					<p class="text-black "><?php echo $product['benefits']; ?></p>
+
+				</div>
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+
+                        <!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
+				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
+
+			</div>-->
+			<!--<div class="row justify-content-center mt-5">-->
+<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
+					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
+
+				</div>-->
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+		</div>
+	</div>
+	<div class="call-shape">
+		<img src="assets/images/call-shape.png" alt="thumb">
+	</div>
+</div>
+<?php } ?>
+<!------------------------>
+<!----------------------------->
+<?php if($product['page_type'] == 6){ ?>
+<div class="call-do-action-abou style-two" style="padding-top: 30px;"> 
+    <!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
+	<div class="">
+		<div class="row justify-content-center gap-5">
+<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['need_title']; ?></h2>
+				<p class="text-black"><?php echo $product['need_para']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features_title']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features_para']; ?></p>
+
+				</div>
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+
+                        <!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
+				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
+
+			</div>-->
+			<!--<div class="row justify-content-center mt-5">-->
+<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
+					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
+
+				</div>-->
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+		</div>
+	</div>
+	<div class="call-shape">
+		<img src="assets/images/call-shape.png" alt="thumb">
+	</div>
+    
+    <div class="call-do-action-abou style-two" style="padding-top: 30px;"> 
+    <p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2></p>
+	<div class="">
+		<div class="row justify-content-center gap-3">
+<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
+				<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
+
+				</div>
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+
+<!--                        			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
+				<p class="text-black"><?php echo $product['key_features3_para']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
+
+				</div>
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+                                <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
+				<p class="text-black"><?php echo $product['key_features5_para']; ?></p>
+
+			</div>
+                          <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['choose_title']; ?></h2>
+				<p class="text-black"><?php echo $product['choose_para']; ?></p>
+
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="call-shape">
+		<img src="assets/images/call-shape.png" alt="thumb">
+	</div>
+</div>
+<?php } ?>
+<!------------------------>
+<!----------------------------->
+<?php if($product['page_type'] == 7){ ?>
+<div class="call-do-action-abou style-two" style="padding-top: 30px;"> 
+    <!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2></p>-->
+	<div class="">
+		<div class="row justify-content-center gap-5">
+<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
+				<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
+
+				</div>
+                        
+                        <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features3_para']; ?></p>
+
+				</div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
+
+				</div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features5_para']; ?></p>
+
+				</div>
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+
+                        <!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
+				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
+
+			</div>-->
+			<!--<div class="row justify-content-center mt-5">-->
+<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
+					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
+
+				</div>-->
+<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+			<!--</div>-->
+		</div>
+	</div>
+	<div class="call-shape">
+		<img src="assets/images/call-shape.png" alt="thumb">
+	</div>
+    
+</div>
+<?php } ?>
+<!------------------------>
 
 <div class="tab-container">
 	<div class="tabs">
-		<div class="tab active" data-tab="description">Description</div>
-		<div class="tab" data-tab="additional-info">Additional Information</div>
+		<!--<div class="tab active" data-tab="description">Description</div>-->
+		<div class="tab active" data-tab="description">Conclusion</div>
+		<!--<div class="tab" data-tab="additional-info">Additional Information</div>-->
 		<div class="tab" data-tab="videos">Videos</div>
 	</div>
 	<div class="tab-content">
 		<div id="description" class="tab-pane active">
-			<p class="fw-bold">The Duztec Double Barrel-DB boasts dual functionality, deploying Mist cannons or fog
+<!--			<p class="fw-bold">The Duztec Double Barrel-DB boasts dual functionality, deploying Mist cannons or fog
 				cannons at identical
 				angles to simultaneously address two crucial aspects of slag management. One barrel efficiently cools
 				the heated slag, promoting effective quenching, while the other focuses on suppressing the dust
 				generated during the process. This dual-action approach not only enhances the overall efficiency of slag
-				management but also contributes to a cleaner and safer working environment.</p>
+				management but also contributes to a cleaner and safer working environment.</p>-->
+                    	<p class="fw-bold"><?php echo $product['conclusion']; ?></p>
 		</div>
-		<div id="additional-info" class="tab-pane">
+<!--		<div id="additional-info" class="tab-pane">
 			<p>Here is some additional information.</p>
-		</div>
+		</div>-->
 		<div id="videos" class="tab-pane">
 			<p>Here are some videos.</p>
 		</div>
@@ -410,26 +655,31 @@
 		</div>
 		<div class="row">
 			<div class="service_list owl-carousel">
+                            <?php foreach ($product_with_cat_sub_cat as $product) { 
+                                $images = explode(',', $product['images']);
+                                ?>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
 					</div> -->
 					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
+						<h2><?php echo $product['name']; ?></h2>
+						<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+						<!--<p><?php echo $product['conclusion']; ?></p>-->
+                                                <a href="<?php echo base_url().'product_detail/'.$product['p_id'] ?>">Learn More</a>
 					</div>
 				</div>
-				<div class="service-single-box">
+                            <?php } ?>
+<!--				<div class="service-single-box">
 					<div class="service-thumb">
 						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
-					<!-- <div class="service-icon">
+					 <div class="service-icon">
 						<i class="flaticon-briefcase"></i>
-					</div> -->
+					</div> 
 					<div class="service-content">
 						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -440,15 +690,15 @@
 					<div class="service-thumb">
 						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
-					<!-- <div class="service-icon">
+					 <div class="service-icon">
 						<i class="flaticon-mail"></i>
-					</div> -->
+					</div> 
 					<div class="service-content">
 						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
 						<a href="single-service.html">Learn More</a>
 					</div>
-				</div>
+				</div>-->
 
 			</div>
 		</div>
