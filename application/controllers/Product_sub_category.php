@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product_category extends CI_Controller {
+class Product_sub_category extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -25,16 +25,17 @@ class Product_category extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
-    public function index() {
+    public function index($c_id) {
 //        $data['product_category'] = $this->frontend_model->productCategory();
         $data['product_sub_category'] = $this->frontend_model->productSubCategory();
         $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+        $data['product_with_cat_sub_cat2'] = $this->frontend_model->product_with_cat_sub_cat2($c_id);
         $data['clientele'] = $this->frontend_model->get_clientele();
 //        echo "<pre>";
 //        print_r($data);
 //        exit;
 //        $data['category_data'] = $this->frontend_model->productCategory();
 
-        $this->load->view('frontend/product_category', $data);
+        $this->load->view('frontend/product_sub_category', $data);
     }
 }

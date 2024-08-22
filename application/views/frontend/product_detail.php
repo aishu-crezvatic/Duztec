@@ -611,8 +611,11 @@
 	<div class="tabs">
 		<!--<div class="tab active" data-tab="description">Description</div>-->
 		<div class="tab active" data-tab="description">Conclusion</div>
-		<!--<div class="tab" data-tab="additional-info">Additional Information</div>-->
+                <?php if(!empty($product['product_diversity_matrix'])){ ?>
+		<div class="tab" data-tab="additional-info">Product Diversity Matrix</div>
+                <?php } ?>
 		<div class="tab" data-tab="videos">Videos</div>
+                
 	</div>
 	<div class="tab-content">
 		<div id="description" class="tab-pane active">
@@ -624,9 +627,12 @@
 				management but also contributes to a cleaner and safer working environment.</p>-->
                     	<p class="fw-bold"><?php echo $product['conclusion']; ?></p>
 		</div>
-<!--		<div id="additional-info" class="tab-pane">
-			<p>Here is some additional information.</p>
-		</div>-->
+            <?php if(!empty($product['product_diversity_matrix'])){ ?>
+		<div id="additional-info" class="tab-pane">
+			<!--<p>Here is some additional information.</p>-->
+			<p><?php echo $product['product_diversity_matrix']; ?></p>
+		</div>
+            <?php } ?>
 		<div id="videos" class="tab-pane">
 			<p>Here are some videos.</p>
 		</div>

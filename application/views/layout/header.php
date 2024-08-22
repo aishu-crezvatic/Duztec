@@ -192,7 +192,7 @@
                                 </li>-->
 
                                                                     <li class="position-relative">
-                                        <a href="product_category">Products <i class="fa fa-angle-down"></i></a>
+                                                                        <a href="<?php echo base_url(); ?>product_category">Products <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
 
                                             <?php 
@@ -220,7 +220,7 @@
                                                     <li class="position-relative">
                                                         <?php if ($sub_cat_count == 1) { ?>
                                                         <div class="drop-cat">
-                                                            <a href="<?php echo base_url() . 'sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
+                                                            <a href="<?php echo base_url() . 'product_sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
                                                         </div>
                                                     <?php // }else{ ?>
                                                         <ul class="sub-prod">
