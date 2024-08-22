@@ -1,5 +1,13 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); 
+
+// echo '<pre>';
+// print_r($about_us);
+// exit;
+
+if (!empty($about_us)) : ?>
+				<?php foreach ($about_us as $about_us) : 
+?>
 <!-- header end  -->
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
@@ -11,7 +19,7 @@
 				<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s"
 					data-wow-delay=".5s">
 					<h2 class=" about-title">About Us</h2>
-					<h2 class="fw-normal text-white ">We are Qualified and Professional</h2>
+					<h2 class="fw-normal text-white "><?php echo $about_us['hero_banner_text']; ?></h2>
 					<ul class="text-white pt-3">
 						<li><a href="index.html"> <i class="fas fa-home fs-3"></i> </a></li>
 						<li class="style2 fs-3 text-white">Home</li>
@@ -31,21 +39,15 @@
 		<div class="row align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="about-thumb">
-					<img src="assets/images/About Us Product Image.png" alt="">
+					<img src="assets/images/<?php echo $about_us['about_image'];?>" alt="about_image">
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<div class="section-title p-0">
 					<!-- <h5>// ABOUT COMPANY</h5> -->
-					<h1 class="lh-1">WE ARE QUALIFIELD & PROFESSIONAL</h1>
+					<h1 class="lh-1"><?php echo $about_us['about_title'];?></h1>
 					<!-- <h1>& Industries!</h1> -->
-					<p>Established in 2018 & serving as market leader in Industrial Dust Control Solutions Duztec
-						Engineering Pvt. Ltd. Is all about making the environment better by suppressing dust with
-						high-end technologies. We serve first rate aid and give effective solutions for controlling dust
-						emissions with our latest technologies. With wide range of Products , Needbase and Timebase
-						support, Innovative & Experienced Solutions & Unparalleled Expertise, DUZTEC helps to reduce the
-						spread of dust which allows you to not only create a dust-free , healthy and safe environment
-						for your employees, as well as for the entire neighbourhood.</p>
+					<p><?php echo $about_us['about_desc'];?></p>
 				</div>
 			</div>
 		</div>
@@ -62,20 +64,12 @@
 			</div>
 			<div class="col-lg-7 col-md-6 col-sm-12">
 				<h2 class="fw-bold about-title fs-1 py-2">OUR VISION</h2>
-				<p class="text-white">Being a leader in Dust Suppression Solutions and services across India, our vision
-					is to minimize the
-					amount of dust emission. We aim to provide the most effective methods of dust suppression technology
-					with more experience, the right Solutions & expertise from Germany & Sweden which has the world’s
-					finest AQI.</p>
-
+				<p class="text-white"><?php echo $about_us['vision'];?></p>
 			</div>
 			<div class="row justify-content-center mt-5">
 				<div class="col-lg-7 col-md-6 col-sm-12">
 					<h2 class="fw-bold about-title fs-1 py-2">OUR MISSION</h2>
-					<p class="text-white ">To focus on continuous product development, rapid delivery & long-term
-						cooperation with our customers. Our mission is to ensure that in every project we deliver
-						quality & satisfactory performance. We strive to improve the Quality of Life of our employees,
-						our partners, our customers, and the people in the communities where we operate.</p>
+					<p class="text-white "><?php echo $about_us['mission'];?></p>
 
 				</div>
 				<div class="col-lg-2 col-md-6">
@@ -297,42 +291,15 @@
 			</div>
 		</div>
 	</div>
-	<!-- ============================================================== -->
-	<!-- Start - Brand- Section -->
-	<!-- ============================================================= -->
-	<!-- <div class="brand-section">
-		<div class="container">
-			<div class="row brand-bg">
-				<div class="brand_list owl-carousel">
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
+	
+	</div>
 
+	<?php endforeach; ?>
+			<?php else : ?>
+				<div class="col-lg-12">
+					<p>No categories found.</p>
+				</div>
+			<?php endif; ?>
 	<!-- Footer start  -->
 	<?php $this->load->view('layout/footer'); ?>
 	<!-- Footer end  -->
