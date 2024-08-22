@@ -62,15 +62,6 @@ class Frontend_model extends CI_Model
 //        $this->db->order_by('dv_id', 'DESC');
         $query = $this->db->get();
         return $query->result_array();
-        
-//        $data = $this->db->select('*')
-//            ->from('sub_category')
-//            ->where('status = 1')
-//            ->order_by('sc_id ', 'asc')
-//            ->get()
-//            ->result_array();
-//        // print_r($data);
-//        return $data;
     }
     
     public function product_with_cat_sub_cat2($c_id) //not used yet
@@ -114,13 +105,13 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
-    public function about($id)
+    public function about_us()
     {
         $data = $this->db->select('*')
-            ->from('about')
+            ->from('about_us')
             ->where('status = 1')
-            ->where('id', id)
-            ->order_by('id ', 'asc')
+            // ->where('id', id)
+            // ->order_by('au_id ', 'asc')
             ->get()
             ->result_array();
         // print_r($data);
