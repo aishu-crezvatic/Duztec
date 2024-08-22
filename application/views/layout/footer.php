@@ -179,14 +179,20 @@
 		align-items: center;
 		z-index: 1000;
 	}
+
 	@media (max-width:600px) {
-		.popup-form .container{
+		.popup-form .container {
 			width: 100% !important;
 		}
-		
+
 	}
 </style>
 </head>
+
+<?php if (isset($error_message)) { ?>
+	<div style="color: red;"><?php echo $error_message; ?></div>
+<?php } ?>
+
 <div class="popup-form " id="popupForm">
 	<div class="container popup-content bg-white p-4 rounded shadow w-50">
 
@@ -194,14 +200,14 @@
 			<h2>Request A Quote</h2>
 			<button class="close-popup text-danger border-0 rounded shadow" id="closePopup">X</button>
 		</div>
-		<form id="quoteForm" class="row ">
+		<form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post">
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
-				<input type="text" id="name" name="name" class="form-control" required>
+				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control" required>
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="email" class="navyText fw-bold">Email:</label>
-				<input type="email" id="email" name="email" class="form-control" required>
+				<input type="email" id="email" name="email" value="<?php echo set_value('email')?>" class="form-control" required>
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="product" class="navyText fw-bold">Product:</label>
@@ -242,53 +248,74 @@
 
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const popupForm = document.getElementById('popupForm');
-		const closePopup = document.getElementById('closePopup');
-		const captchaQuestion = document.getElementById('captchaQuestion');
-		let captchaAnswer;
+document.addEventListener("DOMContentLoaded", function () {
+    const popupForm = document.getElementById('popupForm');
+    const closePopup = document.getElementById('closePopup');
+    const captchaQuestion = document.getElementById('captchaQuestion');
+    let captchaAnswer;
 
-		function generateCaptcha() {
-			const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-			const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-			captchaAnswer = num1 + num2;
-			captchaQuestion.textContent = `${num1} + ${num2} =`;
-		}
+    function generateCaptcha() {
+        const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        captchaAnswer = num1 + num2;
+        captchaQuestion.textContent = `${num1} + ${num2} =`;
+    }
 
-		function showPopup() {
-			popupForm.style.display = 'flex';
-			generateCaptcha(); // Generate captcha when popup is shown
-		}
+    function showPopup() {
+        popupForm.style.display = 'flex';
+        generateCaptcha(); // Generate captcha when popup is shown
+    }
 
-		// Show popup only if it hasn't been shown in this session
-		if (!localStorage.getItem('popupShown')) {
-			showPopup();
-			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
-		}
+    // Show popup only if it hasn't been shown in this session
+    if (!localStorage.getItem('popupShown')) {
+        showPopup();
+        localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+    }
 
-		// Close popup when the close button is clicked
-		closePopup.addEventListener('click', () => {
-			popupForm.style.display = 'none';
-		});
+    // Close popup when the close button is clicked
+    closePopup.addEventListener('click', () => {
+        popupForm.style.display = 'none';
+    });
 
-		// Form submission handling
-		document.getElementById('quoteForm').addEventListener('submit', function (event) {
-			event.preventDefault();
-			const captchaInput = document.getElementById('captcha').value;
-			if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
-				alert('Captcha is incorrect.');
-				return;
-			}
-			// Form submission logic here (e.g., send data to server)
-			alert('Form submitted successfully!');
-			popupForm.style.display = 'none'; // Hide popup after submission
-		});
+    // Clear popupShown flag on page unload (e.g., reload or close)
+    window.addEventListener('beforeunload', function () {
+        localStorage.removeItem('popupShown');
+    });
+});
 
-		// // Clear popupShown flag on page unload (e.g., reload or close)
-		window.addEventListener('beforeunload', function () {
-			localStorage.removeItem('popupShown');
-		});
-	});
+$(document).ready(function() {
+    $('#quoteForm').submit(function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        const captchaInput = $('#captcha').val();
+        if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
+            alert('Captcha is incorrect.');
+            return;
+        }
+
+        // Debug: Print form data to console
+        const formData = $(this).serializeArray();
+        console.log('Form Data:', formData);
+
+        $.ajax({
+            url: $(this).attr('action'), // URL to send the request
+            type: 'POST', // HTTP method
+            data: $(this).serialize(), // Serialize form data
+            success: function(response) {
+                // Handle success (e.g., show a success message)
+                console.log('Response from server:', response);
+                alert('Form submitted successfully!');
+                $('#popupForm').hide(); // Hide popup after submission
+            },
+            error: function(xhr, status, error) {
+                // Handle errors (e.g., show an error message)
+                console.error('An error occurred:', error);
+                alert('An error occurred: ' + error);
+            }
+        });
+    });
+});
+
 </script>
 
 
