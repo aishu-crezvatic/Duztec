@@ -152,7 +152,7 @@
                         </form>
                     </div>
                    
-                    <div class="col-lg-7 col-md-7">
+                    <div class="col-lg-8 col-md-7">
                    
                             <div class="header-menu text-cente">
                     
