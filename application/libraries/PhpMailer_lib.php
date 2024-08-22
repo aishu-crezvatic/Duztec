@@ -22,7 +22,7 @@ class PhpMailer_lib {
             $this->mail->SMTPAuth   = true;                        
             $this->mail->Username   = 'aishwarya@gmail.com';   
             $this->mail->Password   = 'vpcq bljp hxsj iple';             
-            $this->mail->SMTPSecure = 'tls';                       
+            $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;                       
             $this->mail->Port       = 587;                         
 
             // Recipients
@@ -38,17 +38,37 @@ class PhpMailer_lib {
     }
 
     public function sendMail($to, $subject, $body, $isHTML = true) {
+        echo "<h3>Debugging Email Sending</h3>";
+        echo "<strong>To:</strong> " . htmlspecialchars($to) . "<br>";
+        echo "<strong>Subject:</strong> " . htmlspecialchars($subject) . "<br>";
+        echo "<strong>Body:</strong><br>" . nl2br(htmlspecialchars($body)) . "<br>";
+        echo "<strong>Is HTML:</strong> " . ($isHTML ? 'Yes' : 'No') . "<br>";
+    
         try {
+            // Clear previous recipients and set new ones
             $this->mail->clearAddresses();
             $this->mail->addAddress($to);
-            $this->mail->isHTML($isHTML);
+            
+            // Set email format and content
+            $this->mail->isHTML($isHTML); // Set email format to HTML or plain text
             $this->mail->Subject = $subject;
             $this->mail->Body    = $body;
-
+            $this->mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            
+            // Enable debug output for troubleshooting
+            $this->mail->SMTPDebug = 2; // 2 = client messages (you can set to 3 for more verbose output)
+    
+            // Attempt to send the email
+            echo 'Message not yet sent<br>';
             $this->mail->send();
+            echo 'Message has been sent<br>';
+    
             return true;
         } catch (Exception $e) {
-            log_message('error', 'PHPMailer Error: ' . $this->mail->ErrorInfo);
+            // Log error message and display it
+            $errorMessage = 'PHPMailer Error: ' . $this->mail->ErrorInfo;
+            log_message('error', $errorMessage);
+            echo '<p style="color: red;">' . htmlspecialchars($errorMessage) . '</p>';
             return false;
         }
     }
