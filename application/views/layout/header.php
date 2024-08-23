@@ -142,11 +142,11 @@
                     
                     <div class="col-lg-2 col-md-2">
                         <div class="header-logo">
-                            <a class="menu-logo" href="<?php echo base_url()?>index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: 70px; width:auto "></a>
+                            <a class="menu-logo" href="<?php echo base_url()?>index"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt="" style="height: auto; width:100% "></a>
                         </div>
                     </div>
 
-                    <div class="col-2 text-end">
+                    <div class="col-lg-2 col-md-2 col-2 text-end">
                     <form >
                             <input type="text" name="search" placeholder="Search..">
                         </form>
@@ -250,7 +250,7 @@
                                                             <li><a href="product">HPDS</a></li>
                                                             <li><a href="product">SFDS</a></li>-->
                                                         </ul>
-                                                        <?php } ?>
+                                                    <?php } ?>
                                                     </li>
                                                 <?php } else { ?>
                                                     <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
@@ -293,16 +293,21 @@
     <!-- End - Mobile-Menu- Section -->
     <!-- ============================================================= -->
     <!-- Mobile-Menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu p-0">
         <div class="conainer">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="logo-container justify-content-between">
-                        <div class="header-logo">
-                            <a class="mobile-logo" href="index.html"><img src="<?php echo base_url()?>assets/images/data_tech_logo.png" alt=""></a>
+                    <div class="logo-container row justify-content-evenly">
+                        <div class="header-logo col-2 col-md-1">
+                            <a class="mobile-logo" href="index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
-                        <div class="menu-toggle">
-                            <div class="icon">
+                        <div class=" col-6 overflow-hidden">
+                              <form >
+                                    <input type="text" name="search" placeholder="Search..">
+                              </form>
+                        </div> 
+                        <div class="menu-toggl col-2">
+                            <div class="icon text-end">
                                 <i class="fas fa-bars"></i>
                                 <i class="fas fa-times"></i>
                             </div>
