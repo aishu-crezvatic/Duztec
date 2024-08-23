@@ -147,8 +147,9 @@
                     </div>
 
                     <div class="col-2 text-end">
-                    <form >
-                            <input type="text" name="search" placeholder="Search..">
+                    <form action="<?= base_url('product') ?>" method="GET">
+                            <input type="text" name="query" placeholder="Search products...">
+                            <button type="submit">Search</button>
                         </form>
                     </div>
                    
