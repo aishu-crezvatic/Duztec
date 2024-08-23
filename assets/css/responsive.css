@@ -2257,10 +2257,10 @@ i.fas.fa-times {
     display: none;
 }
 .fa-bars:before {
-    color:red !important;
+    color:#2260A4 !important;
 }
 .fa-times:before{
-    color: red !important;
+    color: #2260A4 !important;
 }
 .menu-toggle {
     display: block;
