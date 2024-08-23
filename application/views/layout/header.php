@@ -299,17 +299,17 @@
                 <div class="col-lg-3">
                     <div class="logo-container row justify-content-evenly">
                         <div class="header-logo col-2 col-md-1">
-                            <a class="mobile-logo" href="index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
+                            <a class="mobile-logo" href="<?php echo base_url() ?>index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
                         <div class=" col-6 overflow-hidden">
                               <form >
                                     <input type="text" name="search" placeholder="Search..">
                               </form>
                         </div> 
-                        <div class="menu-toggl col-2">
+                        <div class="menu-toggle col-2">
                             <div class="icon text-end">
-                                <i class="fas fa-bars"></i>
-                                <i class="fas fa-times"></i>
+                                <i class="fas fa-bars "></i>
+                                <i class="fas fa-times "></i>
                             </div>
                         </div>
                     </div>
@@ -317,15 +317,15 @@
                 <div class="col-lg-9 col-md-12">
                     <div class="header-menu2">
                         <ul>
-                            <li class="expand"><a class="menu_hide" href="#">Home
-                                    <div class="menu-toggle2">
+                            <li class="expand"><a class="menu_hide" href="<?php echo base_url() . 'index' ?>">Home
+                                    <!-- <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
                                             <span class="minus">-</span>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </a>
-                                <ul class="menu_open sub-menu2">
+                                <!-- <ul class="menu_open sub-menu2">
                                     <li><a href="index.html">Home Page One</a></li>
                                     <li><a href="index-2.html">Home Page Two</a></li>
                                     <li><a href="index-3.html">Home Page Three</a></li>
@@ -333,17 +333,17 @@
                                     <li><a href="index-5.html">Home Page Five</a></li>
                                     <li><a href="landing-1.html">Landing Page One</a></li>
                                     <li><a href="landing-2.html">Landing Page Two</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="expand"><a class="menu_hide2" href="#">Pages
-                                    <div class="menu-toggle2">
+                            <li class="expand"><a class="menu_hide2" href="about">About Us
+                                    <!-- <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
                                             <span class="minus">-</span>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </a>
-                                <ul class="menu_open2 sub-menu2">
+                                <!-- <ul class="menu_open2 sub-menu2">
                                     <li><a href="about-us.html">About Us</a></li>
                                     <li><a href="service.html">It Service</a></li>
                                     <li><a href="single-service.html">Service Details</a></li>
@@ -351,9 +351,9 @@
                                     <li><a href="portfolio.html">Portfolio</a></li>
                                     <li><a href="team.html">Team</a></li>
                                     <li><a href="404.html">404</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li class="expand"><a class="menu_hide3" href="#">Service
+                            <li class="expand"><a class="menu_hide3" href="#">Products
                                     <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
@@ -362,11 +362,45 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open3 sub-menu2">
-                                    <li><a href="service.html">It Service</a></li>
-                                    <li><a href="single-service.html">Service Details</a></li>
+                                     <?php 
+                                        $sub_cat_count = 0; 
+                                        foreach ($product_with_cat_sub_cat as $product) { 
+                                            $search_c_id = $product['c_id'];
+                                            $search_sc_id = $product['sc_id'];
+                                            $c_id_exists = false;
+                                            foreach ($product_sub_category as $sub_category) {
+                                                if ($sub_category['c_id'] == $search_c_id) {
+                                                    $c_id_exists = true;
+                                                    $sub_cat_count++;
+                                                    break;
+                                                }
+                                            }
+                                            if ($c_id_exists) { ?>
+                                                <p class="position-relative">
+                                                    <?php if ($sub_cat_count == 1) { ?>
+                                                    <div class="drop-cat">
+                                                        <a href="<?php echo base_url() . 'product_sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?><i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                    <ul class="">
+                                                        <?php foreach ($product_sub_category as $sub_category2) { 
+                                                            if($sub_category2['sc_id'] == $search_c_id && $search_sc_id > 0) {
+                                                                foreach ($product_with_cat_sub_cat as $product2) {
+                                                                    if($product2['sc_id'] > 0) { ?>
+                                                                        <li><a href="<?php echo base_url() . 'product_detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
+                                                                    <?php }
+                                                                }
+                                                            }
+                                                        } ?>
+                                                    </ul>
+                                                    <?php } ?>
+                                                    </p>
+                                            <?php } else { ?>
+                                                <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
+                                            <?php } ?>
+                                        <?php } ?>
                                 </ul>
                             </li>
-                            <li class="expand"><a class="menu_hide4" href="#">Case Study
+                            <li class="expand"><a class="menu_hide4" href="#">Sectors
                                     <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
@@ -375,7 +409,9 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open4 sub-menu2">
-                                    <li><a href="case-study-details.html">Case Study</a></li>
+                                <?php foreach ($sectors as $sector) {  ?>
+                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
+                                        <?php } ?>
                                 </ul>
                             </li>
                             <li class="expand"><a class="menu_hide5" href="#">Blog
@@ -387,12 +423,11 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open5 sub-menu2">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li>
+
                                 </ul>
                             </li>
-                            <li><a href="contact-us.html">Contact</a>
-                            </li>
+                            <li><a href="<?php echo base_url() ?>contact_us">Contact</a></li>
                         </ul>
                     </div>
                 </div>
