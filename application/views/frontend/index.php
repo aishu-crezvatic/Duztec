@@ -114,26 +114,30 @@
 		</div>
 		<div class="row">
 			<div class="service_list owl-carousel">
+                            <?php foreach ($product_with_cat_sub_cat as $product) { 
+                                $images = explode(',', $product['images']);
+                                ?>
 				<div class="service-single-box">
 					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
 					</div> -->
 					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
+						<h2><?php echo $product['name']; ?></h2>
+						<!--<p><?php echo $product['conclusion']; ?></p>-->
+						<a href="<?php echo base_url().'product_detail/'.$product['p_id'] ?>">Learn More</a>
 					</div>
 				</div>
-				<div class="service-single-box">
+                            <?php } ?>
+<!--				<div class="service-single-box">
 					<div class="service-thumb">
 						<img src="assets/images/products/ProductImageSection.webp" alt="">
 					</div>
-					<!-- <div class="service-icon">
+					 <div class="service-icon">
 						<i class="flaticon-briefcase"></i>
-					</div> -->
+					</div> 
 					<div class="service-content">
 						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -144,15 +148,15 @@
 					<div class="service-thumb">
 						<img src="assets/images/products/ProductImageSection.webp" alt="">
 					</div>
-					<!-- <div class="service-icon">
+					 <div class="service-icon">
 						<i class="flaticon-mail"></i>
-					</div> -->
+					</div> 
 					<div class="service-content">
 						<h2>Double Barrel System</h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
 						<a href="single-service.html">Learn More</a>
 					</div>
-				</div>
+				</div>-->
 
 			</div>
 		</div>
@@ -194,20 +198,22 @@
 			<h1>SECTORS/INDUSTRIES</h1>
 		</div>
 		<div class="row sectors-industries">
+                    <?php foreach($sectors as $sector){ ?>
 			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
-						<i class="flaticon-bar-chart"></i>
+						<i class="<?php echo $sector['image']; ?>"></i>
 					</div>
 					<div class="feature-content">
-						<h2>Cement Industry</h2>
-						<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.
-						</p>
+						<h2><?php echo $sector['name']; ?> </h2>
+						<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
+						<!--</p>-->
 					</div>
 
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6">
+                    <?php } ?>
+<!--			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
 						<i class="flaticon-square"></i>
@@ -268,7 +274,7 @@
 					</div>
 
 				</div>
-			</div> 
+			</div> -->
 		</div>
 	</div>
 </div>

@@ -147,8 +147,9 @@
                     </div>
 
                     <div class="col-lg-2 col-md-2 col-2 text-end">
-                    <form >
-                            <input type="text" name="search" placeholder="Search..">
+                    <form action="<?= base_url('product') ?>" method="GET">
+                            <input type="text" name="query" placeholder="Search products...">
+                            <button type="submit">Search</button>
                         </form>
                     </div>
                    
@@ -271,7 +272,9 @@
                                 <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
-                                        <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li>
+                                        <?php foreach ($blog_categories as $category) { ?>
+                                        <li><a href="<?php echo base_url() ?>/blog_details/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </li>
                                 <!-- <li><a href="gallery">Gallery</a></li> -->

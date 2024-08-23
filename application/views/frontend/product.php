@@ -35,19 +35,25 @@
 				</div>
 			</div>
 			<div class="row">
+                            <?php foreach ($product_with_cat_sub_cat_search as $product) { 
+                                $images = explode(',', $product['images'])
+                                ?>
+                                
+                            
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<img src="assets/images/all-product/DBProductImageNew.webp" alt="">
+                                                    <img src="<?php echo base_url().'uploads/product/image/'.$images[0]; ?>" alt="">
 							<div class="thumb-content">
-								<span>category</span>
-								<h2>Product Name</h2>
-								<a href="product_detail">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
+								<span>Category: <?php echo $product['cat_name']; ?></span>
+								<h2>Product Name: <?php echo $product['name']; ?></h2>
+                                                                <a href="<?php echo base_url(); ?>product_detail/<?php echo $product['p_id']; ?>">View Product <i class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<?php } ?>
+<!--                            <div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
 							<img src="assets/images/all-product/SB_New ProductImage.webp" alt="">
@@ -106,7 +112,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
