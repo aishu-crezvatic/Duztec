@@ -19,7 +19,7 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
-    
+
     public function productSubCategory()
     {
         $data = $this->db->select('*')
@@ -31,71 +31,71 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
-    
+
     public function get_sectors()
     {
         $data = $this->db->select('*')
             ->from('sector_detail')
             ->where('status = 1')
-//            ->order_by('sc_id ', 'asc')
+            //            ->order_by('sc_id ', 'asc')
             ->get()
             ->result_array();
         // print_r($data);
         return $data;
     }
-    
+
     public function get_clientele()
     {
         $data = $this->db->select('*')
             ->from('clientele')
             ->where('status = 1')
-//            ->order_by('sc_id ', 'asc')
+            //            ->order_by('sc_id ', 'asc')
             ->get()
             ->result_array();
         // print_r($data);
         return $data;
     }
-    
+
     public function product_with_cat_sub_cat() //not used yet
     {
-//         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
-         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image as cat_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+        //         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+        $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image as cat_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
         $this->db->from('product');
         $this->db->join('category', 'product.c_id = category.c_id', 'left');
         $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
         $this->db->where(
-                array(
-                    'product.status' => 1, 
-                    'category.status' => 1
-//                    'sub_category.status' => 1
-                    )
-                );
-//        $this->db->limit(24,  $start);
+            array(
+                'product.status' => 1,
+                'category.status' => 1
+                //                    'sub_category.status' => 1
+            )
+        );
+        //        $this->db->limit(24,  $start);
 //        $this->db->order_by('dv_id', 'DESC');
         $query = $this->db->get();
         return $query->result_array();
     }
-    
+
     public function product_with_cat_sub_cat2($c_id) //not used yet
     {
-//         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
-         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image as cat_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+        //         $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+        $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image as cat_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
         $this->db->from('product');
         $this->db->join('category', 'product.c_id = category.c_id', 'left');
         $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
         $this->db->where(
-                array(
-                    'product.status' => 1, 
-                    'category.status' => 1,
-                    'product.c_id' => $c_id
-                    )
-                );
-//        $this->db->limit(24,  $start);
+            array(
+                'product.status' => 1,
+                'category.status' => 1,
+                'product.c_id' => $c_id
+            )
+        );
+        //        $this->db->limit(24,  $start);
 //        $this->db->order_by('dv_id', 'DESC');
         $query = $this->db->get();
         return $query->result_array();
-        
-//        $data = $this->db->select('*')
+
+        //        $data = $this->db->select('*')
 //            ->from('sub_category')
 //            ->where('status = 1')
 //            ->order_by('sc_id ', 'asc')
@@ -169,10 +169,16 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+    public function gallery()
+    {
+        $data = $this->db->select('*')
+            ->from('gallery')
+            ->get()
+            ->result_array();
+
+        return $data;
+    }
 
 
-
-
-    
 }
 /* End of file Index_model.php */
