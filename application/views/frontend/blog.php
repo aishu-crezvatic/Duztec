@@ -10,11 +10,11 @@
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
-<div class="breadcumn-section d-flex align-items-center">
+<div class="breadcumn-section-blog d-flex align-items-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
-				<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
+				<!-- <div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
 					<h2>Blog Page</h2>
 					<ul>
 						<li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
@@ -22,7 +22,7 @@
 						<li><i class="fas fa-chevron-right"></i></li>
 						<li class="style2">Blog Page</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -103,66 +103,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="single-blog-items">
-						<div class="blog-thumb">
-							<img src="assets/images/b4.jpg" alt="">
-						</div>
-						<div class="single-blog-content">
-							<div class="blog-meta-top2">
-								<span class="color"><i class="fas fa-calendar-alt"></i></span>
-								<span>July 27, 2022</span>
-								<span class="color"><i class="fas fa-comment"></i> 1 Comments</span>
-							</div>
-							<div class="blog-title">
-								<h2>How to Prepare for your First <br>
-									his consumer focused </h2>
-							</div>
-							<div class="blog-text">
-								<p>It is a long established fact that a reader will be distracted by the readable
-									looking at its layout. The point of using Lorem Ipsum is that </p>
-							</div>
-							<div class="blog-btn2">
-								<a href="blog-details.html">Read More</a>
-							</div>
-						</div>
-					</div> -->
-				<!-- <div class="single-blog-items">
-						<div class="blog-thumb">
-							<img src="assets/images/b5.jpg" alt="">
-						</div>
-						<div class="single-blog-content">
-							<div class="blog-meta-top2">
-								<span class="color"><i class="fas fa-calendar-alt"></i></span>
-								<span>July 27, 2022</span>
-								<span class="color"><i class="fas fa-comment"></i> 1 Comments</span>
-							</div>
-							<div class="blog-title">
-								<h2>How to Prepare for your First <br>
-									his consumer focused </h2>
-							</div>
-							<div class="blog-text">
-								<p>It is a long established fact that a reader will be distracted by the readable
-									looking at its layout. The point of using Lorem Ipsum is that </p>
-							</div>
-							<div class="blog-btn2">
-								<a href="blog-details.html">Read More</a>
-							</div>
-						</div>
-					</div> -->
-				<!-- <div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<div class="pagination">
-								<ul>
-									<li><a href="#"><i class="fas fa-long-arrow-alt-left"></i></a></li>
-									<li><a class="current-menu" href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div> -->
 			</div>
 			<div class="col-lg-4 col-md-12 col-sm-12">
 
@@ -267,56 +207,11 @@
 						<a href="#"><i class="fab fa-pinterest"></i></a>
 					</div>
 				</div>
-				<!-- <div class="tags">
-						<h2>Tags</h2>
-						<span>Business</span>
-						<span>Offices</span>
-						<span>Organic</span>
-						<br>
-						<span>pastas</span>
-						<span>Business</span>
-						<span>Topics</span>
-					</div> -->
+			
 			</div>
 		</div>
 	</div>
 </div>
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
-<!-- <div class="brand-section">
-		<div class="container">
-			<div class="row brand-bg">
-				<div class="brand_list owl-carousel">
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_01.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_02.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_03.png" alt="">
-					</div>
-					<div class="brand-thumb">
-						<img src="assets/images/item_04.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
-<!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

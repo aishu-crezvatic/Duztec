@@ -1270,13 +1270,22 @@ body {
 
 /* Breadcumn */
 .breadcumn-section {
-    background: url(../images/slider.png);
+    background: url(../images/BlogProductBannerimage.png);
     padding-top: 280px;
     padding-bottom: 107px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.breadcumn-section-blog{
+    background: url(../images/BlogProductBannerimage.png);
+    padding-top: 280px;
+    padding-bottom: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
 
 .breadcumn-content h2 {
     font-size: 60px;

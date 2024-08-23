@@ -179,6 +179,16 @@ class Frontend_model extends CI_Model
         return $data;
     }
 
+    public function get_contact()
+    {
+        $data = $this->db->select('*')
+        ->from('contact_us')
+        ->get()
+        ->result_array();
+
+        return $data;
+    }
+
 
 }
 /* End of file Index_model.php */

@@ -82,9 +82,9 @@
                             <?php foreach ($product_with_cat_sub_cat as $product) { 
                                 $images = explode(',', $product['images']);
                                 ?>
-				<div class="service-single-box">
+				<div class="service-single-box rounded" style="height:500px">
 					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="" style="height:300px">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>

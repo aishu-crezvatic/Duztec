@@ -1,5 +1,6 @@
 <!-- header start  -->
 <?php $this->load->view('layout/header'); ?>
+
 <!-- header end  -->
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
@@ -10,10 +11,16 @@
 			<div class="col-lg-12 col-md-12">
 				<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s"
 					data-wow-delay=".5s">
-					<h2 class="about-title">CONTACT US</h2>
+					<?php if (!empty($contact)): ?>
+						<?php foreach ($contact as $item): ?>
+							<h2 class="about-title"><?php echo htmlspecialchars($item['content']); ?></h2>
+						<?php endforeach; ?>
+					<?php else: ?>
+						<h2 class="about-title">No content available</h2>
+					<?php endif; ?>
 					<ul>
-						<li ><a href="index.html"> <i class="fas fa-home fs-4"></i> </a></li>
-						<li class="style2 fs-4 fw-semibold text-white">Home |</li> 
+						<li><a href="index.html"> <i class="fas fa-home fs-4"></i> </a></li>
+						<li class="style2 fs-4 fw-semibold text-white">Home |</li>
 						<li class="style2 fs-4 fw-semibold greenText">Product</li>
 					</ul>
 				</div>
@@ -25,6 +32,9 @@
 <!-- Start - Contact-Us- Section -->
 <!-- ============================================================= -->
 <div class="contact-us single-style">
+	<?php print_r($contact);
+	?>
+
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-4 col-md-6">
@@ -148,48 +158,15 @@
 			<img src="assets/images/Path 2525.svg" alt=""> <!-- bg  image -->
 			<div class="content-om-map d-flex align-items-center flex-column">
 				<img src="assets/images/data_tech_logo.png" alt="" class="w-50">
-				<p class="navyText px-5 fw-bold pt-lg-4 pt-md-4 pt-0 lh-5">Plot No A 109, Wagle Industrial Estate, Road no 18, Thane (W) - 400 604, India</p>
+				<p class="navyText px-5 fw-bold pt-lg-4 pt-md-4 pt-0 lh-5">Plot No A 109, Wagle Industrial Estate, Road
+					no 18, Thane (W) - 400 604, India</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
-<!-- <div class="brand-section">
-	<div class="container">
-		<div class="row brand-bg">
-			<div class="brand_list owl-carousel">
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
+
 
 
 <!-- Footer start  -->
