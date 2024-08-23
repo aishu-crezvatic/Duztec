@@ -3,6 +3,7 @@
 <!-- header end  -->
 
 <?php
+// print_r($images);
 $mediaItems  = [
     'https://picsum.photos/seed/picsum/200/300',
     'https://dummyimage.com/600x400/000/fff',
@@ -24,19 +25,22 @@ $mediaItems  = [
 
 <h1 class="my-5 about-title">Gallery</h1>
   <div class="grid">
-    <?php foreach ($mediaItems as $item): ?>
-        <div class="grid-item">
-            <div class="card">
-                <?php if (strpos($item, '.mp4') !== false): ?>
-                    <video controls>
-                        <source src="<?php echo $item; ?>" type="video/mp4">
-                    </video>
-                <?php else: ?>
-                    <img src="<?php echo $item; ?>" alt="Gallery Image">
-                <?php endif; ?>
-            </div>
+  <?php foreach ($images as $item): ?>
+    <div class="grid-item">
+        <div class="card">
+            <?php if ($item['is_video'] == 1): ?>
+                <!-- Video element -->
+                <video controls width="100%">
+                <source src="<?php echo htmlspecialchars('assets/uploads/gallery/' . $item['img_video']); ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <?php else: ?>
+                <!-- Image element -->
+                <img src="<?php echo htmlspecialchars('assets/uploads/gallery/' .$item['img_video']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" width="100%">
+            <?php endif; ?>
         </div>
-    <?php endforeach; ?>
+    </div>
+<?php endforeach; ?>
   </div>
 
 
