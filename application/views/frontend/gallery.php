@@ -31,12 +31,12 @@ $mediaItems  = [
             <?php if ($item['is_video'] == 1): ?>
                 <!-- Video element -->
                 <video controls width="100%">
-                <source src="<?php echo htmlspecialchars('uploads/gallary/' . $item['img_video']); ?>" type="video/mp4">
+                <source src="<?php echo htmlspecialchars('uploads/gallery/' . $item['img_video']); ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             <?php else: ?>
                 <!-- Image element -->
-                <img src="<?php echo htmlspecialchars('uploads/gallary/' .$item['img_video']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" width="100%">
+                <img src="<?php echo htmlspecialchars('uploads/gallery/' .$item['img_video']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" width="100%">
             <?php endif; ?>
         </div>
     </div>
