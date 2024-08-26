@@ -1,14 +1,21 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); 
+
+// echo '<pre>';
+// print_r($home_page_data);
+// exit;
+if (!empty($home_page_data)) : ?>
+				<?php foreach ($home_page_data as $home_page_data) : 
+?>
 <!-- header end  -->
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
 <!-- <div class="slider-section d-flex align-items-center"> -->
 <div class="slider-section d-flex align-items-center">
-	<video preload="auto" poster="assets/video/hero_video1.MP4" autoplay="true" muted="true" playsinline="false"
+	<video preload="auto" poster="assets/video/<?php echo $home_page_data['hero_banner'];?>" autoplay="true" muted="true" playsinline="false"
 		loop="true" classname="banner-video h-100 w-100 md:object-fill object-cover" src="assets/video/hero_video1.MP4">
-		<source src="assets/video/hero_video1.MP4" type="video/mp4">
+		<source src="assets/video/<?php echo $home_page_data['about_image'];?>">
 	</video>
 	<!-- </div> -->
 	<!-- particles.js container -->
@@ -54,7 +61,7 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
 				<div class="about-thumb about-thumb-border">
-					<img src="assets/images/about-video-thumbnail.png" alt="">
+					<img src="assets/images/<?php echo $home_page_data['about_thumbnail'];?>" alt="">
 					<div class="about-video-icon">
 						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
 							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
@@ -68,33 +75,15 @@
 						</div> -->
 					<div class="about-content">
 						<div class="about-title">
-							<h2>MAR­KET LEAD­ER IN INDUS­TRI­AL</h2>
-							<h2>DUST SUP­PRES­SION SYSTEMS</h2>
+							<h2><?php echo $home_page_data['about_title'];?></h2>
+							<!-- <h2>MAR­KET LEAD­ER IN INDUS­TRI­AL</h2>
+							<h2>DUST SUP­PRES­SION SYSTEMS</h2> -->
 						</div>
 						<div class="about-text">
-							<p>Established in 2018 & serving as market leader in Industrial Dust Control Solutions
-								Duztec Engineering Pvt. Ltd. Is all about making the environment better by suppressing
-								dust with high-end technologies. We serve first rate aid and give effective solutions
-								for controlling dust emissions with our latest technologies. What sets us apart from the
-								rest is that we bring in the proven Swedish technology! Offer site study, detailed
-								engineering report for mitigating the dust emissions and ensure a clean environment for
-								the entire community.</p>
+							<p><?php echo $home_page_data['about_description'];?></p>
 						</div>
 					</div>
-				</div>
-				<!-- <div class="about-single-box d-flex">
-						<div class="about-icon">
-							<i class="fas fa-check-circle"></i>
-						</div>
-						<div class="about-content">
-							<div class="about-title">
-								<h2>Responsive & Mobile Friendly Design</h2>
-							</div>
-							<div class="about-text">
-								<p>When our team provides design and digital marketing. Applied arts can include industrial design, graphic</p>
-							</div>
-						</div>
-					</div> -->
+				</div> 
 			</div>
 		</div>
 	</div>
@@ -376,358 +365,6 @@
 <!-- Start - Contact-Us- Section -->
 <!-- ============================================================= -->
 
-
-
-
-
-<!-- <div class="skill-section">
-	<div class="container-fluid">
-		<div class="row skill-bg">
-			<div class="col-lg-5 col-md-12">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<div class="section-title text-left">
-							<h1>Strategy Is The Heart</h1>
-							<h2>Of What We Do</h2>
-							<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology</p>
-						</div>
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<div class="skill-item">
-							<div class="skill-header">
-								<h6 class="skill-title">Cyber Security</h6>
-								<div class="skill-percentage clearfix">
-									<div class="count-box">
-										<span class="counter">55</span><span>%</span>
-									</div>
-								</div>
-							</div>
-							<div class="skill-bar">
-								<div class="bar-inner">
-									<div class="bar progress-line" data-width="55"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<div class="skill-item">
-							<div class="skill-header">
-								<h6 class="skill-title">UI/UX Design</h6>
-								<div class="skill-percentage clearfix">
-									<div class="count-box">
-										<span class="counter">75</span><span>%</span>
-									</div>
-								</div>
-							</div>
-							<div class="skill-bar">
-								<div class="bar-inner">
-									<div class="bar progress-line" data-width="75"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-12 col-md-12">
-						<div class="skill-item">
-							<div class="skill-header">
-								<h6 class="skill-title">App Development</h6>
-								<div class="skill-percentage clearfix">
-									<div class="count-box">
-										<span class="counter">68</span><span>%</span>
-									</div>
-								</div>
-							</div>
-							<div class="skill-bar">
-								<div class="bar-inner">
-									<div class="bar progress-line" data-width="68"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-7 col-md-12">
-				<div class="skill-thumb">
-					<img src="assets/images/skill.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="skill-shape bounce-animate">
-		<img src="assets/images/shape5.png" alt="">
-	</div>
-</div> -->
-<!-- ============================================================== -->
-<!-- Start - Working-Progress- Section -->
-<!-- ============================================================= -->
-<!-- <div class="working-process-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6">
-				<div class="section-title text-left">
-					<h1>Our Working Process</h1>
-					<h2>For Client Work</h2>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-2 col-sm-6">
-				<div class="work-single-content">
-					<div class="work-counterup">
-						<h1>365</h1>
-						<span>+</span>
-					</div>
-					<div class="work-title">
-						<span>Succed Peoject</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-2 col-sm-6">
-				<div class="work-single-content style2-none">
-					<div class="work-counterup">
-						<h1>3245</h1>
-						<span>+</span>
-					</div>
-					<div class="work-title">
-						<span>Working Houres Were Spent</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-4">
-				<div class="single-work-box text-center">
-					<div class="work-icon">
-						<i class="flaticon-setting"></i>
-					</div>
-					<div class="work-content">
-						<h2>Choose Service</h2>
-					</div>
-					<div class="work-icon-bottom">
-						<i class="fas fa-long-arrow-alt-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4">
-				<div class="single-work-box text-center">
-					<div class="work-icon">
-						<i class="flaticon-graduation-hat"></i>
-					</div>
-					<div class="work-content">
-						<h2>Request Metting</h2>
-					</div>
-					<div class="work-icon-bottom">
-						<i class="fas fa-long-arrow-alt-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4">
-				<div class="single-work-box text-center">
-					<div class="work-icon">
-						<i class="flaticon-shopping-basket"></i>
-					</div>
-					<div class="work-content">
-						<h2>Custom Plan</h2>
-					</div>
-					<div class="work-icon-bottom">
-						<i class="fas fa-long-arrow-alt-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4">
-				<div class="single-work-box text-center">
-					<div class="work-icon">
-						<i class="flaticon-mail"></i>
-					</div>
-					<div class="work-content">
-						<h2>Make final Work</h2>
-					</div>
-					<div class="work-icon-bottom">
-						<i class="fas fa-long-arrow-alt-right"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-
-<!-- <div class="contact-us">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6">
-				<div class="section-title text-left">
-					<h1>Get In Touch</h1>
-					<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide</p>
-				</div>
-				<div class="contact-box d-flex">
-					<div class="contact-icon">
-						<i class="flaticon-address"></i>
-					</div>
-					<div class="contact-content">
-						<h2>Office Address:</h2>
-						<p>254 Lillian Blvd, Holbrook,Tower,NYC,US</p>
-					</div>
-				</div>
-				<div class="contact-box d-flex">
-					<div class="contact-icon">
-						<i class="flaticon-phone-call-1"></i>
-					</div>
-					<div class="contact-content">
-						<h2>Phone Number:</h2>
-						<p>Head Office:(210) 123 123 123</p>
-					</div>
-				</div>
-				<div class="contact-box d-flex">
-					<div class="contact-icon">
-						<i class="flaticon-phone-call"></i>
-					</div>
-					<div class="contact-content">
-						<h2>Mail Address:</h2>
-						<p>Example@gmail.com</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<form id="contact_form" action="mail.php" method="POST">
-							<div class="row">
-								<div class="col-lg-6 col-md-6">
-									<div class="contact-form">
-										<form action="post">
-											<input class="contact-style" type="text" name="name" placeholder="Frist Name*" required>
-											<i class="fas fa-user"></i>
-										</form>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="contact-form">
-										<form action="post">
-											<input class="contact-style" type="text" name="name" placeholder="Frist Name*" required>
-											<i class="fas fa-user"></i>
-										</form>
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-12">
-									<select class="select-option">
-										<option class="form-option-contact" value="shab">Select Subject</option>
-										<option class="form-option-contact" value="English">English</option>
-										<option class="form-option-contact" value="Arabic">Arabic</option>
-									</select>
-								</div>
-								<div class="col-lg-12 col-md-12">
-									<div class="contact-form-msg">
-										<form action="post">
-											<textarea name="text" class="contact-style-msg" name="message" id="text" placeholder="Enter Message" cols="30" rows="10"></textarea>
-											<i class="fas fa-comment"></i>
-										</form>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="contact-button text-right">
-										<input class="button" type="submit" value="Submit request"><i class="fas fa-arrow-right"></i>
-									</div>
-								</div>
-							</div>
-						</form>
-						<p class="form-message"></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
-<!-- ============================================================== -->
-<!-- Start - Teatimonial- Section -->
-<!-- ============================================================= -->
-<!-- <div class="testimonial-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="section-title text-center">
-					<h1>What Client,s Says</h1>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="testi_list owl-carousel">
-				<div class="single-testimonial text-center">
-					<div class="testi-thumb">
-						<img src="assets/images/testi.jpg" alt="">
-					</div>
-					<div class="testi-content">
-						<div class="testi-desc">
-							<p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly
-								good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David,
-								haggle young delinquent say so I said bite your arm off easy peasy.
-							</p>
-						</div>
-						<div class="testi-title">
-							<h2>Lurch Schpellchek</h2>
-						</div>
-						<div class="testi-sub-title">
-							<p>UI/UX designer</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-testimonial text-center">
-					<div class="testi-thumb">
-						<img src="assets/images/testi.jpg" alt="">
-					</div>
-					<div class="testi-content">
-						<div class="testi-desc">
-							<p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly
-								good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David,
-								haggle young delinquent say so I said bite your arm off easy peasy.
-							</p>
-						</div>
-						<div class="testi-title">
-							<h2>Lurch Schpellchek</h2>
-						</div>
-						<div class="testi-sub-title">
-							<p>UI/UX designer</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-testimonial text-center">
-					<div class="testi-thumb">
-						<img src="assets/images/testi.jpg" alt="">
-					</div>
-					<div class="testi-content">
-						<div class="testi-desc">
-							<p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly
-								good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David,
-								haggle young delinquent say so I said bite your arm off easy peasy.
-							</p>
-						</div>
-						<div class="testi-title">
-							<h2>Lurch Schpellchek</h2>
-						</div>
-						<div class="testi-sub-title">
-							<p>UI/UX designer</p>
-						</div>
-					</div>
-				</div>
-				<div class="single-testimonial text-center">
-					<div class="testi-thumb">
-						<img src="assets/images/testi.jpg" alt="">
-					</div>
-					<div class="testi-content">
-						<div class="testi-desc">
-							<p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly
-								good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David,
-								haggle young delinquent say so I said bite your arm off easy peasy.
-							</p>
-						</div>
-						<div class="testi-title">
-							<h2>Lurch Schpellchek</h2>
-						</div>
-						<div class="testi-sub-title">
-							<p>UI/UX designer</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 <!-- ============================================================== -->
 <!-- Start - Blog- Section -->
 <!-- ============================================================= -->
@@ -746,42 +383,17 @@
 
 	</div>
 </div>
+<?php endforeach; ?>
+			<?php else : ?>
+				<div class="col-lg-12">
+					<p>No data found.</p>
+				</div>
+			<?php endif; ?>
 <!-- ============================================================== -->
 <!-- Start - Brand- Section -->
 <!-- ============================================================= -->
-<!-- <div class="brand-section">
-	<div class="container">
-		<div class="row brand-bg">
-			<div class="brand_list owl-carousel">
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_01.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_02.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_03.png" alt="">
-				</div>
-				<div class="brand-thumb">
-					<img src="assets/images/item_04.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <!-- Footer start  -->
-<?php $this->load->view('layout/footer'); ?>
+<?php
+ $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

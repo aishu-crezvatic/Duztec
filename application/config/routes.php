@@ -64,5 +64,6 @@ $route['product_detail/(:any)'] = "product_detail/index/$1";
 
 $route['blog_details/(:any)'] = "blog_details/index/$1"; 
 $route['sectors/(:any)'] = "sectors/index/$1"; 
+$route['blog/(:any)'] = "blog/index/$1"; 
 //$route['product_category/(:any)'] = "product_category/index/$1"; 
 $route['product_sub_category/(:any)'] = "product_sub_category/index/$1"; 
