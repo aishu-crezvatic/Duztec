@@ -20,6 +20,18 @@ class Frontend_model extends CI_Model
         return $data;
     }
 
+    public function home_page()
+    {
+        $data = $this->db->select('*')
+            ->from('home_table')
+            // ->where('status = 1')
+            ->order_by('h_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+
     public function productSubCategory()
     {
         $data = $this->db->select('*')
@@ -55,6 +67,32 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+
+    public function blog_categories($bc_id)
+    {
+        $data = $this->db->select('*')
+            ->from('blogs')
+            ->where('status = 1')
+            ->where("bc_id = $bc_id")
+//            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+
+    public function blog_detail()
+    {
+        $data = $this->db->select('*')
+            ->from('blogs')
+            ->where('status = 1')
+//            ->order_by('sc_id ', 'asc')
+            ->get()
+            ->result_array();
+        // print_r($data);
+        return $data;
+    }
+
     
     public function get_clientele()
     {

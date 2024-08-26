@@ -297,7 +297,7 @@ if (!empty($about_us)) : ?>
 	<?php endforeach; ?>
 			<?php else : ?>
 				<div class="col-lg-12">
-					<p>No categories found.</p>
+					<p>No data found.</p>
 				</div>
 			<?php endif; ?>
 	<!-- Footer start  -->

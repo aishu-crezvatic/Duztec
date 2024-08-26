@@ -273,7 +273,7 @@
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
                                         <?php foreach ($blog_categories as $category) { ?>
-                                        <li><a href="<?php echo base_url() ?>/blog_details/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
+                                        <li><a href="<?php echo base_url() ?>/blog/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
                                         <?php } ?>
                                     </ul>
                                 </li>

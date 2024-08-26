@@ -84,7 +84,6 @@ $db['default'] = array(
 	// 'password' => 'mKzxRgkx]A~@',
 	// 'database' => 'digitallab_duztec',
 
-
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
