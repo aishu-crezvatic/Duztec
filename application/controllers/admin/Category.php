@@ -14,6 +14,9 @@ class Category extends CI_Controller {
 
     public function index() {
         $data['data'] = $this->CommonModel->getRecords(DATABASE, 'category', array('status !=' => 2));
+        //        echo "<pre>";
+//        print_r($data);
+//        exit;
 
         $this->load->view('admin/category/category', $data);
     }

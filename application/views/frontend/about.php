@@ -59,7 +59,7 @@ if (!empty($about_us)) : ?>
 <div class="call-do-action-about style-two">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-2 col-md-6">
+			<div class="col-lg-2 col-md-6 col-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>
 			<div class="col-lg-7 col-md-6 col-sm-12">
@@ -72,7 +72,7 @@ if (!empty($about_us)) : ?>
 					<p class="text-white "><?php echo $about_us['mission'];?></p>
 
 				</div>
-				<div class="col-lg-2 col-md-6">
+				<div class="col-lg-2 col-md-6 col-6">
 					<!-- <div class="w-50"> -->
 					<img src="assets/images/MIssion.gif" alt="" class="w-100">
 					<!-- </div> -->
@@ -274,7 +274,7 @@ if (!empty($about_us)) : ?>
 			</div>
 			<div class="col-6 bg-1 position-relative Blackoverlay">
 				<img src="assets/images/contact-bg-1.png" alt="">
-				<div class="overText text-start ">
+				<div class="overText text-start abtOverText">
 					<h2 class="text-white">We have much more, </h2>
 					<h2 class="text-white">lets get started</h2>
 					<div class="btn bg-white fw-bold mt-2 px-2 rounded greenText">Collabrate with us &gt;</div>
@@ -282,7 +282,7 @@ if (!empty($about_us)) : ?>
 			</div>
 			<div class="col-6 position-relative Blueoverlay">
 				<img src="assets/images/contact-bg.png" alt="">
-				<div class="overText text-start">
+				<div class="overText text-start abtOverText">
 					<h2 class="text-white greenText">We are happy to help you </h2>
 					<h2 class="text-white greenText">with our service </h2>
 					<div class="btn bg-white fw-bold mt-2 px-2 rounded text-primary">Yes I Want a Quote &gt;</div>
