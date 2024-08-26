@@ -269,7 +269,7 @@
                                 </li>
 
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
-                                <li><a href="blog">Blog <i class="fa fa-angle-down"></i></a>
+                                <li><a >Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <!-- <li><a href="blog.html">Blog</a></li> -->
                                         <?php foreach ($blog_categories as $category) { ?>

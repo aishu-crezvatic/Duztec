@@ -1271,7 +1271,7 @@ body {
 /* Breadcumn */
 .breadcumn-section {
     background: url(../images/BlogProductBannerimage.png);
-    padding-top: 280px;
+    padding-top: 365px;
     padding-bottom: 107px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3918,7 +3918,7 @@ a.btn2 i {
     box-shadow: 6px 5px 16px 0px rgb(0 0 0 / 15%);
     width: 80%;
     position: relative;
-    bottom: 66px;
+    /* bottom: 66px; */
     left: 19px;
 }
 
