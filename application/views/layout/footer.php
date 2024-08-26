@@ -198,7 +198,7 @@
 
 		<div class="d-flex justify-content-between">
 			<h2>Request A Quote</h2>
-			<button class="close-popup text-danger border-0 rounded shadow" id="closePopup">X</button>
+			<button class="close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
 		<form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post">
 			<div class="form-group col-12 col-md-6 col-lg-6">

@@ -149,7 +149,7 @@
                     <div class="col-lg-2 col-md-2 col-2 text-end">
                     <form action="<?= base_url('product') ?>" method="GET">
                             <input type="text" name="query" placeholder="Search products...">
-                            <button type="submit">Search</button>
+                            <!-- <button type="submit">Search</button> -->
                         </form>
                     </div>
                    

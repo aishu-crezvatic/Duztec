@@ -2,10 +2,26 @@
 <?php $this->load->view('layout/header'); ?>
 
 <!-- header end  -->
+<?php $heroBanner_img = !empty($contact) ? $contact[0]['heroBanner_img'] : 'default-image.png'; ?>
+
+<style>
+	.breadcumn-section-contac {
+		position: relative;
+		/* background: url(assets/images/contact-us-banner.png); */
+		padding-top: 400px;
+		padding-bottom: 300px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+</style>
+
+
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
-<div class="breadcumn-section-contact d-flex align-items-center">
+<div class="breadcumn-section-contact d-flex align-items-center"
+	style="background: url('<?php echo htmlspecialchars('assets/images/' . $heroBanner_img); ?>');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -182,14 +198,16 @@
 				<img src="assets/images/data_tech_logo.png" alt="" class="w-50">
 				<!-- <p class="navyText px-5 fw-bold pt-lg-4 pt-md-4 pt-0 lh-5">Plot No A 109, Wagle Industrial Estate, Road
 					no 18, Thane (W) - 400 604, India</p> -->
-					<?php if (!empty($contact)): ?>
-							<?php foreach ($contact as $item): ?>
-								<p class="navyText px-5 fw-bold pt-lg-4 pt-md-4 pt-0 lh-5"><?php echo htmlspecialchars($item['office_address']); ?></p>
-								<!-- <p>Plot No A 109, Wagle Industrial Estate, Road no 18, Thane (W) - 400 604, India</p> -->
-							<?php endforeach; ?>
-						<?php else: ?>
-							<h2 class="about-title">No address available</h2>
-						<?php endif; ?>
+				<?php if (!empty($contact)): ?>
+					<?php foreach ($contact as $item): ?>
+						<p class="navyText px-5 fw-bold pt-lg-4 pt-md-4 pt-0 lh-5">
+							<?php echo htmlspecialchars($item['office_address']); ?>
+						</p>
+						<!-- <p>Plot No A 109, Wagle Industrial Estate, Road no 18, Thane (W) - 400 604, India</p> -->
+					<?php endforeach; ?>
+				<?php else: ?>
+					<h2 class="about-title">No address available</h2>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
