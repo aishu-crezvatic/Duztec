@@ -1505,6 +1505,17 @@ body {
 
 /* contact us section of  about page */
 
+/* .breadcumn-section-contact {
+    position: relative;
+    background: url(../images/contact-us-banner.png);
+    padding-top: 400px;
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
+
 .overText {
     position: absolute;
     /* width: 100%; */
@@ -7226,16 +7237,6 @@ button.btn-control {
     font-size: 1.5em;
 }
 
-.breadcumn-section-contact {
-    position: relative;
-    /* Ensure the parent is positioned relatively to contain the pseudo-element */
-    background: url(../images/contact-us-banner.png);
-    padding-top: 400px;
-    padding-bottom: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 @media (max-width:425px) {
     .content-om-map p {
