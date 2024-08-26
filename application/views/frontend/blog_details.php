@@ -8,11 +8,11 @@
 <!-- ============================================================== -->
 	<!-- Start - Slider- Section -->
 	<!-- ============================================================= -->
-	<div class="breadcumn-section d-flex align-items-center">
+	<div class="breadcumn-section-blog d-flex align-items-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
-					<div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
+					<!-- <div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">
 						<h2>Single Blog Page</h2>
 						<ul>
 							<li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
@@ -20,7 +20,7 @@
 							<li><i class="fas fa-chevron-right"></i></li>
 							<li class="style2">Single Blog Page</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

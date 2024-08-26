@@ -31,9 +31,10 @@ class Contact_us extends CI_Controller {
         $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
+        $data['contact'] = $this->frontend_model->get_contact();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();
 //        echo "<pre>";
-//        print_r($data);
+    //    print_r($data);
 //        exit;
         $this->load->view('frontend/contact_us', $data);
     }

@@ -64,8 +64,8 @@
     <body class="bg-water">
 
     <div id="loader">
-        <video id="loader-video" autoplay muted loop>
-            <source src="<?php echo base_url()?>assets/video/DuztecPreloaderForWebsite.mp4" type="video/mp4">
+        <video id="loader-video" autoplay muted loop class="w-100">
+            <source src="<?php echo base_url()?>assets/video/DUZtech New Preloader Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
