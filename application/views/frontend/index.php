@@ -17,6 +17,7 @@ if (!empty($home_page_data)) : ?>
 		loop="true" classname="banner-video h-100 w-100 md:object-fill object-cover" src="assets/video/hero_video1.MP4">
 		<source src="assets/video/<?php echo $home_page_data['about_image'];?>">
 	</video>
+	
 	<!-- </div> -->
 	<!-- particles.js container -->
 	<!-- <div id="particles-js"></div> -->
