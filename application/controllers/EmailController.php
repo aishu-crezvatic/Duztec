@@ -5,17 +5,22 @@ class EmailController extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->library('PhpMailer_lib');
-        $this->load->library('form_validation');
+        // $this->load->library('phpmailer_lib');
+        // $this->load->library('form_validation');
     }
 
     public function send_email() {
+
+        $this->load->library('phpmailer_lib');
+       
+        /* PHPMailer object */
+        $mail = $this->phpmailer_lib->load();
         // Set validation rules
-        $this->form_validation->set_rules('name', 'Name', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('product', 'Product', 'required');
-        $this->form_validation->set_rules('phone', 'Phone', 'required|numeric');
-        $this->form_validation->set_rules('comment', 'Comment', 'required');
+        $mail->form_validation->set_rules('name', 'Name', 'required');
+        $mail->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $mail->form_validation->set_rules('product', 'Product', 'required');
+        $mail->form_validation->set_rules('phone', 'Phone', 'required|numeric');
+        $mail->form_validation->set_rules('comment', 'Comment', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $errors = validation_errors();

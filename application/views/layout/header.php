@@ -271,7 +271,6 @@
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
                                 <li><a >Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <!-- <li><a href="blog.html">Blog</a></li> -->
                                         <?php foreach ($blog_categories as $category) { ?>
                                         <li><a href="<?php echo base_url() ?>/blog/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
                                         <?php } ?>
@@ -426,7 +425,15 @@
                                     </div>
                                 </a>
                                 <ul class="menu_open5 sub-menu2">
-                                <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li>
+                                <!-- <li><a href="<?php echo base_url() ?>/blog_details/1">Blog Details</a></li> -->
+
+                                <!-- <li><a >Blog <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu"> -->
+                                        <?php foreach ($blog_categories as $category) { ?>
+                                        <li><a href="<?php echo base_url() ?>/blog/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
+                                        <?php } ?>
+                                    <!-- </ul>
+                                </li> -->
 
                                 </ul>
                             </li>

@@ -26,3 +26,4 @@ class Blog extends CI_Controller {
         $this->load->view('frontend/blog_category', $data);
     }
 }
+?>

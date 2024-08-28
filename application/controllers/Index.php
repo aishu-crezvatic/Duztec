@@ -26,3 +26,4 @@ class Index extends CI_Controller {
         $this->load->view('frontend/index', $data);
     }
 }
+?>

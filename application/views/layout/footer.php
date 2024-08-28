@@ -200,8 +200,9 @@
 			<h2>Request A Quote</h2>
 			<button class="close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
-		<form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post">
-			<div class="form-group col-12 col-md-6 col-lg-6">
+		<!-- <form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post"> -->
+		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">	
+		<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control" required>
 			</div>
