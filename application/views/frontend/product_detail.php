@@ -44,7 +44,7 @@
 <!-- ============================================================== -->
 <!-- Start - Service- Section -->
 <!-- ============================================================= -->
-<div class="portfolio-details single-style">
+<div class="portfolio-details single-style p-0 p-md-5 p-lg-5">
 	<div class="container">
 		<div class="row justify-content-center">
                         <!--images hard coded start-->
@@ -100,10 +100,10 @@
 					</div>
 				</div>
 
-				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden" style="height:25vh">
+				<div class="thumbnail-carousel owl-carousel p-5 overflow-hidden" style="">
                                     <?php foreach ($images as $image) { ?> 
 					<div class="item1 ">
-						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $image; ?>" alt="Thumbnail 1">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $image; ?>" alt="Thumbnail 1" style="height:25vh">
 					</div>
                                     <?php  } ?>
 <!--					<div class="item1  ">
@@ -649,7 +649,7 @@
 <!-- ============================================================== -->
 <!-- Start -our product -->
 <!-- ============================================================= -->
-<div class="service-section">
+<div class="service-section p-0 p-md-5 p-lg-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">

@@ -12,7 +12,7 @@ if (!empty($about_us)) : ?>
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
-<div class="breadcumn-section-about d-flex align-items-center">
+<div class="breadcumn-section-about about-mobile d-flex align-items-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -34,7 +34,7 @@ if (!empty($about_us)) : ?>
 <!-- ============================================================== -->
 <!-- Start - About- Section -->
 <!-- ============================================================= -->
-<div class="about-section style-two style-three style-four style-five single-style">
+<div class="about-section style-two style-three style-four style-five single-style p-0">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-6 col-md-12">

@@ -148,7 +148,7 @@
 
                     <div class="col-lg-2 col-md-2 col-2 text-end">
                     <form action="<?= base_url('product') ?>" method="GET">
-                            <input type="text" name="query" placeholder="Search products...">
+                            <input  type="text" name="query" placeholder="Search products...">
                             <!-- <button type="submit">Search</button> -->
                         </form>
                     </div>
@@ -306,7 +306,7 @@
                         </div>
                         <div class=" col-6 overflow-hidden">
                               <form >
-                                    <input type="text" name="search" placeholder="Search..">
+                                    <input class="my-2" type="text" name="search" placeholder="Search..">
                               </form>
                         </div> 
                         <div class="menu-toggle col-2">

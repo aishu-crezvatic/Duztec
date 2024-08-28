@@ -19,6 +19,8 @@ class Index extends CI_Controller {
         $data['sectors'] = $this->frontend_model->get_sectors();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();
         $data['home_page_data'] = $this->frontend_model->home_page();
+        $data['contact'] = $this->frontend_model->get_contact();
+
         
     //    echo "<pre>";
     //    print_r($data);

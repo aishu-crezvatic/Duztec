@@ -34,7 +34,7 @@
         <div class="row justify-content-between h-75">
             <div class="col-lg-7 col-md-12">
                 <div class="blog-thumb">
-                    <img id="industry-main-image" src="assets/images/default.jpg" alt="" style="width:100%">
+                    <img id="industry-main-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 card col-12 p-0">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-4">
                 <h2 class="py-4 heading">Image gallery</h2>
-                <img id="industry-gallery-image" src="assets/images/default.jpg" alt="" style="width:100%">
+                <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
             </div>
         </div>
 
@@ -84,7 +84,7 @@
                                 ?>
 				<div class="service-single-box rounded" style="height:500px">
 					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="" style="height:300px">
+						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="err" style="height:300px">
 					</div>
 					<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>

@@ -15,6 +15,8 @@ class Sectors extends CI_Controller {
        $data['sector_detail'] = $this->frontend_model->sector_detail();
          $data['product_sub_category'] = $this->frontend_model->productSubCategory();
          $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
+         $data['contact'] = $this->frontend_model->get_contact();
+
     //    echo "<pre>";
     //    print_r($data);
     //    exit;

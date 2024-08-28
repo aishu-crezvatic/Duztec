@@ -17,6 +17,8 @@ class Blog_details extends CI_Controller {
         $data['sectors'] = $this->frontend_model->get_sectors();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();
         $data['blog_detail'] = $this->frontend_model->blog_detail();
+        $data['contact'] = $this->frontend_model->get_contact();
+
 //        echo "<pre>";
 //        print_r($data);
 //        exit;

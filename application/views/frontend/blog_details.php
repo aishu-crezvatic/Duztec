@@ -28,7 +28,7 @@
 	<!-- ============================================================== -->
 	<!-- Start - Blog- Section -->
 	<!-- ============================================================= -->
-	<div class="blogs-section">
+	<div class="blogs-section p-0 p-md-5 p-lg-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-12 col-sm-12">
