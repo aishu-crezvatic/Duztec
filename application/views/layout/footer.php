@@ -22,13 +22,13 @@
 	<div class="container">
 		<div class="row brand-bg">
 			<div class="brand_list owl-carousel">
-                            <?php foreach ($clientele as $client) { ?>
-                            <?php //echo "shankar ".$client['image']; ?>
-				<div class="brand-thumb">
-					<img src="<?php echo base_url(); ?>uploads/clientele/<?php echo $client['image']; ?>" alt="">
-				</div>
-                            <?php } ?>
-<!--				<div class="brand-thumb">
+				<?php foreach ($clientele as $client) { ?>
+					<?php //echo "shankar ".$client['image']; ?>
+					<div class="brand-thumb">
+						<img src="<?php echo base_url(); ?>uploads/clientele/<?php echo $client['image']; ?>" alt="">
+					</div>
+				<?php } ?>
+				<!--				<div class="brand-thumb">
 					<img src="<?php echo base_url(); ?>assets/images/footer-client-logo/Jindal_Logo.png" alt="">
 				</div>
 				<div class="brand-thumb">
@@ -86,12 +86,12 @@
 				</div>
 				<div class="footer-menu">
 					<ul>
-						<li><a href="">About</a></li>
-						<li><a href="">News</a></li>
-						<li><a href="">Partners</a></li>
-						<li><a href="">Room Details</a></li>
-						<li><a href="">Gallery</a></li>
-						<li><a href="">Contacts</a></li>
+						<li><a href='<?php echo base_url(); ?>about'>About</a></li>
+						<!-- <li><a href="">News</a></li> -->
+						<!-- <li><a href="">Partners</a></li> -->
+						<!-- <li><a href="">Room Details</a></li> -->
+						<li><a href="<?PHP echo base_url() ?>gallery">Gallery</a></li>
+						<li><a href="<?php echo base_url() ?>contact_us">Contact_us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -119,13 +119,40 @@
 					<p>We are experienced professionals who understand that It services is</p>
 				</div>
 				<div class="footer-right-side">
-					<span><i class="fas fa fa-map-marker"></i> 254 Lillian Blvd,Holbrook</span>
+					<span><i class="fas fa fa-map-marker d-inline"></i>
+						<?php if (!empty($contact)): ?>
+							<?php foreach ($contact as $item): ?>
+								<p class="d-inline"><?php echo htmlspecialchars($item['office_address']); ?></p>
+								<!-- <p>Plot No A 109, Wagle Industrial Estate, Road no 18, Thane (W) - 400 604, India</p> -->
+							<?php endforeach; ?>
+						<?php else: ?>
+							<h2 class="">No address available</h2>
+						<?php endif; ?>
+					</span>
 				</div>
 				<div class="footer-right-side">
-					<span><i class="fas fa fa-phone"></i> 254 Lillian Blvd,Holbrook</span>
+					<span><i class="fas fa fa-phone"></i>
+						<?php if (!empty($contact)): ?>
+							<?php foreach ($contact as $item): ?>
+								<!-- <p>+91 9137657039</p> -->
+								<p class="d-inline"><?php echo htmlspecialchars($item['phone_no']) ?></p>
+							<?php endforeach; ?>
+						<?php else: ?>
+							<p>no number available</p>
+						<?php endif; ?>
+					</span>
 				</div>
 				<div class="footer-right-side">
-					<span><i class="fas fa fa-envelope"></i> 254 Lillian Blvd,Holbrook</span>
+					<span><i class="fas fa fa-envelope"></i>
+						<?php if (!empty($contact)): ?>
+							<?php foreach ($contact as $item): ?>
+								<!-- <p>sales@duztec.in</p> -->
+								<p class="d-inline"><?php echo htmlspecialchars($item['email_id']) ?></p>
+							<?php endforeach; ?>
+						<?php else: ?>
+							<p>no mail available</p>
+						<?php endif; ?>
+					</span>
 				</div>
 				<!-- <div class="footer-btn">
 					<form id="contact_form2" action="mail2.php" method="POST">
@@ -204,11 +231,13 @@
 		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">	
 		<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
-				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control" required>
+				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control"
+					required>
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="email" class="navyText fw-bold">Email:</label>
-				<input type="email" id="email" name="email" value="<?php echo set_value('email')?>" class="form-control" required>
+				<input type="email" id="email" name="email" value="<?php echo set_value('email') ?>"
+					class="form-control" required>
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="product" class="navyText fw-bold">Product:</label>
@@ -249,73 +278,73 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const popupForm = document.getElementById('popupForm');
-    const closePopup = document.getElementById('closePopup');
-    const captchaQuestion = document.getElementById('captchaQuestion');
-    let captchaAnswer;
+	document.addEventListener("DOMContentLoaded", function () {
+		const popupForm = document.getElementById('popupForm');
+		const closePopup = document.getElementById('closePopup');
+		const captchaQuestion = document.getElementById('captchaQuestion');
+		let captchaAnswer;
 
-    function generateCaptcha() {
-        const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-        const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-        captchaAnswer = num1 + num2;
-        captchaQuestion.textContent = `${num1} + ${num2} =`;
-    }
+		function generateCaptcha() {
+			const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+			const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+			captchaAnswer = num1 + num2;
+			captchaQuestion.textContent = `${num1} + ${num2} =`;
+		}
 
-    function showPopup() {
-        popupForm.style.display = 'flex';
-        generateCaptcha(); // Generate captcha when popup is shown
-    }
+		function showPopup() {
+			popupForm.style.display = 'flex';
+			generateCaptcha(); // Generate captcha when popup is shown
+		}
 
-    // Show popup only if it hasn't been shown in this session
-    if (!localStorage.getItem('popupShown')) {
-        showPopup();
-        localStorage.setItem('popupShown', 'true'); // Mark popup as shown
-    }
+		// Show popup only if it hasn't been shown in this session
+		if (!localStorage.getItem('popupShown')) {
+			showPopup();
+			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+		}
 
-    // Close popup when the close button is clicked
-    closePopup.addEventListener('click', () => {
-        popupForm.style.display = 'none';
-    });
+		// Close popup when the close button is clicked
+		closePopup.addEventListener('click', () => {
+			popupForm.style.display = 'none';
+		});
 
-    // Clear popupShown flag on page unload (e.g., reload or close)
-    window.addEventListener('beforeunload', function () {
-        localStorage.removeItem('popupShown');
-    });
-});
+		// Clear popupShown flag on page unload (e.g., reload or close)
+		window.addEventListener('beforeunload', function () {
+			localStorage.removeItem('popupShown');
+		});
+	});
 
-$(document).ready(function() {
-    $('#quoteForm').submit(function(e) {
-        e.preventDefault(); // Prevent the default form submission
+	$(document).ready(function () {
+		$('#quoteForm').submit(function (e) {
+			e.preventDefault(); // Prevent the default form submission
 
-        const captchaInput = $('#captcha').val();
-        if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
-            alert('Captcha is incorrect.');
-            return;
-        }
+			const captchaInput = $('#captcha').val();
+			if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
+				alert('Captcha is incorrect.');
+				return;
+			}
 
-        // Debug: Print form data to console
-        const formData = $(this).serializeArray();
-        console.log('Form Data:', formData);
+			// Debug: Print form data to console
+			const formData = $(this).serializeArray();
+			console.log('Form Data:', formData);
 
-        $.ajax({
-            url: $(this).attr('action'), // URL to send the request
-            type: 'POST', // HTTP method
-            data: $(this).serialize(), // Serialize form data
-            success: function(response) {
-                // Handle success (e.g., show a success message)
-                console.log('Response from server:', response);
-                alert('Form submitted successfully!');
-                $('#popupForm').hide(); // Hide popup after submission
-            },
-            error: function(xhr, status, error) {
-                // Handle errors (e.g., show an error message)
-                console.error('An error occurred:', error);
-                alert('An error occurred: ' + error);
-            }
-        });
-    });
-});
+			$.ajax({
+				url: $(this).attr('action'), // URL to send the request
+				type: 'POST', // HTTP method
+				data: $(this).serialize(), // Serialize form data
+				success: function (response) {
+					// Handle success (e.g., show a success message)
+					console.log('Response from server:', response);
+					alert('Form submitted successfully!');
+					$('#popupForm').hide(); // Hide popup after submission
+				},
+				error: function (xhr, status, error) {
+					// Handle errors (e.g., show an error message)
+					console.error('An error occurred:', error);
+					alert('An error occurred: ' + error);
+				}
+			});
+		});
+	});
 
 </script>
 

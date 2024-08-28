@@ -1,76 +1,80 @@
 <?php
 
 defined('BASEPATH') or exit('No direct script access allowed');
-class contact_us extends CI_Controller
 
+class Contact_us extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('admin/contact_us_model');
+        $this->load->model('admin/CommonModel');
+        $this->load->library('session'); // Ensure session library is loaded
+        $this->load->helper('url'); // Load URL helper for base_url()
+        $this->load->library('upload'); // Load upload library
     }
 
     public function index()
     {
-        $data['data'] = $this->contact_us_model->fetch();
-// print_r($data['data']);
-// exit;
-        $this->load->view('admin/home/contact_us', $data);
+        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'contact_us');
+        $data['edit_mode'] = false; // Default to view mode
+        $this->load->view('admin/contact_us/contact_us', $data);
     }
 
-
-    // Edit
-    public function edit()
+    public function edit($id)
     {
-        /* form Post values */
-       $email =  $this->input->post('email');
-       $phone =  $this->input->post('phone');
-       $address =  $this->input->post('address');
-       $phone2 =  $this->input->post('phone2');
-        $error = false; 
+        $data['contact_us'] = $this->CommonModel->getRow(DATABASE, 'contact_us', array('id' => $id));
+        $this->load->view('admin/contact_us/edit', $data);
+    }
+    public function update()
+    {
+        $id = 1;
 
+        // Set up upload configuration for the hero banner image
+        $config['upload_path'] = './uploads/'; // Ensure this path is correct and writable
+        $config['allowed_types'] = '*'; // Allowed file types
+        $config['max_size'] = 20048; 
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
 
-        if ($error == false) {
-            // $images_name = $image_data['file_name']; 
-            $data = [
-                'id' =>  $this->input->post('id'), 
-                'email_id' => $email,
-                'phone_no' => $phone,
-                'phone_no2' => $phone2,
-                'address' => $address
-            ];
-            }else{
-                $data = [
-                    'id' =>  $this->input->post('id'), 
-                ];
+        // Initialize file variable
+        $heroBannerImg = $this->input->post('existing_heroBanner_img');
+
+        if (!empty($_FILES['heroBanner_img']['name'])) {
+            // If a new file is uploaded
+            if ($this->upload->do_upload('heroBanner_img')) {
+                $uploadData = $this->upload->data();
+                $heroBannerImg = $uploadData['file_name'];
+            } else {
+                // File upload error
+                $this->session->set_flashdata('error', $this->upload->display_errors());
+                redirect('admin/contact_us');
+                // redirect('admin/contact_us/edit/' . $id); // Redirect to the edit page with an error
             }
-            
-// print_r( $data);
-// exit;
-            $this->contact_us_model->edit($data);
-            $this->session->set_flashdata('success', 'contact details Updated Successfully');
-            redirect(base_url('admin/contact_us'));
         }
-        public function delete()
 
-        {
-    
-            $id = $this->input->post('id');
-            // echo($id);
-            // exit;
-            $this->contact_us_model->delete($id); 
-            $this->session->set_flashdata('success', 'contact details  Deleted');
-    
-            redirect(base_url('admin/contact_us'));
+        // Prepare data for updating
+        $data = [
+            'content' => $this->input->post('content'),
+            'office_address' => $this->input->post('office_address'),
+            'phone_no' => $this->input->post('phone_no'),
+            'email_id' => $this->input->post('email_id'),
+            'map_url' => $this->input->post('map_url'),
+            'heroBanner_img' => $heroBannerImg
+        ];
+
+        // Update data in the database
+        // $this->load->model('CommonModel'); // Ensure you load the model
+        $updateResult = $this->CommonModel->edit(DATABASE, 'contact_us', $data, array('id' => $id));
+        if ($updateResult) {
+            $this->session->set_flashdata('success', 'Contact information updated successfully!');
+            redirect('admin/contact_us'); // Redirect to the contact_us list or a different page
+        } else {
+            $this->session->set_flashdata('error', 'Failed to update contact information.');
+            redirect('admin/contact_us'); // Redirect back to the contact_us list or edit page
         }
-    
-    
-    
-        public function status($id)
-        {
-    
-            $this->contact_us_model->status($id);
-        }
+
+
+
     }
 
-?>
+}

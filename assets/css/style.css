@@ -319,7 +319,7 @@ body {
 .sub-menu {
     display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     background-color: white;
     padding: 10px;
@@ -332,10 +332,10 @@ body {
 }
 
 .sub-prod {
-    display: none !important; 
+    display: none !important;
     position: absolute;
     top: -10px;
-    left: 100%; 
+    left: 100%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 10px;
@@ -344,19 +344,21 @@ body {
     width: 100%;
 }
 
-.drop-cat:hover ~ .sub-prod,
+.drop-cat:hover~.sub-prod,
 .sub-prod:hover {
     display: block !important;
 }
 
-.sub-menu a, .sub-prod a {
+.sub-menu a,
+.sub-prod a {
     display: block !important;
     padding: 5px 10px;
     color: #333;
     text-decoration: none;
 }
 
-.sub-menu a:hover, .sub-prod a:hover {
+.sub-menu a:hover,
+.sub-prod a:hover {
     background-color: #f1f1f1;
 }
 
@@ -442,6 +444,7 @@ body {
 .sticky .header-menu ul li a {
     color: #0a2c3d;
 }
+
 .sticky {
     left: 0;
     margin: auto;
@@ -643,13 +646,22 @@ body {
 /*====================================================
 --<	dreamit Slider Menu Section Css -->
 ======================================================*/
+.HomeTextContainer {
+    top: 75% !important;
+    left: 8%;
+}
+
 .slider-section {
     position: relative;
-    height: 798px;
+    height: 100vh;
+    /* Adjust to full viewport height */
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #background-video {
@@ -660,7 +672,8 @@ body {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
-    z-index: -1; /* Ensure the video stays behind other content */
+    z-index: -1;
+    /* Ensure the video stays behind other content */
 }
 
 .overlay {
@@ -669,18 +682,35 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: 0; /* Ensure the overlay stays behind the content but above the video */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    z-index: 0;
+    /* Ensure the overlay stays behind the content but above the video */
 }
 
-.slider-content {
+.HomeTextContaine {
     position: relative;
     z-index: 1;
     color: #fff;
+    text-align: center;
+}
+
+.slider-content h2 {
+    font-size: 2.5rem;
+    /* Responsive font size */
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.slider-content h2 span {
+    color: #A6C438;
 }
 
 .slider-content h5 {
-    font-size: 16px;
+    font-size: 1rem;
+    /* Responsive font size */
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Nunito', sans-serif;
@@ -691,33 +721,25 @@ body {
 .slider-content h5:before {
     position: absolute;
     content: "";
-    left: -196px;
-    top: 13px;
+    left: -10px;
+    /* Adjusted for responsive design */
+    top: 5px;
+    /* Adjusted for responsive design */
     background: #aac737;
     width: 10px;
     height: 10px;
-    right: 0;
-    margin: auto;
 }
 
-.slider-content h1 {
-    font-size: 80px;
-    font-weight: bold;
-    font-family: 'Rajdhani', sans-serif;
-    color: #fff;
-    margin: 28px 0 62px;
+.slider-circle-thumb {
+    margin: 1rem auto;
+    /* Centered with margin adjustments */
 }
 
-.slider-content h2 {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: 'Rajdhani', sans-serif;
-    margin-top: 32px;
-    color: #fff;
-}
-
-.slider-content h2 span {
-    color: #A6C438;
+.slider-button a {
+    font-size: 1rem;
+    /* Responsive font size */
+    padding: 0.5rem 1rem;
+    /* Adjust padding for responsiveness */
 }
 
 
@@ -1270,20 +1292,21 @@ body {
 
 /* Breadcumn */
 .breadcumn-section {
-    background: url(../images/BlogProductBannerimage.png);
+    background: url(../images/slider.png);
     padding-top: 365px;
     padding-bottom: 107px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.breadcumn-section-blog{
+
+.breadcumn-section-blog {
     background: url(../images/BlogProductBannerimage.png);
     padding-top: 280px;
     padding-bottom: 280px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 
@@ -1395,6 +1418,7 @@ body {
     background-position: center;
     position: relative;
 }
+
 
 .breadcumn-section-about .breadcumn-content .about-title {
     color: #A6C438 !important;
@@ -1568,11 +1592,15 @@ img {
 
 }
 
-.bg-blue{
-    background-image: url('../images/rectangle-bg-blue.webp'); /* Replace with your image URL */
-    background-size: cover; /* Adjusts the background image to cover the entire area */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    background-position: center; /* Centers the background image */
+.bg-blue {
+    background-image: url('../images/rectangle-bg-blue.webp');
+    /* Replace with your image URL */
+    background-size: cover;
+    /* Adjusts the background image to cover the entire area */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -1587,10 +1615,10 @@ img {
     animation-delay: 2s;
     animation-fill-mode: forwards;
     visibility: hidden;
-   
+
 }
 
-.about-thumb-border img{
+.about-thumb-border img {
     border-radius: 28px;
     box-shadow: rgb(158 186 54) 5px 5px, rgb(158 186 54) 10px 10px;
 }
@@ -2254,8 +2282,18 @@ a.btn2 i {
 }
 
 /*====================================================
---<	dreamit Service Section Css -->
+--<	dreamit Service Section  and our product section Css -->
 ======================================================*/
+.ProdImgContainer{
+    
+}
+.ProdImgContainer:hover .frontImg {
+    display: none !important;
+}
+.ProdImgContainer:hover .hoverImg {
+    display: block !important;
+}
+
 .service-section {
     padding-top: 92px;
     padding-bottom: 120px;
@@ -6493,7 +6531,7 @@ label.checkbox-control {
 ======================================================*/
 
 
-.floating-social-icons{
+.floating-social-icons {
 
     position: fixed !important;
     top: 50%;
@@ -6912,13 +6950,13 @@ button.btn-control {
 
 /* Preloader */
 #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #171B2A url(assets/images/preloader.png) no-repeat center;
-      z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #171B2A url(assets/images/preloader.png) no-repeat center;
+    z-index: 1000;
 }
 
 /* #loader {
@@ -6999,9 +7037,10 @@ button.btn-control {
     start sectors page  css
 =========================================*/
 
-.sectors-industries{
+.sectors-industries {
     background-image: url("../images/Homepage-Blue-Droplet-Bg.webp");
 }
+
 .breadcumn-section-sector {
     position: relative;
     /* Ensure the parent is positioned relatively to contain the pseudo-element */
@@ -7048,16 +7087,18 @@ button.btn-control {
     color: inherit;
     /* Optional: Inherit color from parent, or set a specific color */
 }
+
 #industry-links li {
     padding: 10px;
-    list-style: none; 
+    list-style: none;
 }
 
 #industry-links .active {
     background-color: #A6C438;
     color: white;
-    font-weight:900;
+    font-weight: 900;
 }
+
 .portfolio-details .heading {
     color: #1C5093 !important;
 }

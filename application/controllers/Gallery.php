@@ -20,6 +20,8 @@ class Gallery extends CI_Controller
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();
+        $data['contact'] = $this->frontend_model->get_contact();
+
 //        echo "<pre>";
 //        print_r($data);
 //        exit;

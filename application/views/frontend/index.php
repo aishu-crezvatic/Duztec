@@ -1,172 +1,153 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); 
+<?php $this->load->view('layout/header');
 
 // echo '<pre>';
 // print_r($home_page_data);
 // exit;
-if (!empty($home_page_data)) : ?>
-				<?php foreach ($home_page_data as $home_page_data) : 
-?>
-<!-- header end  -->
-<!-- ============================================================== -->
-<!-- Start - Slider- Section -->
-<!-- ============================================================= -->
-<!-- <div class="slider-section d-flex align-items-center"> -->
-<div class="slider-section d-flex align-items-center">
-	<video preload="auto" poster="assets/video/<?php echo $home_page_data['hero_banner'];?>" autoplay="true" muted="true" playsinline="false"
-		loop="true" classname="banner-video h-100 w-100 md:object-fill object-cover" src="assets/video/hero_video1.MP4">
-		<source src="assets/video/<?php echo $home_page_data['about_image'];?>">
-	</video>
-	<!-- </div> -->
-	<!-- particles.js container -->
-	<!-- <div id="particles-js"></div> -->
+if (!empty($home_page_data)): ?>
+	<?php foreach ($home_page_data as $home_page_data):
+		?>
+		<!-- header end  -->
+		<!-- ============================================================== -->
+		<!-- Start - Slider- Section -->
+		<!-- ============================================================= -->
+		<!-- <div class="slider-section d-flex align-items-center"> -->
+		<div class="slider-section d-flex align-items-center position-relative">
+			<video id="background-video" preload="auto" poster="assets/video/<?php echo $home_page_data['hero_banner']; ?>"
+				autoplay muted playsinline loop>
+				<source src="assets/video/hero_video1.MP4" type="video/mp4">
+				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
+			</video>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="slider-content text-center">
+			<div class="overlay"></div>
 
-					<!-- <h5 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">Optimized It System</h5>  -->
-					<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
-						<span>DUST SUPPRESSION SOLUTION</span>
-					</h2>
-					<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
-					<div class="slider-circle-thumb rotateme">
-						<img src="assets/images/shape3.png" alt="">
+			<div class="HomeTextContaine container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="slider-content text-center">
+							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
+								<span>DUST SUPPRESSION SOLUTION</span>
+							</h2>
+							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
+							<div class="slider-circle-thumb rotateme">
+								<img src="assets/images/shape3.png" alt="">
+							</div>
+							<div class="slider-button text-center">
+								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+							</div>
+						</div>
 					</div>
-					<div class="slider-button text-center">
-						<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
-					</div>
-					<!-- <div class="slider-video-icon">
-						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
-							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
-						<span class="top">Watch Video</span>
-					</div> -->
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
 
 
-<!-- ============================================================== -->
-<!-- Start - About- Section -->
-<!-- ============================================================= -->
-<div class="about-section">
-	<div class="section-title">
-		<h1 class="text-center">ABOUT US</h1>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6">
-				<div class="about-thumb about-thumb-border">
-					<img src="assets/images/<?php echo $home_page_data['about_thumbnail'];?>" alt="">
-					<div class="about-video-icon">
-						<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
-							href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
-					</div>
-				</div>
+		<!-- ============================================================== -->
+		<!-- Start - About- Section -->
+		<!-- ============================================================= -->
+		<div class="about-section pb-0">
+			<div class="section-title">
+				<h1 class="text-center">ABOUT US</h1>
 			</div>
-			<div class="col-lg-6 col-md-6">
-				<div class="about-single-box d-flex">
-					<!-- <div class="about-icon">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="about-thumb about-thumb-border">
+							<img src="assets/images/<?php echo $home_page_data['about_thumbnail']; ?>" alt="">
+							<div class="about-video-icon">
+								<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
+									href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
+							</div>
+
+
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="about-single-box d-flex">
+							<!-- <div class="about-icon">
 							<i class="fas fa-check-circle"></i>
 						</div> -->
-					<div class="about-content">
-						<div class="about-title">
-							<h2><?php echo $home_page_data['about_title'];?></h2>
-							<!-- <h2>MAR­KET LEAD­ER IN INDUS­TRI­AL</h2>
+							<div class="about-content">
+								<div class="about-title">
+									<h2><?php echo $home_page_data['about_title']; ?></h2>
+									<!-- <h2>MAR­KET LEAD­ER IN INDUS­TRI­AL</h2>
 							<h2>DUST SUP­PRES­SION SYSTEMS</h2> -->
-						</div>
-						<div class="about-text">
-							<p><?php echo $home_page_data['about_description'];?></p>
+								</div>
+								<div class="about-text">
+									<p><?php echo $home_page_data['about_description']; ?></p>
+								</div>
+								<div class="service-content">
+									<a href="#">View More</a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div> 
-			</div>
-		</div>
-	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Start -our product -->
-<!-- ============================================================= -->
-<div class="service-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="section-title text-center">
-					<!-- <h5>// WHAT WE Do</h5> -->
-					<h1>OUR PRODUCTS</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="service_list owl-carousel">
-                            <?php foreach ($product_with_cat_sub_cat as $product) { 
-                                $images = explode(',', $product['images']);
-                                ?>
-				<div class="service-single-box rounded"  style="height:500px">
-					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""  style="height:300px">
+		<!-- ============================================================== -->
+		<!-- Start -our product -->
+		<!-- ============================================================= -->
+		<div class="service-section p-0 p-md-5 p-lg-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<!-- <h5>// WHAT WE Do</h5> -->
+							<h1>OUR PRODUCTS</h1>
+						</div>
 					</div>
-					<!-- <div class="service-icon">
+				</div>
+				<div class="row">
+					<div class="service_list owl-carousel">
+						<?php foreach ($product_with_cat_sub_cat as $product) {
+							$images = explode(',', $product['images']);
+							?>
+							<div class="service-single-box rounded position-relative" style="height:500px">
+								<div class="service-thumb ProdImgContainer ">
+									<img class="frontImg" src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
+										style="height:300px">
+									<img 
+										class="hoverImg d-none"
+									    src="https://images.pexels.com/photos/27946281/pexels-photo-27946281/free-photo-of-a-small-boat-is-docked-in-the-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+										alt="" 	style="height:300px">
+								</div>
+								<div>
+
+								</div>
+								<!-- <div class="service-icon">
 						<i class="flaticon-business-and-finance"></i>
 					</div> -->
-					<div class="service-content">
-						<h2><?php echo $product['name']; ?></h2>
-						<!--<p><?php echo $product['conclusion']; ?></p>-->
-						<a href="<?php echo base_url().'product_detail/'.$product['p_id'] ?>">Learn More</a>
+								<div class="service-content">
+									<h2><?php echo $product['name']; ?></h2>
+									<!--<p><?php echo $product['conclusion']; ?></p>-->
+									<a class="bottom-0 position-absolute"
+										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
+										style="left:27%">Learn More</a>
+								</div>
+							</div>
+						<?php } ?>
 					</div>
 				</div>
-                            <?php } ?>
-<!--				<div class="service-single-box">
-					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
-					</div>
-					 <div class="service-icon">
-						<i class="flaticon-briefcase"></i>
-					</div> 
-					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
-					</div>
-				</div>
-				<div class="service-single-box">
-					<div class="service-thumb">
-						<img src="assets/images/products/ProductImageSection.webp" alt="">
-					</div>
-					 <div class="service-icon">
-						<i class="flaticon-mail"></i>
-					</div> 
-					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
-					</div>
-				</div>-->
+			</div>
 
+			<div class="shape-thumb">
+				<div class="service-shape-thumb bounce-animate">
+					<img src="assets/images/shape2.png" alt="">
+				</div>
+				<div class="service-shape-thumb2 bounce-animate">
+					<img src="assets/images/shape4.png" alt="">
+				</div>
+				<div class="service-shape-thumb3 rotateme">
+					<img src="assets/images/service-shape.png" alt="">
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="shape-thumb">
-		<div class="service-shape-thumb bounce-animate">
-			<img src="assets/images/shape2.png" alt="">
-		</div>
-		<div class="service-shape-thumb2 bounce-animate">
-			<img src="assets/images/shape4.png" alt="">
-		</div>
-		<div class="service-shape-thumb3 rotateme">
-			<img src="assets/images/service-shape.png" alt="">
-		</div>
-	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Start - call-Do-Action- Section -->
-<!-- ============================================================= -->
-<!-- <div class="call-do-action">
+		<!-- ============================================================== -->
+		<!-- Start - call-Do-Action- Section -->
+		<!-- ============================================================= -->
+		<!-- <div class="call-do-action">
 		<div class="container">
 			<div class="row call-bg">
 				<div class="col-lg-12">
@@ -178,31 +159,31 @@ if (!empty($home_page_data)) : ?>
 		</div>
 	</div> -->
 
-<!-- ============================================================== -->
-<!-- Start - Feature- Section -->
-<!-- ============================================================= -->
-<div class="feature-section">
-	<div class="container">
-		<div class="section-title text-center">
-			<h1>SECTORS/INDUSTRIES</h1>
-		</div>
-		<div class="row sectors-industries">
-                    <?php foreach($sectors as $sector){ ?>
-			<div class="col-lg-4 col-md-6">
-				<div class="single-feature-box text-center">
-					<div class="feature-icon">
-						<i class="<?php echo $sector['image']; ?>"></i>
-					</div>
-					<div class="feature-content">
-						<h2><?php echo $sector['name']; ?> </h2>
-						<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
-						<!--</p>-->
-					</div>
-
+		<!-- ============================================================== -->
+		<!-- Start - Feature- Section -->
+		<!-- ============================================================= -->
+		<div class="feature-section p-3 p-md-5 p-lg-5">
+			<div class="container">
+				<div class="section-title text-center">
+					<h1>SECTORS/INDUSTRIES</h1>
 				</div>
-			</div>
-                    <?php } ?>
-<!--			<div class="col-lg-4 col-md-6">
+				<div class="row sectors-industries">
+					<?php foreach ($sectors as $sector) { ?>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-feature-box text-center">
+								<div class="feature-icon">
+									<i class="<?php echo $sector['image']; ?>"></i>
+								</div>
+								<div class="feature-content">
+									<h2><?php echo $sector['name']; ?> </h2>
+									<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
+									<!--</p>-->
+								</div>
+
+							</div>
+						</div>
+					<?php } ?>
+					<!--			<div class="col-lg-4 col-md-6">
 				<div class="single-feature-box text-center">
 					<div class="feature-icon">
 						<i class="flaticon-square"></i>
@@ -264,136 +245,136 @@ if (!empty($home_page_data)) : ?>
 
 				</div>
 			</div> -->
-		</div>
-	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Gallery- Section -->
-<!-- ============================================================= -->
-
-<div class="service-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="section-title text-center">
-					<h1>OUR GALLERY</h1>
 				</div>
 			</div>
-
-			<?php $this->load->view('component/gallery') ?> 
-
 		</div>
-	</div>
-</div>
+		<!-- ============================================================== -->
+		<!-- Gallery- Section -->
+		<!-- ============================================================= -->
 
+		<div class="service-section p-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<h1>OUR GALLERY</h1>
+						</div>
+					</div>
 
+					<?php $this->load->view('component/gallery') ?>
 
-
-
-
-<!-- ============================================================== -->
-<!-- Start - Case-Study- Section -->
-<!-- ============================================================= -->
-<div class="case-study-section">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="section-title text-center">
-					<!-- <h5>// WHAT WE Do</h5> -->
-					<h1>LATEST BOLGS </h1>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="case_list owl-carousel">
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/blog/blog-image.png" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
+
+
+
+
+
+		<!-- ============================================================== -->
+		<!-- Start - Case-Study- Section -->
+		<!-- ============================================================= -->
+		<div class="case-study-section ">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<!-- <h5>// WHAT WE Do</h5> -->
+							<h1>LATEST BLOGS </h1>
 						</div>
 					</div>
 				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/blog/blog-image.png" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
+
+				<div class="row">
+					<div class="case_list owl-carousel">
+						<div class="single-case-study">
+							<div class="case-thumb">
+								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2>Data Research Analysis</h2>
+									<h6>Cloud Computing</h6>
+									<a href="case-study-details.html"><span>+</span></a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/blog/blog-image.png" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
+						<div class="single-case-study">
+							<div class="case-thumb">
+								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2>Data Research Analysis</h2>
+									<h6>Cloud Computing</h6>
+									<a href="case-study-details.html"><span>+</span></a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/blog/blog-image.png" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
+						<div class="single-case-study">
+							<div class="case-thumb">
+								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2>Data Research Analysis</h2>
+									<h6>Cloud Computing</h6>
+									<a href="case-study-details.html"><span>+</span></a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="single-case-study">
-					<div class="case-thumb">
-						<img src="assets/images/blog/blog-image.png" alt="">
-						<div class="case-content">
-							<h2>Data Research Analysis</h2>
-							<h6>Cloud Computing</h6>
-							<a href="case-study-details.html"><span>+</span></a>
+						<div class="single-case-study">
+							<div class="case-thumb">
+								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2>Data Research Analysis</h2>
+									<h6>Cloud Computing</h6>
+									<a href="case-study-details.html"><span>+</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="single-case-study">
+							<div class="case-thumb">
+								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2>Data Research Analysis</h2>
+									<h6>Cloud Computing</h6>
+									<a href="case-study-details.html"><span>+</span></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<!-- ============================================================== -->
-<!-- Start - Contact-Us- Section -->
-<!-- ============================================================= -->
+		<!-- ============================================================== -->
+		<!-- Start - Contact-Us- Section -->
+		<!-- ============================================================= -->
 
-<!-- ============================================================== -->
-<!-- Start - Blog- Section -->
-<!-- ============================================================= -->
-<div class="bolg-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12">
-				<div class="section-title text-center">
-					<h1>We have much more,</h1>
-					<h1>let's get started</h1>
+		<!-- ============================================================== -->
+		<!-- Start - Blog- Section -->
+		<!-- ============================================================= -->
+		<div class="bolg-section pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<h1>We have much more,</h1>
+							<h1>let's get started</h1>
 
-					<button class="cta_button" type="button">Collaborate with us > </button>
+							<button class="cta_button" type="button">Collaborate with us > </button>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
-
+	<?php endforeach; ?>
+<?php else: ?>
+	<div class="col-lg-12">
+		<p>No data found.</p>
 	</div>
-</div>
-<?php endforeach; ?>
-			<?php else : ?>
-				<div class="col-lg-12">
-					<p>No data found.</p>
-				</div>
-			<?php endif; ?>
+<?php endif; ?>
 <!-- ============================================================== -->
 <!-- Start - Brand- Section -->
 <!-- ============================================================= -->
 
 <!-- Footer start  -->
 <?php
- $this->load->view('layout/footer'); ?>
+$this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

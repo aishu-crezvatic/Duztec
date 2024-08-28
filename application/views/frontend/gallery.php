@@ -3,6 +3,7 @@
 <!-- header end  -->
 
 <?php
+
 // print_r($images);
 $mediaItems  = [
     'https://picsum.photos/seed/picsum/200/300',
@@ -23,11 +24,19 @@ $mediaItems  = [
 ];
 ?>
 
-<h1 class="my-5 about-title">Gallery</h1>
+<style>
+    .card{
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+ 
+<h1 class="my-5 about-title text-center">Gallery</h1>
   <div class="grid">
   <?php foreach ($images as $item): ?>
-    <div class="grid-item">
-        <div class="card">
+    <div class="grid-item rounded p-3 ">
+        <div class="card bg-transparent border-0 ">
             <?php if ($item['is_video'] == 1): ?>
                 <!-- Video element -->
                 <video controls width="100%">

@@ -1,3 +1,50 @@
+
+/* HOME PAGE hero section responsive css */
+@media (max-width:1199px) {
+    .slider-button a {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider-content h5 {
+        font-size: 0.875rem;
+    }
+
+    .slider-button a {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .slider-content h5 {
+        font-size: 0.75rem;
+    }
+
+    .slider-button a {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
+/* home hero section close */
+
+
+
+
+
+
+
+
 /* Normal desktop :1500. */
 @media (min-width: 1501px) and (max-width: 1919px) {
     .section-title h1 {
@@ -2340,6 +2387,46 @@ ul.sub-menu2 {
 @media (max-width: 600px) {
     #industry-links li {
         padding:5px 10px !important;    
+    }
+    .breadcumn-section-about {
+        background: url(../images/Mobile-Banners/AboutUsHeroBanner.png) !important;
+        padding-top: 100px !important;
+        padding-bottom: 110px !important;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        /* background-position: center; */
+        position: relative;
+        /* display: none; */
+    }
+    .breadcumn-section-prodDetail {
+        background: url(../images/Mobile-Banners/ProductdetailpageHeroBanner.png) !important;
+        padding-top: 100px !important;
+        padding-bottom: 110px !important;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        /* background-position: center; */
+        position: relative;
+        /* display: none; */
+    }
+    .breadcumn-section-contac {
+        background: url(../images/Mobile-Banners/ContactusHerobanner.png) !important;
+        padding-top: 100px !important;
+        padding-bottom: 110px !important;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        /* background-position: center; */
+        position: relative;
+        /* display: none; */
+    }
+    .breadcumn-section-blog {
+        background: url(../images/Mobile-Banners/BlogPageheroBanner.png) !important;
+        padding-top: 100px !important;
+        /* padding-bottom: 110px !important; */
+        background-repeat: no-repeat !important;
+        /* background-size: cover; */
+        /* background-position: center; */
+        position: relative;
+        /* display: none; */
     }
 }
 

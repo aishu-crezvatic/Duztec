@@ -20,7 +20,7 @@
 <!-- ============================================================== -->
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
-<div class="breadcumn-section-contact d-flex align-items-center"
+<div class="breadcumn-section-contac d-flex align-items-center"
 	style="background: url('<?php echo htmlspecialchars('assets/images/' . $heroBanner_img); ?>');">
 	<div class="container">
 		<div class="row">
