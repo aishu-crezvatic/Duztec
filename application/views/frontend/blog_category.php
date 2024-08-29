@@ -25,30 +25,6 @@
 			</div>
 		</div>
 	</div>
-<<<<<<< HEAD
-	<!-- ============================================================== -->
-	<!-- Start - Service- Section -->
-	<!-- ============================================================= -->
-	<div class="portfolio-section single-style">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 xol-md-12">
-					<div class="section-title text-center"> 
-						
-                                        <h1>
-        <?php 
-        foreach ($blog_categories as $category) { 
-            if ($category['bc_id'] == $this->uri->segment(2)) { 
-                // Assuming the ID from the URL is in the third segment
-                echo $category['name']; 
-                break; // Stop the loop once the matching category is found
-            }
-        } 
-        ?>
-    </h1>
-                                        
-					</div>
-=======
 </div>
 <!-- ============================================================== -->
 <!-- Start - Service- Section -->
@@ -59,7 +35,6 @@
 			<div class="col-lg-12 xol-md-12">
 				<div class="section-title text-center">
 					<h1>Blog Category Name</h1>
->>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad
 				</div>
 			</div>
 		</div>
@@ -71,11 +46,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-<<<<<<< HEAD
-                                                    <img src="<?php echo base_url().'uploads/product/image/'.$blog['b_image']; ?>" alt="No image">
-=======
 							<!-- <img src="<?php echo base_url() . 'uploads/product/image/' . $blog['b_image']; ?>" alt="error"> -->
->>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad
 							<div class="thumb-content">
 								<h3>Category: <?php echo $blog['title']; ?></h3>
 								<!-- <h2>Product Name: <?php echo $blog['name']; ?></h2> -->

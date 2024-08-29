@@ -124,7 +124,7 @@ if (!empty($home_page_data)): ?>
 									<!--<p><?php echo $product['conclusion']; ?></p>-->
 									<a class="bottom-0 position-absolute"
 										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
-										style="left:27%">Learn More</a>
+										style="left:35%">Learn More</a>
 								</div>
 							</div>
 						<?php } ?>
