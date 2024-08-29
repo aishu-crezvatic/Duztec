@@ -34,9 +34,6 @@
         <div class="row justify-content-between h-75">
             <div class="col-lg-7 col-md-12">
                 <div class="blog-thumb">
-<<<<<<< HEAD
-                    <img id="industry-main-image" src="../assets/images/default.jpg" alt="" style="width:100%">
-=======
                     <img id="industry-main-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
 <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
                 </div>
