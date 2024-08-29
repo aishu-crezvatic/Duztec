@@ -38,7 +38,7 @@
                     <img id="industry-main-image" src="../assets/images/default.jpg" alt="" style="width:100%">
 =======
                     <img id="industry-main-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
->>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad
+<!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 card col-12 p-0">
@@ -66,12 +66,12 @@
             </div>
             <div class="col-lg-4">
                 <h2 class="py-4 heading">Image gallery</h2>
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
                 <!-- <img id="industry-gallery-image" src="assets/images/default.jpg" alt="" style="width:100%"> -->
                 <img id="industry-gallery-image" src="https://dummyimage.com/300x300/1e89d1/ffffff" alt="" style="width:100%">
 =======
-                <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
->>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad
+                <!-- <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%"> -->
+<!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
             </div>
         </div>
 
