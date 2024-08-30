@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Blog extends CI_Controller
+class BlogController extends CI_Controller
 {
     public function __construct()
     {
@@ -146,7 +146,7 @@ private function _handle_blog_upload($action)
     }
     
     $this->session->set_flashdata('success', 'Blog saved successfully.');
-    redirect('admin/blog');
+    redirect('admin/blogcontroller');
 }
 
     // Delete a blog
@@ -159,7 +159,7 @@ private function _handle_blog_upload($action)
         $deleteResult = $this->CommonModel->delete(DATABASE, 'blogs', ['b_id' => $b_id]);
         $message = $deleteResult ? 'Blog deleted successfully!' : 'Failed to delete blog.';
         $this->session->set_flashdata($deleteResult ? 'success' : 'error', $message);
-        redirect('admin/blog');
+        redirect('admin/blogcontroller');
     }
 
     // Delete a category
@@ -172,6 +172,6 @@ private function _handle_blog_upload($action)
         $deleteResult = $this->CommonModel->delete('blog_categories', ['bc_id' => $bc_id]);
         $message = $deleteResult ? 'Category deleted successfully!' : 'Failed to delete category.';
         $this->session->set_flashdata($deleteResult ? 'success' : 'error', $message);
-        redirect('admin/blog');
+        redirect('admin/blogcontroller');
     }
 }

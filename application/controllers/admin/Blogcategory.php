@@ -1,370 +1,86 @@
 <?php
 
-
-
-
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
-
-
-class Blogcategory extends CI_Controller
-
+class BlogCategory extends CI_Controller
 {
-
-
-
     public function __construct()
-
     {
-
         parent::__construct();
-
-        $this->load->model('admin/blog_model');
-
-        $this->load->model('admin/blogcategory_model');
-
+        $this->load->model('admin/CommonModel');
+        $this->load->library('session');
+        $this->load->helper('url');
     }
 
-
-
+    // Display all blog categories
     public function index()
-
     {
+        $data['categories'] = $this->CommonModel->getRecords(DATABASE, 'blog_category');
+        $data['edit_mode'] = false;
+        $this->load->view('admin/blog/blog_category', $data);
+    }
 
-        $data['data'] = [
+    // Show form to create a new category
+    public function create()
+    {
+        $data['edit_mode'] = false;
+        $this->load->view('admin/category/create_category', $data);
+    }
 
-            'category' => $this->blog_model->fetchcategory()
-
+    // Store a new category
+    public function store()
+    {
+        $data = [
+            'name'        => $this->input->post('name'),
+            'description' => $this->input->post('description'),
+            'status'      => $this->input->post('status')
         ];
 
-        $this->load->view('admin/blog/category', $data);
-
+        $insertResult = $this->CommonModel->add(DATABASE, 'blog_category', $data);
+        $message = $insertResult ? 'Category created successfully!' : 'Failed to create category.';
+        $this->session->set_flashdata($insertResult ? 'success' : 'error', $message);
+        redirect('admin/blogcategory');
     }
 
-
-
-    public function create()
-
+    // Show form to edit an existing category
+    public function edit($bc_id)
     {
+        $data['category'] = $this->CommonModel->getRow(DATABASE, 'blog_category', ['bc_id' => $bc_id]);
 
-        $banners = [];
-
-        $error = false;
-
-        for ($i = 0; $i < 2; $i++) {
-
-            $config['upload_path']          = './uploads/';
-
-            $config['allowed_types']        = 'gif|jpg|jpeg|png|webp';
-
-            $config['max_size']             = 10000;
-
-            // $config['max_width']            = 10240;
-
-            // $config['max_height']           = 7680;
-
-            // $config['file_name']            = md5(date('Y-m-d H:s:i'));
-
-
-
-            $this->load->library('upload', $config);
-
-            if (!$this->upload->do_upload('image' . $i)) {
-
-                $error = array('error' => $this->upload->display_errors());
-
-                $this->session->set_flashdata('error', $error);
-
-                $error = true;
-
-                break;
-
-            } else {
-
-                array_push($banners, $this->upload->data());
-
-                $this->upload->initialize($config);
-
-            }
-
+        if (empty($data['category'])) {
+            show_404();
         }
 
-        if ($error == false) {
-
-            $images = [];
-
-            foreach ($banners as $image) {
-
-                array_push($images, $image['file_name']);
-
-            }
-
-            $data = [
-
-                'image' => $images[0],
-
-                'banner' => $images[1],
-
-                'name' => $this->input->post('name'),
-
-                'description' => $this->input->post('description'),
-
-                'url_name' => $this->input->post('url_name')
-
-            ];
-
-            $this->blogcategory_model->create($data);
-
-            $this->session->set_flashdata('success', 'category added');
-
-        }
-
-        redirect(base_url('admin/blogcategory'));
-
+        $data['edit_mode'] = true;
+        $this->load->view('admin/blog/blog_category', $data);
     }
 
-
-
-
-
-    public function delete()
-
+    // Update an existing category
+    public function update()
     {
+        $bc_id = $this->input->post('bc_id');
+        $data = [
+            'name'        => $this->input->post('name'),
+            'description' => $this->input->post('description'),
+            'status'      => $this->input->post('status')
+        ];
 
-        $id = $this->input->post('id');
-
-        $this->blogcategory_model->delete($id);
-
-        $this->session->set_flashdata('success', 'Category Deleted');
-
-        redirect(base_url('admin/blogcategory'));
-
+        $updateResult = $this->CommonModel->edit(DATABASE, 'blog_category', $data, ['bc_id' => $bc_id]);
+        $message = $updateResult ? 'Category updated successfully!' : 'Failed to update category.';
+        $this->session->set_flashdata($updateResult ? 'success' : 'error', $message);
+        redirect('admin/blogcategory');
     }
 
-
-
-    public function edit()
-
+    // Delete a category
+    public function delete($bc_id)
     {
-
-        // if two image upload at once 
-
-        if (($_FILES['image0']['size'] > 0) && ($_FILES['image1']['size'] > 0)) {
-
-            $banners = [];
-
-            $error = false;
-
-            for ($i = 0; $i < 2; $i++) {
-
-                $config['upload_path']          = './uploads/';
-
-                $config['allowed_types']        = 'gif|jpg|jpeg|png|webp';
-
-                $config['max_size']             = 1000;
-
-                // $config['max_width']            = 10240;
-
-                // $config['max_height']           = 7680;
-
-                // $config['file_name']            = md5(date('Y-m-d H:s:i'));
-
-
-
-                $this->load->library('upload', $config);
-
-                if (!$this->upload->do_upload('image' . $i)) {
-
-                    $error = array('error' => $this->upload->display_errors());
-
-                    $this->session->set_flashdata('error', $error);
-
-                    $error = true;
-
-                    break;
-
-                } else {
-
-                    array_push($banners, $this->upload->data());
-
-                    $this->upload->initialize($config);
-
-                }
-
-            }
-
-            if ($error == false) {
-
-                $images = [];
-
-                foreach ($banners as $image) {
-
-                    array_push($images, $image['file_name']);
-
-                }
-
-                $data = [
-
-                    'id' => $this->input->post('id'),
-
-                    'image' => $images[0],
-
-                    'banner' => $images[1],
-
-                    'name' => $this->input->post('name'),
-
-                    'description' => $this->input->post('description'),
-
-                    'url_name' => $this->input->post('url_name')
-
-                ];
-
-                $this->blogcategory_model->update($data);
-
-                $this->session->set_flashdata('success', 'category updated');
-
-            }
-
+        if (empty($bc_id)) {
+            show_404();
         }
 
-        // if only image uploaded 
-
-        elseif (($_FILES['image0']['size'] > 0) && ($_FILES['image1']['size'] == 0)) {
-
-
-
-            $config['upload_path']          = './uploads/';
-
-            $config['allowed_types']        = 'gif|jpg|jpeg|png|webp';
-
-            $config['max_size']             = 1000;
-
-            // $config['max_width']            = 10240;
-
-            // $config['max_height']           = 7680;
-
-            // $config['file_name']            = md5(date('Y-m-d H:s:i'));
-
-
-
-            $this->load->library('upload', $config);
-
-            if (!$this->upload->do_upload('image0')) {
-
-                $error = array('error' => $this->upload->display_errors());
-
-                $this->session->set_flashdata('error', $error);
-
-            } else {
-
-                $image = $this->upload->data();
-
-                $data = [
-
-                    'id' => $this->input->post('id'),
-
-                    'image' => $image['file_name'],
-
-                    'name' => $this->input->post('name'),
-
-                    'description' => $this->input->post('description'),
-
-                    'url_name' => $this->input->post('url_name')
-
-                ];
-
-                $this->blogcategory_model->update($data);
-
-                $this->session->set_flashdata('success', 'category updated');
-
-            }
-
-        }
-
-        // if banner uploaded only 
-
-        elseif (($_FILES['image0']['size'] == 0) && ($_FILES['image1']['size'] > 0)) {
-
-
-
-            $config['upload_path']          = './uploads/';
-
-            $config['allowed_types']        = 'gif|jpg|jpeg|png|webp';
-
-            $config['max_size']             = 1000;
-
-            // $config['max_width']            = 10240;
-
-            // $config['max_height']           = 7680;
-
-            // $config['file_name']            = md5(date('Y-m-d H:s:i'));
-
-
-
-            $this->load->library('upload', $config);
-
-            if (!$this->upload->do_upload('image1')) {
-
-                $error = array('error' => $this->upload->display_errors());
-
-                $this->session->set_flashdata('error', $error);
-
-            } else {
-
-                $image = $this->upload->data();
-
-                $data = [
-
-                    'id' => $this->input->post('id'),
-
-                    'banner' => $image['file_name'],
-
-                    'name' => $this->input->post('name'),
-
-                    'description' => $this->input->post('description'),
-
-                    'url_name' => $this->input->post('url_name')
-
-                ];
-
-                $this->blogcategory_model->update($data);
-
-                $this->session->set_flashdata('success', 'category updated');
-
-            }
-
-        }
-
-        // no image is uploaded 
-
-        else {
-
-            $data = [
-
-                'id' => $this->input->post('id'),
-
-                'name' => $this->input->post('name'),
-
-                'description' => $this->input->post('description'),
-
-                'url_name' => $this->input->post('url_name')
-
-            ];
-
-            $this->blogcategory_model->update($data);
-
-            $this->session->set_flashdata('success', 'category updated');
-
-        }
-
-        redirect(base_url('admin/blogcategory'));
-
+        $deleteResult = $this->CommonModel->delete(DATABASE, 'blog_category', ['bc_id' => $bc_id]);
+        $message = $deleteResult ? 'Category deleted successfully!' : 'Failed to delete category.';
+        $this->session->set_flashdata($deleteResult ? 'success' : 'error', $message);
+        redirect('admin/blogcategory');
     }
-
 }
-
-
-
-/* End of file Blogcategory.php */
-

@@ -65,7 +65,7 @@
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop class="w-100">
-            <source src="<?php echo base_url()?>assets/video/DUZtech New Preloader Video.mp4" type="video/mp4">
+            <source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -146,16 +146,15 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-2 col-2 text-end">
-                    <form action="<?= base_url('product') ?>" method="GET">
+                    <!-- <div class="col-lg-2 col-md-2 col-2 text-end"> -->
+                    <!-- <form action="<?= base_url('product') ?>" method="GET">
                             <input  type="text" name="query" placeholder="Search products...">
-                            <!-- <button type="submit">Search</button> -->
-                        </form>
-                    </div>
+                        </form> -->
+                    <!-- </div> -->
                    
-                    <div class="col-lg-8 col-md-7">
+                    <div class="col-lg-9 col-md-9">
                    
-                            <div class="header-menu text-cente">
+                            <div class="header-menu d-flex flex-wrap align-items-center justify-content-center">
                     
 
 
@@ -190,10 +189,10 @@
                                         <li><a href="<?php echo base_url() ?>product_detail/index/2" >Trolly Mounted Mist Beams</a></li>
                                         <li><a href="<?php echo base_url() ?>product_detail/index/2" >Cooling and Humidification</a></li>
                                     </ul>
-                                </li>-->
+                                 </li>-->
 
-                                                                    <li class="position-relative">
-                                                                        <a href="<?php echo base_url(); ?>product_category">Products <i class="fa fa-angle-down"></i></a>
+                                    <li class="position-relative">
+                                        <a href="<?php echo base_url(); ?>product_category">Products <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
 
                                             <?php 
@@ -213,10 +212,10 @@
                                                     }
                                                 }
 
-//                                                echo "Value exists in c_id_exists key.".$c_id_exists.' product name '.$product['name'].'</br>';
-//                                                exit;
+                                                    //echo "Value exists in c_id_exists key.".$c_id_exists.' product name '.$product['name'].'</br>';
+                                                   //exit;
                                                 if ($c_id_exists) {
-//                                            echo "Value exists in c_id key.";
+                                                    // echo "Value exists in c_id key.";
                                                     ?>
                                                     <li class="position-relative">
                                                         <?php if ($sub_cat_count == 1) { ?>
@@ -282,6 +281,10 @@
                             <!-- <div class="header-src-btn">
                                 <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
                             </div> -->
+                            <form action="<?= base_url('product') ?>" method="GET">
+                                  <input  type="text" name="query" placeholder="Search products...">
+                                  <!-- <button type="submit">Search</button> -->
+                            </form>
                             <div class="header-button text-right">
                                 <a href="#">Enquire Now</a>
                             </div>

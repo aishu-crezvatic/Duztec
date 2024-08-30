@@ -7,12 +7,12 @@
 <style>
 	.breadcumn-section-contac {
 		position: relative;
-		/* background: url(assets/images/contact-us-banner.png); */
+		background: url(assets/images/contact-us-banner.png);
 		padding-top: 400px;
 		padding-bottom: 300px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center !important;
 	}
 </style>
 
