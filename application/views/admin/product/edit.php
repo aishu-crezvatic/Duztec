@@ -1,11 +1,9 @@
 <!--**********************************Header & sidebar start***********************************-->
 
 <?php
-
 $this->load->view('admin/layout/header');
 
 $this->load->view('admin/layout/sidebar');
-
 ?>
 
 <!--**********************************Header & sidebar end***********************************-->
@@ -27,18 +25,16 @@ $this->load->view('admin/layout/sidebar');
             <div class="col-12">
 
                 <?php
-
                 if (!empty($this->session->flashdata('success'))) {
-
-                ?>
+                    ?>
 
                     <div class="alert alert-success solid alert-dismissible fade show w-100 mx-">
 
                         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
 
-                            <polyline points="9 11 12 14 22 4"></polyline>
+                        <polyline points="9 11 12 14 22 4"></polyline>
 
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
 
                         </svg>
 
@@ -50,29 +46,25 @@ $this->load->view('admin/layout/sidebar');
 
                     </div>
 
-                <?php
-
+                    <?php
                 }
-
                 ?>
 
 
 
                 <?php
-
                 if (!empty($this->session->flashdata('error'))) {
-
-                ?>
+                    ?>
 
                     <div class="alert alert-danger solid alert-dismissible fade show">
 
                         <svg viewBox="0 0 24 24" width="24 " height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
 
-                            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+                        <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
 
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
 
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
 
                         </svg>
 
@@ -84,12 +76,8 @@ $this->load->view('admin/layout/sidebar');
 
                     </div>
 
-                <?php
-
+                    <?php
                 }
-
-
-
                 ?>
 
 
@@ -100,7 +88,7 @@ $this->load->view('admin/layout/sidebar');
 
             <div class="col-12 mb-3">
 
-                <a href="<?php echo base_url('admin/product') ?>" class="btn btn-warning w-100 m-0"><i class="fa-solid fa-arrow-left-long"></i> Back</a>
+                <a href="<?php echo base_url('admin/sub_category') ?>" class="btn btn-warning w-100 m-0"><i class="fa-solid fa-arrow-left-long"></i> Back</a>
 
             </div>
 
@@ -112,45 +100,60 @@ $this->load->view('admin/layout/sidebar');
 
                     <div class="card-header">
 
-                        <h4 class="card-title">Edit Product</h4>
+                        <h4 class="card-title">Edit Sub Category</h4>
 
                     </div>
 
                     <div class="card-body">
 
-                        <form method="POST" action="<?php echo base_url() ?>admin/product/update" enctype="multipart/form-data">
+                        <form method="POST" action="<?php echo base_url() ?>admin/sub_category/update" enctype="multipart/form-data">
 
-                            <input name="id" type="text" value="<?php echo $data['id'] ?>" id="blogeditModalId" hidden>
+                            <input name="sc_id" type="text" value="<?php echo $data['sc_id'] ?>" id="blogeditModalId" hidden>
+                            <!--<input name="c_id" type="text" value="<?php //echo $data['c_id'] ?>" id="blogeditModalId" hidden>-->
+                            <div class="form-group col-12">
+                                        <label>Category</label>
+                                        <select name="c_id" class="form-control default-select" id="sel1">
+                                            <?php
+                                            // unset($data['category'][0]);
+                                            foreach ($categories as $category) {
+                                                if($data['c_id'] == $category['c_id']){
+                                            ?>
+                                                <option value="<?php echo $category['c_id'] ?>" selected><?php echo $category['name'] ?></option>
+                                            <?php
+                                            }else{
+                                            ?>
+                                                 <option value="<?php echo $category['c_id'] ?>"><?php echo $category['name'] ?></option>
+                                            <?php
+                                            }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                            <!--<div class="form-group">-->
 
-                            <div class="form-group">
+                                <!--<label class="text-black font-w500">Upload Category Image (400*200px)</label>-->
 
-                                <label class="text-black font-w500">Upload Image (400*200px)</label>
+<!--                                <div class="input-group">
 
-                                <div class="input-group">
-
-                                    <!-- <img style="width:300px;" id="blogeditModalImage" class="my-2 border rounded" src="<?php echo base_url().$blog['image'] ?>" alt="banner"> -->
+                                     <img style="width:300px;" id="blogeditModalImage" class="my-2 border rounded" src="<?php echo base_url() . $blog['image'] ?>" alt="banner"> 
 
                                     <?php
+//                                    $image = explode(',',$data['category_image']);
+//                                    $image = $data['category_image'];
 
-                                    $image = explode(',',$data['image']);
-
-                                    // var_dump($data);
-
-                                    foreach($image as $img){
-
-                                        ?>
-
-                                        <img style="padding:5px;" width="100" src="<?php echo base_url()."uploads/".$img ?>" alt="">
-
-                                        <?php
-
-                                    }
-
+// var_dump($data);
+//                                    foreach($image as $img){
                                     ?>
 
-                                </div>
+                                    <img style="padding:5px;" width="100" src="<?php //echo base_url() . "uploads/" . $image ?>" alt="">
 
-                                <div class="input-group mb-3">
+                                    <?php
+//                                    }
+                                    ?>
+
+                                </div>-->
+
+<!--                                <div class="input-group mb-3">
 
                                     <div class="input-group-prepend">
 
@@ -160,21 +163,21 @@ $this->load->view('admin/layout/sidebar');
 
                                     <div class="custom-file">
 
-                                        <input name="image[]" multiple accept=".jpg,.jpeg,.png,.webp,.avif" type="file" class="custom-file-input">
+                                        <input name="category_image" multiple accept=".jpg,.jpeg,.png,.webp,.avif" type="file" class="custom-file-input">
 
                                         <label class="custom-file-label selected">Choose File</label>
 
                                     </div>
 
-                                </div>
+                                </div>-->
 
-                            </div>
+                            <!--</div>-->
 
                             <div class="form-group col-12">
 
-                                <label>Title*</label>
+                                <label>Name*</label>
 
-                                <input name="name" type="text" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['title'] ?>" required>
+                                <input name="name" type="text" class="form-control editModalTitle" placeholder="Enter Name" value="<?php echo $data['name'] ?>" required>
 
                             </div>
 
@@ -184,27 +187,27 @@ $this->load->view('admin/layout/sidebar');
 
                                 <textarea name="description" class="summernote editModalDescription" required>
 
-                                <?php echo $data['description'] ?>
+                                    <?php echo $data['description'] ?>
 
                                 </textarea>
 
                             </div>
 
-                            <div class="form-group col-12">
+                            <!--                            <div class="form-group col-12">
+                            
+                                                            <label>Price (₹)*</label>
+                            
+                                                            <input name="price" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['price'] ?>" required>
+                            
+                                                        </div>-->
 
-                                <label>Price (₹)*</label>
-
-                                <input name="price" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['price'] ?>" required>
-
-                            </div>
-
-                            <div class="form-group col-12">
-
-                                <label>Discount (%)*</label>
-
-                                <input name="discount" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['discount'] ?>" required>
-
-                            </div>
+                            <!--                            <div class="form-group col-12">
+                            
+                                                            <label>Discount (%)*</label>
+                            
+                                                            <input name="discount" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['discount'] ?>" required>
+                            
+                                                        </div>-->
 
                             <div class="form-group">
 

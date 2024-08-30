@@ -4,14 +4,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Category extends CI_Controller {
 
+    private $_table;
+    private $_view_folder;
+    private $_view;
+    private $_edit;
+    
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/CommonModel');
+        $this->_table = 'category';
+        $this->_view_folder = 'admin/category';
+        $this->_view = 'category';
+        $this->_edit = 'edit';
     }
 
     public function index() {
-        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'category', array('status !=' => 2));
-        $this->load->view('admin/category/category', $data);
+        $data['data'] = $this->CommonModel->getRecords(DATABASE, $this->_table, array('status !=' => 2));
+        $this->load->view($this->_view_folder.'/'.$this->_view, $data);
     }
 
     public function create() {
@@ -37,12 +46,12 @@ class Category extends CI_Controller {
         ];
         $this->CommonModel->add(DATABASE, 'category', $data);
         $this->session->set_flashdata('success', 'Category Created');
-        redirect(base_url('admin/category'));
+        redirect(base_url($this->_view_folder));
     }
 
     public function edit($id) {
-        $data['data'] = $this->CommonModel->getRow(DATABASE, 'category', array('c_id' => $id), '*');
-        $this->load->view('admin/category/edit', $data);
+        $data['data'] = $this->CommonModel->getRow(DATABASE, $this->_table, array('c_id' => $id), '*');
+        $this->load->view($this->_view_folder.'/'.$this->_edit, $data);
     }
 
     public function update() {
@@ -72,20 +81,20 @@ class Category extends CI_Controller {
                 'description' => trim($this->input->post('description'))
             ];
         }
-        $this->CommonModel->edit(DATABASE, 'category', $data, array('c_id' => trim($this->input->post('c_id'))));
+        $this->CommonModel->edit(DATABASE, $this->_table, $data, array('c_id' => trim($this->input->post('c_id'))));
         $this->session->set_flashdata('success', 'Category Updated');
-        redirect(base_url('admin/category'));
+        redirect(base_url($this->_view_folder));
     }
 
     public function delete() {
         $id = trim($this->input->post('id'));
-        $this->CommonModel->soft_delete(DATABASE, 'category', 'c_id', $id);
+        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'c_id', $id);
         $this->session->set_flashdata('success', 'Category Deleted');
-        redirect(base_url('admin/category'));
+        redirect(base_url($this->_view_folder));
     }
 
     public function status($id) {
-        $this->CommonModel->status(DATABASE, 'category', 'c_id', $id);
+        $this->CommonModel->status(DATABASE, $this->_table, 'c_id', $id);
     }
     
 //    public function delete(){
