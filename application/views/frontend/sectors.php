@@ -54,10 +54,10 @@
         </div>
         <div class="row mt-5 align-items-start ">
             <div class="col-lg-8 col-md-8 col-12">
-                <div class="text1">
+                <div class="text-black">
                 <?php //foreach($sector_detail as $sector){ ?>
                     <h2 id="industry-subtitle" class="py-4 heading"><?php echo $sector_detail[$selected_sector_index]['name']; ?></h2>
-                    <p id="industry-description" class="p-0 m-0"><?php echo $sector_detail[$selected_sector_index]['description']; ?></p>
+                    <p id="industry-description" class="p-0 m-0 text-black" ><?php echo $sector_detail[$selected_sector_index]['description']; ?></p>
                     <?php //} ?>
                 </div>
             </div>
@@ -66,7 +66,7 @@
 <!-- <<<<<<< HEAD -->
                 <!-- <img id="industry-gallery-image" src="assets/images/default.jpg" alt="" style="width:100%"> -->
                 <img id="industry-gallery-image" src="https://dummyimage.com/300x300/1e89d1/ffffff" alt="" style="width:100%">
-=======
+
                 <!-- <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%"> -->
 <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
             </div>

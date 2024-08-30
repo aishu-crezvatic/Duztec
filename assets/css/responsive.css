@@ -1,5 +1,15 @@
 
 /* HOME PAGE hero section responsive css */
+@media (min-width:1641px) {
+    .breadcumn-section-blog{
+        padding-top: 780px !important;
+        padding-bottom: 280px
+    }
+    .breadcumn-section-contac{
+        padding-top: 780px !important;
+        padding-bottom: 280px
+    }
+}
 @media (max-width:1199px) {
     .slider-button a {
         font-size: 0.875rem;

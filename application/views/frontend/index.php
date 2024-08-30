@@ -122,6 +122,7 @@ if (!empty($home_page_data)): ?>
 								<div class="service-content">
 									<h2><?php echo $product['name']; ?></h2>
 									<!--<p><?php echo $product['conclusion']; ?></p>-->
+									<p>Lorem ipsum dolor sit amet.</p>
 									<a class="bottom-0 position-absolute"
 										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
 										style="left:35%">Learn More</a>
@@ -257,7 +258,7 @@ if (!empty($home_page_data)): ?>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="section-title text-center">
-							<h1>OUR GALLERY</h1>
+							<h1>OUR WORK</h1>
 						</div>
 					</div>
 

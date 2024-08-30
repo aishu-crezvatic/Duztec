@@ -70,7 +70,7 @@
 						understand that It services is changing,</p>
 				</div>
 				<div class="footer-address">
-					<div class="footer-social-icon">
+					<div class="footer-social-icon d-flex">
 						<ul>
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -153,7 +153,9 @@
 							<p>no mail available</p>
 						<?php endif; ?>
 					</span>
+					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt="" style="margin-top:-60px">
 				</div>
+
 				<!-- <div class="footer-btn">
 					<form id="contact_form2" action="mail2.php" method="POST">
 						<input type="email" placeholder="Enter email address" class="footer-email" required>
@@ -228,8 +230,8 @@
 			<button class="close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
 		<!-- <form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post"> -->
-		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">	
-		<div class="form-group col-12 col-md-6 col-lg-6">
+		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">
+			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control"
 					required>
@@ -256,7 +258,9 @@
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="phone" class="navyText fw-bold">Phone:</label>
-				<input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 9876543210">
+				<input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 9876543210"
+					pattern="\d{10}"
+					title="Please enter a 10-digit phone number without any spaces or special characters.">
 			</div>
 			<div class="form-group col-12">
 				<label for="comment" class="navyText fw-bold">Comment:</label>
@@ -282,6 +286,8 @@
 		const popupForm = document.getElementById('popupForm');
 		const closePopup = document.getElementById('closePopup');
 		const captchaQuestion = document.getElementById('captchaQuestion');
+		const phonePattern = /^\d{10}$/; 
+
 		let captchaAnswer;
 
 		function generateCaptcha() {
@@ -301,6 +307,11 @@
 			showPopup();
 			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
 		}
+		
+		if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
+            alert('Please enter a valid 10-digit phone number.');
+            return;
+        }
 
 		// Close popup when the close button is clicked
 		closePopup.addEventListener('click', () => {
