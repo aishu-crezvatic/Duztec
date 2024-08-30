@@ -7,17 +7,10 @@ class Category extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/CommonModel');
-//        echo "<pre>";
-//        print_r($data);
-//        exit;
     }
 
     public function index() {
         $data['data'] = $this->CommonModel->getRecords(DATABASE, 'category', array('status !=' => 2));
-        //        echo "<pre>";
-//        print_r($data);
-//        exit;
-
         $this->load->view('admin/category/category', $data);
     }
 
@@ -34,12 +27,11 @@ class Category extends CI_Controller {
             $comp_logo = $this->upload->data();
             $image = $comp_logo['file_name'];
         }
-        $name = $this->input->post('name');
-        $description = $this->input->post('description');
+
         $data = [
-            'category_image' => $image,
-            'name' => $name,
-            'description' => $description,
+            'category_image' => trim($image),
+            'name' => trim($this->input->post('name')),
+            'description' => trim($this->input->post('description')),
             'status' => 0,
             'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
         ];
@@ -68,40 +60,41 @@ class Category extends CI_Controller {
                 $image = $comp_logo['file_name'];
             }
             $data = [
-                'c_id' => $this->input->post('c_id'),
-                'category_image' => $image,
-                'name' => $this->input->post('name'),
-                'description' => $this->input->post('description')
+                'c_id' => trim($this->input->post('c_id')),
+                'category_image' => trim($image),
+                'name' => trim($this->input->post('name')),
+                'description' => trim($this->input->post('description'))
             ];
         } else {
             $data = [
-                'c_id' => $this->input->post('id'),
-                'name' => $this->input->post('name'),
-                'description' => $this->input->post('description')
+                'c_id' => trim($this->input->post('c_id')),
+                'name' => trim($this->input->post('name')),
+                'description' => trim($this->input->post('description'))
             ];
         }
-        $this->CommonModel->edit(DATABASE, 'category', $data, array('c_id' => $this->input->post('c_id')));
+        $this->CommonModel->edit(DATABASE, 'category', $data, array('c_id' => trim($this->input->post('c_id'))));
         $this->session->set_flashdata('success', 'Category Updated');
         redirect(base_url('admin/category'));
     }
 
     public function delete() {
-        $id = $this->input->post('id');
+        $id = trim($this->input->post('id'));
         $this->CommonModel->soft_delete(DATABASE, 'category', 'c_id', $id);
         $this->session->set_flashdata('success', 'Category Deleted');
         redirect(base_url('admin/category'));
     }
 
+    public function status($id) {
+        $this->CommonModel->status(DATABASE, 'category', 'c_id', $id);
+    }
+    
 //    public function delete(){
 //        $id = $this->input->post('id');
 //        $this->product_model->delete($id)
 //        $this->session->set_flashdata('success', 'Product Deleted');
 //        redirect(base_url('admin/product'));
 //    }
-
-    public function status($id) {
-        $this->CommonModel->status(DATABASE, 'category', 'c_id', $id);
-    }
+    
 }
 
 /* End of file Index.php */

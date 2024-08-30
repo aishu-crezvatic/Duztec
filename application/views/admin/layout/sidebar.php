@@ -19,29 +19,44 @@
                     ?>
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-house"></i>
-                                <span class="nav-text">Home</span>
+                                <span class="nav-text">Category</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="<?php echo base_url() ?>admin/slider">Slider</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/wayam_madhe_ky_wachal">Wayam Madhe Ky Wachal H&A</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/about_wayam">About Wayam Home</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/bapat_sir_intro">Bapat Sir Intro Home</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/salagar_mandal">Salagar Mandal Home</a></li>
+                                <li><a href="<?php echo base_url() ?>admin/category">View Category</a></li>
+                                <!--<li><a href="<?php echo base_url() ?>admin/wayam_madhe_ky_wachal">Wayam Madhe Ky Wachal H&A</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/about_wayam">About Wayam Home</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/bapat_sir_intro">Bapat Sir Intro Home</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/salagar_mandal">Salagar Mandal Home</a></li>-->
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-store"></i>
-                                <span class="nav-text">Products</span>
+                                <span class="nav-text">Sub Category</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="<?php echo base_url() ?>admin/product">Product List</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/about_hero">About Hero Section</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/bapat_sir_intro_about_us">Bapat sir intro aboutus page</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/about_aboutus_page">About section on aboutus page</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/wayam_sahitik">Wayam Sahitik</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/award">Award</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/contact_us">Contact Us</a></li>
+                                <li><a href="<?php echo base_url() ?>admin/sub_category">View Sub Category</a></li>
+                                <!--<li><a href="<?php echo base_url() ?>admin/about_hero">About Hero Section</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/bapat_sir_intro_about_us">Bapat sir intro aboutus page</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/about_aboutus_page">About section on aboutus page</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/wayam_sahitik">Wayam Sahitik</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/award">Award</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/contact_us">Contact Us</a></li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                <i class="fa-solid fa-store"></i>
+                                <span class="nav-text">Product</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="<?php echo base_url() ?>admin/product">Product</a></li>
+                                <!--<li><a href="<?php echo base_url() ?>admin/about_hero">About Hero Section</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/bapat_sir_intro_about_us">Bapat sir intro aboutus page</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/about_aboutus_page">About section on aboutus page</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/wayam_sahitik">Wayam Sahitik</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/award">Award</a></li>-->
+                                <!--<li><a href="<?php echo base_url() ?>admin/contact_us">Contact Us</a></li>-->
                             </ul>
                         </li>
                     <?php
@@ -52,8 +67,11 @@
                     if ($userData['type'] == 1 || $userData['type'] == 2) {
                     ?>
                         <li>
+                            <hr>
+                            -----------------------
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-store"></i>
+                                
                                 <span class="nav-text">Orders</span>
                             </a>
                             <ul aria-expanded="false">
