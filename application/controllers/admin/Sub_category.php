@@ -2,21 +2,21 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Product extends CI_Controller {
-
+class Sub_category extends CI_Controller {
+    
     private $_table;
     private $_table2;
     private $_view_folder;
     private $_view;
     private $_edit;
-    
+
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/CommonModel');
-        $this->_table = 'product';
+        $this->_table = 'sub_category';
         $this->_table2 = 'category';
-        $this->_view_folder = 'admin/product';
-        $this->_view = 'product';
+        $this->_view_folder = 'admin/sub_category';
+        $this->_view = 'sub_category';
         $this->_edit = 'edit';
     }
 
@@ -34,7 +34,7 @@ class Product extends CI_Controller {
             'status' => 0,
             'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
         ];
-        $this->CommonModel->add(DATABASE, $this->_table, $data);
+        $this->CommonModel->add(DATABASE, $this->_view, $data);
         $this->session->set_flashdata('success', 'Sub Category Created');
         redirect(base_url($this->_view_folder));
     }
@@ -61,7 +61,7 @@ class Product extends CI_Controller {
         $id = trim($this->input->post('id'));
         $this->CommonModel->soft_delete(DATABASE, $this->_table, 'sc_id', $id);
         $this->session->set_flashdata('success', 'Sub Category Deleted');
-        redirect(base_url($this->_table));
+        redirect(base_url($this->_view_folder));
     }
 
     public function status($id) {

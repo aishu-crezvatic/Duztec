@@ -178,7 +178,7 @@ $this->load->view('admin/layout/sidebar');
                 ?>
             </div>
             <div class="col-12 mb-3">
-                <a href="javascript:void(0)" class="btn btn-primary w-100 m-0" data-toggle="modal" data-target="#addOrderModalside">+ New Product</a>
+                <a href="javascript:void(0)" class="btn btn-primary w-100 m-0" data-toggle="modal" data-target="#addOrderModalside">+ New Category</a>
             </div>
             <div class="col-12">
                 <div class="card">
@@ -216,7 +216,8 @@ $this->load->view('admin/layout/sidebar');
                                                     $Image = $row['category_image'];
 //                                                    foreach ($Images as $baseimg) {
                                                     ?>
-                                                    <img style="width: 50px;" src="<?php echo base_url() . "uploads/category" . $Image ?>" alt="image">
+                                                    <!--<img style="width: 50px;" src="<?php // echo base_url() . "uploads/category" . $Image ?>" alt="image">-->
+                                                    <img style="width: 50px;" src="<?php echo base_url() . "uploads/" . $Image ?>" alt="image">
                                                     <?php
 //                                                    }
                                                     ?>
