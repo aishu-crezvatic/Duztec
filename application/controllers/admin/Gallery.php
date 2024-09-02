@@ -12,7 +12,7 @@ class Gallery extends CI_Controller {
 
     public function index() {
         // Fetch records from the CommonModel
-        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'gallery', array('status !=' => 0));
+        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'gallery', array('status !=' => 2));
 
         // Load the view and pass the data
         $this->load->view('admin/gallery/gallery', $data);
@@ -98,10 +98,20 @@ class Gallery extends CI_Controller {
             'is_video'  => $this->input->post('is_video'),
             'status'    => $this->input->post('status'),
         ];
+
+        $updateResult = $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
+
+        if ($updateResult) {
+            $this->session->set_flashdata('success', 'Gallery information updated successfully!');
+            redirect('admin/gallery');
+        } else {
+            $this->session->set_flashdata('error', 'Failed to update gallery information.');
+            redirect('admin/gallery');
+        }
     
-        $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
-        $this->session->set_flashdata('success', 'Gallery item updated successfully!');
-        redirect(base_url('admin/gallery'));
+        // $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
+        // $this->session->set_flashdata('success', 'Gallery item updated successfully!');
+        // redirect(base_url('admin/gallery'));
     }
     
 

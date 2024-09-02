@@ -34,6 +34,7 @@
                         <th>ID</th>
                         <th>Title</th>
                         <th>Category</th>
+                        <th>Image</th> 
                         <th>Description</th>
                         <th>Status</th>
                         <th>Actions</th>
@@ -46,6 +47,13 @@
                                 <td><?php echo htmlspecialchars($blog['b_id']); ?></td>
                                 <td><?php echo htmlspecialchars($blog['title']); ?></td>
                                 <td><?php echo htmlspecialchars($blog['category_name'] ?? 'Unknown'); ?></td>
+                                <td>
+                                    <?php if (!empty($blog['b_image'])): ?>
+                                        <img src="<?php echo base_url('uploads/' . htmlspecialchars($blog['b_image'])); ?>" alt="Blog Image" style="max-width: 100px; height: auto;">
+                                    <?php else: ?>
+                                        No Image
+                                    <?php endif; ?>
+                                </td>
                                 <td>
                                     <div class="description-preview">
                                         <?php echo nl2br(htmlspecialchars(substr($blog['description'] ?? 'No description', 0, 150))); ?>

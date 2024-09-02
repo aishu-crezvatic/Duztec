@@ -46,7 +46,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="portfolio-items">
 						<div class="portfolio-thumb">
-							<!-- <img src="<?php echo base_url() . 'uploads/product/image/' . $blog['b_image']; ?>" alt="error"> -->
+							<img src="<?php echo base_url() . 'uploads/product/image/' . $blog['b_image']; ?>" alt="error">
 							<div class="thumb-content">
 								<h3>Category: <?php echo $blog['title']; ?></h3>
 								<!-- <h2>Product Name: <?php echo $blog['name']; ?></h2> -->
