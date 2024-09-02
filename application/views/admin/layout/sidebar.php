@@ -54,7 +54,7 @@
                             <span class="nav-text">Sub category</span>
                         </a>
                        </li>
-                        <li><a href="<?php echo base_url() ?>admin/home_page" class="ai-icon" aria-expanded="false">
+                        <li><a href="<?php echo base_url() ?>admin/home" class="ai-icon" aria-expanded="false">
                             <i class="fa-solid fa-chart-simple"></i>
                             <span class="nav-text">Home Page</span>
                         </a>
@@ -79,6 +79,15 @@
                             <span class="nav-text">Product</span>
                         </a>
                        </li>
+                       <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                <i class="fa-solid fa-blog"></i>
+                                <span class="nav-text">Blogs</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="<?php echo base_url() ?>admin/blogcategory">Category</a></li>
+                                <li><a href="<?php echo base_url() ?>admin/blog">Blogs</a></li>
+                            </ul>
+                        </li>
                         
 <!--                        <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -121,15 +130,7 @@
                     <?php
                     if ($userData['type'] == 1) {
                     ?>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-blog"></i>
-                                <span class="nav-text">Blogs</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="<?php echo base_url() ?>admin/blogcategory">Category</a></li>
-                                <li><a href="<?php echo base_url() ?>admin/blog">Blogs</a></li>
-                            </ul>
-                        </li>
+                        
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span class="nav-text">Event</span>
