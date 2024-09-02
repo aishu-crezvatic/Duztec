@@ -91,7 +91,7 @@
 						<!-- <li><a href="">Partners</a></li> -->
 						<!-- <li><a href="">Room Details</a></li> -->
 						<li><a href="<?PHP echo base_url() ?>gallery">Gallery</a></li>
-						<li><a href="<?php echo base_url() ?>contact_us">Contact_us</a></li>
+						<li><a href="<?php echo base_url() ?>contact_us">Contact</a></li>
 					</ul>
 				</div>
 			</div>
