@@ -1,14 +1,21 @@
 <!-- ============================================================== -->
 <!-- Floating icons of social media  Section -->
 <!-- ============================================================= -->
+<style>
+	.navyGreen {
+		background: -webkit-linear-gradient(90deg, #A6C438 0%, #2260A4 80%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>
 
 <div
 	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
-	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
+	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i class="fab fa-facebook-f fs-3 navyGreen "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
-	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
-	<a href="#"><i class="fab fa-linkedin-in fs-3 navyText "></i></a>
-	<a href="#"><i class="fab fa-instagram fs-3 navyText "></i></a>
+	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i class="fab fa-youtube fs-3 navyGreen "></i></a>
+	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
+	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i class="fab fa-instagram fs-3 navyGreen "></i></a>
 
 	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
 	<span></span>
@@ -72,10 +79,10 @@
 				<div class="footer-address">
 					<div class="footer-social-icon d-flex">
 						<ul>
-							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/duztec_engineering/" target="blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -304,10 +311,10 @@
 		}
 
 		// Show popup only if it hasn't been shown in this session
-		if (!localStorage.getItem('popupShown')) {
-			showPopup();
-			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
-		}
+		// if (!localStorage.getItem('popupShown')) {
+		// 	showPopup();
+		// 	localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+		// }
 
 		if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
 			alert('Please enter a valid 10-digit phone number.');

@@ -13,7 +13,7 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
 		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="assets/video/<?php echo $home_page_data['hero_banner']; ?>"
+			<video id="background-video" preload="auto" poster="uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
 				autoplay muted playsinline loop>
 				<source src="assets/video/hero_video1.MP4" type="video/mp4">
 				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
@@ -54,7 +54,7 @@ if (!empty($home_page_data)): ?>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
 						<div class="about-thumb about-thumb-border">
-							<img src="assets/images/<?php echo $home_page_data['about_thumbnail']; ?>" alt="">
+							<img src="uploads/heroBanner/<?php echo $home_page_data['about_thumbnail']; ?>" alt="">
 							<div class="about-video-icon">
 								<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
 									href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>

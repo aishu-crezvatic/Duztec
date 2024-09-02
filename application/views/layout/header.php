@@ -283,7 +283,6 @@
                             </div> -->
                             <form action="<?= base_url('product') ?>" method="GET">
                                   <input  type="text" name="query" placeholder="Search products...">
-                                  <!-- <button type="submit">Search</button> -->
                             </form>
                             <div class="header-button text-right">
                                 <a href="#">Enquire Now</a>
@@ -307,9 +306,9 @@
                             <a class="mobile-logo" href="<?php echo base_url() ?>index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
                         <div class=" col-6 overflow-hidden">
-                              <form >
-                                    <input class="my-2" type="text" name="search" placeholder="Search..">
-                              </form>
+                        <form action="<?= base_url('product') ?>" method="GET">
+                                  <input  type="text" name="query" placeholder="Search products...">
+                            </form>
                         </div> 
                         <div class="menu-toggle col-2">
                             <div class="icon text-end">

@@ -109,7 +109,7 @@ private function _handle_blog_upload($action)
     $b_image = NULL; // Initialize to NULL
     
     if (!empty($_FILES['b_image']['name'])) {
-        $config['upload_path']   = './uploads/';
+        $config['upload_path']   = './uploads/blog/';
         $config['allowed_types'] = '*';
         $config['max_size']      = 2048; // 2MB
     

@@ -28,7 +28,7 @@ $this->load->view('admin/layout/sidebar');
                     <div class="col-md-6 mb-3">
                         <strong>Hero Banner Image:</strong><br>
                         <?php if (isset($data[0]['hero_banner_image']) && !empty($data[0]['hero_banner_image'])): ?>
-                            <img src="<?php echo base_url('uploads/' . $data[0]['hero_banner_image']); ?>" alt="Banner Image" class="img-fluid" style="max-width: 75%; height: auto;">
+                            <img src="<?php echo base_url('uploads/heroBanner/' . $data[0]['hero_banner_image']); ?>" alt="Banner Image" class="img-fluid" style="max-width: 75%; height: auto;">
                         <?php else: ?>
                             <p>No image available.</p>
                         <?php endif; ?>
@@ -42,7 +42,7 @@ $this->load->view('admin/layout/sidebar');
                     <div class="col-md-6 mb-3">
                         <strong>About Image:</strong><br>
                         <?php if (isset($data[0]['about_image']) && !empty($data[0]['about_image'])): ?>
-                            <img src="<?php echo base_url('uploads/' . $data[0]['about_image']); ?>" alt="About Image" class="img-fluid" style="max-width: 75%; height: auto;">
+                            <img src="<?php echo base_url('uploads/heroBanner/' . $data[0]['about_image']); ?>" alt="About Image" class="img-fluid" style="max-width: 75%; height: auto;">
                         <?php else: ?>
                             <p>No image available.</p>
                         <?php endif; ?>
@@ -84,7 +84,7 @@ $this->load->view('admin/layout/sidebar');
                         <div class="col-md-6 mb-3">
                             <strong>Hero Banner Image:</strong><br>
                             <?php if (isset($data[0]['hero_banner_image']) && !empty($data[0]['hero_banner_image'])): ?>
-                                <img src="<?php echo base_url('uploads/' . $data[0]['hero_banner_image']); ?>" alt="Current Banner" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
+                                <img src="<?php echo base_url('uploads/heroBanner/' . $data[0]['hero_banner_image']); ?>" alt="Current Banner" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
                             <?php endif; ?>
                             <input type="file" class="form-control mb-2" name="hero_banner_image">
                             <input type="hidden" name="existing_hero_banner_image" value="<?php echo isset($data[0]['hero_banner_image']) ? htmlspecialchars($data[0]['hero_banner_image']) : ''; ?>">
@@ -98,7 +98,7 @@ $this->load->view('admin/layout/sidebar');
                         <div class="col-md-6 mb-3">
                             <strong>About Image:</strong><br>
                             <?php if (isset($data[0]['about_image']) && !empty($data[0]['about_image'])): ?>
-                                <img src="<?php echo base_url('uploads/' . $data[0]['about_image']); ?>" alt="Current About Image" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
+                                <img src="<?php echo base_url('uploads/heroBanner/' . $data[0]['about_image']); ?>" alt="Current About Image" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
                             <?php endif; ?>
                             <input type="file" class="form-control mb-2" name="about_image">
                             <input type="hidden" name="existing_about_image" value="<?php echo isset($data[0]['about_image']) ? htmlspecialchars($data[0]['about_image']) : ''; ?>">

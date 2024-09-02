@@ -86,10 +86,13 @@
         <?php foreach ($images as $item): ?>
             <?php if ($item['is_video'] == 1): ?>
                 <!-- Video element -->
-                <video class="swiper-slide" controls width="100%" style="height:300px">
+                <a class="swiper-slide" href="<?php echo htmlspecialchars('uploads/gallery/' . $item['img_video']); ?>" target="_blank">
+
+                <video  controls width="100%" style="height:300px">
                     <source src="<?php echo htmlspecialchars('uploads/gallery/' . $item['img_video']); ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                </a>
             <?php else: ?>
 
             <?php endif; ?>
