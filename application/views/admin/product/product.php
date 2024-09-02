@@ -3,6 +3,11 @@
 $this->load->view('admin/layout/header');
 $this->load->view('admin/layout/sidebar');
 ?>
+<style>
+    .page_type_specific{
+        display: none;
+    }
+</style>
 <!--**********************************Header & sidebar end***********************************-->
 <!--**********************************Content body start****************************-->
 <div class="content-body">
@@ -29,7 +34,7 @@ $this->load->view('admin/layout/sidebar');
                             <!--<div class="form-group col-12">-->
                             <div class="form-group">
                                 <label>Category</label>
-                                <select name="c_id" class="form-control default-select" id="sel1">
+                                <select name="c_id" class="form-control default-select" id="sel1" required>
                                     <?php
                                     // unset($data['category'][0]);
                                     foreach ($categories as $category) {
@@ -42,8 +47,8 @@ $this->load->view('admin/layout/sidebar');
                             </div>
                             <div class="form-group">
                                 <label>Sub Category</label>
-                                <select name="sc_id" class="form-control default-select" id="sel1">
-                                    <option value="0" selected><?php echo 'Not Selected'; ?></option>
+                                <select name="sc_id" class="form-control default-select" id="sel1" required>
+                                    <option value="0" selected><?php echo 'Not Sub Category'; ?></option>
                                     <?php
                                     // unset($data['category'][0]);
                                     foreach ($sub_categories as $sub_category) {
@@ -56,359 +61,375 @@ $this->load->view('admin/layout/sidebar');
                             </div>
                             <div class="form-group">
                                 <label>Page Type</label>
-                                <select name="page_type" class="form-control default-select" id="sel1">
+                                <select name="page_type" class="form-control default-select" id="page_type" required>
                                     <?php
                                     // unset($data['category'][0]);
                                     foreach ($page_types as $key => $val) {
-                                        ?>
-                                        <option value="<?php echo $key ?>"><?php echo $val ?></option>
-                                        <?php
+                                        if ($key == '1') {
+                                            ?>
+                                            <option value="<?php echo $key ?>" selected><?php echo $val ?></option>
+                                        <?php } else { ?>
+                                            <option value="<?php echo $key ?>"><?php echo $val ?></option>
+                                            <?php
+                                        }
                                     }
                                     ?>
                                 </select>
                             </div>
 
                             <?php
-                            $page_type = 7;
-                            switch ($page_type) {
-                                case 1:
+//                            $page_type = 1;
+//                            switch ($page_type) {
+//                                case 1:
                                     ?>
-                                    <div class="form-group">
-                                        <label>Advantages Title</label>
-                                        <input name="advantages_title" type="text" class="form-control" placeholder="Enter advantages title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Advantages 1</label>
-                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 1 para</label>
-                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Advantages 2</label>
-                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 2 para</label>
-                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Advantages 3</label>
-                                        <input name="advantages_3" type="text" class="form-control" placeholder="Enter advantages 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 3 para</label>
-                                        <input name="advantages3_para" type="text" class="form-control" placeholder="Enter advantages 3 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Advantages 4</label>
-                                        <input name="advantages_4" type="text" class="form-control" placeholder="Enter advantages 4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 4 para</label>
-                                        <input name="advantages4_para" type="text" class="form-control" placeholder="Enter advantages 4 para">
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label>Product Diversity Matrix</label>
-                                        <textarea name="product_diversity_matrix" class="summernote"></textarea>
+                                    <div class="page_type_specific" id="page_type_1">
+                                        <div class="form-group">
+                                            <label>Advantages Title</label>
+                                            <input name="advantages_title" type="text" class="form-control" placeholder="Enter advantages title" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Advantages 1</label>
+                                            <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 1 para</label>
+                                            <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Advantages 2</label>
+                                            <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 2 para</label>
+                                            <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Advantages 3</label>
+                                            <input name="advantages_3" type="text" class="form-control" placeholder="Enter advantages 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 3 para</label>
+                                            <input name="advantages3_para" type="text" class="form-control" placeholder="Enter advantages 3 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Advantages 4</label>
+                                            <input name="advantages_4" type="text" class="form-control" placeholder="Enter advantages 4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 4 para</label>
+                                            <input name="advantages4_para" type="text" class="form-control" placeholder="Enter advantages 4 para" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Product Diversity Matrix</label>
+                                            <textarea name="product_diversity_matrix" class="summernote" required></textarea>
+                                        </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 2:
+//                                    break;
+//                                case 2:
                                     ?>
-                                    <div class="form-group">
-                                        <label>Advantages 1</label>
-                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 1 para</label>
-                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Advantages 2</label>
-                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>advantages 2 para</label>
-                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para">
-                                    </div>
-                                    
-                                    <?php
-//                                    echo "Foo\n";
-                                    break;
-                                case 3:
-                                    ?>
-                                    <div class="form-group">
-                                        <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose</label>
-                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 1</label>
-                                        <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 1 Para</label>
-                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 2</label>
-                                        <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 2 Para</label>
-                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 3</label>
-                                        <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose 3 Para</label>
-                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para">
-                                    </div>
-                                    
-                                    <?php
-//                                    echo "Foo\n";
-                                    break;
-                                case 4:
-                                    ?>
-                                    <div class="form-group">
-                                        <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Why Choose</label>
-                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose">
-                                    </div>
-<!--                                    <div class="form-group">
-                                        <label>Why Choose 1</label>
-                                        <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1">
-                                    </div>-->
-                                    <div class="form-group">
-                                        <label>Why Choose 1 Para</label>
-                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para">
-                                    </div>
-<!--                                    <div class="form-group">
-                                        <label>Why Choose 2</label>
-                                        <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2">
-                                    </div>-->
-                                    <div class="form-group">
-                                        <label>Why Choose 2 Para</label>
-                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para">
-                                    </div>
-<!--                                    <div class="form-group">
-                                        <label>Why Choose 3</label>
-                                        <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3">
-                                    </div>-->
-                                    <div class="form-group">
-                                        <label>Why Choose 3 Para</label>
-                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para">
+                                    <div class="page_type_specific" id="page_type_2">
+                                        <div class="form-group">
+                                            <label>Advantages 1</label>
+                                            <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 1 para</label>
+                                            <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Advantages 2</label>
+                                            <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>advantages 2 para</label>
+                                            <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" required>
+                                        </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 5:
+//                                    break;
+//                                case 3:
                                     ?>
-                                    <div class="form-group">
-                                        <label>Technology</label>
-                                        <input name="technology" type="text" class="form-control" placeholder="Enter technology">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Benefits</label>
-                                        <textarea name="benefits" class="summernote"></textarea>
+                                    <div class="page_type_specific" id="page_type_3">
+                                        <div class="form-group">
+                                            <label>Key Features</label>
+                                            <input name="key_features" type="text" class="form-control" placeholder="Enter key features" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1</label>
+                                            <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1 Para</label>
+                                            <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2</label>
+                                            <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2 Para</label>
+                                            <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3</label>
+                                            <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3 Para</label>
+                                            <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4</label>
+                                            <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4 Para</label>
+                                            <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose</label>
+                                            <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 1</label>
+                                            <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 1 Para</label>
+                                            <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 2</label>
+                                            <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 2 Para</label>
+                                            <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 3</label>
+                                            <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose 3 Para</label>
+                                            <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" required>
+                                        </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 6:
+//                                    break;
+//                                case 4:
                                     ?>
-                                    <div class="form-group">
-                                        <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Need Title</label>
-                                        <input name="need_title" type="text" class="form-control" placeholder="Enter key need title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Need Para</label>
-                                        <input name="need_para" type="text" class="form-control" placeholder="Enter key need para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>key Features Title</label>
-                                        <input name="key_features_title" type="text" class="form-control" placeholder="Enter key features title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features Para</label>
-                                        <input name="key_features_para" type="text" class="form-control" placeholder="Enter key features para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Choose Title</label>
-                                        <input name="choose_title" type="text" class="form-control" placeholder="Enter choose title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Choose Para</label>
-                                        <input name="choose_para" type="text" class="form-control" placeholder="Enter choose para">
+                                    <div class="page_type_specific" id="page_type_4">    
+                                        <div class="form-group">
+                                            <label>Key Features</label>
+                                            <input name="key_features" type="text" class="form-control" placeholder="Enter key features" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1</label>
+                                            <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1 Para</label>
+                                            <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2</label>
+                                            <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2 Para</label>
+                                            <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3</label>
+                                            <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3 Para</label>
+                                            <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4</label>
+                                            <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4 Para</label>
+                                            <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Why Choose</label>
+                                            <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" required>
+                                        </div>
+                                        <!--                                    <div class="form-group">
+                                                                                <label>Why Choose 1</label>
+                                                                                <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1">
+                                                                            </div>-->
+                                        <div class="form-group">
+                                            <label>Why Choose 1 Para</label>
+                                            <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" required>
+                                        </div>
+                                        <!--                                    <div class="form-group">
+                                                                                <label>Why Choose 2</label>
+                                                                                <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2">
+                                                                            </div>-->
+                                        <div class="form-group">
+                                            <label>Why Choose 2 Para</label>
+                                            <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" required>
+                                        </div>
+                                        <!--                                    <div class="form-group">
+                                                                                <label>Why Choose 3</label>
+                                                                                <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3">
+                                                                            </div>-->
+                                        <div class="form-group">
+                                            <label>Why Choose 3 Para</label>
+                                            <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" required>
+                                        </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 7:
+//                                    break;
+//                                case 5:
                                     ?>
-                                    <div class="form-group">
-                                        <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 5</label>
-                                        <input name="key_features5" type="text" class="form-control" placeholder="Enter key features 5">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Key Features 5 Para</label>
-                                        <input name="key_features5_para" type="text" class="form-control" placeholder="Enter key features 5 para">
+                                    <div class="page_type_specific" id="page_type_5">
+                                        <div class="form-group">
+                                            <label>Technology</label>
+                                            <input name="technology" type="text" class="form-control" placeholder="Enter technology" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Benefits</label>
+                                            <textarea name="benefits" class="summernote" required></textarea>
+                                        </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                default:
+//                                    break;
+//                                case 6:
+                                    ?>
+                                    <div class="page_type_specific" id="page_type_6">
+                                        <div class="form-group">
+                                            <label>Key Features</label>
+                                            <input name="key_features" type="text" class="form-control" placeholder="Enter key features" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1</label>
+                                            <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1 Para</label>
+                                            <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2</label>
+                                            <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2 Para</label>
+                                            <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3</label>
+                                            <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3 Para</label>
+                                            <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4</label>
+                                            <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4 Para</label>
+                                            <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Need Title</label>
+                                            <input name="need_title" type="text" class="form-control" placeholder="Enter key need title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Need Para</label>
+                                            <input name="need_para" type="text" class="form-control" placeholder="Enter key need para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>key Features Title</label>
+                                            <input name="key_features_title" type="text" class="form-control" placeholder="Enter key features title" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features Para</label>
+                                            <input name="key_features_para" type="text" class="form-control" placeholder="Enter key features para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choose Title</label>
+                                            <input name="choose_title" type="text" class="form-control" placeholder="Enter choose title" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Choose Para</label>
+                                            <input name="choose_para" type="text" class="form-control" placeholder="Enter choose para" required>
+                                        </div>
+                                    </div>
+                                    <?php
+//                                    echo "Foo\n";
+//                                    break;
+//                                case 7:
+                                    ?>
+                                    <div class="page_type_specific" id="page_type_7">
+                                        <div class="form-group">
+                                            <label>Key Features</label>
+                                            <input name="key_features" type="text" class="form-control" placeholder="Enter key features" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1</label>
+                                            <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 1 Para</label>
+                                            <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2</label>
+                                            <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 2 Para</label>
+                                            <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3</label>
+                                            <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 3 Para</label>
+                                            <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4</label>
+                                            <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 4 Para</label>
+                                            <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 5</label>
+                                            <input name="key_features5" type="text" class="form-control" placeholder="Enter key features 5" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Key Features 5 Para</label>
+                                            <input name="key_features5_para" type="text" class="form-control" placeholder="Enter key features 5 para" required>
+                                        </div>
+                                    </div>
+                                    <?php
+//                                    echo "Foo\n";
+//                                    break;
+//                                default:
 //                                    echo "Bar\n";
-                                    break;
-                            }
+//                                    break;
+//                            }
                             ?>
 
                             <!--</div>-->
@@ -436,13 +457,13 @@ $this->load->view('admin/layout/sidebar');
                                                         </div>-->
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea name="description" class="summernote"></textarea>
+                                <textarea name="description" class="summernote" required></textarea>
                             </div>
                             <div class="form-group">
-                               <label>Conclusion</label>
-                               <textarea name="conclusion" class="summernote"></textarea>
+                                <label>Conclusion</label>
+                                <textarea name="conclusion" class="summernote" required></textarea>
                             </div>
-                            
+
                             <div class="form-group border rounded p-2">
                                 <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
                                 <label class="text-black font-w500">Upload Images</label>
@@ -458,7 +479,22 @@ $this->load->view('admin/layout/sidebar');
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class="form-group border rounded p-2">
+                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                                <label class="text-black font-w500">Upload Videos</label>
+                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <!--required-->
+                                        <input name="videos[]" type="file" class="custom-file-input" > 
+                                        <label class="custom-file-label selected">Choose File</label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Create</button>
                             </div>
@@ -626,7 +662,7 @@ $this->load->view('admin/layout/sidebar');
 //                                                    $Image = $row['category_image'];
 //                                                    foreach ($Images as $baseimg) {
                                                 ?>
-                                                    <img style="width: 50px;" src="<?php //echo base_url() . "uploads/category" . $Image ?>" alt="image">
+                                                    <img style="width: 50px;" src="<?php //echo base_url() . "uploads/category" . $Image      ?>" alt="image">
                                                 <?php
 //                                                    }
                                                 ?>
@@ -651,10 +687,10 @@ $this->load->view('admin/layout/sidebar');
                                                     ?>
                                                 </td>
                                                 <td><?php echo $row['page_type'] ?></td>
-                                                <!--<td><?php //echo $row['description'];  ?></td>-->
-                                                <!--<td><?php // echo strlen($row['description']) > 50 ? substr($row['description'], 0, 100) . '...' : $row['description']  ?></td>-->
-                                                <!--<td><?php // echo $row['price']   ?></td>-->
-                                                <!--<td><?php // echo $row['discount']   ?></td>-->
+                                                <!--<td><?php //echo $row['description'];       ?></td>-->
+                                                <!--<td><?php // echo strlen($row['description']) > 50 ? substr($row['description'], 0, 100) . '...' : $row['description']       ?></td>-->
+                                                <!--<td><?php // echo $row['price']        ?></td>-->
+                                                <!--<td><?php // echo $row['discount']        ?></td>-->
                                                 <td>
                                                     <div class="col-sm-9">
                                                         <input data-id="<?php echo $row['p_id'] ?>" class="switch switchProduct" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> />
@@ -687,6 +723,18 @@ $this->load->view('admin/layout/sidebar');
 <?php $this->load->view('admin/layout/footer'); ?>
 <!--**********************************footer End***********************************-->
 <script>
+    $(document).ready(function () {
+//    console.log( "ready!" );
+//alert();
+        $('#page_type_1').css('display','block');
+    });
+    
+    $("#page_type").change(function(){
+//        alert("The text has been changed.");
+               var id = $(this).val();
+        $('.page_type_specific').css('display','none');
+        $('#page_type_'+id).css('display','block');
+    });
     $(".switchProduct").click(function () {
         var id = $(this).attr("data-id");
         $.post(
