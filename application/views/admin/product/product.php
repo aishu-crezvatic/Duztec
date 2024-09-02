@@ -19,6 +19,13 @@ $this->load->view('admin/layout/sidebar');
                     </div>
                     <div class="modal-body">
                         <form method="POST" action="<?php echo base_url() ?>admin/product/create" enctype="multipart/form-data">
+                            <div class="form-group">
+
+                                <label>Name*</label>
+
+                                <input name="name" type="text" class="form-control editModalTitle" placeholder="Enter Name" required>
+
+                            </div>
                             <!--<div class="form-group col-12">-->
                             <div class="form-group">
                                 <label>Category</label>
@@ -62,7 +69,7 @@ $this->load->view('admin/layout/sidebar');
                             </div>
 
                             <?php
-                            $page_type = 2;
+                            $page_type = 7;
                             switch ($page_type) {
                                 case 1:
                                     ?>
@@ -435,6 +442,23 @@ $this->load->view('admin/layout/sidebar');
                                <label>Conclusion</label>
                                <textarea name="conclusion" class="summernote"></textarea>
                             </div>
+                            
+                            <div class="form-group border rounded p-2">
+                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                                <label class="text-black font-w500">Upload Images</label>
+                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <!--required-->
+                                        <input name="images[]" type="file" class="custom-file-input" > 
+                                        <label class="custom-file-label selected">Choose File</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="form-group">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Create</button>
                             </div>
@@ -575,7 +599,7 @@ $this->load->view('admin/layout/sidebar');
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 152.594px;">Sr No</th>
-                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Image</th>-->
+                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Name</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Category</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Sub Category</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Page Type</th>
@@ -607,6 +631,7 @@ $this->load->view('admin/layout/sidebar');
 //                                                    }
                                                 ?>
                                                 </td>-->
+                                                <td><?php echo $row['name'] ?></td>
                                                 <td>
                                                     <?php
                                                     foreach ($categories as $category) {
