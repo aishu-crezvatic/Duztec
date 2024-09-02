@@ -21,7 +21,7 @@ class Gallery extends CI_Controller {
 
     public function create() {
         if ($_FILES['img_video']['error'] != 4) {
-            $config['upload_path'] = 'uploads/gallary';
+            $config['upload_path'] = 'uploads/gallery';
             // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
             $config['allowed_types'] = '*';
             // $config['max_size']      = 2048; 
@@ -77,7 +77,7 @@ class Gallery extends CI_Controller {
     
          $data2 = $this->CommonModel->getRow(DATABASE, 'gallery', array('g_id' => $id), '*');
         if ($_FILES['img_video']['error'] != 4) {
-            $config['upload_path'] = 'uploads/gallary';
+            $config['upload_path'] = 'uploads/gallery';
             // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
             $config['allowed_types'] = '*';
             // $config['max_size']      = 2048; 

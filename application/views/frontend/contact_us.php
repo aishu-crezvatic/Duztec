@@ -21,7 +21,7 @@
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
 <div class="breadcumn-section-contac d-flex align-items-center"
-	style="background: url('<?php echo htmlspecialchars('assets/images/' . $heroBanner_img); ?>');">
+	style="background: url('<?php echo htmlspecialchars('uploads/heroBanner/' . $heroBanner_img); ?>');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">

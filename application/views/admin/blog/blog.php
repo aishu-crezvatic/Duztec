@@ -49,7 +49,7 @@
                                 <td><?php echo htmlspecialchars($blog['category_name'] ?? 'Unknown'); ?></td>
                                 <td>
                                     <?php if (!empty($blog['b_image'])): ?>
-                                        <img src="<?php echo base_url('uploads/' . htmlspecialchars($blog['b_image'])); ?>" alt="Blog Image" style="max-width: 100px; height: auto;">
+                                        <img src="<?php echo base_url('uploads/blog/' . htmlspecialchars($blog['b_image'])); ?>" alt="Blog Image" style="max-width: 100px; height: auto;">
                                     <?php else: ?>
                                         No Image
                                     <?php endif; ?>
@@ -124,7 +124,7 @@
                         <label for="b_image">Image:</label>
                         <input type="file" class="form-control" id="b_image" name="b_image">
                         <?php if ($edit_mode && ($current_blog['b_image'] ?? '')): ?>
-                            <img src="<?php echo base_url('uploads/' . ($current_blog['b_image'] ?? '')); ?>" class="img-fluid"
+                            <img src="<?php echo base_url('uploads/blog/' . ($current_blog['b_image'] ?? '')); ?>" class="img-fluid"
                                 style="max-width: 100px;">
                         <?php endif; ?>
                     </div>
