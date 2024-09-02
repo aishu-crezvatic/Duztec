@@ -142,7 +142,7 @@
     $('.service_list').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 3000,
         dots: true,
         dotsEach:true,
         nav: false,
@@ -386,7 +386,7 @@
     $('.brand_list').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 2000,
         dots: true,
         nav: false,
         responsive: {
@@ -413,7 +413,7 @@
     $('.brand_list_2').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 100,
         dots: false,
         nav: false,
         responsive: {
@@ -486,7 +486,7 @@
         loop: true,
         center: true,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 3000,
         dots: true,
         center:true,
         nav: false,

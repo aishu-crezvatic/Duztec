@@ -153,7 +153,8 @@
 							<p>no mail available</p>
 						<?php endif; ?>
 					</span>
-					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt="" style="margin-top:-60px">
+					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt=""
+						style="margin-top:-60px">
 				</div>
 
 				<!-- <div class="footer-btn">
@@ -286,7 +287,7 @@
 		const popupForm = document.getElementById('popupForm');
 		const closePopup = document.getElementById('closePopup');
 		const captchaQuestion = document.getElementById('captchaQuestion');
-		const phonePattern = /^\d{10}$/; 
+		const phonePattern = /^\d{10}$/;
 
 		let captchaAnswer;
 
@@ -307,11 +308,11 @@
 			showPopup();
 			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
 		}
-		
+
 		if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
-            alert('Please enter a valid 10-digit phone number.');
-            return;
-        }
+			alert('Please enter a valid 10-digit phone number.');
+			return;
+		}
 
 		// Close popup when the close button is clicked
 		closePopup.addEventListener('click', () => {
@@ -367,7 +368,7 @@
 
 <!-- gallery js -->
 <!-- Load jQuery -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- Load jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -417,7 +418,12 @@
 <script src="<?php echo base_url(); ?>assets/js/jquery.scrollUp.js"></script>
 <!-- theme js -->
 <script src="<?php echo base_url(); ?>assets/js/theme.js"></script>
+
+
+
+
 <script>
+
 	let index = 0;
 	const slides = document.querySelectorAll('.slide');
 	const slider = document.querySelector('.slider');
