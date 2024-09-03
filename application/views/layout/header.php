@@ -198,8 +198,17 @@
                                     <li class="position-relative">
                                         <a href="<?php echo base_url(); ?>product_category">Products <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
-
-                                            <?php 
+                                            
+<!--                                            <li class="position-relative">
+                                                <div class="drop-cat">
+                                                    <a href="">A<i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                                <ul class="sub-prod">
+                                                    <li><a href="">B</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="">C</a></li>-->
+                                                  <?php 
                                              $sub_cat_count = 0; 
                                             foreach ($product_with_cat_sub_cat as $product) { ?>
 
@@ -247,21 +256,16 @@
                                                                         }
                                                                 }
                                                                 } ?>
-<!--                                                            <li><a href="product">Mosquito</a></li>
-                                                            <li><a href="product">Godust</a></li>
-                                                            <li><a href="product">Mist Beams</a></li>
-                                                            <li><a href="product">Double Barrel System</a></li>
-                                                            <li><a href="product">HPDS</a></li>
-                                                            <li><a href="product">SFDS</a></li>-->
                                                         </ul>
                                                     <?php } ?>
                                                     </li>
                                                 <?php } else { ?>
                                                     <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
                                                 <?php } ?>
-                                            <?php } ?>
+                                            <?php } ?> 
+                                         
                                                     
-                                                    </ul>
+                                        </ul>
                                 </li>
                                 <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
