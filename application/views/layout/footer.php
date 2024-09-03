@@ -13,7 +13,15 @@
 	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
 	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
 			class="fab fa-facebook-f fs-3 navyGreen "></i></a>
+	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
+			class="fab fa-facebook-f fs-3 navyGreen "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
+	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
+			class="fab fa-youtube fs-3 navyGreen "></i></a>
+	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
+			class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
+	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
+			class="fab fa-instagram fs-3 navyGreen "></i></a>
 	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
 			class="fab fa-youtube fs-3 navyGreen "></i></a>
 	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
@@ -83,6 +91,14 @@
 				<div class="footer-address">
 					<div class="footer-social-icon d-flex">
 						<ul>
+							<li><a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
+										class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
+										class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
+										class="fab fa-instagram"></i></a></li>
+							<li><a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
+										class="fab fa-linkedin-in"></i></a></li>
 							<li><a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
 										class="fab fa-facebook-f"></i></a></li>
 							<li><a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
@@ -298,94 +314,69 @@
 
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const showForm = document.getElementById('showForm');
-		const popupForm = document.getElementById('popupForm');
-		const closePopup = document.getElementById('closePopup');
-		const close = document.querySelector('.close');
-		const captchaQuestion = document.getElementById('captchaQuestion');
-		const phonePattern = /^\d{10}$/;
+        document.addEventListener("DOMContentLoaded", function () {
+            const popupForm = document.getElementById('popupForm');
+            const closePopup = document.getElementById('closePopup');
+            const captchaQuestion = document.getElementById('captchaQuestion');
+            const phoneInput = document.getElementById('phone');
+            const phonePattern = /^\d{10}$/;
+            let captchaAnswer;
 
-		showForm.addEventListener('click', function (event) {
-			event.preventDefault(); // Prevent the default anchor behavior
-			popupForm.style.display = 'flex'; // Show the popup
-		});
+            function generateCaptcha() {
+                const num1 = Math.floor(Math.random() * 10) + 1;
+                const num2 = Math.floor(Math.random() * 10) + 1;
+                captchaAnswer = num1 + num2;
+                captchaQuestion.textContent = `${num1} + ${num2} =`;
+            }
 
-		close.addEventListener('click', function () {
-			popupForm.style.display = 'none';
-		});
+            function showPopup() {
+                popupForm.style.display = 'flex';
+                generateCaptcha();
+            }
 
+            // Always show the popup form after page reload
+            showPopup();
 
-		let captchaAnswer;
+            closePopup.addEventListener('click', () => {
+                popupForm.style.display = 'none';
+            });
 
-		function generateCaptcha() {
-			const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-			const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-			captchaAnswer = num1 + num2;
-			captchaQuestion.textContent = `${num1} + ${num2} =`;
-		}
+            $('#quoteForm').submit(function (e) {
+                e.preventDefault();
 
-		function showPopup() {
-			popupForm.style.display = 'flex';
-			generateCaptcha(); // Generate captcha when popup is shown
-		}
+                const captchaInput = $('#captcha').val();
+                if (parseInt(captchaInput) !== captchaAnswer) {
+                    alert('Captcha is incorrect.');
+                    return;
+                }
 
-		// Show popup only if it hasn't been shown in this session
-		// if (!localStorage.getItem('popupShown')) {
-		// 	showPopup();
-		// 	localStorage.setItem('popupShown', 'true'); // Mark popup as shown
-		// }
+                // Phone number validation
+                if (!phonePattern.test(phoneInput.value)) {
+                    alert('Please enter a valid 10-digit phone number.');
+                    return;
+                }
 
-		if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
-			alert('Please enter a valid 10-digit phone number.');
-			return;
-		}
+                // Debug: Print form data to console
+                const formData = $(this).serializeArray();
+                console.log('Form Data:', formData);
 
-		// Close popup when the close button is clicked
-		closePopup.addEventListener('click', () => {
-			popupForm.style.display = 'none';
-		});
-
-		// Clear popupShown flag on page unload (e.g., reload or close)
-		window.addEventListener('beforeunload', function () {
-			localStorage.removeItem('popupShown');
-		});
-	});
-
-	$(document).ready(function () {
-		$('#quoteForm').submit(function (e) {
-			e.preventDefault(); // Prevent the default form submission
-
-			const captchaInput = $('#captcha').val();
-			if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
-				alert('Captcha is incorrect.');
-				return;
-			}
-
-			// Debug: Print form data to console
-			const formData = $(this).serializeArray();
-			console.log('Form Data:', formData);
-
-			$.ajax({
-				url: $(this).attr('action'), // URL to send the request
-				type: 'POST', // HTTP method
-				data: $(this).serialize(), // Serialize form data
-				success: function (response) {
-					// Handle success (e.g., show a success message)
-					console.log('Response from server:', response);
-					alert('Form submitted successfully!');
-					$('#popupForm').hide(); // Hide popup after submission
-				},
-				error: function (xhr, status, error) {
-					// Handle errors (e.g., show an error message)
-					console.error('An error occurred:', error);
-					alert('An error occurred: ' + error);
-				}
-			});
-		});
-	});
-
-</script>
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        console.log('Response from server:', response);
+                        alert('Form submitted successfully!');
+                        $('#popupForm').hide();
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('An error occurred:', error);
+                        alert('An error occurred: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
 
 
 

@@ -30,11 +30,22 @@
         font-size: 0.875rem;
         padding: 0.5rem 0.75rem;
     }
+    .about-content{
+        margin-left: 0 !important;
+
+    }
+    .about-text p{
+        width: 100% !important;
+    }
+    .owl-dots {
+        bottom: -40px !important;
+    }
 }
 
 @media (max-width: 576px) {
     .slider-content h2 {
         font-size: 1.25rem;
+        margin: 0 !important;
     }
 
     .slider-content h5 {
@@ -725,7 +736,8 @@ a.menu-logo {
 }
 .slider-content h2 {
     font-size: 55px;
-    margin-top: -30px;
+    margin-top: 0px;
+    line-height: 1;
 }
 .slider-circle-thumb.rotateme {
     top: 25%;
