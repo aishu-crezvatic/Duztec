@@ -13,8 +13,6 @@
 	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
 	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
 			class="fab fa-facebook-f fs-3 navyGreen "></i></a>
-	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
-			class="fab fa-facebook-f fs-3 navyGreen "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
 	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
 			class="fab fa-youtube fs-3 navyGreen "></i></a>
@@ -22,13 +20,8 @@
 			class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
 	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
 			class="fab fa-instagram fs-3 navyGreen "></i></a>
-	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
-			class="fab fa-youtube fs-3 navyGreen "></i></a>
-	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
-			class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
-	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
-			class="fab fa-instagram fs-3 navyGreen "></i></a>
-
+	
+	
 	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
 	<span></span>
 </div>
