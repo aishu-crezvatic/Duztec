@@ -65,7 +65,11 @@
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop class="w-100">
+<<<<<<< HEAD
+            <source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4" w-100>
+=======
             <source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4">
+>>>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544
             Your browser does not support the video tag.
         </video>
     </div>
@@ -272,7 +276,7 @@
                                 </li>
 
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
-                                <li><a >Blog <i class="fa fa-angle-down"></i></a>
+                                <li><a href="#">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <?php foreach ($blog_categories as $category) { ?>
                                         <li><a href="<?php echo base_url() ?>/blog/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
@@ -289,7 +293,7 @@
                                   <input  type="text" name="query" placeholder="Search products...">
                             </form>
                             <div class="header-button text-right">
-                                <a href="#">Enquire Now</a>
+                                <a href="#" id="showForm">Enquire Now</a>
                             </div>
                         </div>
                     </div>
@@ -310,7 +314,7 @@
                             <a class="mobile-logo" href="<?php echo base_url() ?>index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
                         <div class=" col-6 overflow-hidden">
-                        <form action="<?= base_url('product') ?>" method="GET">
+                        <form class="my-3" action="<?= base_url('product') ?>" method="GET">
                                   <input  type="text" name="query" placeholder="Search products...">
                             </form>
                         </div> 
@@ -450,3 +454,12 @@
             </div>
         </div>
     </div>
+
+
+
+     <!-- <div data-id="74a7bab1" data-element_type="widget" data-widget_type="themedraft_section_title.default" style="flex-basis: var(--flex-basis); flex-grow: var(--flex-grow); flex-shrink: var(--flex-shrink); order: var(--order); align-self: var(--align-self); flex-direction: var(--flex-direction); flex-wrap: var(--flex-wrap); justify-content: var(--justify-content); align-items: var(--align-items); align-content: var(--align-content); gap: var(--gap); --swiper-theme-color: #000; --swiper-navigation-size: 44px; --swiper-pagination-bullet-size: 6px; --swiper-pagination-bullet-horizontal-gap: 6px;  color: rgb(103, 111, 134); font-family: &quot;Red Rose&quot;; font-size: 17px; font-weight: 400; white-space-collapse: collapse;">
+        <div style="transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s);">
+            <div style="margin: 0px; ">
+  <p>
+J.Duncan through its group company lok-beta having corporate office in Mumbai-India, Moscow-Russia, Kiev-Ukraine, &amp; Minsk-Belarus, Lok-Beta is able to expend its marketing operations in Asia Pacific, Latin America and Africa Market covering more than 32 countries.
+</p></div></div></div> -->

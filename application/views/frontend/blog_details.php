@@ -86,10 +86,10 @@
 									sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
 									inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 							</div>
-							<!-- <div class="blog-single-thumb">
+							<div class="blog-single-thumb">
 								<img src="../assets/images/Blog_Image_02.webp" alt="blog-thumb">
 								<img src="../assets/images/Blog_Image_01.webp" alt="blog-thumb">
-							</div> -->
+							</div>
 							<div class="blog-social-icon text-center">
 								<ul>
 									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
