@@ -314,70 +314,81 @@
 
 
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const popupForm = document.getElementById('popupForm');
-            const closePopup = document.getElementById('closePopup');
-            const captchaQuestion = document.getElementById('captchaQuestion');
-            const phoneInput = document.getElementById('phone');
-            const phonePattern = /^\d{10}$/;
-            let captchaAnswer;
+	document.addEventListener("DOMContentLoaded", function () {
+		const showForm = document.getElementById('showForm');
+		const popupForm = document.getElementById('popupForm');
+		const closeBtn = document.querySelector('.close');
+		const closePopup = document.getElementById('closePopup');
+		const captchaQuestion = document.getElementById('captchaQuestion');
+		const phoneInput = document.getElementById('phone');
+		const phonePattern = /^\d{10}$/;
+		let captchaAnswer;
 
-            function generateCaptcha() {
-                const num1 = Math.floor(Math.random() * 10) + 1;
-                const num2 = Math.floor(Math.random() * 10) + 1;
-                captchaAnswer = num1 + num2;
-                captchaQuestion.textContent = `${num1} + ${num2} =`;
-            }
+		showForm.addEventListener('click', function (event) {
+			event.preventDefault(); // Prevent the default anchor behavior
+			popupForm.style.display = 'flex'; // Show the popup
+		});
 
-            function showPopup() {
-                popupForm.style.display = 'flex';
-                generateCaptcha();
-            }
+		closeBtn.addEventListener('click', function () {
+			popupForm.style.display = 'none';
+		});
 
-            // Always show the popup form after page reload
-            showPopup();
+		function generateCaptcha() {
+			const num1 = Math.floor(Math.random() * 10) + 1;
+			const num2 = Math.floor(Math.random() * 10) + 1;
+			captchaAnswer = num1 + num2;
+			captchaQuestion.textContent = `${num1} + ${num2} =`;
+		}
 
-            closePopup.addEventListener('click', () => {
-                popupForm.style.display = 'none';
-            });
+		function showPopup() {
+			popupForm.style.display = 'flex';
+			generateCaptcha();
+		}
 
-            $('#quoteForm').submit(function (e) {
-                e.preventDefault();
+		// Always show the popup form after page reload
+		showPopup();
 
-                const captchaInput = $('#captcha').val();
-                if (parseInt(captchaInput) !== captchaAnswer) {
-                    alert('Captcha is incorrect.');
-                    return;
-                }
+		closePopup.addEventListener('click', () => {
+			popupForm.style.display = 'none';
+		});
 
-                // Phone number validation
-                if (!phonePattern.test(phoneInput.value)) {
-                    alert('Please enter a valid 10-digit phone number.');
-                    return;
-                }
+		$('#quoteForm').submit(function (e) {
+			e.preventDefault();
 
-                // Debug: Print form data to console
-                const formData = $(this).serializeArray();
-                console.log('Form Data:', formData);
+			const captchaInput = $('#captcha').val();
+			if (parseInt(captchaInput) !== captchaAnswer) {
+				alert('Captcha is incorrect.');
+				return;
+			}
 
-                $.ajax({
-                    url: $(this).attr('action'),
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        console.log('Response from server:', response);
-                        alert('Form submitted successfully!');
-                        $('#popupForm').hide();
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('An error occurred:', error);
-                        alert('An error occurred: ' + error);
-                    }
-                });
-            });
-        });
-    </script>
-	
+			// Phone number validation
+			if (!phonePattern.test(phoneInput.value)) {
+				alert('Please enter a valid 10-digit phone number.');
+				return;
+			}
+
+			// Debug: Print form data to console
+			const formData = $(this).serializeArray();
+			console.log('Form Data:', formData);
+
+			$.ajax({
+				url: $(this).attr('action'),
+				type: 'POST',
+				data: $(this).serialize(),
+				success: function (response) {
+					console.log('Response from server:', response);
+					alert('Form submitted successfully!');
+					$('#popupForm').hide();
+				},
+				error: function (xhr, status, error) {
+					console.error('An error occurred:', error);
+					alert('An error occurred: ' + error);
+				}
+			});
+		});
+	});
+</script>
+
 
 
 <!-- ============================================================== -->
