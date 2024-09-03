@@ -108,12 +108,12 @@
 				</div>
 				<div class="footer-menu">
 					<ul>
-						<li><a href="">FAQ</a></li>
-						<li><a href="">Term & conditions</a></li>
-						<li><a href="">Reporting</a></li>
-						<li><a href="">Documentation</a></li>
-						<li><a href="">Suport Policy</a></li>
-						<li><a href="">Privacy</a></li>
+						<!--<li><a href="">FAQ</a></li>-->
+						<li><a href="<?PHP echo base_url() ?>term-and-condition">Terms & conditions</a></li>
+						<!--<li><a href="">Reporting</a></li>-->
+						<!--<li><a href="">Documentation</a></li>-->
+						<!--<li><a href="">Suport Policy</a></li>-->
+						<li><a href="<?PHP echo base_url() ?>privacy-and-policy">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
@@ -189,8 +189,8 @@
 			<div class="col-lg-6 col-md-6">
 				<div class="footer-menu-right">
 					<ul>
-						<li><a href="#">Terms of Use</a></li>
-						<li><a class="br-none" href="#">Privacy Policy</a></li>
+						<li><a href="<?PHP echo base_url() ?>term-and-condition">Terms & conditions</a></li>
+						<li><a class="br-none" href="<?PHP echo base_url() ?>privacy-and-policy">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
