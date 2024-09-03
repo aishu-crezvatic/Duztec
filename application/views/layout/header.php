@@ -285,7 +285,7 @@
                                   <input  type="text" name="query" placeholder="Search products...">
                             </form>
                             <div class="header-button text-right">
-                                <a href="#">Enquire Now</a>
+                                <a href="#" id="showForm">Enquire Now</a>
                             </div>
                         </div>
                     </div>
