@@ -66,7 +66,7 @@
 <!-- <<<<<<< HEAD -->
                 <!-- <img id="industry-gallery-image" src="assets/images/default.jpg" alt="" style="width:100%"> -->
                 <img id="industry-gallery-image" src="https://dummyimage.com/300x300/1e89d1/ffffff" alt="" style="width:100%">
-=======
+<!-- ======= -->
                 <!-- <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%"> -->
 <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
             </div>

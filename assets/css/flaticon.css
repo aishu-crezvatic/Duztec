@@ -171,6 +171,17 @@
   vertical-align: middle; /* Adjust this based on your layout */
 }
 
+.feature-waste-recycling-industry:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/RecyclingIcon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+
 
 .flaticon-mail:before {
   content: "\f101";
