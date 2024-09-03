@@ -34,7 +34,7 @@
                         <strong>Hero Banner Image:</strong><br>
                         <?php if (isset($home_section['hero_banner']) && !empty($home_section['hero_banner'])): ?>
                             <video controls class="img-fluid w-75" style="max-width: 100%; height: auto;">
-                                <source src="<?php echo base_url('uploads/' . $home_section['hero_banner']); ?>"
+                                <source src="<?php echo base_url('uploads/heroBanner/' . $home_section['hero_banner']); ?>"
                                     type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -46,8 +46,8 @@
                     <div class="col-md-6 mb-3">
                         <strong>About Thumbnail:</strong><br>
                         <?php if (isset($home_section['about_thumbnail']) && !empty($home_section['about_thumbnail'])): ?>
-                            <img class="w-75" src="<?php echo base_url('uploads/' . $home_section['about_thumbnail']); ?>"
-                                alt="Thumbnail Image" class="img-fluid" style="max-width: 100%; height: auto;">
+                            <img class="w-75" src="<?php echo base_url('uploads/heroBanner/' . $home_section['about_thumbnail']); ?>"
+                                alt="Th" class="img-fluid" style="max-width: 100%; height: auto;">
                         <?php else: ?>
                             <p>No image available.</p>
                         <?php endif; ?>
@@ -85,8 +85,11 @@
                         <div class="col-md-6 mb-3">
                             <strong>Hero Banner Image:</strong><br>
                             <?php if (isset($home_section['hero_banner']) && !empty($home_section['hero_banner'])): ?>
-                                <img src="<?php echo base_url('uploads/' . $home_section['hero_banner']); ?>"
-                                    alt="Current Banner" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
+                                <video controls class="img-fluid w-75" style="max-width: 100%; height: auto;">
+                                <source src="<?php echo base_url('uploads/heroBanner/' . $home_section['hero_banner']); ?>"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <?php endif; ?>
                             <input type="file" class="form-control mb-2" name="hero_banner">
                             <input type="hidden" name="existing_heroBanner_img"
@@ -96,7 +99,7 @@
                         <div class="col-md-6 mb-3">
                             <strong>About Thumbnail:</strong><br>
                             <?php if (isset($home_section['about_thumbnail']) && !empty($home_section['about_thumbnail'])): ?>
-                                <img src="<?php echo base_url('uploads/' . $home_section['about_thumbnail']); ?>"
+                                <img src="<?php echo base_url('uploads/heroBanner/' . $home_section['about_thumbnail']); ?>"
                                     alt="Current Thumbnail" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
                             <?php endif; ?>
                             <input type="file" class="form-control mb-2" name="about_thumbnail">

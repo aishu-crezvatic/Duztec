@@ -27,7 +27,7 @@
         transform: scale(0.8);
     }
 
-   
+
     .swiper-slide-prev {
         left: 5%;
     }
@@ -76,13 +76,27 @@
 
 <!-- Swiper Container -->
 <div class="swiper-container overflow-hidden p-0 m-0">
-    <div class="swiper-wrapper ">
-        <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 1"></div>
+    <div class="swiper-wrapper">
+        <!-- <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 1"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 3"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div>
-        <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div>
+        <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div> -->
+        <?php foreach ($images as $item): ?>
+            <?php if ($item['is_video'] == 1): ?>
+                <!-- Video element -->
+                <a class="swiper-slide" href="<?php echo htmlspecialchars('uploads/gallery/' . $item['img_video']); ?>" target="_blank">
+
+                <video  controls width="100%" style="height:300px">
+                    <source src="<?php echo htmlspecialchars('uploads/gallery/' . $item['img_video']); ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                </a>
+            <?php else: ?>
+
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
     <!-- Navigation buttons -->
     <div class="swiper-button-next"></div>

@@ -1,8 +1,8 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); 
+<?php $this->load->view('layout/header');
 // echo '<pre>';
-        //  print_r($sector_detail);
-        // exit;
+//  print_r($sector_detail);
+// exit;
 ?>
 <!-- header end  -->
 
@@ -19,7 +19,8 @@
                         <li><a href="index.html"> <i class="fas fa-home"></i> </a></li>
                         <li class="style2 text-white">Home</li>
                         <li><i class="fas fa-chevron-right"></i></li>
-                        <li class="style2 sectorStyle2"><?php echo $sector_detail[$selected_sector_index]['name']; ?></li>
+                        <li class="style2 sectorStyle2"><?php echo $sector_detail[$selected_sector_index]['name']; ?>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -34,8 +35,9 @@
         <div class="row justify-content-between h-75">
             <div class="col-lg-7 col-md-12">
                 <div class="blog-thumb">
-                    <img id="industry-main-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%">
-<!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
+                    <img id="industry-main-image" src="<?php echo base_url() ?>uploads/sectors/SectorImageGallary.png"
+                        alt="" style="width:100%">
+                    <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 card col-12 p-0">
@@ -45,8 +47,11 @@
                 <div class="single-content m-0">
                     <ul id="industry-links">
                         <!-- Links will be populated dynamically -->
-                        <?php foreach($sector_detail as $sector){ ?>
-                        <a href="<?php echo base_url()?>sectors/<?php echo $sector['sd_id'] ?>" class="industry-link" style="text-decoration: none;"><li class="py-3 ps-3"><?php echo $sector['name']; ?></li></a>
+                        <?php foreach ($sector_detail as $sector) { ?>
+                            <a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id'] ?>" class="industry-link"
+                                style="text-decoration: none;">
+                                <li class="py-3 ps-3"><?php echo $sector['name']; ?></li>
+                            </a>
                         <?php } ?>
                     </ul>
                 </div>
@@ -54,21 +59,43 @@
         </div>
         <div class="row mt-5 align-items-start ">
             <div class="col-lg-8 col-md-8 col-12">
-                <div class="text1">
-                <?php //foreach($sector_detail as $sector){ ?>
-                    <h2 id="industry-subtitle" class="py-4 heading"><?php echo $sector_detail[$selected_sector_index]['name']; ?></h2>
-                    <p id="industry-description" class="p-0 m-0"><?php echo $sector_detail[$selected_sector_index]['description']; ?></p>
+                <div class="text-black">
+                    <?php //foreach($sector_detail as $sector){ ?>
+                    <h2 id="industry-subtitle" class="py-4 heading">
+                        <?php echo $sector_detail[$selected_sector_index]['name']; ?>
+                    </h2>
+                    <p id="industry-description" class="p-0 m-0 text-black">
+                        <?php echo $sector_detail[$selected_sector_index]['description']; ?>
+                    </p>
                     <?php //} ?>
                 </div>
             </div>
             <div class="col-lg-4">
                 <h2 class="py-4 heading">Image gallery</h2>
-<!-- <<<<<<< HEAD -->
+
+
+
+                <?php foreach ($images as $item): ?>
+    <div style="display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 5px;">
+        <?php if ($item['is_video'] != 1): ?>
+            <!-- Image element -->
+            <img src="<?php echo base_url('uploads/gallery/' . $item['img_video']); ?>"
+                style="width: 150px; height: 100px; object-fit: cover; margin: 5px;" alt="Image">            
+        <?php endif; ?>
+    </div>
+<?php endforeach; ?>
+
                 <!-- <img id="industry-gallery-image" src="assets/images/default.jpg" alt="" style="width:100%"> -->
+<<<<<<< HEAD
                 <img id="industry-gallery-image" src="https://dummyimage.com/300x300/1e89d1/ffffff" alt="" style="width:100%">
 <!-- ======= -->
                 <!-- <img id="industry-gallery-image" src="<?php echo base_url()?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%"> -->
 <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
+=======
+                <!-- <img id="industry-gallery-image" src="https://dummyimage.com/300x300/1e89d1/ffffff" alt="" style="width:100%"> -->
+
+                <!-- <img id="industry-gallery-image" src="<?php echo base_url() ?>uploads/sectors/SectorImageGallary.png" alt="" style="width:100%"> -->
+>>>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544
             </div>
         </div>
 
@@ -84,65 +111,66 @@
                     </div>
                 </div>
                 <div class="row">
-			<div class="service_list owl-carousel">
-                            <?php foreach ($product_with_cat_sub_cat as $product) { 
-                                $images = explode(',', $product['images']);
-                                ?>
-				<div class="service-single-box rounded" style="height:500px">
-					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt="err" style="height:300px">
-					</div>
-					<!-- <div class="service-icon">
-						<i class="flaticon-business-and-finance"></i>
-					</div> -->
-					<div class="service-content">
-						<h2><?php echo $product['name']; ?></h2>
-						<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
-						<!--<p><?php echo $product['conclusion']; ?></p>-->
-                                                <a href="<?php echo base_url().'product_detail/'.$product['p_id'] ?>">Learn More</a>
-					</div>
-				</div>
-                            <?php } ?>
-<!--				<div class="service-single-box">
-					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
-					</div>
-					 <div class="service-icon">
-						<i class="flaticon-briefcase"></i>
-					</div> 
-					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
-					</div>
-				</div>
-				<div class="service-single-box">
-					<div class="service-thumb">
-						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
-					</div>
-					 <div class="service-icon">
-						<i class="flaticon-mail"></i>
-					</div> 
-					<div class="service-content">
-						<h2>Double Barrel System</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						<a href="single-service.html">Learn More</a>
-					</div>
-				</div>-->
+                    <div class="service_list owl-carousel">
+                        <?php foreach ($product_with_cat_sub_cat as $product) {
+                            $images = explode(',', $product['images']);
+                            ?>
+                            <div class="service-single-box rounded" style="height:500px">
+                                <div class="service-thumb">
+                                    <img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>"
+                                        alt="err" style="height:300px">
+                                </div>
+                                <!-- <div class="service-icon">
+                        <i class="flaticon-business-and-finance"></i>
+                    </div> -->
+                                <div class="service-content">
+                                    <h2><?php echo $product['name']; ?></h2>
+                                    <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+                                    <!--<p><?php echo $product['conclusion']; ?></p>-->
+                                    <a href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>">Learn More</a>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <!--				<div class="service-single-box">
+                    <div class="service-thumb">
+                        <img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
+                    </div>
+                     <div class="service-icon">
+                        <i class="flaticon-briefcase"></i>
+                    </div> 
+                    <div class="service-content">
+                        <h2>Double Barrel System</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <a href="single-service.html">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-single-box">
+                    <div class="service-thumb">
+                        <img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
+                    </div>
+                     <div class="service-icon">
+                        <i class="flaticon-mail"></i>
+                    </div> 
+                    <div class="service-content">
+                        <h2>Double Barrel System</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        <a href="single-service.html">Learn More</a>
+                    </div>
+                </div>-->
 
-			</div>
-		</div>
-                
-                
-<!--                <div class="row">
+                    </div>
+                </div>
+
+
+                <!--                <div class="row">
                     <div class="service_list owl-carousel">
                         <div class="service-single-box">
                             <div class="service-thumb">
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                              <div class="service-icon">
-						<i class="flaticon-business-and-finance"></i>
-					</div> 
+                        <i class="flaticon-business-and-finance"></i>
+                    </div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -154,8 +182,8 @@
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                              <div class="service-icon">
-						<i class="flaticon-briefcase"></i>
-					</div> 
+                        <i class="flaticon-briefcase"></i>
+                    </div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -167,8 +195,8 @@
                                 <img src="assets/images/products/ProductImageSection.webp" alt="">
                             </div>
                              <div class="service-icon">
-						<i class="flaticon-mail"></i>
-					</div> 
+                        <i class="flaticon-mail"></i>
+                    </div> 
                             <div class="service-content">
                                 <h2>Double Barrel System</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -178,7 +206,7 @@
 
                     </div>
                 </div>-->
-                
+
             </div>
 
             <div class="shape-thumb">

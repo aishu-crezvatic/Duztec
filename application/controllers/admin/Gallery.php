@@ -12,7 +12,7 @@ class Gallery extends CI_Controller {
 
     public function index() {
         // Fetch records from the CommonModel
-        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'gallery', array('status !=' => 0));
+        $data['data'] = $this->CommonModel->getRecords(DATABASE, 'gallery', array('status !=' => 2));
 
         // Load the view and pass the data
         $this->load->view('admin/gallery/gallery', $data);
@@ -20,28 +20,21 @@ class Gallery extends CI_Controller {
 
 
     public function create() {
-        // Configuration for file upload
-        $config['upload_path']   = './uploads/gallery'; // Ensure this path is correct and writable
-        $config['allowed_types'] = '*'; // Allow all file types; adjust as needed
-        $config['max_size']      = 2048; // Maximum file size in kilobytes (2MB in this case)
-    
-        // Load and initialize the upload library
-        $this->load->library('upload', $config);
-        $this->upload->initialize($config);
-    
-        // Initialize $image variable
-        $image = '';
-    
-        // Check if file was uploaded and process the upload
-        if ($this->upload->do_upload('img_video')) {
-            $upload_data = $this->upload->data();
-            $image = $upload_data['file_name']; // Get the uploaded file name
+        if ($_FILES['img_video']['error'] != 4) {
+            $config['upload_path'] = 'uploads/gallery';
+            // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
+            $config['allowed_types'] = '*';
+            // $config['max_size']      = 2048; 
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            // check logo upload or not 
+            $logo = 'logo.tls';
+            if ($this->upload->do_upload('img_video')) {
+                $comp_logo = $this->upload->data();
+                $image = $comp_logo['file_name'];
+            }
         } else {
-            // Handle errors if file upload fails
-            $error = $this->upload->display_errors();
-            $this->session->set_flashdata('error', $error);
-            redirect(base_url('admin/gallery'));
-            return;
+            $image = '';
         }
     
         // Retrieve other form data
@@ -82,35 +75,43 @@ class Gallery extends CI_Controller {
     public function update() {
         $id = $this->input->post('g_id');
     
-        // Set up upload configuration
-        $config['upload_path']   = './uploads/gallery'; // Ensure this path is correct and writable
-        $config['allowed_types'] = 'jpg|jpeg|png|gif|mp4|webm'; // Allowed file types
-        $this->load->library('upload', $config);
-        $this->upload->initialize($config);
-    
-        // Initialize file variable
-        $image = $this->input->post('existing_img_video'); // Keep existing image/video if no new upload
-    
-        if (!empty($_FILES['img_video']['name'])) {
-            // If a new file is uploaded
+         $data2 = $this->CommonModel->getRow(DATABASE, 'gallery', array('g_id' => $id), '*');
+        if ($_FILES['img_video']['error'] != 4) {
+            $config['upload_path'] = 'uploads/gallery';
+            // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
+            $config['allowed_types'] = '*';
+            // $config['max_size']      = 2048; 
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            // check logo upload or not 
+            $logo = 'logo.tls';
             if ($this->upload->do_upload('img_video')) {
-                $uploadData = $this->upload->data();
-                $image = $uploadData['file_name'];
-            } else {
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/gallery/edit/' . $id);
+                $comp_logo = $this->upload->data();
+                $image = $comp_logo['file_name'];
             }
+        } else {
+            $image = $data2['img_video'];
         }
-    
+        
         $data = [
             'img_video' => $image,
             'is_video'  => $this->input->post('is_video'),
             'status'    => $this->input->post('status'),
         ];
+
+        $updateResult = $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
+
+        if ($updateResult) {
+            $this->session->set_flashdata('success', 'Gallery information updated successfully!');
+            redirect('admin/gallery');
+        } else {
+            $this->session->set_flashdata('error', 'Failed to update gallery information.');
+            redirect('admin/gallery');
+        }
     
-        $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
-        $this->session->set_flashdata('success', 'Gallery item updated successfully!');
-        redirect(base_url('admin/gallery'));
+        // $this->CommonModel->edit(DATABASE, 'gallery', $data, array('g_id' => $id));
+        // $this->session->set_flashdata('success', 'Gallery item updated successfully!');
+        // redirect(base_url('admin/gallery'));
     }
     
 

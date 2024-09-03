@@ -13,7 +13,7 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
 		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="assets/video/<?php echo $home_page_data['hero_banner']; ?>"
+			<video id="background-video" preload="auto" poster="uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
 				autoplay muted playsinline loop>
 				<source src="assets/video/hero_video1.MP4" type="video/mp4">
 				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
@@ -54,7 +54,7 @@ if (!empty($home_page_data)): ?>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
 						<div class="about-thumb about-thumb-border">
-							<img src="assets/images/<?php echo $home_page_data['about_thumbnail']; ?>" alt="">
+							<img src="uploads/heroBanner/<?php echo $home_page_data['about_thumbnail']; ?>" alt="">
 							<div class="about-video-icon">
 								<a class="video-vemo-icon vbox-item" data-vbtype="youtube" data-autoplay="true"
 									href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play"></i></a>
@@ -106,25 +106,24 @@ if (!empty($home_page_data)): ?>
 							?>
 							<div class="service-single-box rounded position-relative" style="height:500px">
 								<div class="service-thumb ProdImgContainer ">
-									<img class="frontImg" src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
+									<img class="frontImg"
+										src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
 										style="height:300px">
-									<img 
-										class="hoverImg d-none"
-									    src="https://images.pexels.com/photos/27946281/pexels-photo-27946281/free-photo-of-a-small-boat-is-docked-in-the-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-										alt="" 	style="height:300px">
+									<img class="hoverImg d-none"
+										src="https://images.pexels.com/photos/27946281/pexels-photo-27946281/free-photo-of-a-small-boat-is-docked-in-the-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+										alt="" style="height:300px">
 								</div>
 								<div>
 
 								</div>
-								<!-- <div class="service-icon">
-						<i class="flaticon-business-and-finance"></i>
-					</div> -->
+
 								<div class="service-content">
 									<h2><?php echo $product['name']; ?></h2>
 									<!--<p><?php echo $product['conclusion']; ?></p>-->
+									<p>Lorem ipsum dolor sit amet.</p>
 									<a class="bottom-0 position-absolute"
 										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
-										style="left:27%">Learn More</a>
+										style="left:35%">Learn More</a>
 								</div>
 							</div>
 						<?php } ?>
@@ -257,7 +256,7 @@ if (!empty($home_page_data)): ?>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="section-title text-center">
-							<h1>OUR GALLERY</h1>
+							<h1>OUR WORK</h1>
 						</div>
 					</div>
 
@@ -286,7 +285,7 @@ if (!empty($home_page_data)): ?>
 					</div>
 				</div>
 
-				<div class="row">
+				<div class=" row justify-content-center">
 					<div class="case_list owl-carousel">
 						<div class="single-case-study">
 							<div class="case-thumb">
@@ -370,11 +369,24 @@ if (!empty($home_page_data)): ?>
 		<p>No data found.</p>
 	</div>
 <?php endif; ?>
-<!-- ============================================================== -->
-<!-- Start - Brand- Section -->
-<!-- ============================================================= -->
+
 
 <!-- Footer start  -->
+<script>
+	$(document).ready(function () {
+		$(".service_list").owlCarousel({
+			items: 1,                
+			loop: true,              
+			margin: 10,              
+			autoplay: true,         
+			autoplayTimeout: 3000,  
+			autoplayHoverPause: true,
+			nav: false,             
+			dots: true               
+		});
+	});
+
+</script>
 <?php
 $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

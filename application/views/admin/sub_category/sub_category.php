@@ -13,19 +13,27 @@ $this->load->view('admin/layout/sidebar');
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Category</h5>
+                        <h5 class="modal-title">Add Sub Category</h5>
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form method="POST" action="<?php echo base_url() ?>admin/category/create" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label>Upload Category Image (200*250px)</label>
-                                <div class="custom-file">
-                                    <input name="category_image" type="file" class="custom-file-input" multiple accept=".jpg,.jpeg,.png,.webp,.avif">
-                                    <label class="custom-file-label selected">Choose File</label>
-                                </div>
-                            </div>
+                        <form method="POST" action="<?php echo base_url() ?>admin/sub_category/create" enctype="multipart/form-data">
+                             <!--<div class="form-group col-12">-->
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select name="c_id" class="form-control default-select" id="sel1">
+                                            <?php
+                                            // unset($data['category'][0]);
+                                            foreach ($categories as $category) {
+                                            ?>
+                                                <option value="<?php echo $category['c_id'] ?>"><?php echo $category['name'] ?></option>
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                <!--</div>-->
                             <div class="form-group">
                                 <label>Name</label>
                                 <input name="name" type="text" class="form-control" placeholder="Enter Name">
@@ -65,7 +73,7 @@ $this->load->view('admin/layout/sidebar');
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Category</h5>
+                        <h5 class="modal-title">Edit Sub Category</h5>
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                         </button>
                     </div>
@@ -178,12 +186,12 @@ $this->load->view('admin/layout/sidebar');
                 ?>
             </div>
             <div class="col-12 mb-3">
-                <a href="javascript:void(0)" class="btn btn-primary w-100 m-0" data-toggle="modal" data-target="#addOrderModalside">+ New Category</a>
+                <a href="javascript:void(0)" class="btn btn-primary w-100 m-0" data-toggle="modal" data-target="#addOrderModalside">+ New Sub Category</a>
             </div>
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Category Table</h4>
+                        <h4 class="card-title">Sub Category Table</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -192,7 +200,8 @@ $this->load->view('admin/layout/sidebar');
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 152.594px;">Sr No</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Image</th>
+                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Image</th>-->
+                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Category Name</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Name</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Description</th>
                                             <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Price (₹)</th>-->
@@ -210,17 +219,25 @@ $this->load->view('admin/layout/sidebar');
                                             ?>
                                             <tr role="row" class="odd">
                                                 <td><?php echo $i; ?></td>
-                                                <td>
+<!--                                                <td>
                                                     <?php
 //                                                    $Images = explode(",", $row['image']);
-                                                    $Image = $row['category_image'];
+//                                                    $Image = $row['category_image'];
 //                                                    foreach ($Images as $baseimg) {
                                                     ?>
-                                                    <!--<img style="width: 50px;" src="<?php // echo base_url() . "uploads/category" . $Image ?>" alt="image">-->
-                                                    <img style="width: 50px;" src="<?php echo base_url() . "uploads/" . $Image ?>" alt="image">
+                                                    <img style="width: 50px;" src="<?php //echo base_url() . "uploads/category" . $Image ?>" alt="image">
                                                     <?php
 //                                                    }
                                                     ?>
+                                                </td>-->
+                                                <td>
+                                                <?php 
+                                                foreach ($categories as $category) {
+                                                if($row['c_id'] == $category['c_id']){ 
+                                                    echo $category['name'];
+                                                }
+                                                }
+                                                ?>
                                                 </td>
                                                 <td><?php echo $row['name'] ?></td>
                                                 <td><?php echo strlen($row['description']) > 50 ? substr($row['description'], 0, 50) . '...' : $row['description'] ?></td>
@@ -228,14 +245,14 @@ $this->load->view('admin/layout/sidebar');
                                                 <!--<td><?php // echo $row['discount']  ?></td>-->
                                                 <td>
                                                     <div class="col-sm-9">
-                                                        <input data-id="<?php echo $row['c_id'] ?>" class="switch switchProduct" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> />
+                                                        <input data-id="<?php echo $row['sc_id'] ?>" class="switch switchProduct" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> />
                                                     </div>
                                                 </td>
                                                 <td><?php echo date('d/m/Y', strtotime($row['created_date'])) ?></td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="<?php echo base_url() ?>admin/category/edit/<?php echo $row['c_id'] ?>" data-id="<?php echo $row['c_id'] ?>" class="btn btn-primary shadow btn-xs sharp mr-1 editbtn"><i class="fa fa-pencil"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#deleteOrderModalside" data-id="<?php echo $row['c_id'] ?>" class="btn btn-danger shadow btn-xs sharp deletebtn"><i class="fa fa-trash"></i></a>
+                                                        <a href="<?php echo base_url() ?>admin/sub_category/edit/<?php echo $row['sc_id'] ?>" data-id="<?php echo $row['sc_id'] ?>" class="btn btn-primary shadow btn-xs sharp mr-1 editbtn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#deleteOrderModalside" data-id="<?php echo $row['sc_id'] ?>" class="btn btn-danger shadow btn-xs sharp deletebtn"><i class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -261,7 +278,7 @@ $this->load->view('admin/layout/sidebar');
     $(".switchProduct").click(function () {
         var id = $(this).attr("data-id");
         $.post(
-                base_url + "admin/category/status/" + id, {
+                base_url + "admin/sub_category/status/" + id, {
                     data: id
                 },
                 function (response) {

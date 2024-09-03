@@ -1,319 +1,181 @@
-<!--**********************************Header & sidebar start***********************************-->
-<?php
-$this->load->view('admin/layout/header');
-$this->load->view('admin/layout/sidebar');
-?>
-<!--**********************************Header & sidebar end***********************************-->
-<!--**********************************Content body start****************************-->
-<div class="content-body">
-    <!-- row -->
-    <div class="container-fluid">
-        <!-- Add Modal -->
-        <div class="modal fade" id="addOrderModalside">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add Blog</h5>
-                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="POST" action="<?php echo base_url() ?>admin/blog/create" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label class="text-black font-w500">Upload Thumbnail (400*600px)</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                        <input name="image0" type="file" class="custom-file-input" required>
-                                        <label class="custom-file-label selected">Choose File</label>
-                                    </div>
-                                </div>
-                                <label class="text-black font-w500">Upload Banner (400*200px)</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                        <input name="image1" type="file" class="custom-file-input" required>
-                                        <label class="custom-file-label selected">Choose File</label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Url Title*</label>
-                                    <input name="url_title" type="text" class="form-control" placeholder="Enter Title">
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Title*</label>
-                                    <input name="title" type="text" class="form-control" placeholder="Enter Title">
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Meta Title*</label>
-                                    <input name="meta-title" type="text" class="form-control" placeholder="Enter Title">
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Meta Description*</label>
-                                    <input name="meta-description" type="text" class="form-control" placeholder="Enter Title">
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Short Description*</label>
-                                    <textarea name="short-description" class="summernote"></textarea>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Description*</label>
-                                    <textarea name="description" class="summernote"></textarea>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label>Keyword (use comma for sepration)*</label>
-                                    <input name="keyword" type="text" class="form-control" placeholder="trending, new blog, Study">
-                                </div>
-                                <div class="form-group col-12">
-                                    <div class="form-group">
-                                        <label>Category</label>
-                                        <select multiple name="category[]" class="form-control default-select" id="sel2">
-                                            <?php
-                                            // unset($data['category'][0]);
-                                            foreach ($data['category'] as $category) {
-                                            ?>
-                                                <option value="<?php echo $category['name'] ?>"><?php echo $category['name'] ?></option>
-                                            <?php
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button name="submit" type="submit" class="btn btn-primary btn-block">Create</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Edit Modal -->
-        <div class="modal fade" id="editOrderModalside">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Edit Slider</h5>
-                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="POST" action="<?php echo base_url() ?>admin/blog/edit" enctype="multipart/form-data">
-                            <input name="id" type="text" value="1" id="blogeditModalId">
-                            <div class="form-group">
-                                <label class="text-black font-w500">Upload Image (400*200px)</label>
-                                <img style="width:100%;" id="blogeditModalImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                        <input name="image" type="file" class="custom-file-input" required>
-                                        <label class="custom-file-label selected">Choose File</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group col-12">
-                                <label>Title*</label>
-                                <input name="title" type="text" class="form-control editModalTitle" placeholder="Enter Title">
-                            </div>
-                            <div class="form-group col-12">
-                                <label>Description*</label>
-                                <textarea name="description" class="summernote editModalDescription"></textarea>
-                            </div>
-                            <div class="form-group col-12">
-                                <label>Keyword (use comma for sepration)*</label>
-                                <input name="keyword" type="text" class="form-control editModalKeyword" placeholder="trending, new blog, Study">
-                            </div>
-                            <div class="form-group col-12">
-                                <div class="form-group">
-                                    <label>Category</label>
-                                    <select name="category" class="form-control default-select editModalCategory" id="sel1" value="Ghost Story">
-                                        <?php
-                                        // unset($data['category'][0]);
-                                        foreach ($data['category'] as $category) {
-                                        ?>
-                                            <option value="<?php echo $category['name'] ?>"><?php echo $category['name'] ?></option>
-                                        <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button name="submit" type="submit" class="btn btn-primary btn-block">Update</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Delete Modal -->
-        <div class="modal fade" id="deleteOrderModalside">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Are you sure you want to delete?</h5>
-                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                        </button>
-                    </div>
-                    <form method="POST" action="<?php echo base_url() ?>admin/blog/delete" enctype="multipart/form-data">
-                        <div class="modal-body">
-                            <input name="id" type="text" value="1" id="blogdeleteModalId" hidden>
-                            <div class="form-group">
-                                <button name="submit" type="submit" class="btn btn-danger btn-block">Delete</button>
-                                <button name="submit" type="submit" class="btn btn-outline-danger btn-block" data-dismiss="modal">No</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- alert section  -->
-            <div class="col-12">
-                <?php
-                if (!empty($this->session->flashdata('success'))) {
-                ?>
-                    <div class="alert alert-success solid alert-dismissible fade show w-100 mx-">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                            <polyline points="9 11 12 14 22 4"></polyline>
-                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                        </svg>
-                        <strong>Success!</strong> <?php echo $this->session->flashdata('success') ?>
-                        <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
-                        </button>
-                    </div>
-                <?php
-                }
-                ?>
-                <?php
-                if (!empty($this->session->flashdata('error'))) {
-                ?>
-                    <div class="alert alert-danger solid alert-dismissible fade show">
-                        <svg viewBox="0 0 24 24" width="24 " height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
-                        </svg>
-                        <strong>Error!</strong> <?php echo $this->session->flashdata('error') ?>
-                        <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
-                        </button>
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="col-12 mb-3">
-                <a href="javascript:void(0)" class="btn btn-primary w-100 m-0" data-toggle="modal" data-target="#addOrderModalside">+ New Blog</a>
-            </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Blog Table</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <div id="example3_wrapper" class="dataTables_wrapper no-footer">
-                                <table id="example3" class="display min-w850 dataTable no-footer" role="grid" aria-describedby="example3_info">
-                                    <thead>
-                                        <tr role="row">
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 152.594px;">Sr No</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Thumbnail</th>
-                                            <!-- <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Banner</th>-->
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Title</th>
-                                            <!-- <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Url Title</th>-->
-                                            <!-- <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Description</th>-->
-                                            <!-- <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Keyword</th>-->
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Category</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Seo url</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Status</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Created At</th>
-                                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84.9219px;">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        // var_dump($data['category']);
-                                        $i = 1;
-                                        foreach ($data['blog'] as $row) {
-                                        ?>
-                                            <tr role="row" class="odd">
-                                                <td><?php echo $i; ?></td>
-                                                <td><img style="width: 150px;" class="blogbanner" src="<?php echo base_url() . "uploads/" . $row['image'] ?>" alt="banner"></td>
-                                                <!--<td>-->
-                                                <!--    <img style="width: 150px;" class="blogbanner" src="<?php echo base_url() . "uploads/" . $row['banner'] ?>" alt="banner">-->
-                                                <!--</td>-->
-                                                <td class="blogTitle"><?php echo strlen($row['title']) > 100 ? substr($row['title'], 0, 100) . '...' : $row['title'] ?></td>
-                                                <!--<td class="blogTitle"><?php echo strlen($row['url_title']) > 50 ? substr($row['url_title'], 0, 50) . '...' : $row['url_title'] ?></td>-->
-                                                <!--<td class="blogDescription"><?php echo strlen($row['description']) > 50 ? substr($row['description'], 0, 50) . '...' : $row['description'] ?></td>
-                                                <td class="blogKeyword"><?php echo $row['keywords'] ?></td>-->
-                                                <td class="blogCategory"><?php echo $row['category'] ?></td>
-                                                <td class="blogCategory"><?php echo $row['url_title'] ?></td>
-                                                <td class="blogCategory">
-                                                    <input class="switch" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> onclick="switchBlog(<?php echo $row['id'] ?>)" />
-                                                </td>
+<?php $this->load->view('admin/layout/header'); ?>
+<?php $this->load->view('admin/layout/sidebar'); ?>
 
-                                                <td class=""><?php echo date('d/m/Y', strtotime($row['created_at'])) ?></td>
-                                                <td>
-                                                    <div class="d-flex">
-                                                        <a href="<?php echo base_url() ?>admin/blog/edit/<?php echo $row['id'] ?>" class="btn btn-primary shadow btn-xs sharp mr-1 blogeditbtn"><i class="fa fa-pencil"></i></a>
-                                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#deleteOrderModalside<?php echo $i ?>" data-id="<?php echo $row['id'] ?>" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                                        <!-- delete modal -->
-                                                        <div class="modal fade" id="deleteOrderModalside<?php echo $i ?>">
-                                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h5 class="modal-title">Are you sure you want to delete?</h5>
-                                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <form method="POST" action="<?php echo base_url() ?>admin/blog/delete" enctype="multipart/form-data">
-                                                                        <div class="modal-body">
-                                                                            <input name="id" type="text" value="<?php echo $row['id'] ?>" id="blogdeleteModalId" hidden>
-                                                                            <div class="form-group">
-                                                                                <button name="submit" type="submit" class="btn btn-danger btn-block">Delete</button>
-                                                                                <button name="submit" type="submit" class="btn btn-outline-danger btn-block" data-dismiss="modal">No</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        <?php
-                                            $i = $i + 1;
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+<div class="content-body">
+    <h1 class="mb-4">Blog Management</h1>
+
+    <!-- Toggle Button -->
+    <button id="toggleButton" onclick="toggleEditMode(<?php echo $edit_mode ? 'false' : 'true'; ?>)"
+        class="btn btn-primary mb-3">
+        <?php echo $edit_mode ? 'Cancel' : 'Add New'; ?>
+    </button>
+
+    <?php if ($this->session->flashdata('success')): ?>
+        <div class="alert alert-success">
+            <?php echo $this->session->flashdata('success'); ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($this->session->flashdata('error')): ?>
+        <div class="alert alert-danger">
+            <?php echo $this->session->flashdata('error'); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Display Mode -->
+    <div id="displayMode" <?php echo $edit_mode ? 'style="display: none;"' : ''; ?>>
+    <div class="card">
+        <div class="card-header">
+            <strong>Blog List</strong>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Image</th> 
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (!empty($blogs) && is_array($blogs)): ?>
+                        <?php foreach ($blogs as $blog): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($blog['b_id']); ?></td>
+                                <td><?php echo htmlspecialchars($blog['title']); ?></td>
+                                <td><?php echo htmlspecialchars($blog['category_name'] ?? 'Unknown'); ?></td>
+                                <td>
+                                    <?php if (!empty($blog['b_image'])): ?>
+                                        <img src="<?php echo base_url('uploads/blog/' . htmlspecialchars($blog['b_image'])); ?>" alt="Blog Image" style="max-width: 100px; height: auto;">
+                                    <?php else: ?>
+                                        No Image
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <div class="description-preview">
+                                        <?php echo nl2br(htmlspecialchars(substr($blog['description'] ?? 'No description', 0, 150))); ?>
+                                        <?php if (strlen($blog['description'] ?? '') > 150): ?>
+                                            <a href="#" class="read-more" data-blog-id="<?php echo $blog['b_id']; ?>">Read More</a>
+                                        <?php endif; ?>
+                                    </div>
+                                </td>
+                                <td><?php echo $blog['status'] == 1 ? 'Active' : 'Inactive'; ?></td>
+                                <td class="d-flex">
+                                    <a href="<?php echo site_url('admin/blog/edit_blog/' . $blog['b_id']); ?>"
+                                        class="btn btn-warning btn-sm"> <i class="fas fa-pen"></i></a>
+                                    <a href="<?php echo site_url('admin/blog/delete_blog/' . $blog['b_id']); ?>"
+                                        class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');"> <i
+                                            class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="6">No records found</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <!-- Edit/Add Mode -->
+    <div id="editMode" <?php echo $edit_mode ? '' : 'style="display: none;"'; ?>>
+        <div class="card">
+            <div class="card-header">
+                <strong><?php echo $edit_mode ? 'Edit Blog' : 'Add New Blog'; ?></strong>
+            </div>
+            <div class="card-body">
+            <form action="<?php echo site_url('admin/blog/' . ($edit_mode ? 'update_blog' : 'store')); ?>" method="post" enctype="multipart/form-data">
+            <?php if ($edit_mode): ?>
+                        <input type="hidden" name="b_id" value="<?php echo htmlspecialchars($current_blog['b_id'] ?? ''); ?>">
+                        <input type="hidden" name="existing_image" value="<?php echo htmlspecialchars($current_blog['b_image'] ?? ''); ?>">
+                    <?php endif; ?>
+
+                    <div class="form-group">
+                        <label for="bc_id">Category:</label>
+                        <select class="form-control" id="bc_id" name="bc_id" required>
+                            <?php foreach ($categories as $category): ?>
+                                <option value="<?php echo $category['bc_id']; ?>"
+                                    <?php echo $edit_mode && ($current_blog['bc_id'] ?? '') == $category['bc_id'] ? 'selected' : ''; ?>>
+                                    <?php echo htmlspecialchars($category['name']); ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
-                </div>
+
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" name="title"
+                            value="<?php echo htmlspecialchars($edit_mode ? ($current_blog['title'] ?? '') : ''); ?>" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="5"
+                            required><?php echo htmlspecialchars($edit_mode ? ($current_blog['description'] ?? '') : ''); ?></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="b_image">Image:</label>
+                        <input type="file" class="form-control" id="b_image" name="b_image">
+                        <?php if ($edit_mode && ($current_blog['b_image'] ?? '')): ?>
+                            <img src="<?php echo base_url('uploads/blog/' . ($current_blog['b_image'] ?? '')); ?>" class="img-fluid"
+                                style="max-width: 100px;">
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select class="form-control" id="status" name="status" required>
+                            <option value="1" <?php echo ($edit_mode && ($current_blog['status'] ?? '') == '1') ? 'selected' : ''; ?>>Active</option>
+                            <option value="0" <?php echo ($edit_mode && ($current_blog['status'] ?? '') == '0') ? 'selected' : ''; ?>>Inactive</option>
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                        class="btn btn-primary"><?php echo $edit_mode ? 'Update Blog' : 'Add Blog'; ?></button>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<!--**********************************Content body End***********************************-->
-<!--**********************************footer Start***********************************-->
-<?php $this->load->view('admin/layout/footer'); ?>
-<!--**********************************footer End***********************************-->
+
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 <script>
-    function switchBlog(id) {
-        $.post(
-            base_url + "admin/blog/status/" + id, {
-                data: id
-            },
-            function(response) {
-                console.log(response);
-            }
-        );
+    CKEDITOR.replace('description');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.read-more').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var blogId = this.getAttribute('data-blog-id');
+                var preview = this.previousElementSibling;
+                
+                fetch("<?php echo site_url('admin/blog/get_description/'); ?>" + blogId)
+                    .then(response => response.text())
+                    .then(data => {
+                        preview.innerHTML = data;
+                        this.style.display = 'none';
+                    });
+            });
+        });
+    });
+
+    function toggleEditMode(isEdit) {
+        document.getElementById('editMode').style.display = isEdit ? '' : 'none';
+        document.getElementById('displayMode').style.display = isEdit ? 'none' : '';
+        document.getElementById('toggleButton').textContent = isEdit ? 'Cancel' : 'Add New';
+        document.getElementById('toggleButton').setAttribute('onclick', isEdit ? 'cancelEdit()' : 'toggleEditMode(true)');
+    }
+
+    function cancelEdit() {
+        window.location.href = "<?php echo site_url('admin/blog'); ?>";
     }
 </script>
+
+<?php $this->load->view('admin/layout/footer'); ?>

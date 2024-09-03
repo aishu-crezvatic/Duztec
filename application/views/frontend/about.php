@@ -39,7 +39,11 @@ if (!empty($about_us)) : ?>
 		<div class="row align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="about-thumb">
+<<<<<<< HEAD
 					<img src="<?php echo base_url() ?>assets/images/<?php echo $about_us['about_image'];?>" alt="about_image">
+=======
+					<img src="uploads/heroBanner/<?php echo $about_us['about_image'];?>" alt="about_image">
+>>>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">

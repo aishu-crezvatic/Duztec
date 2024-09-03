@@ -31,7 +31,7 @@ class About_us extends CI_Controller
         $id = 1; // Hardcoded ID
 
         // Set up upload configuration for images
-        $config['upload_path'] = './uploads/'; // Ensure this path is correct and writable
+        $config['upload_path'] = './uploads/heroBanner/'; // Ensure this path is correct and writable
         $config['allowed_types'] = 'jpg|jpeg|png|gif'; // Allowed file types
         $config['max_size'] = 20048; // Max file size in kilobytes
         $this->load->library('upload', $config);

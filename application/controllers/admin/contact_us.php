@@ -30,7 +30,7 @@ class Contact_us extends CI_Controller
         $id = 1;
 
         // Set up upload configuration for the hero banner image
-        $config['upload_path'] = './uploads/';
+        $config['upload_path'] = './uploads/heroBanner/';
         $config['allowed_types'] = '*'; 
         $config['max_size'] = 20048; 
         $this->load->library('upload', $config);

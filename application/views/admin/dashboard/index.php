@@ -7,7 +7,7 @@ $this->load->view('admin/layout/sidebar');
 <!--**********************************Content body start****************************-->
 <div class="content-body">
     <!-- row -->
-    <div class="container-fluid">
+    <div class="container-fluid d-none">
         <div class="row">
             <div class="col-xl-3 col-xxl-4">
                 <div class="row">

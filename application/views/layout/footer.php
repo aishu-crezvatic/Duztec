@@ -1,14 +1,21 @@
 <!-- ============================================================== -->
 <!-- Floating icons of social media  Section -->
 <!-- ============================================================= -->
+<style>
+	.navyGreen {
+		background: -webkit-linear-gradient(90deg, #A6C438 0%, #2260A4 80%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>
 
 <div
 	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
-	<a href="#"><i class="fab fa-facebook-f fs-3 navyText "></i></a>
+	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i class="fab fa-facebook-f fs-3 navyGreen "></i></a>
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
-	<a href="#"><i class="fab fa-youtube fs-3 navyText "></i></a>
-	<a href="#"><i class="fab fa-linkedin-in fs-3 navyText "></i></a>
-	<a href="#"><i class="fab fa-instagram fs-3 navyText "></i></a>
+	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i class="fab fa-youtube fs-3 navyGreen "></i></a>
+	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
+	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i class="fab fa-instagram fs-3 navyGreen "></i></a>
 
 	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
 	<span></span>
@@ -70,12 +77,12 @@
 						understand that It services is changing,</p>
 				</div>
 				<div class="footer-address">
-					<div class="footer-social-icon">
+					<div class="footer-social-icon d-flex">
 						<ul>
-							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/duztec_engineering/" target="blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -91,7 +98,7 @@
 						<!-- <li><a href="">Partners</a></li> -->
 						<!-- <li><a href="">Room Details</a></li> -->
 						<li><a href="<?PHP echo base_url() ?>gallery">Gallery</a></li>
-						<li><a href="<?php echo base_url() ?>contact_us">Contact_us</a></li>
+						<li><a href="<?php echo base_url() ?>contact_us">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -153,7 +160,10 @@
 							<p>no mail available</p>
 						<?php endif; ?>
 					</span>
+					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt=""
+						style="margin-top:-60px">
 				</div>
+
 				<!-- <div class="footer-btn">
 					<form id="contact_form2" action="mail2.php" method="POST">
 						<input type="email" placeholder="Enter email address" class="footer-email" required>
@@ -228,8 +238,8 @@
 			<button class="close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
 		<!-- <form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post"> -->
-		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">	
-		<div class="form-group col-12 col-md-6 col-lg-6">
+		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">
+			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control"
 					required>
@@ -256,7 +266,9 @@
 			</div>
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="phone" class="navyText fw-bold">Phone:</label>
-				<input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 9876543210">
+				<input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 9876543210"
+					pattern="\d{10}"
+					title="Please enter a 10-digit phone number without any spaces or special characters.">
 			</div>
 			<div class="form-group col-12">
 				<label for="comment" class="navyText fw-bold">Comment:</label>
@@ -282,6 +294,8 @@
 		const popupForm = document.getElementById('popupForm');
 		const closePopup = document.getElementById('closePopup');
 		const captchaQuestion = document.getElementById('captchaQuestion');
+		const phonePattern = /^\d{10}$/;
+
 		let captchaAnswer;
 
 		function generateCaptcha() {
@@ -297,9 +311,14 @@
 		}
 
 		// Show popup only if it hasn't been shown in this session
-		if (!localStorage.getItem('popupShown')) {
-			showPopup();
-			localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+		// if (!localStorage.getItem('popupShown')) {
+		// 	showPopup();
+		// 	localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+		// }
+
+		if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
+			alert('Please enter a valid 10-digit phone number.');
+			return;
 		}
 
 		// Close popup when the close button is clicked
@@ -356,7 +375,7 @@
 
 <!-- gallery js -->
 <!-- Load jQuery -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- Load jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
 	integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -406,7 +425,12 @@
 <script src="<?php echo base_url(); ?>assets/js/jquery.scrollUp.js"></script>
 <!-- theme js -->
 <script src="<?php echo base_url(); ?>assets/js/theme.js"></script>
+
+
+
+
 <script>
+
 	let index = 0;
 	const slides = document.querySelectorAll('.slide');
 	const slider = document.querySelector('.slider');
