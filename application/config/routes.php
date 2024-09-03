@@ -67,3 +67,6 @@ $route['sectors/(:any)'] = "sectors/index/$1";
 $route['blog/(:any)'] = "blog/index/$1"; 
 //$route['product_category/(:any)'] = "product_category/index/$1"; 
 $route['product_sub_category/(:any)'] = "product_sub_category/index/$1"; 
+
+$route['term-and-condition'] = "index/term_and_condition"; 
+$route['privacy-and-policy'] = "index/privacy_and_policy"; 
