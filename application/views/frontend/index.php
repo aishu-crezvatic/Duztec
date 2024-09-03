@@ -161,7 +161,7 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================== -->
 		<!-- Start - Feature- Section -->
 		<!-- ============================================================= -->
-		<div class="feature-section p-3 p-md-5 p-lg-5">
+		<div class="feature-section p-3 pt-5">
 			<div class="container">
 				<div class="section-title text-center">
 					<h1>SECTORS/INDUSTRIES</h1>

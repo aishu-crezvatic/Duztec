@@ -268,7 +268,7 @@
                                 </li>
 
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
-                                <li><a >Blog <i class="fa fa-angle-down"></i></a>
+                                <li><a href="#">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <?php foreach ($blog_categories as $category) { ?>
                                         <li><a href="<?php echo base_url() ?>/blog/<?php echo $category['bc_id']; ?>"><?php echo $category['name']; ?></a></li>
@@ -306,7 +306,7 @@
                             <a class="mobile-logo" href="<?php echo base_url() ?>index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
                         <div class=" col-6 overflow-hidden">
-                        <form action="<?= base_url('product') ?>" method="GET">
+                        <form class="my-3" action="<?= base_url('product') ?>" method="GET">
                                   <input  type="text" name="query" placeholder="Search products...">
                             </form>
                         </div> 
