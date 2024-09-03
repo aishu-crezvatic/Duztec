@@ -110,7 +110,8 @@
 			<div class="col-lg-6">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+						<!-- <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form"> -->
+							<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
 									<div class="contact-form">
