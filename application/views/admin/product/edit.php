@@ -5,6 +5,11 @@ $this->load->view('admin/layout/header');
 
 $this->load->view('admin/layout/sidebar');
 ?>
+<style>
+    .page_type_specific{
+        display: none;
+    }
+</style>
 
 <!--**********************************Header & sidebar end***********************************-->
 
@@ -158,7 +163,7 @@ $this->load->view('admin/layout/sidebar');
                                     </div>
                                     <div class="form-group col-12">
                                 <label>Page Type</label>
-                                <select name="page_type" class="form-control default-select" id="sel1">
+                                <select name="page_type" class="form-control default-select" id="page_type">
                                     <?php
                                     // unset($data['category'][0]);
                                     foreach ($page_types as $key => $val) {
@@ -178,187 +183,192 @@ $this->load->view('admin/layout/sidebar');
                             
                             <?php
 //                            $page_type = 2;
-                            $page_type = $data['page_type'];
-                            switch ($page_type) {
-                                case 1:
+//                            $page_type = $data['page_type'];
+//                            switch ($page_type) {
+//                                case 1:
                                     ?>
+                            <div class="page_type_specific" id="page_type_1">
                                     <div class="form-group">
                                         <label>Advantages Title</label>
-                                        <input name="advantages_title" type="text" class="form-control" placeholder="Enter advantages title" value="<?php echo $data['advantages_title'] ?>">
+                                        <input name="advantages_title" type="text" class="form-control" placeholder="Enter advantages title" value="<?php echo $data['advantages_title'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Advantages 1</label>
-                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" value="<?php echo $data['advantages_1'] ?>">
+                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" value="<?php echo $data['advantages_1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 1 para</label>
-                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" value="<?php echo $data['advantages1_para'] ?>">
+                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" value="<?php echo $data['advantages1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Advantages 2</label>
-                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" value="<?php echo $data['advantages_2'] ?>">
+                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" value="<?php echo $data['advantages_2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 2 para</label>
-                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" value="<?php echo $data['advantages2_para'] ?>">
+                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" value="<?php echo $data['advantages2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Advantages 3</label>
-                                        <input name="advantages_3" type="text" class="form-control" placeholder="Enter advantages 3" value="<?php echo $data['advantages_3'] ?>">
+                                        <input name="advantages_3" type="text" class="form-control" placeholder="Enter advantages 3" value="<?php echo $data['advantages_3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 3 para</label>
-                                        <input name="advantages3_para" type="text" class="form-control" placeholder="Enter advantages 3 para" value="<?php echo $data['advantages3_para'] ?>">
+                                        <input name="advantages3_para" type="text" class="form-control" placeholder="Enter advantages 3 para" value="<?php echo $data['advantages3_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Advantages 4</label>
-                                        <input name="advantages_4" type="text" class="form-control" placeholder="Enter advantages 4" value="<?php echo $data['advantages_4'] ?>">
+                                        <input name="advantages_4" type="text" class="form-control" placeholder="Enter advantages 4" value="<?php echo $data['advantages_4'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 4 para</label>
-                                        <input name="advantages4_para" type="text" class="form-control" placeholder="Enter advantages 4 para" value="<?php echo $data['advantages4_para'] ?>">
+                                        <input name="advantages4_para" type="text" class="form-control" placeholder="Enter advantages 4 para" value="<?php echo $data['advantages4_para'] ?>" required>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label>Product Diversity Matrix</label>
-                                        <textarea name="product_diversity_matrix" class="summernote"><?php echo $data['product_diversity_matrix'] ?></textarea>
+                                        <textarea name="product_diversity_matrix" class="summernote" required><?php echo $data['product_diversity_matrix'] ?></textarea>
                                     </div>
+                                </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 2:
+//                                    break;
+//                                case 2:
                                     ?>
+                            <div class="page_type_specific" id="page_type_2">
                                     <div class="form-group">
                                         <label>Advantages 1</label>
-                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" value="<?php echo $data['advantages_1'] ?>">
+                                        <input name="advantages_1" type="text" class="form-control" placeholder="Enter advantages 1" value="<?php echo $data['advantages_1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 1 para</label>
-                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" value="<?php echo $data['advantages1_para'] ?>">
+                                        <input name="advantages1_para" type="text" class="form-control" placeholder="Enter advantages 1 para" value="<?php echo $data['advantages1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Advantages 2</label>
-                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" value="<?php echo $data['advantages_2'] ?>">
+                                        <input name="advantages_2" type="text" class="form-control" placeholder="Enter advantages 2" value="<?php echo $data['advantages_2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>advantages 2 para</label>
-                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" value="<?php echo $data['advantages2_para'] ?>">
+                                        <input name="advantages2_para" type="text" class="form-control" placeholder="Enter advantages 2 para" value="<?php echo $data['advantages2_para'] ?>" required>
                                     </div>
-                                    
+                                    </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 3:
+//                                    break;
+//                                case 3:
                                     ?>
+                                    <div class="page_type_specific" id="page_type_3">
                                     <div class="form-group">
                                         <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>">
+                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>">
+                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>">
+                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>">
+                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>">
+                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>">
+                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>">
+                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>">
+                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>">
+                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose</label>
-                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" value="<?php echo $data['why_choose'] ?>">
+                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" value="<?php echo $data['why_choose'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 1</label>
-                                        <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1" value="<?php echo $data['why_choose1'] ?>">
+                                        <input name="why_choose1" type="text" class="form-control" placeholder="Enter why choose 1" value="<?php echo $data['why_choose1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 1 Para</label>
-                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" value="<?php echo $data['why_choose1_para'] ?>">
+                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" value="<?php echo $data['why_choose1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 2</label>
-                                        <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2" value="<?php echo $data['why_choose2'] ?>">
+                                        <input name="why_choose2" type="text" class="form-control" placeholder="Enter why choose 2" value="<?php echo $data['why_choose2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 2 Para</label>
-                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" value="<?php echo $data['why_choose2_para'] ?>">
+                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" value="<?php echo $data['why_choose2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 3</label>
-                                        <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3" value="<?php echo $data['why_choose3'] ?>">
+                                        <input name="why_choose3" type="text" class="form-control" placeholder="Enter why choose 3" value="<?php echo $data['why_choose3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose 3 Para</label>
-                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" value="<?php echo $data['why_choose3_para'] ?>">
+                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" value="<?php echo $data['why_choose3_para'] ?>" required>
                                     </div>
-                                    
+                                    </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 4:
+//                                    break;
+//                                case 4:
                                     ?>
+                                    <div class="page_type_specific" id="page_type_4">
                                     <div class="form-group">
                                         <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>">
+                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>">
+                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>">
+                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>">
+                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>">
+                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>">
+                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>">
+                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>">
+                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>">
+                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Why Choose</label>
-                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" value="<?php echo $data['why_choose'] ?>">
+                                        <input name="why_choose" type="text" class="form-control" placeholder="Enter key why choose" value="<?php echo $data['why_choose'] ?>" required>
                                     </div>
 <!--                                    <div class="form-group">
                                         <label>Why Choose 1</label>
@@ -366,7 +376,7 @@ $this->load->view('admin/layout/sidebar');
                                     </div>-->
                                     <div class="form-group">
                                         <label>Why Choose 1 Para</label>
-                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" value="<?php echo $data['why_choose1_para'] ?>">
+                                        <input name="why_choose1_para" type="text" class="form-control" placeholder="Enter why choose 1 para" value="<?php echo $data['why_choose1_para'] ?>" required>
                                     </div>
 <!--                                    <div class="form-group">
                                         <label>Why Choose 2</label>
@@ -374,7 +384,7 @@ $this->load->view('admin/layout/sidebar');
                                     </div>-->
                                     <div class="form-group">
                                         <label>Why Choose 2 Para</label>
-                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" value="<?php echo $data['why_choose2_para'] ?>">
+                                        <input name="why_choose2_para" type="text" class="form-control" placeholder="Enter why choose 2 para" value="<?php echo $data['why_choose2_para'] ?>" required>
                                     </div>
 <!--                                    <div class="form-group">
                                         <label>Why Choose 3</label>
@@ -382,150 +392,188 @@ $this->load->view('admin/layout/sidebar');
                                     </div>-->
                                     <div class="form-group">
                                         <label>Why Choose 3 Para</label>
-                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" value="<?php echo $data['why_choose3_para'] ?>">
+                                        <input name="why_choose3_para" type="text" class="form-control" placeholder="Enter why choose 3 para" value="<?php echo $data['why_choose3_para'] ?>" required>
+                                    </div>
                                     </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 5:
+//                                    break;
+//                                case 5:
                                     ?>
+                                    <div class="page_type_specific" id="page_type_5">
                                     <div class="form-group">
                                         <label>Technology</label>
-                                        <input name="technology" type="text" class="form-control" placeholder="Enter technology" value="<?php echo $data['technology'] ?>">
+                                        <input name="technology" type="text" class="form-control" placeholder="Enter technology" value="<?php echo $data['technology'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Benefits</label>
-                                        <textarea name="benefits" class="summernote"><?php echo $data['benefits'] ?></textarea>
+                                        <textarea name="benefits" class="summernote" required><?php echo $data['benefits'] ?></textarea>
                                     </div>
+                                        </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 6:
+//                                    break;
+//                                case 6:
                                     ?>
+                                    <div class="page_type_specific" id="page_type_6">
                                     <div class="form-group">
                                         <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>">
+                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>">
+                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>">
+                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>">
+                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>">
+                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>">
+                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>">
+                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>">
+                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>">
+                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Need Title</label>
-                                        <input name="need_title" type="text" class="form-control" placeholder="Enter key need title" value="<?php echo $data['need_title'] ?>">
+                                        <input name="need_title" type="text" class="form-control" placeholder="Enter key need title" value="<?php echo $data['need_title'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Need Para</label>
-                                        <input name="need_para" type="text" class="form-control" placeholder="Enter key need para" value="<?php echo $data['need_para'] ?>">
+                                        <input name="need_para" type="text" class="form-control" placeholder="Enter key need para" value="<?php echo $data['need_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>key Features Title</label>
-                                        <input name="key_features_title" type="text" class="form-control" placeholder="Enter key features title" value="<?php echo $data['key_features_title'] ?>">
+                                        <input name="key_features_title" type="text" class="form-control" placeholder="Enter key features title" value="<?php echo $data['key_features_title'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features Para</label>
-                                        <input name="key_features_para" type="text" class="form-control" placeholder="Enter key features para" value="<?php echo $data['key_features_para'] ?>">
+                                        <input name="key_features_para" type="text" class="form-control" placeholder="Enter key features para" value="<?php echo $data['key_features_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Choose Title</label>
-                                        <input name="choose_title" type="text" class="form-control" placeholder="Enter choose title" value="<?php echo $data['choose_title'] ?>">
+                                        <input name="choose_title" type="text" class="form-control" placeholder="Enter choose title" value="<?php echo $data['choose_title'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Choose Para</label>
-                                        <input name="choose_para" type="text" class="form-control" placeholder="Enter choose para" value="<?php echo $data['choose_para'] ?>">
+                                        <input name="choose_para" type="text" class="form-control" placeholder="Enter choose para" value="<?php echo $data['choose_para'] ?>" required>
                                     </div>
+                                        </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                case 7:
+//                                    break;
+//                                case 7:
                                     ?>
+                            <div class="page_type_specific" id="page_type_7">
                                     <div class="form-group">
                                         <label>Key Features</label>
-                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>">
+                                        <input name="key_features" type="text" class="form-control" placeholder="Enter key features" value="<?php echo $data['key_features'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1</label>
-                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>">
+                                        <input name="key_features1" type="text" class="form-control" placeholder="Enter key features 1" value="<?php echo $data['key_features1'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 1 Para</label>
-                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>">
+                                        <input name="key_features1_para" type="text" class="form-control" placeholder="Enter key features1 para" value="<?php echo $data['key_features1_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2</label>
-                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>">
+                                        <input name="key_features2" type="text" class="form-control" placeholder="Enter key features 2" value="<?php echo $data['key_features2'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 2 Para</label>
-                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>">
+                                        <input name="key_features2_para" type="text" class="form-control" placeholder="Enter key features 2 para" value="<?php echo $data['key_features2_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3</label>
-                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>">
+                                        <input name="key_features3" type="text" class="form-control" placeholder="Enter key features 3" value="<?php echo $data['key_features3'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 3 Para</label>
-                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>">
+                                        <input name="key_features3_para" type="text" class="form-control" placeholder="Enter key features 3 para" value="<?php echo $data['key_features3_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4</label>
-                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>">
+                                        <input name="key_features4" type="text" class="form-control" placeholder="Enter key features 4" value="<?php echo $data['key_features4'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 4 Para</label>
-                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>">
+                                        <input name="key_features4_para" type="text" class="form-control" placeholder="Enter key features 4 para" value="<?php echo $data['key_features4_para'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 5</label>
-                                        <input name="key_features5" type="text" class="form-control" placeholder="Enter key features 5" value="<?php echo $data['key_features5'] ?>">
+                                        <input name="key_features5" type="text" class="form-control" placeholder="Enter key features 5" value="<?php echo $data['key_features5'] ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Key Features 5 Para</label>
-                                        <input name="key_features5_para" type="text" class="form-control" placeholder="Enter key features 5 para" value="<?php echo $data['key_features5_para'] ?>">
+                                        <input name="key_features5_para" type="text" class="form-control" placeholder="Enter key features 5 para" value="<?php echo $data['key_features5_para'] ?>" required>
                                     </div>
+                                </div>
                                     <?php
 //                                    echo "Foo\n";
-                                    break;
-                                default:
+//                                    break;
+//                                default:
 //                                    echo "Bar\n";
-                                    break;
-                            }
+//                                    break;
+//                            }
                             ?>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea name="description" class="summernote"><?php echo $data['description'] ?></textarea>
+                                <textarea name="description" class="summernote" required><?php echo $data['description'] ?></textarea>
                             </div>
                             <div class="form-group">
                                <label>Conclusion</label>
-                               <textarea name="conclusion" class="summernote"><?php echo $data['conclusion'] ?></textarea>
+                               <textarea name="conclusion" class="summernote" required><?php echo $data['conclusion'] ?></textarea>
+                            </div>
+
+                            <div class="form-group border rounded p-2">
+                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                                <label class="text-black font-w500">Upload Images</label>
+                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <!--required-->
+                                        <input name="images[]" type="file" class="custom-file-input" > 
+                                        <label class="custom-file-label selected">Choose File</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group border rounded p-2">
+                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                                <label class="text-black font-w500">Upload Videos</label>
+                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <!--required-->
+                                        <input name="videos[]" type="file" class="custom-file-input" > 
+                                        <label class="custom-file-label selected">Choose File</label>
+                                    </div>
+                                </div>
                             </div>
                             
                             <!--<div class="form-group">-->
@@ -641,3 +689,18 @@ $this->load->view('admin/layout/sidebar');
 <?php $this->load->view('admin/layout/footer'); ?>
 
 <!--**********************************footer End***********************************-->
+<script>
+    $(document).ready(function () {
+//    console.log( "ready!" );
+//alert();
+        var id = $("#page_type").val();
+        $('#page_type_'+id).css('display','block');
+    });
+    
+    $("#page_type").change(function(){
+//        alert("The text has been changed.");
+               var id = $(this).val();
+        $('.page_type_specific').css('display','none');
+        $('#page_type_'+id).css('display','block');
+    });
+</script>

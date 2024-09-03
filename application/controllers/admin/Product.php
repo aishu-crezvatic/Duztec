@@ -39,6 +39,7 @@ class Product extends CI_Controller {
 //        print_r($_FILES);
 //        exit;
 
+        //Images
         $config['upload_path'] = 'uploads/product/image';
         // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
         $config['allowed_types'] = '*';
@@ -80,8 +81,51 @@ class Product extends CI_Controller {
 //                $vendor_img = $data['images'];
             $product_imgs = '';
         }
+        
+        //Videos
+        $config['upload_path'] = 'uploads/product/video';
+        // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
+        $config['allowed_types'] = '*';
+        // $config['max_size']      = 2048; 
 
-        $page_type = trim($this->input->post('name'));
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+
+        // check logo upload or not    
+        $image_path = array();
+        if (!empty($_FILES['images']['name'][0])) {
+            // Upload multiple images
+            $files = $_FILES['videos'];
+            // print_r($_FILES['images']);
+            $file_count = is_array($files['name']) ? count($files['name']) : 0;
+
+            for ($i = 0; $i < $file_count; $i++) {
+                $_FILES['images']['name'] = $files['name'][$i];
+                $_FILES['images']['type'] = $files['type'][$i];
+                $_FILES['images']['tmp_name'] = $files['tmp_name'][$i];
+                $_FILES['images']['error'] = $files['error'][$i];
+                $_FILES['images']['size'] = $files['size'][$i];
+
+                if ($this->upload->do_upload('images')) {
+                    $images = $this->upload->data();
+                    $image_path[] = $images['file_name'];
+                }
+            }
+            //merge existing images with new one
+//                if($data['images']!=''){
+//                    $db_images = explode(',', $data['images']);
+//                    $db_and_upload_merge = array_merge($db_images,$image_path);
+//                    $vendor_img = implode(',', $db_and_upload_merge);
+//                }else{
+            $product_vids = implode(',', $image_path);
+//                }                
+        } else {
+            // fetch existing image name
+//                $vendor_img = $data['images'];
+            $product_vids = '';
+        }
+
+        $page_type = trim($this->input->post('page_type'));
 
         switch ($page_type) {
             case 1:
@@ -102,6 +146,7 @@ class Product extends CI_Controller {
                     'product_diversity_matrix' => trim($this->input->post('product_diversity_matrix')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -119,6 +164,7 @@ class Product extends CI_Controller {
                     'advantages2_para' => trim($this->input->post('advantages2_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -148,6 +194,7 @@ class Product extends CI_Controller {
                     'why_choose3_para' => trim($this->input->post('why_choose3_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -174,6 +221,7 @@ class Product extends CI_Controller {
                     'why_choose3_para' => trim($this->input->post('why_choose3_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -189,6 +237,7 @@ class Product extends CI_Controller {
                     'benefits' => trim($this->input->post('benefits')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -217,6 +266,7 @@ class Product extends CI_Controller {
                     'choose_para' => trim($this->input->post('choose_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -241,6 +291,7 @@ class Product extends CI_Controller {
                     'key_features5_para' => trim($this->input->post('key_features5_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion')),
                     'status' => 0,
                     'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
@@ -275,6 +326,7 @@ class Product extends CI_Controller {
 //        echo "<pre>";
 //        print_r($data);
 //        exit;
+        //images
         $config['upload_path'] = 'uploads/product/image';
         // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
         $config['allowed_types'] = '*';
@@ -316,6 +368,49 @@ class Product extends CI_Controller {
             $product_imgs = $data['images'];
 //            $product_imgs = '';
         }
+        
+        //videos
+        $config['upload_path'] = 'uploads/product/video';
+        // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
+        $config['allowed_types'] = '*';
+        // $config['max_size']      = 2048; 
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+
+        // check logo upload or not    
+        $image_path = array();
+        if (!empty($_FILES['images']['name'][0])) {
+            // Upload multiple images
+            $files = $_FILES['images'];
+            // print_r($_FILES['images']);
+            $file_count = is_array($files['name']) ? count($files['name']) : 0;
+
+            for ($i = 0; $i < $file_count; $i++) {
+                $_FILES['images']['name'] = $files['name'][$i];
+                $_FILES['images']['type'] = $files['type'][$i];
+                $_FILES['images']['tmp_name'] = $files['tmp_name'][$i];
+                $_FILES['images']['error'] = $files['error'][$i];
+                $_FILES['images']['size'] = $files['size'][$i];
+
+                if ($this->upload->do_upload('images')) {
+                    $images = $this->upload->data();
+                    $image_path[] = $images['file_name'];
+                }
+            }
+            //merge existing images with new one
+            if ($data['images'] != '') {
+                $db_images = explode(',', $data['images']);
+                $db_and_upload_merge = array_merge($db_images, $image_path);
+                $product_vids = implode(',', $db_and_upload_merge);
+            } else {
+                $product_vids = implode(',', $image_path);
+            }
+        } else {
+            // fetch existing image name
+            $product_vids = $data['videos'];
+//            $product_imgs = '';
+        }
 
         $page_type = trim($this->input->post('name'));
 
@@ -338,6 +433,7 @@ class Product extends CI_Controller {
                     'product_diversity_matrix' => trim($this->input->post('product_diversity_matrix')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -353,6 +449,7 @@ class Product extends CI_Controller {
                     'advantages2_para' => trim($this->input->post('advantages2_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -380,6 +477,7 @@ class Product extends CI_Controller {
                     'why_choose3_para' => trim($this->input->post('why_choose3_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -404,6 +502,7 @@ class Product extends CI_Controller {
                     'why_choose3_para' => trim($this->input->post('why_choose3_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -417,6 +516,7 @@ class Product extends CI_Controller {
                     'benefits' => trim($this->input->post('benefits')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -443,6 +543,7 @@ class Product extends CI_Controller {
                     'choose_para' => trim($this->input->post('choose_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
@@ -465,6 +566,7 @@ class Product extends CI_Controller {
                     'key_features5_para' => trim($this->input->post('key_features5_para')),
                     'description' => trim($this->input->post('description')),
                     'images' => $product_imgs,
+                    'videos' => $product_vids,
                     'conclusion' => trim($this->input->post('conclusion'))
                 ];
                 break;
