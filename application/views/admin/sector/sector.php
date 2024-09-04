@@ -50,13 +50,13 @@
                                     <td><?php echo strlen($item['description']) > 100 ? substr(htmlspecialchars($item['description']), 0, 100) . '...' : htmlspecialchars($item['description']); ?>
                                     </td>
                                     <td><?php if ($item['image']): ?><img
-                                                src="<?php echo base_url('uploads/' . $item['image']); ?>" class="img-fluid"
+                                                src="<?php echo base_url('uploads/sectors/' . $item['image']); ?>" class="img-fluid"
                                                 style="max-width: 100px;"><?php endif; ?></td>
                                     <td>
                                         <?php if ($item['work_images']): ?>
                                             <?php $images = explode(',', $item['work_images']); ?>
                                             <?php foreach ($images as $img): ?>
-                                                <img src="<?php echo base_url('uploads/' . $img); ?>" class="img-fluid"
+                                                <img src="<?php echo base_url('uploads/sectors/' . $img); ?>" class="img-fluid"
                                                     style="max-width: 100px;">
                                             <?php endforeach; ?>
                                         <?php endif; ?>
@@ -115,7 +115,7 @@
                         <label for="image">Image:</label>
                         <input type="file" class="form-control" id="image" name="image">
                         <?php if ($edit_mode && $current_item['image']): ?>
-                            <img src="<?php echo base_url('uploads/' . $current_item['image']); ?>" class="img-fluid"
+                            <img src="<?php echo base_url('uploads/sectors/' . $current_item['image']); ?>" class="img-fluid"
                                 style="max-width: 100px;">
                         <?php endif; ?>
                     </div>
@@ -126,7 +126,7 @@
                         <?php if ($edit_mode && $current_item['work_images']): ?>
                             <?php $images = explode(',', $current_item['work_images']); ?>
                             <?php foreach ($images as $img): ?>
-                                <img src="<?php echo base_url('uploads/' . $img); ?>" class="img-fluid"
+                                <img src="<?php echo base_url('uploads/sectors/' . $img); ?>" class="img-fluid"
                                     style="max-width: 100px;">
                             <?php endforeach; ?>
                         <?php endif; ?>

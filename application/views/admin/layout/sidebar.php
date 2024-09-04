@@ -48,6 +48,11 @@
                         <span class="nav-text">Gallery</span>
                     </a>
                 </li>
+                <li><a href="<?php echo base_url() ?>admin/sector" class="ai-icon" aria-expanded="false">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span class="nav-text">Sector</span>
+                    </a>
+                </li>
                 <li><a href="<?php echo base_url() ?>admin/product" class="ai-icon" aria-expanded="false">
                         <i class="fa-solid fa-chart-simple"></i>
                         <span class="nav-text">Product</span>

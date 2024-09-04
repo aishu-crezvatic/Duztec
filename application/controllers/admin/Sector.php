@@ -44,7 +44,7 @@ class Sector extends CI_Controller
         $id = $this->input->post('sd_id');
         $is_edit = !empty($id);
 
-        $config['upload_path'] = './uploads/';
+        $config['upload_path'] = './uploads/sectors';
         $config['allowed_types'] = '*'; 
         $config['max_size'] = 20048; 
         $this->load->library('upload', $config);
