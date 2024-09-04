@@ -13,8 +13,6 @@
 	class="floating-social-icons d-flex flex-column gap-1 align-items-center bg-white p-2 justify-content-center mx-auto">
 	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
 			class="fab fa-facebook-f fs-3 navyGreen "></i></a>
-<!--	<a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
-			class="fab fa-facebook-f fs-3 navyGreen "></i></a>-->
 	<!-- <a href="#"><i class="fab fa-behance-square fs-3"></i></a> -->
 	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
 			class="fab fa-youtube fs-3 navyGreen "></i></a>
@@ -22,12 +20,6 @@
 			class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
 	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
 			class="fab fa-instagram fs-3 navyGreen "></i></a>
-<!--	<a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
-			class="fab fa-youtube fs-3 navyGreen "></i></a>
-	<a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
-			class="fab fa-linkedin-in fs-3 navyGreen "></i></a>
-	<a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
-			class="fab fa-instagram fs-3 navyGreen "></i></a>-->
 
 	<!-- <a href="#"><i class="fab fa-pinterest fs-3"></i></a> -->
 	<span></span>
@@ -133,11 +125,11 @@
 				<div class="footer-menu">
 					<ul>
 						<!--<li><a href="">FAQ</a></li>-->
-						<li><a href="<?PHP echo base_url() ?>term-and-condition">Terms & conditions</a></li>
+						<li><a href="<?php echo base_url().'term-and-condition'; ?>">Term & conditions</a></li>
 						<!--<li><a href="">Reporting</a></li>-->
 						<!--<li><a href="">Documentation</a></li>-->
 						<!--<li><a href="">Suport Policy</a></li>-->
-						<li><a href="<?PHP echo base_url() ?>privacy-and-policy">Privacy Policy</a></li>
+						<li><a href="<?php echo base_url().'privacy-and-policy'; ?>">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
@@ -213,8 +205,8 @@
 			<div class="col-lg-6 col-md-6">
 				<div class="footer-menu-right">
 					<ul>
-						<li><a href="<?PHP echo base_url() ?>term-and-condition">Terms & conditions</a></li>
-						<li><a class="br-none" href="<?PHP echo base_url() ?>privacy-and-policy">Privacy Policy</a></li>
+						<li><a href="<?php echo base_url().'term-and-condition'; ?>">Term & conditions</a></li>
+						<li><a class="br-none" href="<?php echo base_url().'privacy-and-policy'; ?>">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
@@ -314,70 +306,73 @@
 
 
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const popupForm = document.getElementById('popupForm');
-            const closePopup = document.getElementById('closePopup');
-            const captchaQuestion = document.getElementById('captchaQuestion');
-            const phoneInput = document.getElementById('phone');
-            const phonePattern = /^\d{10}$/;
-            let captchaAnswer;
+	document.addEventListener("DOMContentLoaded", function () {
+		const popupForm = document.getElementById('popupForm');
+		const closePopup = document.getElementById('closePopup');
+		const phoneInput = document.getElementById('phone');
+		const captchaQuestion = document.getElementById('captchaQuestion');
+		const phonePattern = /^\d{10}$/;
+		let captchaAnswer;
 
-            function generateCaptcha() {
-                const num1 = Math.floor(Math.random() * 10) + 1;
-                const num2 = Math.floor(Math.random() * 10) + 1;
-                captchaAnswer = num1 + num2;
-                captchaQuestion.textContent = `${num1} + ${num2} =`;
-            }
+		function generateCaptcha() {
+			const num1 = Math.floor(Math.random() * 10) + 1;
+			const num2 = Math.floor(Math.random() * 10) + 1;
+			captchaAnswer = num1 + num2;
+			captchaQuestion.textContent = `${num1} + ${num2} =`;
+		}
 
-            function showPopup() {
-                popupForm.style.display = 'flex';
-                generateCaptcha();
-            }
+		function showPopup() {
+			popupForm.style.display = 'flex';
+			generateCaptcha();
+		}
 
-            // Always show the popup form after page reload
-            showPopup();
+		// Always show the popup form after page reload
+		showPopup();
 
-            closePopup.addEventListener('click', () => {
-                popupForm.style.display = 'none';
-            });
+		closePopup.addEventListener('click', () => {
+			popupForm.style.display = 'none';
+		});
+		$(document).ready(function () {
 
-            $('#quoteForm').submit(function (e) {
-                e.preventDefault();
+			$('#quoteForm').submit(function (e) {
+				e.preventDefault();
 
-                const captchaInput = $('#captcha').val();
-                if (parseInt(captchaInput) !== captchaAnswer) {
-                    alert('Captcha is incorrect.');
-                    return;
-                }
+				const captchaInput = $('#captcha').val();
+				if (parseInt(captchaInput) !== captchaAnswer) {
+					alert('Captcha is incorrect.');
+					return;
+				}
 
-                // Phone number validation
-                if (!phonePattern.test(phoneInput.value)) {
-                    alert('Please enter a valid 10-digit phone number.');
-                    return;
-                }
+				// Phone number validation
+				if (!phonePattern.test(phoneInput.value)) {
+					alert('Please enter a valid 10-digit phone number.');
+					return;
+				}
 
-                // Debug: Print form data to console
-                const formData = $(this).serializeArray();
-                console.log('Form Data:', formData);
+				// Debug: Print form data to console
+				const formData = $(this).serializeArray();
+				console.log('Form Data:', formData);
 
-                $.ajax({
-                    url: $(this).attr('action'),
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        console.log('Response from server:', response);
-                        alert('Form submitted successfully!');
-                        $('#popupForm').hide();
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('An error occurred:', error);
-                        alert('An error occurred: ' + error);
-                    }
-                });
-            });
-        });
-    </script>
-	
+				$.ajax({
+					url: $(this).attr('action'),
+					type: 'POST',
+					data: $(this).serialize(),
+					success: function (response) {
+						console.log('Response from server:', response);
+						alert('Form submitted successfully!');
+						$('#popupForm').hide();
+					},
+					error: function (xhr, status, error) {
+						console.error('An error occurred:', error);
+						alert('An error occurred: ' + error);
+					}
+				});
+			});
+		})
+
+	});
+</script>
+
 
 
 <!-- ============================================================== -->
