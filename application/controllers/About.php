@@ -21,9 +21,9 @@ class About extends CI_Controller {
          $data['blog_categories'] = $this->frontend_model->get_blog_categories();
         $data['contact'] = $this->frontend_model->get_contact();
 
-    //    echo "<pre>";
-    //    print_r($data);
-    //    exit;
+//        echo "<pre>";
+//        print_r($data);
+//        exit;
         $this->load->view('frontend/about', $data);
     }
 }

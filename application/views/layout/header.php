@@ -65,11 +65,11 @@
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop class="w-100">
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
             <source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4" w-100>
-=======
-            <source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4">
->>>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544
+<!--=======-->
+            <!--<source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4">-->
+<!-->>>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544-->
             Your browser does not support the video tag.
         </video>
     </div>

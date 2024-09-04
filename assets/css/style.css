@@ -1411,6 +1411,7 @@ body {
 
 .breadcumn-section-about {
     background: url(../images/aboutUs-banner/aboutUs-banner.png);
+    /*background: url(../images/aboutUs-banner/aboutUs-banner.png);*/
     padding-top: 280px;
     padding-bottom: 300px;
     background-repeat: no-repeat;

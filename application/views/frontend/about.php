@@ -1,10 +1,18 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header'); 
+<?php $this->load->view('layout/header');  ?>
+<style>
+.breadcumn-section-about {
+    background: url("<?php echo base_url().'assets/images/aboutUs-banner/'.$about_us[0]['hero_banner_image']; ?>");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+</style>
 
-// echo '<pre>';
-// print_r($about_us);
-// exit;
-
+<!--// echo "<pre>';-->
+<!--// print_r($about_us);-->
+<!--// exit;-->
+<?php
 if (!empty($about_us)) : ?>
 				<?php foreach ($about_us as $about_us) : 
 ?>

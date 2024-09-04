@@ -13,9 +13,10 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
 		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
+			<video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
 				autoplay muted playsinline loop>
-				<source src="assets/video/hero_video1.MP4" type="video/mp4">
+                            <source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
+				<!--<source src="assets/video/hero_video1.MP4" type="video/mp4">-->
 				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
 			</video>
 
