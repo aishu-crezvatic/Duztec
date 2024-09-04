@@ -126,6 +126,43 @@
     background-repeat: no-repeat;
     vertical-align: middle; /* Adjust this based on your layout */
 }
+
+.flaticon-power-ind:before {
+  /* content: "\f103"; */
+  content: "";
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    background-image: url('../images/Animated_Icons/PowerIndustryicon.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Adjust this based on your layout */
+}
+
+.flaticon-agri-ind:before {
+  /* content: "\f103"; */
+  content: "";
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    background-image: url('../images/Animated_Icons/Agriculturecicon.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Adjust this based on your layout */
+}
+
+.flaticon-crusher-ind:before {
+  /* content: "\f103"; */
+  content: "";
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    background-image: url('../images/Animated_Icons/CrusherIndustry.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Adjust this based on your layout */
+}
+
 .flaticon-world:before {
   /* content: "\f104"; */
 
