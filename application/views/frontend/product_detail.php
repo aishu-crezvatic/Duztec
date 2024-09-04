@@ -658,7 +658,28 @@
 					</div>
 				<?php } ?>
 				<div id="videos" class="tab-pane">
-					<p>Here are some videos.</p>
+					<!--<p>Here are some videos.</p>-->
+                                    <div class="call-do-action-abou style-two" style="padding-top: 30px;">
+                                        <div class="">
+                                            <div class="row justify-content-center gap-5">
+                                                    
+                                                <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+							<!--<h2 class="fw-bold about-title fs-1 py-2">A</h2>-->
+							<!--<p class="text-black">ASDF</p>-->
+                                                        <iframe width="400" height="260" src="https://www.youtube.com/embed/x4SmLxxH5gc" frameborder="0" allowfullscreen></iframe>
+
+						</div>
+						<!--<div class="row justify-content-center mt-5">-->
+						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+							<!--<h2 class="fw-bold about-title fs-1 py-2">B</h2>-->
+							<!--<p class="text-black ">ZXCV</p>-->
+                                                        <iframe width="400" height="260" src="https://www.youtube.com/embed/HAIP1RNg4zA" frameborder="0" allowfullscreen></iframe>
+
+						</div>
+                                                
+                                            </div>
+                                        </div>      
+                                    </div>
 				</div>
 			</div>
 		</div>
