@@ -176,7 +176,7 @@
 							<p>no mail available</p>
 						<?php endif; ?>
 					</span>
-					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt=""
+					<img class="w-75" src="<?php echo base_url() ?>assets\images\ProductWithCity_FooterImage (2).png" alt=""
 						style="margin-top:-60px">
 				</div>
 
@@ -190,7 +190,7 @@
 		</div>
 	</div>
 	<div class="footerImg">
-		<img src="assets/images/Product With City02-01.png" alt="">
+		<img class="w-100" src="<?php echo base_url() ?>assets/images/Product With City02-01.png" alt="error to load">
 	</div>
 </div>
 <!-- footer-copyright-section -->
