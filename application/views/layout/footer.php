@@ -78,7 +78,7 @@
 				<div class="footer-text">
 					<p>We are experienced professionals who understand that It services is changing, and are true
 						partners who care about your future business success.We are experienced professionals who
-						understand that It services is changing,</p>
+						understand that It services is ,</p>
 				</div>
 				<div class="footer-address">
 					<div class="footer-social-icon d-flex">
@@ -91,14 +91,7 @@
 										class="fab fa-instagram"></i></a></li>
 							<li><a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
 										class="fab fa-linkedin-in"></i></a></li>
-<!--							<li><a href="https://www.facebook.com/profile.php?id=100063857210642" target="blank"><i
-										class="fab fa-facebook-f"></i></a></li>
-							<li><a href="https://www.youtube.com/@DuztecEngineeringPvt.Ltd." target="blank"><i
-										class="fab fa-youtube"></i></a></li>
-							<li><a href="https://www.instagram.com/duztec_engineering/" target="blank"><i
-										class="fab fa-instagram"></i></a></li>
-							<li><a href="https://in.linkedin.com/company/duztec-engineering" target="blank"><i
-										class="fab fa-linkedin-in"></i></a></li>-->
+
 						</ul>
 					</div>
 				</div>
@@ -125,18 +118,20 @@
 				<div class="footer-menu">
 					<ul>
 						<!--<li><a href="">FAQ</a></li>-->
-						<li><a href="<?php echo base_url().'term-and-condition'; ?>">Term & conditions</a></li>
+						<li><a href="<?php echo base_url() . 'term-and-condition'; ?>">Term & conditions</a></li>
 						<!--<li><a href="">Reporting</a></li>-->
 						<!--<li><a href="">Documentation</a></li>-->
 						<!--<li><a href="">Suport Policy</a></li>-->
-						<li><a href="<?php echo base_url().'privacy-and-policy'; ?>">Privacy Policy</a></li>
+						<li><a href="<?php echo base_url() . 'privacy-and-policy'; ?>">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-logo">
-					<img style="width: 100%;" src="<?php echo base_url(); ?>assets/images/duztecLogo.png" alt="">
+					<!-- <img style="width: 100%;" src="<?php echo base_url(); ?>assets/images/duztecLogo.png" alt="err"> -->
+					<img src="<?php echo base_url()?>assets/images/data_tech_logo-white bg.png" alt="" style="height: auto; width:100% ">
 					<!-- <img src="assets/images/fav-icon/transparent-logo.png" alt=""> -->
+
 				</div>
 				<div class="footer-right-text">
 					<p>We are experienced professionals who understand that It services is</p>
@@ -176,8 +171,8 @@
 							<p>no mail available</p>
 						<?php endif; ?>
 					</span>
-					<img class="w-75" src="assets\images\ProductWithCity_FooterImage (2).png" alt=""
-						style="margin-top:-60px">
+					<img class="w-75" src="<?php echo base_url() ?>assets\images\ProductWithCity_FooterImage (2).png"
+						alt="" style="margin-top:-60px">
 				</div>
 
 				<!-- <div class="footer-btn">
@@ -190,7 +185,7 @@
 		</div>
 	</div>
 	<div class="footerImg">
-		<img src="assets/images/Product With City02-01.png" alt="">
+		<img class="w-100" src="<?php echo base_url() ?>assets/images/Product With City02-01.png" alt="error to load">
 	</div>
 </div>
 <!-- footer-copyright-section -->
@@ -205,8 +200,9 @@
 			<div class="col-lg-6 col-md-6">
 				<div class="footer-menu-right">
 					<ul>
-						<li><a href="<?php echo base_url().'term-and-condition'; ?>">Term & conditions</a></li>
-						<li><a class="br-none" href="<?php echo base_url().'privacy-and-policy'; ?>">Privacy Policy</a></li>
+						<li><a href="<?php echo base_url() . 'term-and-condition'; ?>">Term & conditions</a></li>
+						<li><a class="br-none" href="<?php echo base_url() . 'privacy-and-policy'; ?>">Privacy Policy</a>
+						</li>
 					</ul>
 				</div>
 			</div>

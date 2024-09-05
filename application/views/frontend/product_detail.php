@@ -207,9 +207,9 @@
 							<!--</div>-->
 						</div>
 					</div>
-					<div class="call-shape">
+					<!-- <div class="call-shape">
 						<img src="assets/images/call-shape.png" alt="thumb">
-					</div>
+					</div> -->
 				</div>
 			<?php } ?>
 			<!------------------------>
