@@ -58,15 +58,17 @@ $route['sector'] = 'Sec­tors';
 
 $route['translate_uri_dashes'] = FALSE;
 // Product detail page
-$route['product_detail/(:any)'] = "product_detail/index/$1"; 
+$route['product-detail/(:any)'] = "product_detail/index/$1"; 
 
 // Blog detail page
 
-$route['blog_details/(:any)'] = "blog_details/index/$1"; 
+$route['blog-details/(:any)'] = "blog_details/index/$1"; 
 $route['sectors/(:any)'] = "sectors/index/$1"; 
 $route['blog/(:any)'] = "blog/index/$1"; 
 //$route['product_category/(:any)'] = "product_category/index/$1"; 
-$route['product_sub_category/(:any)'] = "product_sub_category/index/$1"; 
+$route['product-sub-category/(:any)'] = "product_sub_category/index/$1"; 
+$route['product-category'] = "product_category/index"; 
+$route['contact-us'] = "contact_us/index"; 
 
 $route['term-and-condition'] = "index/term_and_condition"; 
 $route['privacy-and-policy'] = "index/privacy_and_policy"; 

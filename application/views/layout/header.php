@@ -196,7 +196,7 @@
                                  </li>-->
 
                                     <li class="position-relative">
-                                        <a href="<?php echo base_url(); ?>product_category">Products <i class="fa fa-angle-down"></i></a>
+                                        <a href="<?php echo base_url(); ?>product-category">Products <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             
 <!--                                            <li class="position-relative">
@@ -233,7 +233,7 @@
                                                     <li class="position-relative">
                                                         <?php if ($sub_cat_count == 1) { ?>
                                                         <div class="drop-cat">
-                                                            <a href="<?php echo base_url() . 'product_sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
+                                                            <a href="<?php echo base_url() . 'product-sub-category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
                                                         </div>
                                                     <?php // }else{ ?>
                                                         <ul class="sub-prod">
@@ -249,7 +249,7 @@
                                                                         if($search_sc_id2 > 0 ) {
                                                                 ?>
                                                                 <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
-                                                                <li><a href="<?php echo base_url() . 'product_detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
+                                                                <li><a href="<?php echo base_url() . 'product-detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
                                                             <?php 
                                                                 
                                                                         }
@@ -260,7 +260,7 @@
                                                     <?php } ?>
                                                     </li>
                                                 <?php } else { ?>
-                                                    <li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
+                                                    <li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
                                                 <?php } ?>
                                             <?php } ?> 
                                          
@@ -284,7 +284,7 @@
                                     </ul>
                                 </li>
                                 <!-- <li><a href="gallery">Gallery</a></li> -->
-                                <li><a href="<?php echo base_url() ?>contact_us">Contact</a></li>
+                                <li><a href="<?php echo base_url() ?>contact-us">Contact</a></li>
                             </ul>
                             <!-- <div class="header-src-btn">
                                 <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
