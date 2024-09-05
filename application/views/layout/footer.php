@@ -98,11 +98,12 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-title">
-					<h2>Useful Links</h2>
+					<h2>Quick Link</h2>
 				</div>
 				<div class="footer-menu">
 					<ul>
 						<li><a href='<?php echo base_url(); ?>about'>About</a></li>
+						<li><a href='<?php echo base_url(); ?>product-category'>Products</a></li>
 						<!-- <li><a href="">News</a></li> -->
 						<!-- <li><a href="">Partners</a></li> -->
 						<!-- <li><a href="">Room Details</a></li> -->
@@ -113,7 +114,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-title">
-					<h2>Help?</h2>
+					<h2>Important Links</h2>
 				</div>
 				<div class="footer-menu">
 					<ul>

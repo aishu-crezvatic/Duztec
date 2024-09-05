@@ -288,7 +288,21 @@ if (!empty($home_page_data)): ?>
 
 				<div class=" row justify-content-center">
 					<div class="case_list owl-carousel">
+                                            <?php foreach ($blogs as $blog) { ?>
+                                                <a href="<?php echo base_url().'blog-details/'.$blog['b_id']; ?>">
 						<div class="single-case-study">
+							<div class="case-thumb">
+                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2><?php echo $blog['title']; ?></h2>
+									<h6>Read More</h6>
+<!--									<a href="case-study-details.html"><span>+</span></a>-->
+								</div>
+							</div>
+						</div>
+                                                    </a>
+                                            <?php } ?>
+<!--						<div class="single-case-study">
 							<div class="case-thumb">
 								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
 								<div class="case-content">
@@ -337,7 +351,7 @@ if (!empty($home_page_data)): ?>
 									<a href="case-study-details.html"><span>+</span></a>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>

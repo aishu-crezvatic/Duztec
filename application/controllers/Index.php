@@ -18,6 +18,7 @@ class Index extends CI_Controller {
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();
+        $data['blogs'] = $this->frontend_model->blog_detail();
         $data['home_page_data'] = $this->frontend_model->home_page();
         $data['contact'] = $this->frontend_model->get_contact();
         $data['images'] = $this->frontend_model->gallery();
