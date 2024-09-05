@@ -274,30 +274,25 @@ if (!empty($about_us)) : ?>
 <!-- ============================================================= -->
 <div class=" style-two">
 	<div class="">
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center py-5">
 					<h1>Contact Us</h1>
 				</div>
-			</div>
-			<div class="col-6 bg-1 position-relative Blackoverlay">
-				<img src="assets/images/contact-bg-1.png" alt="">
-				<div class="overText text-start abtOverText">
-					<h2 class="text-white">We have much more, </h2>
-					<h2 class="text-white">lets get started</h2>
-					<div class="btn bg-white fw-bold mt-2 px-2 rounded greenText">Collabrate with us &gt;</div>
-				</div>
-			</div>
-			<div class="col-6 position-relative Blueoverlay">
-				<img src="assets/images/contact-bg.png" alt="">
-				<div class="overText text-start abtOverText">
-					<h2 class="text-white greenText">We are happy to help you </h2>
-					<h2 class="text-white greenText">with our service </h2>
-					<div class="btn bg-white fw-bold mt-2 px-2 rounded text-primary">Yes I Want a Quote &gt;</div>
+			</div> 
+		</div> -->
+		<div class="row py-5">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<h1>We have more,</h1>
+							<h1>Products</h1>
 
-				</div>
-			</div>
-		</div>
+							<div class="slider-button text-center">
+								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+							</div>
+						</div>
+					</div>
+				</div> 
 	</div>
 	
 	</div>

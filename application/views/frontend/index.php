@@ -354,14 +354,15 @@ if (!empty($home_page_data)): ?>
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="section-title text-center">
-							<h1>We have much more,</h1>
-							<h1>let's get started</h1>
+							<h1>We have more,</h1>
+							<h1>Products</h1>
 
-							<button class="cta_button" type="button">Collaborate with us > </button>
+							<div class="slider-button text-center">
+								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+							</div>
 						</div>
 					</div>
-				</div>
-
+				</div> 
 			</div>
 		</div>
 	<?php endforeach; ?>
