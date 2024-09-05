@@ -123,7 +123,7 @@ if (!empty($home_page_data)): ?>
 									<!--<p><?php echo $product['conclusion']; ?></p>-->
 									<p>Lorem ipsum dolor sit amet.</p>
 									<a class="bottom-0 position-absolute"
-										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
+										href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>"
 										style="left:35%">Learn More</a>
 								</div>
 							</div>

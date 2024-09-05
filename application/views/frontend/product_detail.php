@@ -721,7 +721,7 @@
 							<h2><?php echo $product['name']; ?></h2>
 							<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
 							<!--<p><?php echo $product['conclusion']; ?></p>-->
-							<a href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>">Learn More</a>
+							<a href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>">Learn More</a>
 						</div>
 					</div>
 				<?php } ?>
