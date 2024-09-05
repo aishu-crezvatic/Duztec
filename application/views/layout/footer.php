@@ -360,17 +360,19 @@ if(cookie_consent != ""){
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const showForm = document.getElementById('showForm');
+        const showForm = document.querySelectorAll('.showForm2');
         const popupForm = document.getElementById('popupForm');
         const closePopup = document.getElementById('closePopup');
         const close = document.querySelector('.close');
         const captchaQuestion = document.getElementById('captchaQuestion');
         const phonePattern = /^\d{10}$/;
 
-        showForm.addEventListener('click', function (event) {
+        for (var i = 0; i < showForm.length; i++) {
+        showForm[i].addEventListener('click', function (event) {
             event.preventDefault(); // Prevent the default anchor behavior
             popupForm.style.display = 'flex'; // Show the popup
         });
+        }
 
         close.addEventListener('click', function () {
             popupForm.style.display = 'none';
