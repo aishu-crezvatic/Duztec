@@ -58,6 +58,51 @@
                 justify-content: center;
                 z-index: 9999;
             }
+            
+            /*cookie start*/
+            .cookie-notice {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  bottom: 0;
+  width: 100%;
+  background: #191919;
+  color: #F6F6F6;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+.cookie-notice a {
+  color: #F6F6F6;
+}
+.cookie-notice a:hover {
+  text-decoration: none;
+}
+.cookie-notice a:visited {
+  color: #F6F6F6;
+}
+.cookie-notice .cookie {
+  font-size: 2.2rem;
+  margin-right: 0.3rem;
+  margin-left: 1rem;
+}
+.cookie-notice .accept-cookies {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #F6F6F6;
+  color: #191919;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  margin-left: 3rem;
+  transition: 0.35s ease;
+}
+.cookie-notice .accept-cookies:hover {
+  box-shadow: 0.01rem 0.01rem 0.1rem #DDDDDD;
+}
+/*cookie end*/
         </style>
     </head>
 
