@@ -77,14 +77,14 @@
 								<div class="service-content">
 									<h2><?php echo $product['cat_name']; ?></h2>
 									<p><?php echo $product['cat_description']; ?></p>
-									<a href="product_sub_category/<?php echo $product['c_id']; ?>">Read More <i
+									<a href="<?php echo base_url() .'product-sub-category/'. $product['c_id']; ?>">Read More <i
 											class="fas fa-long-arrow-alt-right"></i></a>
 								</div>
 							</div>
 						</div>
 
 						<!--                                                        <div class="drop-cat">
-															<a href="<?php echo base_url() . 'product_sub_category/' . $product['p_id']; ?>"><?php echo $product['cat_name'] . ' '; ?><i class="fa fa-angle-down"></i></a>
+															<a href="<?php echo base_url() . 'product-sub-category/' . $product['p_id']; ?>"><?php echo $product['cat_name'] . ' '; ?><i class="fa fa-angle-down"></i></a>
 														</div>-->
 					<?php }
 					//                                                    else{ ?>
@@ -101,13 +101,13 @@
 							<div class="service-content">
 								<h2><?php echo $product['cat_name']; ?></h2>
 								<p><?php echo $product['cat_description']; ?></p>
-								<a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>">Read More <i
+								<a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>">Read More <i
 										class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>
 					</div>
 
-					<!--<li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>-->
+					<!--<li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>-->
 				<?php } ?>
 			<?php } ?>
 
