@@ -586,20 +586,21 @@ class Product extends CI_Controller {
 //            'name' => trim($this->input->post('name')),
 //            'description' => trim($this->input->post('description'))
 //        ];
-        $this->CommonModel->edit(DATABASE, $this->_table, $data, array('sc_id' => $this->input->post('sc_id')));
+        $this->CommonModel->edit(DATABASE, $this->_table, $data, array('p_id' => $this->input->post('p_id')));
         $this->session->set_flashdata('success', 'Product Updated');
         redirect(base_url($this->_view_folder));
     }
 
     public function delete() {
         $id = trim($this->input->post('id'));
-        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'sc_id', $id);
+        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'p_id', $id);
         $this->session->set_flashdata('success', 'Product Deleted');
         redirect(base_url($this->_view_folder));
     }
 
-    public function status($id) {
-        $this->CommonModel->status(DATABASE, $this->_table, 'sc_id', $id);
+    public function status() {
+        $id = trim($this->input->post('data'));
+        $this->CommonModel->status(DATABASE, $this->_table, 'p_id', $id); 
     }
 
 //    public function delete(){

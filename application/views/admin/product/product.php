@@ -693,7 +693,7 @@ $this->load->view('admin/layout/sidebar');
                                                 <!--<td><?php // echo $row['discount']        ?></td>-->
                                                 <td>
                                                     <div class="col-sm-9">
-                                                        <input data-id="<?php echo $row['p_id'] ?>" class="switch switchProduct" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> />
+                                                        <input data-id="<?php echo $row['p_id'] ?>" onclick="switchProduct(<?php echo $row['p_id'] ?>)" class="switch switchProduct" type="checkbox" <?php echo $row['status'] == 1 ? 'checked' : '' ?> />
                                                     </div>
                                                 </td>
                                                 <td><?php echo date('d/m/Y', strtotime($row['created_date'])) ?></td>
@@ -735,15 +735,26 @@ $this->load->view('admin/layout/sidebar');
         $('.page_type_specific').css('display','none');
         $('#page_type_'+id).css('display','block');
     });
-    $(".switchProduct").click(function () {
-        var id = $(this).attr("data-id");
+    function switchProduct(id) {
+//        var id = $(this).attr("data-id");
         $.post(
-                base_url + "admin/product/status/" + id, {
+                base_url + "admin/product/status", {
                     data: id
                 },
                 function (response) {
                     console.log(response);
                 }
         );
-    });
+    }
+//    $(".switchProduct").click(function () {
+//        var id = $(this).attr("data-id");
+//        $.post(
+//                base_url + "admin/product/status", {
+//                    data: id
+//                },
+//                function (response) {
+//                    console.log(response);
+//                }
+//        );
+//    });
 </script>
