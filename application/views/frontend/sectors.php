@@ -35,9 +35,10 @@
         <div class="row justify-content-between h-75">
             <div class="col-lg-7 col-md-12">
                 <div class="blog-thumb">
-                    <img id="industry-main-image" src="<?php echo base_url() ?>uploads/sectors/SectorImageGallary.png"
+                    <img id="industry-main-image" src="<?php echo base_url() ?>uploads/sectors/<?php echo $sector_detail[$selected_sector_index]['image']; ?>
+"
                         alt="" style="width:100%">
-                    <!-- >>>>>>> 1a2b803147bff879ef3e4101cdc54345312222ad -->
+                   
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 card col-12 p-0">
@@ -76,14 +77,14 @@
 
 
                 <?php foreach ($images as $item): ?>
-    <div style="display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 5px;">
-        <?php if ($item['is_video'] != 1): ?>
-            <!-- Image element -->
-            <img src="<?php echo base_url('uploads/gallery/' . $item['img_video']); ?>"
-                style="width: 150px; height: 100px; object-fit: cover; margin: 5px;" alt="Image">            
-        <?php endif; ?>
-    </div>
-<?php endforeach; ?>
+                    <div style="display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 5px;">
+                        <?php if ($item['is_video'] != 1): ?>
+                            <!-- Image element -->
+                            <img src="<?php echo base_url('uploads/gallery/' . $item['img_video']); ?>"
+                                style="width: 150px; height: 100px; object-fit: cover; margin: 5px;" alt="Image">
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
 
             </div>
         </div>
