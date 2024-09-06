@@ -278,7 +278,7 @@ $this->load->view('admin/layout/sidebar');
     $(".switchProduct").click(function () {
         var id = $(this).attr("data-id");
         $.post(
-                base_url + "admin/sub_category/status/" + id, {
+                base_url + "admin/sub_category/status/", {
                     data: id
                 },
                 function (response) {

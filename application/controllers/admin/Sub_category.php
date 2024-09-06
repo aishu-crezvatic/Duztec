@@ -64,7 +64,8 @@ class Sub_category extends CI_Controller {
         redirect(base_url($this->_view_folder));
     }
 
-    public function status($id) {
+    public function status() {
+        $id = trim($this->input->post('data'));
         $this->CommonModel->status(DATABASE, $this->_table, 'sc_id', $id);
     }
     
