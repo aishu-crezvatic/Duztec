@@ -370,8 +370,8 @@ if(cookie_consent != ""){
 
         for (var i = 0; i < showForm.length; i++) {
         showForm[i].addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default anchor behavior
-            popupForm.style.display = 'flex'; // Show the popup
+            event.preventDefault(); 
+            popupForm.style.display = 'flex'; 
         });
         }
 
@@ -391,7 +391,7 @@ if(cookie_consent != ""){
 
         function showPopup() {
             popupForm.style.display = 'flex';
-            generateCaptcha(); // Generate captcha when popup is shown
+            generateCaptcha(); 
         }
 
         // Show popup only if it hasn't been shown in this session

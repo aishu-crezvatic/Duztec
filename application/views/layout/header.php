@@ -211,41 +211,20 @@
                                 <li><a href="<?php echo base_url()?>index"> <i class="fas fa-home"></i></a>
 
                                 </li>
-                                <li><a href="<?php echo base_url() ?>about">About Us</a>
-
-                                </li>
-<!--                                <li class="position-relative">
-                                    <a href="<?php echo base_url() ?>product">Products <i class="fa fa-angle-down"></i></a>
+                                <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li class="position-relative">
-                                            <div class="drop-cat">
-                                                <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
-                                            </div>
-                                            <ul class="sub-prod">
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mosquito</a></li>
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Godust</a></li>
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mist Beams</a></li>
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Double Barrel System</a></li>
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">HPDS</a></li>
-                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">SFDS</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Odur Control System</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Waste Water Evaporation</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Road Washing System</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Fog Curtain</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Truck Mounted Mist Beams</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Trolly Mounted Mist Beams</a></li>
-                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Cooling and Humidification</a></li>
+                                        <?php foreach ($sectors as $sector) {  ?>
+                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
+                                        <?php } ?>
                                     </ul>
-                                 </li>-->
+                                </li>
 
-                                    <li class="position-relative">
+                                <li class="position-relative">
                                         <a href="<?php echo base_url(); ?>product-category">Products <i class="fa fa-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             
-<!--                                            <li class="position-relative">
-                                                <div class="drop-cat">
+                                             <!--<li class="position-relative">
+                                                    <div class="drop-cat">
                                                     <a href="">A<i class="fa fa-angle-down"></i></a>
                                                 </div>
                                                 <ul class="sub-prod">
@@ -312,15 +291,40 @@
                                                     
                                         </ul>
                                 </li>
-                                <li><a href="#">Sectors <i class="fa fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <?php foreach ($sectors as $sector) {  ?>
-                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </li>
-
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
+
+                                <li><a href="<?php echo base_url() ?>about">About Us</a>
+
+                                </li>
+<!--                                <li class="position-relative">
+                                    <a href="<?php echo base_url() ?>product">Products <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="position-relative">
+                                            <div class="drop-cat">
+                                                <a href="#">Dust Suppression <i class="fa fa-angle-down"></i></a>
+                                            </div>
+                                            <ul class="sub-prod">
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mosquito</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Godust</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Mist Beams</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">Double Barrel System</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">HPDS</a></li>
+                                                <li><a href="<?php echo base_url() ?>product_detail/index/2">SFDS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Odur Control System</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Waste Water Evaporation</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Road Washing System</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Fog Curtain</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Truck Mounted Mist Beams</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Trolly Mounted Mist Beams</a></li>
+                                        <li><a href="<?php echo base_url() ?>product_detail/index/2" >Cooling and Humidification</a></li>
+                                    </ul>
+                                 </li>-->
+
+                                    
+                                
+
                                 <li><a href="#">Blog <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <?php foreach ($blog_categories as $category) { ?>
@@ -331,14 +335,12 @@
                                 <!-- <li><a href="gallery">Gallery</a></li> -->
                                 <li><a href="<?php echo base_url() ?>contact-us">Contact</a></li>
                             </ul>
-                            <!-- <div class="header-src-btn">
-                                <div class="search-box-btn search-box-outer"><i class="fas fa-search"></i></div>
-                            </div> -->
-                            <form action="<?= base_url('product') ?>" method="GET">
+                           
+                            <!-- <form action="<?= base_url('product') ?>" method="GET">
                                   <input  type="text" name="query" placeholder="Search products...">
-                            </form>
+                            </form> -->
                             <div class="header-button text-right">
-                                <a href="#" class="showForm2">Enquire Now</a>
+                                <a href="#" class="showForm2" id="showForm">Enquire Now</a>
                             </div>
                         </div>
                     </div>
@@ -358,10 +360,10 @@
                         <div class="header-logo col-2 col-md-1">
                             <a class="mobile-logo" href="<?php echo base_url() ?>index"><img src="<?php echo base_url()?>assets/images/fevicon.png" alt=""></a>
                         </div>
-                        <div class=" col-6 overflow-hidden">
-                        <form class="my-3" action="<?= base_url('product') ?>" method="GET">
+                        <div class=" col-6 overflow-hidden py-4">
+                        <!-- <form class="my-3" action="<?= base_url('product') ?>" method="GET">
                                   <input  type="text" name="query" placeholder="Search products...">
-                            </form>
+                        </form> -->
                         </div> 
                         <div class="menu-toggle col-2">
                             <div class="icon text-end">
@@ -374,41 +376,20 @@
                 <div class="col-lg-9 col-md-12">
                     <div class="header-menu2">
                         <ul>
-                            <li class="expand"><a class="menu_hide" href="<?php echo base_url() . 'index' ?>">Home
-                                    <!-- <div class="menu-toggle2">
+                            <li class="expand"><a class="menu_hide" href="<?php echo base_url() . 'index' ?>">Home</a></li>
+                            <li class="expand"><a class="menu_hide4" href="#">Sectors
+                                    <div class="menu-toggle2">
                                         <div class="icon2">
                                             <span class="plus">+</span>
                                             <span class="minus">-</span>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </a>
-                                <!-- <ul class="menu_open sub-menu2">
-                                    <li><a href="index.html">Home Page One</a></li>
-                                    <li><a href="index-2.html">Home Page Two</a></li>
-                                    <li><a href="index-3.html">Home Page Three</a></li>
-                                    <li><a href="index-4.html">Home Page Four</a></li>
-                                    <li><a href="index-5.html">Home Page Five</a></li>
-                                    <li><a href="landing-1.html">Landing Page One</a></li>
-                                    <li><a href="landing-2.html">Landing Page Two</a></li>
-                                </ul> -->
-                            </li>
-                            <li class="expand"><a class="menu_hide2" href="about">About Us
-                                    <!-- <div class="menu-toggle2">
-                                        <div class="icon2">
-                                            <span class="plus">+</span>
-                                            <span class="minus">-</span>
-                                        </div>
-                                    </div> -->
-                                </a>
-                                <!-- <ul class="menu_open2 sub-menu2">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="service.html">It Service</a></li>
-                                    <li><a href="single-service.html">Service Details</a></li>
-                                    <li><a href="case-study-details.html">Case Study</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                </ul> -->
+                                <ul class="menu_open4 sub-menu2">
+                                <?php foreach ($sectors as $sector) {  ?>
+                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
+                                        <?php } ?>
+                                </ul>
                             </li>
                             <li class="expand"><a class="menu_hide3" href="#">Products
                                     <div class="menu-toggle2">
@@ -457,20 +438,10 @@
                                         <?php } ?>
                                 </ul>
                             </li>
-                            <li class="expand"><a class="menu_hide4" href="#">Sectors
-                                    <div class="menu-toggle2">
-                                        <div class="icon2">
-                                            <span class="plus">+</span>
-                                            <span class="minus">-</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <ul class="menu_open4 sub-menu2">
-                                <?php foreach ($sectors as $sector) {  ?>
-                                        <li><a href="<?php echo base_url() ?>sectors/<?php echo $sector['sd_id']; ?>"><?php echo $sector['name']; ?></a></li>
-                                        <?php } ?>
-                                </ul>
-                            </li>
+                            <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
+                            <li class="expand"><a class="menu_hide2" href="about">About Us</a></li>
+
+                           
                             <li class="expand"><a class="menu_hide5" href="#">Blog
                                     <div class="menu-toggle2">
                                         <div class="icon2">
