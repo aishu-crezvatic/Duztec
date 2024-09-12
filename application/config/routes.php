@@ -72,3 +72,4 @@ $route['contact-us'] = "contact_us/index";
 
 $route['term-and-condition'] = "index/term_and_condition"; 
 $route['privacy-and-policy'] = "index/privacy_and_policy"; 
+$route['thankyou'] = 'mail/thankyou';

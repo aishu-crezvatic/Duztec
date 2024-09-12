@@ -65,6 +65,7 @@ class Frontend_model extends CI_Model
             ->get()
             ->result_array();
         // print_r($data);
+        // exit;
         return $data;
     }
 

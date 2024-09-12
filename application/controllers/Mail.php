@@ -59,7 +59,8 @@ class Mail extends CI_Controller{
             echo 'Mail could not be sent.';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
-            echo 'Mail has been sent';
+            // echo 'Mail has been sent'; 
+            redirect('thankyou');
         }
     }
    

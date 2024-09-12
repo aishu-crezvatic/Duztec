@@ -410,12 +410,12 @@ if(cookie_consent != ""){
 					url: $(this).attr('action'),
 					type: 'POST',
 					data: $(this).serialize(),
-					success: function (response) {
+					success: function(response) {
 						console.log('Response from server:', response);
-						alert('Form submitted successfully!');
-						$('#popupForm').hide();
+						// Redirect to the thank you page after successful form submission
+						window.location.href = 'thankyou';
 					},
-					error: function (xhr, status, error) {
+					error: function(xhr, status, error) {
 						console.error('An error occurred:', error);
 						alert('An error occurred: ' + error);
 					}

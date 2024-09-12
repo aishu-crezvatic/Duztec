@@ -175,6 +175,38 @@
   background-repeat: no-repeat;
   vertical-align: middle; /* Adjust this based on your layout */
 }
+.flaticon-coal-power:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/PowerIndustryicon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+.flaticon-crusher:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/CrusherIndustry.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+.flaticon-agriculturecicon:before{
+  content: "";
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  background-image: url('../images/Animated_Icons/Agriculturecicon.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Adjust this based on your layout */
+}
+
+
 .flaticon-metal-industry:before{
   content: "";
   display: inline-block;
