@@ -22,7 +22,7 @@ class Blog_details extends CI_Controller {
 //        echo "<pre>";
 //        print_r($data);
 //        exit;
-        $data['blog_derail'] = $this->frontend_model->blog($b_id);
+        $data['blog_detail'] = $this->frontend_model->blog($b_id);
         $this->load->view('frontend/blog_details', $data);
     }
 }

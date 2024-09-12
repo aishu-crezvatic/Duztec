@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Category extends CI_Controller {
+class Clientele extends CI_Controller {
 
     private $_table;
     private $_view_folder;
@@ -12,9 +12,9 @@ class Category extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/CommonModel');
-        $this->_table = 'category';
-        $this->_view_folder = 'admin/category';
-        $this->_view = 'category';
+        $this->_table = 'clientele';
+        $this->_view_folder = 'admin/clientele';
+        $this->_view = 'clientele';
         $this->_edit = 'edit';
     }
 
@@ -24,7 +24,7 @@ class Category extends CI_Controller {
     }
 
     public function create() {
-        $config['upload_path'] = 'uploads';
+        $config['upload_path'] = 'uploads/clientele';
         // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
         $config['allowed_types'] = '*';
         // $config['max_size']      = 2048; 
@@ -32,31 +32,31 @@ class Category extends CI_Controller {
         $this->upload->initialize($config);
         // check logo upload or not 
         $logo = 'logo.tls';
-        if ($this->upload->do_upload('category_image')) {
+        if ($this->upload->do_upload('image')) {
             $comp_logo = $this->upload->data();
             $image = $comp_logo['file_name'];
         }
 
         $data = [
-            'category_image' => trim($image),
-            'name' => trim($this->input->post('name')),
-            'description' => trim($this->input->post('description')),
+            'image' => trim($image),
+//            'name' => trim($this->input->post('name')),
+//            'description' => trim($this->input->post('description')),
             'status' => 0,
             'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
         ];
         $this->CommonModel->add(DATABASE, 'category', $data);
-        $this->session->set_flashdata('success', 'Category Created');
+        $this->session->set_flashdata('success', 'Clientele Created');
         redirect(base_url($this->_view_folder));
     }
 
     public function edit($id) {
-        $data['data'] = $this->CommonModel->getRow(DATABASE, $this->_table, array('c_id' => $id), '*');
+        $data['data'] = $this->CommonModel->getRow(DATABASE, $this->_table, array('ct_id' => $id), '*');
         $this->load->view($this->_view_folder.'/'.$this->_edit, $data);
     }
 
     public function update() {
         if ($_FILES['category_image']['error'] != 4) {
-            $config['upload_path'] = 'uploads';
+            $config['upload_path'] = 'uploads/clientele';
             // $config['allowed_types'] = 'gif|jpg|png|jpeg|webp';
             $config['allowed_types'] = '*';
             // $config['max_size']      = 2048; 
@@ -64,38 +64,38 @@ class Category extends CI_Controller {
             $this->upload->initialize($config);
             // check logo upload or not 
             $logo = 'logo.tls';
-            if ($this->upload->do_upload('category_image')) {
+            if ($this->upload->do_upload('image')) {
                 $comp_logo = $this->upload->data();
                 $image = $comp_logo['file_name'];
             }
             $data = [
-                'c_id' => trim($this->input->post('c_id')),
-                'category_image' => trim($image),
-                'name' => trim($this->input->post('name')),
-                'description' => trim($this->input->post('description'))
+                'ct_id' => trim($this->input->post('ct_id')),
+                'image' => trim($image)
+//                'name' => trim($this->input->post('name')),
+//                'description' => trim($this->input->post('description'))
             ];
         } else {
             $data = [
-                'c_id' => trim($this->input->post('c_id')),
-                'name' => trim($this->input->post('name')),
-                'description' => trim($this->input->post('description'))
+                'ct_id' => trim($this->input->post('c_id')),
+//                'name' => trim($this->input->post('name')),
+//                'description' => trim($this->input->post('description'))
             ];
         }
-        $this->CommonModel->edit(DATABASE, $this->_table, $data, array('c_id' => trim($this->input->post('c_id'))));
-        $this->session->set_flashdata('success', 'Category Updated');
+        $this->CommonModel->edit(DATABASE, $this->_table, $data, array('ct_id' => trim($this->input->post('ct_id'))));
+        $this->session->set_flashdata('success', 'Clientele Updated');
         redirect(base_url($this->_view_folder));
     }
 
     public function delete() {
         $id = trim($this->input->post('id'));
-        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'c_id', $id);
-        $this->session->set_flashdata('success', 'Category Deleted');
+        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'ct_id', $id);
+        $this->session->set_flashdata('success', 'Clientele Deleted');
         redirect(base_url($this->_view_folder));
     }
 
     public function status() {
         $id = trim($this->input->post('data'));
-        $this->CommonModel->status(DATABASE, $this->_table, 'c_id', $id);
+        $this->CommonModel->status(DATABASE, $this->_table, 'ct_id', $id);
     }
     
 //    public function delete(){

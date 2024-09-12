@@ -47,7 +47,7 @@
     .swiper-button-next,
     .swiper-button-prev {
         position: absolute;
-        top: 50% !important;
+        top: 60% !important;
     }
 
     .swiper-button-next,
@@ -64,11 +64,11 @@
         letter-spacing: 0;
         font-variant: initial;
         line-height: 1;
-        font-size: 24px !important;
+        font-size: 22px !important;
         font-weight: 900;
         color: white;
         background-color: #2260A4;
-        padding: 10px;
+        padding: 15px;
         border-radius: 100%;
     }
 </style>
@@ -76,7 +76,7 @@
 
 <!-- Swiper Container -->
 <div class="swiper-container overflow-hidden p-0 m-0">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper position-relative">
         <!-- <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 1"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 3"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 5"></div>

@@ -1,8 +1,5 @@
 <!-- header start  -->
 <?php $this->load->view('layout/header');
-// echo '<pre>';
-//          print_r($product_detail_data);
-//         exit;
 ?>
 
 <!-- header end  -->
@@ -90,8 +87,9 @@
 										<div class="item position-relative p-1">
 											<img class="position-relative "
 												src="<?php echo base_url() ?>uploads/product/image/<?php echo $image; ?>"
-												alt="Image 1" style="z-index:1;border-top-right-radius: 33px; border-bottom-left-radius:33px">
-											</div>
+												alt="Image 1"
+												style="z-index:1;border-top-right-radius: 33px; border-bottom-left-radius:33px">
+										</div>
 
 									<?php } ?>
 									<!--						<div class="item">
@@ -145,9 +143,11 @@
 								<!--<div><span class="navyText fw-semibold">Category : </span>lorem ipsum</div>-->
 
 								<div class="mt-5 ">
-									<!--<span class="fs-2 fw-semibold" style="color:black">Buy or rent this machine ? </span>-->
-									<h5 class="fw-bold">Request your pricce here</h5>
-									<div class="btn px-2 text-white fw-bold priceReqBtn">PRICE REQUEST</div>
+									<!-- <h5 class="fw-bold">Request your pricce here</h5> -->
+									<div class="btn px-2 text-white fw-bold priceReqBtn showForm2">PRICE REQUEST</div>
+									<!-- <div class="btn px-2 text-white fw-bold priceReqBtn">DOWNLOAD BROCHURE</div> -->
+									<a href="/index" target="blank" class="btn px-2 text-white fw-bold priceReqBtn">DOWNLOAD
+										BROCHURE</a>
 								</div>
 							</div>
 						</div>
@@ -266,9 +266,7 @@
 							<!--</div>-->
 						</div>
 					</div>
-					<div class="call-shape">
-						<img src="assets/images/call-shape.png" alt="thumb">
-					</div>
+
 				</div>
 			<?php } ?>
 			<!------------------------>
@@ -325,9 +323,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="call-shape">
-					<img src="assets/images/call-shape.png" alt="thumb">
-				</div>
+				
 			</div>
 
 			<div class="call-do-action-abou style-two" style="padding-top: 30px;">
@@ -379,9 +375,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="call-shape">
-				<img src="assets/images/call-shape.png" alt="thumb">
-			</div>
+			
 			</div>
 		<?php } ?>
 		<!------------------------>
@@ -434,9 +428,7 @@
 						<!--</div>-->
 					</div>
 				</div>
-				<div class="call-shape">
-					<img src="assets/images/call-shape.png" alt="thumb">
-				</div>
+				
 			</div>
 		<?php } ?>
 		<!------------------------>
@@ -489,9 +481,7 @@
 						<!--</div>-->
 					</div>
 				</div>
-				<div class="call-shape">
-					<img src="assets/images/call-shape.png" alt="thumb">
-				</div>
+				
 
 				<div class="call-do-action-abou style-two" style="padding-top: 30px;">
 					<p style="text-align: center;">
@@ -552,9 +542,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="call-shape">
-					<img src="assets/images/call-shape.png" alt="thumb">
-				</div>
+				
 			</div>
 		<?php } ?>
 		<!------------------------>
@@ -623,9 +611,7 @@
 						<!--</div>-->
 					</div>
 				</div>
-				<div class="call-shape">
-					<img src="assets/images/call-shape.png" alt="thumb">
-				</div>
+			
 
 			</div>
 		<?php } ?>
@@ -634,15 +620,15 @@
 		<div class="tab-container mt-5">
 			<div class="tabs">
 				<!--<div class="tab active" data-tab="description">Description</div>-->
-				<div class="tab active" data-tab="description">Conclusion</div>
+				<!-- <div class="tab active" data-tab="description">Conclusion</div> -->
 				<?php if (!empty($product['product_diversity_matrix'])) { ?>
-					<div class="tab" data-tab="additional-info">Product Diversity Matrix</div>
+					<div class="tab active" data-tab="additional-info">Product Diversity Matrix</div>
 				<?php } ?>
-				<div class="tab" data-tab="videos">Videos</div>
+				<div class="tab" data-tab="videos">Gallery</div>
 
 			</div>
 			<div class="tab-content">
-				<div id="description" class="tab-pane active">
+				<div id="description" class="tab-pane ">
 					<!--			<p class="fw-bold">The Duztec Double Barrel-DB boasts dual functionality, deploying Mist cannons or fog
 				cannons at identical
 				angles to simultaneously address two crucial aspects of slag management. One barrel efficiently cools
@@ -652,34 +638,36 @@
 					<p class="fw-bold"><?php echo $product['conclusion']; ?></p>
 				</div>
 				<?php if (!empty($product['product_diversity_matrix'])) { ?>
-					<div id="additional-info" class="tab-pane">
+					<div id="additional-info" class="tab-pane active">
 						<!--<p>Here is some additional information.</p>-->
 						<p><?php echo $product['product_diversity_matrix']; ?></p>
 					</div>
 				<?php } ?>
 				<div id="videos" class="tab-pane">
 					<!--<p>Here are some videos.</p>-->
-                                    <div class="call-do-action-abou style-two" style="padding-top: 30px;">
-                                        <div class="">
-                                            <div class="row justify-content-center gap-5">
-                                                    
-                                                <div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<!--<h2 class="fw-bold about-title fs-1 py-2">A</h2>-->
-							<!--<p class="text-black">ASDF</p>-->
-                                                        <iframe width="400" height="260" src="https://www.youtube.com/embed/x4SmLxxH5gc" frameborder="0" allowfullscreen></iframe>
+					<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+						<div class="">
+							<div class="row justify-content-center gap-5">
 
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<!--<h2 class="fw-bold about-title fs-1 py-2">B</h2>-->
-							<!--<p class="text-black ">ZXCV</p>-->
-                                                        <iframe width="400" height="260" src="https://www.youtube.com/embed/HAIP1RNg4zA" frameborder="0" allowfullscreen></iframe>
+								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+									<!--<h2 class="fw-bold about-title fs-1 py-2">A</h2>-->
+									<!--<p class="text-black">ASDF</p>-->
+									<iframe width="400" height="260" src="https://www.youtube.com/embed/x4SmLxxH5gc"
+										frameborder="0" allowfullscreen></iframe>
 
+								</div>
+								<!--<div class="row justify-content-center mt-5">-->
+								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+									<!--<h2 class="fw-bold about-title fs-1 py-2">B</h2>-->
+									<!--<p class="text-black ">ZXCV</p>-->
+									<iframe width="400" height="260" src="https://www.youtube.com/embed/HAIP1RNg4zA"
+										frameborder="0" allowfullscreen></iframe>
+
+								</div>
+
+							</div>
 						</div>
-                                                
-                                            </div>
-                                        </div>      
-                                    </div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -721,7 +709,7 @@
 							<h2><?php echo $product['name']; ?></h2>
 							<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
 							<!--<p><?php echo $product['conclusion']; ?></p>-->
-							<a href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>">Learn More</a>
+							<a href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>">Learn More</a>
 						</div>
 					</div>
 				<?php } ?>

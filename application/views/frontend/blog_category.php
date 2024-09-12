@@ -42,9 +42,10 @@
 						<div class="portfolio-thumb">
 							<!-- <img src="<?php echo base_url() . 'uploads/blog/' . $blog['b_image']; ?>" alt="not found"> -->
 							<div class="thumb-content">
-								<h3><?php echo $blog['title']; ?></h3>
+								<!--<h3>Category: <?php echo $blog['title']; ?></h3>-->
+								<h3> <?php echo $blog['title']; ?></h3>
 								<!-- <h2>Product Name: <?php echo $blog['name']; ?></h2> -->
-								<a href="<?php echo base_url(); ?>blog_details/<?php echo $blog['b_id']; ?>">View Product <i
+								<a href="<?php echo base_url(); ?>blog-details/<?php echo $blog['b_id']; ?>">Blog Details <i
 										class="fas fa-long-arrow-alt-right"></i></a>
 							</div>
 						</div>

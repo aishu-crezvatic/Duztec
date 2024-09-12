@@ -98,11 +98,12 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-title">
-					<h2>Useful Links</h2>
+					<h2>Quick Link</h2>
 				</div>
 				<div class="footer-menu">
 					<ul>
 						<li><a href='<?php echo base_url(); ?>about'>About</a></li>
+						<li><a href='<?php echo base_url(); ?>product-category'>Products</a></li>
 						<!-- <li><a href="">News</a></li> -->
 						<!-- <li><a href="">Partners</a></li> -->
 						<!-- <li><a href="">Room Details</a></li> -->
@@ -113,7 +114,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-title">
-					<h2>Help?</h2>
+					<h2>Important Links</h2>
 				</div>
 				<div class="footer-menu">
 					<ul>
@@ -359,53 +360,52 @@ if(cookie_consent != ""){
 </script>
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const popupForm = document.getElementById('popupForm');
-		const closePopup = document.getElementById('closePopup');
-		const phoneInput = document.getElementById('phone');
-		const captchaQuestion = document.getElementById('captchaQuestion');
-		const phonePattern = /^\d{10}$/;
-		let captchaAnswer;
+    document.addEventListener("DOMContentLoaded", function () {
+        const showForm = document.querySelectorAll('.showForm2');
+        const popupForm = document.getElementById('popupForm');
+        const closePopup = document.getElementById('closePopup');
+        const close = document.querySelector('.close');
+        const captchaQuestion = document.getElementById('captchaQuestion');
+        const phonePattern = /^\d{10}$/;
 
-		function generateCaptcha() {
-			const num1 = Math.floor(Math.random() * 10) + 1;
-			const num2 = Math.floor(Math.random() * 10) + 1;
-			captchaAnswer = num1 + num2;
-			captchaQuestion.textContent = `${num1} + ${num2} =`;
-		}
+        for (var i = 0; i < showForm.length; i++) {
+        showForm[i].addEventListener('click', function (event) {
+            event.preventDefault(); 
+            popupForm.style.display = 'flex'; 
+        });
+        }
 
-		function showPopup() {
-			popupForm.style.display = 'flex';
-			generateCaptcha();
-		}
+        close.addEventListener('click', function () {
+            popupForm.style.display = 'none';
+        });
 
-		// Always show the popup form after page reload
-		showPopup();
 
-		closePopup.addEventListener('click', () => {
-			popupForm.style.display = 'none';
-		});
-		$(document).ready(function () {
+        let captchaAnswer;
 
-			$('#quoteForm').submit(function (e) {
-				e.preventDefault();
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+            const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+            captchaAnswer = num1 + num2;
+            captchaQuestion.textContent = `${num1} + ${num2} =`;
+        }
 
-				const captchaInput = $('#captcha').val();
-				if (parseInt(captchaInput) !== captchaAnswer) {
-					alert('Captcha is incorrect.');
-					return;
-				}
+        function showPopup() {
+            popupForm.style.display = 'flex';
+            generateCaptcha(); 
+        }
 
-				// Phone number validation
-				if (!phonePattern.test(phoneInput.value)) {
-					alert('Please enter a valid 10-digit phone number.');
-					return;
-				}
+        // Show popup only if it hasn't been shown in this session
+        // if (!localStorage.getItem('popupShown')) {
+        //  showPopup();
+        //  localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+        // }
 
-				// Debug: Print form data to console
-				const formData = $(this).serializeArray();
-				console.log('Form Data:', formData);
+        if (!phonePattern.test(phoneInput)) { // Check if phone number is 10 digits
+            alert('Please enter a valid 10-digit phone number.');
+            return;
+        }
 
+<<<<<<< HEAD
 				$.ajax({
 					url: $(this).attr('action'),
 					type: 'POST',
@@ -422,8 +422,52 @@ if(cookie_consent != ""){
 				});
 			});
 		})
+=======
+        // Close popup when the close button is clicked
+        closePopup.addEventListener('click', () => {
+            popupForm.style.display = 'none';
+        });
 
-	});
+        // Clear popupShown flag on page unload (e.g., reload or close)
+        window.addEventListener('beforeunload', function () {
+            localStorage.removeItem('popupShown');
+        });
+    });
+
+    $(document).ready(function () {
+        $('#quoteForm').submit(function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const captchaInput = $('#captcha').val();
+            if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
+                alert('Captcha is incorrect.');
+                return;
+            }
+
+            // Debug: Print form data to console
+            const formData = $(this).serializeArray();
+            console.log('Form Data:', formData);
+
+            $.ajax({
+                url: $(this).attr('action'), // URL to send the request
+                type: 'POST', // HTTP method
+                data: $(this).serialize(), // Serialize form data
+                success: function (response) {
+                    // Handle success (e.g., show a success message)
+                    console.log('Response from server:', response);
+                    alert('Form submitted successfully!');
+                    $('#popupForm').hide(); // Hide popup after submission
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors (e.g., show an error message)
+                    console.error('An error occurred:', error);
+                    alert('An error occurred: ' + error);
+                }
+            });
+        });
+    });
+>>>>>>> 29716b25235d1ceebfa01e52bf8f958bd904cf8b
+
 </script>
 
 

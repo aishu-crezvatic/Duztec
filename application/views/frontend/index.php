@@ -34,7 +34,7 @@ if (!empty($home_page_data)): ?>
 								<img src="assets/images/shape3.png" alt="">
 							</div>
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>
@@ -79,7 +79,7 @@ if (!empty($home_page_data)): ?>
 									<p><?php echo $home_page_data['about_description']; ?></p>
 								</div>
 								<div class="service-content">
-									<a href="#">View More</a>
+                                                                    <a href="<?php echo base_url().'about'; ?>">View More</a>
 								</div>
 							</div>
 						</div>
@@ -123,7 +123,7 @@ if (!empty($home_page_data)): ?>
 									<!--<p><?php echo $product['conclusion']; ?></p>-->
 									<p>Lorem ipsum dolor sit amet.</p>
 									<a class="bottom-0 position-absolute"
-										href="<?php echo base_url() . 'product_detail/' . $product['p_id'] ?>"
+										href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>"
 										style="left:35%">Learn More</a>
 								</div>
 							</div>
@@ -170,7 +170,7 @@ if (!empty($home_page_data)): ?>
 				<div class="row sectors-industries">
 					<?php foreach ($sectors as $sector) { ?>
 						<div class="col-lg-4 col-md-6">
-							<div class="single-feature-box text-center">
+                                                    <a href="<?php echo base_url().'sectors/'.$sector['sd_id'] ;?>"><div class="single-feature-box text-center">
 								<div class="feature-icon">
 									<i class="<?php echo $sector['image']; ?>"></i>
 								</div>
@@ -180,7 +180,7 @@ if (!empty($home_page_data)): ?>
 									<!--</p>-->
 								</div>
 
-							</div>
+							</div></a>
 						</div>
 					<?php } ?>
 					<!--			<div class="col-lg-4 col-md-6">
@@ -288,7 +288,21 @@ if (!empty($home_page_data)): ?>
 
 				<div class=" row justify-content-center">
 					<div class="case_list owl-carousel">
+                                            <?php foreach ($blogs as $blog) { ?>
+                                                <a href="<?php echo base_url().'blog-details/'.$blog['b_id']; ?>">
 						<div class="single-case-study">
+							<div class="case-thumb">
+                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="" style="max-height:500px">
+								<div class="case-content">
+									<h2><?php echo $blog['title']; ?></h2>
+									<h6>Read More</h6>
+<!--									<a href="case-study-details.html"><span>+</span></a>-->
+								</div>
+							</div>
+						</div>
+                                                    </a>
+                                            <?php } ?>
+<!--						<div class="single-case-study">
 							<div class="case-thumb">
 								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
 								<div class="case-content">
@@ -337,7 +351,7 @@ if (!empty($home_page_data)): ?>
 									<a href="case-study-details.html"><span>+</span></a>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -358,7 +372,7 @@ if (!empty($home_page_data)): ?>
 							<h1>Products</h1>
 
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>

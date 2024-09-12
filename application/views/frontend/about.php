@@ -288,7 +288,7 @@ if (!empty($about_us)) : ?>
 							<h1>Products</h1>
 
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>

@@ -79,13 +79,13 @@
 						<div class="service-content">
 							<h2><?php echo $product['name']; ?></h2>
 							<p><?php echo $product['cat_description']; ?></p>
-							<a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>">Read More <i
+							<a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>">Read More <i
 									class="fas fa-long-arrow-alt-right"></i></a>
 						</div>
 					</div>
 				</div>
 
-				<!--<li><a href="<?php echo base_url() . 'product_detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>-->
+				<!--<li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>-->
 				<?php //} ?>
 			<?php } ?>
 
