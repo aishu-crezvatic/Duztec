@@ -6,41 +6,42 @@
 // exit;
 if (!empty($home_page_data)): ?>
 	<?php foreach ($home_page_data as $home_page_data):
-		?>
+	?>
 		<!-- header end  -->
 		<!-- ============================================================== -->
 		<!-- Start - Slider- Section -->
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
-		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
-				autoplay muted playsinline loop>
-                            <source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
-				<!--<source src="assets/video/hero_video1.MP4" type="video/mp4">-->
-				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
-			</video>
-
-			<div class="overlay"></div>
-
-			<div class="HomeTextContaine container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<div class="slider-content text-center">
-							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
-								<span>DUST SUPPRESSION SOLUTION</span>
-							</h2>
-							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
-							<div class="slider-circle-thumb rotateme">
-								<img src="assets/images/shape3.png" alt="">
-							</div>
-							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<!-- Start - Slider Section -->
+<div class="slider-section d-flex align-items-center position-relative">
+    <div id="heroSlider" class="owl-carousel">
+        <?php foreach ($blogs as $blog): ?>
+        <div class="slider-item">
+            <!-- <img src="<?php echo base_url(); ?>uploads/heroSlider/<?php echo $image['filename']; ?>" alt="Slider Image"> -->
+			<img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="No image found">
 		</div>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="HomeTextContainer container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="slider-content text-center">
+                    <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
+                        <span>DUST SUPPRESSION SOLUTION</span>
+                    </h2>
+                    <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
+                    <div class="slider-circle-thumb rotateme">
+                        <img src="assets/images/shape3.png" alt="">
+                    </div>
+                    <div class="slider-button text-center">
+                        <a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -79,7 +80,7 @@ if (!empty($home_page_data)): ?>
 									<p><?php echo $home_page_data['about_description']; ?></p>
 								</div>
 								<div class="service-content">
-                                                                    <a href="<?php echo base_url().'about'; ?>">View More</a>
+									<a href="<?php echo base_url() . 'about'; ?>">View More</a>
 								</div>
 							</div>
 						</div>
@@ -104,7 +105,7 @@ if (!empty($home_page_data)): ?>
 					<div class="service_list owl-carousel">
 						<?php foreach ($product_with_cat_sub_cat as $product) {
 							$images = explode(',', $product['images']);
-							?>
+						?>
 							<div class="service-single-box rounded position-relative" style="height:500px">
 								<div class="service-thumb ProdImgContainer ">
 									<img class=""
@@ -170,17 +171,19 @@ if (!empty($home_page_data)): ?>
 				<div class="row sectors-industries">
 					<?php foreach ($sectors as $sector) { ?>
 						<div class="col-lg-4 col-md-6">
-                                                    <a href="<?php echo base_url().'sectors/'.$sector['sd_id'] ;?>"><div class="single-feature-box text-center">
-								<div class="feature-icon">
-									<i class="<?php echo $sector['image']; ?>"></i>
-								</div>
-								<div class="feature-content">
-									<h2><?php echo $sector['name']; ?> </h2>
-									<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
-									<!--</p>-->
-								</div>
+							<a href="<?php echo base_url() . 'sectors/' . $sector['sd_id']; ?>">
+								<div class="single-feature-box text-center">
+									<div class="feature-icon">
+										<i class="<?php echo $sector['gif_images']; ?>"></i>
+									</div>
+									<div class="feature-content">
+										<h2><?php echo $sector['name']; ?> </h2>
+										<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
+										<!--</p>-->
+									</div>
 
-							</div></a>
+								</div>
+							</a>
 						</div>
 					<?php } ?>
 					<!--			<div class="col-lg-4 col-md-6">
@@ -292,7 +295,7 @@ if (!empty($home_page_data)): ?>
                                                 <a href="<?php echo base_url().'blog-details/'.$blog['b_id']; ?>">
 						<div class="single-case-study">
 							<div class="case-thumb">
-                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="" style="max-height:500px">
+                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="No image found" style="max-height:500px">
 								<div class="case-content">
 									<h2><?php echo $blog['title']; ?></h2>
 									<h6>Read More</h6>
@@ -376,7 +379,7 @@ if (!empty($home_page_data)): ?>
 							</div>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
 	<?php endforeach; ?>
@@ -389,18 +392,32 @@ if (!empty($home_page_data)): ?>
 
 <!-- Footer start  -->
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$(".service_list").owlCarousel({
-			items: 1,                
-			loop: true,              
-			margin: 10,              
-			autoplay: true,         
-			autoplayTimeout: 3000,  
+			items: 1,
+			loop: true,
+			margin: 10,
+			autoplay: true,
+			autoplayTimeout: 3000,
 			autoplayHoverPause: true,
-			nav: false,             
-			dots: true               
+			nav: false,
+			dots: true
 		});
 	});
+</script>
+<script>
+	$(document).ready(function() {
+    $("#heroSlider").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        nav: false,
+        dots: true
+    });
+});
 
 </script>
 <?php

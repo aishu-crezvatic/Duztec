@@ -130,7 +130,7 @@
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-logo">
 					<!-- <img style="width: 100%;" src="<?php echo base_url(); ?>assets/images/duztecLogo.png" alt="err"> -->
-					<img src="<?php echo base_url() ?>assets/images/data_tech_logo-white bg.png" alt=""
+					<img src="<?php echo base_url() ?>assets/images/data_tech_logo.png" alt=""
 						style="height: auto; width:100% ">
 					<!-- <img src="assets/images/fav-icon/transparent-logo.png" alt=""> -->
 
@@ -252,8 +252,7 @@
 			<h2>Request A Quote</h2>
 			<button class=" close close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
-		<form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post">
-		<!-- <form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>"> -->
+		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control"
@@ -451,7 +450,21 @@ $(document).ready(function () {
 });
 
 </script>
+<script>
+	$(document).ready(function() {
+    $("#heroSlider").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        nav: false,
+        dots: true
+    });
+});
 
+</script>
 
 
 <!-- ============================================================== -->

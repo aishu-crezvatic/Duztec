@@ -1,18 +1,17 @@
-
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mail extends CI_Controller{
    
-    public function  __construct(){
+    public function __construct(){
         parent::__construct();
+        // Do not load views in the constructor
     }
    
     public function index(){
         // Load PHPMailer library
         $this->load->library('phpmailer_lib');
-       
+        
         // PHPMailer object
         $mail = $this->phpmailer_lib->load();
        
@@ -21,10 +20,9 @@ class Mail extends CI_Controller{
         $mail->Host     = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'aishwarya@crezvatic.com'; // Your Gmail address
-        $mail->Password = 'vpcq bljp hxsj iple'; // App Password or your Gmail password
-        $mail->SMTPSecure = 'tls';  // Use 'tls' instead of 'ssl'
+        $mail->Password = 'vpcq bljp hxsj iple'; // App Password or Gmail password
+        $mail->SMTPSecure = 'tls';  
         $mail->Port     = 587; // TLS port for Gmail
-        // $mail->Port     = 465;
         
         $mail->setFrom('aishwarya@crezvatic.com', 'Sender Aishwarya');
         $mail->addReplyTo('aishwarya@crezvatic.com', 'CodexWorld');
@@ -57,11 +55,16 @@ class Mail extends CI_Controller{
         // Send email
         if(!$mail->send()){
             echo 'Mail could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            // echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
-            // echo 'Mail has been sent'; 
+            // Redirect to the thank you page after sending the email
             redirect('thankyou');
         }
     }
-   
+
+    // Method to display the Thank You page
+    public function thankyou(){
+        // Load the thank you view
+        $this->load->view('frontend/thankyou');
+    }
 }
