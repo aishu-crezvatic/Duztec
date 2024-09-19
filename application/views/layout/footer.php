@@ -252,8 +252,8 @@
 			<h2>Request A Quote</h2>
 			<button class=" close close-popup navyText border-0 rounded shadow fw-bold" id="closePopup">X</button>
 		</div>
-		<form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post">
-		<!-- <form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>"> -->
+		<!-- <form id="quoteForm" class="row " action="<?php echo site_url('emailcontroller/send_email'); ?>" method="post"> -->
+		<form id="quoteForm" class="row" method="post" action="<?php echo site_url('mail'); ?>">
 			<div class="form-group col-12 col-md-6 col-lg-6">
 				<label for="name" class="navyText fw-bold">Name:</label>
 				<input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>" class="form-control"
@@ -368,87 +368,85 @@
 
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
-    const showForm = document.querySelectorAll('.showForm2');
-    const popupForm = document.getElementById('popupForm');
-    const closePopup = document.getElementById('closePopup');
-    const close = document.querySelector('.close');
-    const captchaQuestion = document.getElementById('captchaQuestion');
-    const phoneInput = document.getElementById('phoneInput'); // Ensure this is the correct ID
-    const phonePattern = /^\d{10}$/;
-    let captchaAnswer;
+		const showForm = document.querySelectorAll('.showForm2');
+		const popupForm = document.getElementById('popupForm');
+		const closePopup = document.getElementById('closePopup');
+		const close = document.querySelector('.close');
+		const captchaQuestion = document.getElementById('captchaQuestion');
+		const phoneInput = document.getElementById('phone');
 
-    function showPopup() {
-        popupForm.style.display = 'flex';
-        generateCaptcha();
-    }
-    
-    function generateCaptcha() {
-        const num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-        const num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-        captchaAnswer = num1 + num2;
-        captchaQuestion.textContent = `${num1} + ${num2} =`;
-    }
+		// const phonePattern = /^\d{10}$/;
+		let captchaAnswer;
 
-    for (let i = 0; i < showForm.length; i++) {
-        showForm[i].addEventListener('click', function (event) {
-            event.preventDefault();
-            showPopup(); // Show popup and generate captcha
-        });
-    }
+		function showPopup() {
+			popupForm.style.display = 'flex';
+			generateCaptcha();
+		}
 
-    close.addEventListener('click', function () {
-        popupForm.style.display = 'none';
-    });
+		function generateCaptcha() {
+			const num1 = Math.floor(Math.random() * 10) + 1;
+			const num2 = Math.floor(Math.random() * 10) + 1; 
+			captchaAnswer = num1 + num2;
+			captchaQuestion.textContent = `${num1} + ${num2} =`;
+		}
 
-    // Close popup when the close button is clicked
-    closePopup.addEventListener('click', () => {
-        popupForm.style.display = 'none';
-    });
+		
 
-    // Clear popupShown flag on page unload (e.g., reload or close)
-    window.addEventListener('beforeunload', function () {
-        localStorage.removeItem('popupShown');
-    });
-});
+		for (let i = 0; i < showForm.length; i++) {
+			showForm[i].addEventListener('click', function (event) {
+				event.preventDefault();
+				showPopup();
+			});
+		}
 
-$(document).ready(function () {
-    $('#quoteForm').submit(function (e) {
-        e.preventDefault(); // Prevent the default form submission
+		close.addEventListener('click', function () {
+			popupForm.style.display = 'none';
+		});
 
-        const phoneInputValue = $('#phoneInput').val(); // Ensure this matches your form field ID
-        if (!/^\d{10}$/.test(phoneInputValue)) { // Check if phone number is 10 digits
-            alert('Please enter a valid 10-digit phone number.');
-            return;
-        }
 
-        const captchaInput = $('#captcha').val();
-        if (parseInt(captchaInput) !== captchaAnswer) { // Check if captcha is correct
-            alert('Captcha is incorrect.');
-            return;
-        }
+		if (!phonePattern.test(phoneInput)) { 
+			alert('Please enter a valid 10-digit phone number.');
+			return;
+		}
 
-        // Debug: Print form data to console
-        const formData = $(this).serializeArray();
-        console.log('Form Data:', formData);
+		closePopup.addEventListener('click', () => {
+			popupForm.style.display = 'none';
+		});
 
-        $.ajax({
-            url: $(this).attr('action'), // URL to send the request
-            type: 'POST', // HTTP method
-            data: $(this).serialize(), // Serialize form data
-            success: function (response) {
-                // Handle success (e.g., show a success message)
-                console.log('Response from server:', response);
-                alert('Form submitted successfully!');
-                $('#popupForm').hide(); // Hide popup after submission
-            },
-            error: function (xhr, status, error) {
-                // Handle errors (e.g., show an error message)
-                console.error('An error occurred:', error);
-                alert('An error occurred: ' + error);
-            }
-        });
-    });
-});
+		window.addEventListener('beforeunload', function () {
+			localStorage.removeItem('popupShown');
+		});
+	});
+
+	$(document).ready(function () {
+		$('#quoteForm').submit(function (e) {
+			e.preventDefault(); 
+
+			const captchaInput = $('#captcha').val();
+			if (parseInt(captchaInput) !== captchaAnswer) { 
+				alert('Captcha is incorrect.');
+				return;
+			}
+
+			const formData = $(this).serializeArray();
+			console.log('Form Data:', formData);
+
+			$.ajax({
+				url: $(this).attr('action'),
+				type: 'POST', 
+				data: $(this).serialize(), 
+				success: function (response) {
+					console.log('Response from server:', response);
+					alert('Form submitted successfully!');
+					$('#popupForm').hide(); 
+				},
+				error: function (xhr, status, error) {
+					console.error('An error occurred:', error);
+					alert('An error occurred: ' + error);
+				}
+			});
+		});
+	});
 
 </script>
 
