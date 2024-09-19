@@ -13,12 +13,50 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
 		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
+			<!-- <video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
 				autoplay muted playsinline loop>
-                            <source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
-				<!--<source src="assets/video/hero_video1.MP4" type="video/mp4">-->
-				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
-			</video>
+							<source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
+			</video> -->
+			<div id="background-video" class="swiper-container unique"> <!-- Use swiper-container class -->
+				<div class="swiper-wrapper">
+					<?php
+					$image_array = [
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+					]; // Dummy array of images
+					foreach ($image_array as $image): ?>
+						<div class="swiper-slide">
+							<img class="w-100" src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $image; ?>" alt="">
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<div class="swiper-pagination"></div>
+				<!-- <div class="swiper-button-next"></div> -->
+				<!-- <div class="swiper-button-prev"></div> -->
+			</div>
+
+			<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+			<script>
+				const swiper2 = new Swiper('.unique', {
+					loop: true,
+					pagination: {
+						el: '.unique .swiper-pagination', // Scoped to this Swiper instance
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.unique .swiper-button-next', // Corrected selector
+						prevEl: '.unique .swiper-button-prev', // Corrected selector
+					},
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false,
+					},
+				});
+			</script>
+
 
 			<div class="overlay"></div>
 
@@ -34,13 +72,16 @@ if (!empty($home_page_data)): ?>
 								<img src="assets/images/shape3.png" alt="">
 							</div>
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s"
+									href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
 
 
@@ -79,7 +120,7 @@ if (!empty($home_page_data)): ?>
 									<p><?php echo $home_page_data['about_description']; ?></p>
 								</div>
 								<div class="service-content">
-                                                                    <a href="<?php echo base_url().'about'; ?>">View More</a>
+									<a href="<?php echo base_url() . 'about'; ?>">View More</a>
 								</div>
 							</div>
 						</div>
@@ -107,9 +148,8 @@ if (!empty($home_page_data)): ?>
 							?>
 							<div class="service-single-box rounded position-relative" style="height:500px">
 								<div class="service-thumb ProdImgContainer ">
-									<img class=""
-										src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
-										style="height:300px">
+									<img class="" src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>"
+										alt="" style="height:300px">
 									<!-- <img class="hoverImg d-none"
 										src="https://images.pexels.com/photos/27946281/pexels-photo-27946281/free-photo-of-a-small-boat-is-docked-in-the-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
 										alt="" style="height:300px"> -->
@@ -170,17 +210,19 @@ if (!empty($home_page_data)): ?>
 				<div class="row sectors-industries">
 					<?php foreach ($sectors as $sector) { ?>
 						<div class="col-lg-4 col-md-6">
-                                                    <a href="<?php echo base_url().'sectors/'.$sector['sd_id'] ;?>"><div class="single-feature-box text-center">
-								<div class="feature-icon">
-									<i class="<?php echo $sector['image']; ?>"></i>
-								</div>
-								<div class="feature-content">
-									<h2><?php echo $sector['name']; ?> </h2>
-									<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
-									<!--</p>-->
-								</div>
+							<a href="<?php echo base_url() . 'sectors/' . $sector['sd_id']; ?>">
+								<div class="single-feature-box text-center">
+									<div class="feature-icon">
+										<i class="<?php echo $sector['image']; ?>"></i>
+									</div>
+									<div class="feature-content">
+										<h2><?php echo $sector['name']; ?> </h2>
+										<!--<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit, sed do eiusmod tempor incididunt.-->
+										<!--</p>-->
+									</div>
 
-							</div></a>
+								</div>
+							</a>
 						</div>
 					<?php } ?>
 					<!--			<div class="col-lg-4 col-md-6">
@@ -288,21 +330,22 @@ if (!empty($home_page_data)): ?>
 
 				<div class=" row justify-content-center">
 					<div class="case_list owl-carousel">
-                                            <?php foreach ($blogs as $blog) { ?>
-                                                <a href="<?php echo base_url().'blog-details/'.$blog['b_id']; ?>">
-						<div class="single-case-study">
-							<div class="case-thumb">
-                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2><?php echo $blog['title']; ?></h2>
-									<h6>Read More</h6>
-<!--									<a href="case-study-details.html"><span>+</span></a>-->
+						<?php foreach ($blogs as $blog) { ?>
+							<a href="<?php echo base_url() . 'blog-details/' . $blog['b_id']; ?>">
+								<div class="single-case-study">
+									<div class="case-thumb">
+										<img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt=""
+											style="max-height:500px">
+										<div class="case-content">
+											<h2><?php echo $blog['title']; ?></h2>
+											<h6>Read More</h6>
+											<!--									<a href="case-study-details.html"><span>+</span></a>-->
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-                                                    </a>
-                                            <?php } ?>
-<!--						<div class="single-case-study">
+							</a>
+						<?php } ?>
+						<!--						<div class="single-case-study">
 							<div class="case-thumb">
 								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
 								<div class="case-content">
@@ -372,11 +415,12 @@ if (!empty($home_page_data)): ?>
 							<h1>Products</h1>
 
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s"
+									href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
 	<?php endforeach; ?>
@@ -391,18 +435,20 @@ if (!empty($home_page_data)): ?>
 <script>
 	$(document).ready(function () {
 		$(".service_list").owlCarousel({
-			items: 1,                
-			loop: true,              
-			margin: 10,              
-			autoplay: true,         
-			autoplayTimeout: 3000,  
+			items: 1,
+			loop: true,
+			margin: 10,
+			autoplay: true,
+			autoplayTimeout: 3000,
 			autoplayHoverPause: true,
-			nav: false,             
-			dots: true               
+			nav: false,
+			dots: true
 		});
 	});
 
 </script>
+
+
 <?php
 $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->
