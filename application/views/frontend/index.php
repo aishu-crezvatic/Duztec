@@ -13,12 +13,50 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
 		<div class="slider-section d-flex align-items-center position-relative">
-			<video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
+			<!-- <video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
 				autoplay muted playsinline loop>
-				<source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
-				<!--<source src="assets/video/hero_video1.MP4" type="video/mp4">-->
-				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
-			</video>
+							<source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
+			</video> -->
+			<div id="background-video" class="swiper-container unique"> <!-- Use swiper-container class -->
+				<div class="swiper-wrapper">
+					<?php
+					$image_array = [
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+						'contact-us-banner.png',
+					]; // Dummy array of images
+					foreach ($image_array as $image): ?>
+						<div class="swiper-slide">
+							<img class="w-100" src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $image; ?>" alt="">
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<div class="swiper-pagination"></div>
+				<!-- <div class="swiper-button-next"></div> -->
+				<!-- <div class="swiper-button-prev"></div> -->
+			</div>
+
+			<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+			<script>
+				const swiper2 = new Swiper('.unique', {
+					loop: true,
+					pagination: {
+						el: '.unique .swiper-pagination', // Scoped to this Swiper instance
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.unique .swiper-button-next', // Corrected selector
+						prevEl: '.unique .swiper-button-prev', // Corrected selector
+					},
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false,
+					},
+				});
+			</script>
+
 
 			<div class="overlay"></div>
 
@@ -34,13 +72,16 @@ if (!empty($home_page_data)): ?>
 								<img src="assets/images/shape3.png" alt="">
 							</div>
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s"
+									href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
 
 
@@ -107,9 +148,8 @@ if (!empty($home_page_data)): ?>
 						?>
 							<div class="service-single-box rounded position-relative" style="height:500px">
 								<div class="service-thumb ProdImgContainer ">
-									<img class=""
-										src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
-										style="height:300px">
+									<img class="" src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>"
+										alt="" style="height:300px">
 									<!-- <img class="hoverImg d-none"
 										src="https://images.pexels.com/photos/27946281/pexels-photo-27946281/free-photo-of-a-small-boat-is-docked-in-the-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
 										alt="" style="height:300px"> -->
@@ -325,7 +365,8 @@ if (!empty($home_page_data)): ?>
 							<h1>Products</h1>
 
 							<div class="slider-button text-center">
-								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s"
+									href="#">Enquire Now</a>
 							</div>
 						</div>
 					</div>
@@ -355,6 +396,8 @@ if (!empty($home_page_data)): ?>
 		});
 	});
 </script>
+
+
 <?php
 $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->

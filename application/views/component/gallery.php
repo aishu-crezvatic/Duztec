@@ -1,5 +1,5 @@
 <style>
-    .swiper-container {
+    .swiper-container-custom {
         width: 100%;
         height: auto;
         overflow: visible;
@@ -75,7 +75,7 @@
 
 
 <!-- Swiper Container -->
-<div class="swiper-container overflow-hidden p-0 m-0">
+<div class="swiper-container-custom overflow-hidden p-0 m-0">
     <div class="swiper-wrapper position-relative">
         <!-- <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 1"></div>
         <div class="swiper-slide"><img src="assets/images/products/ProductImageSection.webp" alt="Image 3"></div>
@@ -110,7 +110,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container-custom', {
         loop: true,
         centeredSlides: true, /* Center the active slide */
         slidesPerView: 3, /* Display 3 slides at a time */
