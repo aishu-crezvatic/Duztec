@@ -12,36 +12,35 @@ if (!empty($home_page_data)): ?>
 		<!-- Start - Slider- Section -->
 		<!-- ============================================================= -->
 		<!-- <div class="slider-section d-flex align-items-center"> -->
-		<!-- Start - Slider Section -->
-<div class="slider-section d-flex align-items-center position-relative">
-    <div id="heroSlider" class="owl-carousel">
-        <?php foreach ($blogs as $blog): ?>
-        <div class="slider-item">
-            <!-- <img src="<?php echo base_url(); ?>uploads/heroSlider/<?php echo $image['filename']; ?>" alt="Slider Image"> -->
-			<img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="No image found">
-		</div>
-        <?php endforeach; ?>
-    </div>
+		<div class="slider-section d-flex align-items-center position-relative">
+			<video id="background-video" preload="auto" poster="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>"
+				autoplay muted playsinline loop>
+				<source src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $home_page_data['hero_banner']; ?>" type="video/mp4">
+				<!--<source src="assets/video/hero_video1.MP4" type="video/mp4">-->
+				<!-- <source src="assets/video/<?php echo $home_page_data['about_image']; ?>" type="video/mp4"> -->
+			</video>
 
-    <div class="HomeTextContainer container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="slider-content text-center">
-                    <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
-                        <span>DUST SUPPRESSION SOLUTION</span>
-                    </h2>
-                    <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
-                    <div class="slider-circle-thumb rotateme">
-                        <img src="assets/images/shape3.png" alt="">
-                    </div>
-                    <div class="slider-button text-center">
-                        <a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+			<div class="overlay"></div>
+
+			<div class="HomeTextContaine container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="slider-content text-center">
+							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">WE PROVIDE THE BEST
+								<span>DUST SUPPRESSION SOLUTION</span>
+							</h2>
+							<h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay=".5s">IN INDUSTRIAL SERVICE</h2>
+							<div class="slider-circle-thumb rotateme">
+								<img src="assets/images/shape3.png" alt="">
+							</div>
+							<div class="slider-button text-center">
+								<a class="wow fadeInUpBig showForm2" data-wow-duration="2s" data-wow-delay=".5s" href="#">Enquire Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
@@ -291,70 +290,21 @@ if (!empty($home_page_data)): ?>
 
 				<div class=" row justify-content-center">
 					<div class="case_list owl-carousel">
-                                            <?php foreach ($blogs as $blog) { ?>
-                                                <a href="<?php echo base_url().'blog-details/'.$blog['b_id']; ?>">
-						<div class="single-case-study">
-							<div class="case-thumb">
-                                                            <img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="No image found" style="max-height:500px">
-								<div class="case-content">
-									<h2><?php echo $blog['title']; ?></h2>
-									<h6>Read More</h6>
-<!--									<a href="case-study-details.html"><span>+</span></a>-->
+						<?php foreach ($blogs as $blog) { ?>
+							<a href="<?php echo base_url() . 'blog-details/' . $blog['b_id']; ?>">
+								<div class="single-case-study">
+									<div class="case-thumb">
+										<img src="<?php echo base_url(); ?>assets/images/<?php echo $blog['b_image']; ?>" alt="No image found" style="max-height:500px">
+										<div class="case-content">
+											<h2><?php echo $blog['title']; ?></h2>
+											<h6>Read More</h6>
+											<!--									<a href="case-study-details.html"><span>+</span></a>-->
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-                                                    </a>
-                                            <?php } ?>
-<!--						<div class="single-case-study">
-							<div class="case-thumb">
-								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2>Data Research Analysis</h2>
-									<h6>Cloud Computing</h6>
-									<a href="case-study-details.html"><span>+</span></a>
-								</div>
-							</div>
-						</div>
-						<div class="single-case-study">
-							<div class="case-thumb">
-								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2>Data Research Analysis</h2>
-									<h6>Cloud Computing</h6>
-									<a href="case-study-details.html"><span>+</span></a>
-								</div>
-							</div>
-						</div>
-						<div class="single-case-study">
-							<div class="case-thumb">
-								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2>Data Research Analysis</h2>
-									<h6>Cloud Computing</h6>
-									<a href="case-study-details.html"><span>+</span></a>
-								</div>
-							</div>
-						</div>
-						<div class="single-case-study">
-							<div class="case-thumb">
-								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2>Data Research Analysis</h2>
-									<h6>Cloud Computing</h6>
-									<a href="case-study-details.html"><span>+</span></a>
-								</div>
-							</div>
-						</div>
-						<div class="single-case-study">
-							<div class="case-thumb">
-								<img src="assets/images/blog/blog-image.png" alt="" style="max-height:500px">
-								<div class="case-content">
-									<h2>Data Research Analysis</h2>
-									<h6>Cloud Computing</h6>
-									<a href="case-study-details.html"><span>+</span></a>
-								</div>
-							</div>
-						</div>-->
+							</a>
+						<?php } ?>
+						 
 					</div>
 				</div>
 			</div>
@@ -404,21 +354,6 @@ if (!empty($home_page_data)): ?>
 			dots: true
 		});
 	});
-</script>
-<script>
-	$(document).ready(function() {
-    $("#heroSlider").owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        nav: false,
-        dots: true
-    });
-});
-
 </script>
 <?php
 $this->load->view('layout/footer'); ?>

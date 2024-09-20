@@ -450,21 +450,7 @@ $(document).ready(function () {
 });
 
 </script>
-<script>
-	$(document).ready(function() {
-    $("#heroSlider").owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        nav: false,
-        dots: true
-    });
-});
 
-</script>
 
 
 <!-- ============================================================== -->
