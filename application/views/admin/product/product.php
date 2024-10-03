@@ -699,7 +699,7 @@ $this->load->view('admin/layout/sidebar');
                                                 <td><?php echo date('d/m/Y', strtotime($row['created_date'])) ?></td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="<?php echo base_url() ?>admin/product/edit/<?php echo $row['sc_id'] ?>" data-id="<?php echo $row['p_id'] ?>" class="btn btn-primary shadow btn-xs sharp mr-1 editbtn"><i class="fa fa-pencil"></i></a>
+                                                        <a href="<?php echo base_url() ?>admin/product/edit/<?php echo $row['p_id'] ?>" data-id="<?php echo $row['p_id'] ?>" class="btn btn-primary shadow btn-xs sharp mr-1 editbtn"><i class="fa fa-pencil"></i></a>
                                                         <a href="javascript:void(0)" data-toggle="modal" data-target="#deleteOrderModalside" data-id="<?php echo $row['p_id'] ?>" class="btn btn-danger shadow btn-xs sharp deletebtn"><i class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>

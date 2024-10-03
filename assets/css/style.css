@@ -7258,7 +7258,17 @@ button.btn-control {
 
 }
 
+.tablesorter .table-header th {
+    border-color: black !important;
+}
+ 
 
+.tablesorter tbody tr td .td-content-wrapper .td-content p strong ,
+.tablesorter .table-header th span font,
+.tablesorter tbody tr td .td-content-wrapper .td-content p strong font{
+    color: black !important; 
+}
+ 
 
 /* !!!!!!!!!!!!!!! !  Contact us page   !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 

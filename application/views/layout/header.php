@@ -269,7 +269,7 @@
 //                                                                    echo "Value exists in sc_id_exists key.".$search_sc_id.' product name '.$product['name'].'</br>';
                                                                     foreach ($product_with_cat_sub_cat as $product2) {
                                                                         $search_sc_id2 = $product2['sc_id'];
-//                                                                        echo "<pre> shankar ".$search_sc_id2.' </br>';
+                                                                    //    echo "<pre> shankar ".$search_sc_id2.' </br>';
                                                                         if($search_sc_id2 > 0 ) {
                                                                 ?>
                                                                 <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
@@ -284,7 +284,8 @@
                                                     <?php } ?>
                                                     </li>
                                                 <?php } else { ?>
-                                                    <li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['cat_name']; ?></a></li>
+                                                    <li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['name']; ?></a></li>
+                                                     <!-- <li>test</li> -->
                                                 <?php } ?>
                                             <?php } ?> 
                                          

@@ -1,13 +1,15 @@
 <?php
 
-class CommonModel extends CI_Model {
+class CommonModel extends CI_Model
+{
     /* 1. 
       ADD RECORD
       LOAD MODEL : $this->load->model('CommonModel');
       EXAMPLE : $this->CommonModel->add('default','messages', $post);
      */
 
-    public function add($database = NULL, $tbl = NULL, $record = NULL) {
+    public function add($database = NULL, $tbl = NULL, $record = NULL)
+    {
         if (!empty($database) && !empty($tbl) && !empty($record)) {
             $common = $this->load->database($database, TRUE);
             $common->insert($tbl, $record);
@@ -23,7 +25,8 @@ class CommonModel extends CI_Model {
       EXAMPLE : $this->CommonModel->multipleAdd('default','messages', $post);
      */
 
-    public function multipleAdd($database = NULL, $tbl = NULL, $records = NULL) {
+    public function multipleAdd($database = NULL, $tbl = NULL, $records = NULL)
+    {
         $records = array_values($records);
         if (!empty($database) && !empty($tbl) && !empty($records)) {
             $common = $this->load->database($database, TRUE);
@@ -38,7 +41,8 @@ class CommonModel extends CI_Model {
      * 3. ADD/EDIT SINGLES COL RECORD 
      */
 
-    public function addEditSinglesCol($database = NULL, $tbl = NULL, $record = NULL, $col = NULL, $value = NULL) {
+    public function addEditSinglesCol($database = NULL, $tbl = NULL, $record = NULL, $col = NULL, $value = NULL)
+    {
         if (!empty($database) && !empty($tbl) && !empty($record)) {
             $common = $this->load->database($database, TRUE);
             $sql = $common->insert_string($tbl, $record) . ' ON DUPLICATE KEY UPDATE `' . $col . '`=' . $value . '';
@@ -55,7 +59,8 @@ class CommonModel extends CI_Model {
       EXAMPLE : $this->CommonModel->edit('default','messages', $post, array('page_name' => $post['page_name']));
      */
 
-    public function edit($database = NULL, $tbl = NULL, $record = NULL, $cond = NULL, $doNotEscape = FALSE) {
+    public function edit($database = NULL, $tbl = NULL, $record = NULL, $cond = NULL, $doNotEscape = FALSE)
+    {
         if (!empty($database) && !empty($tbl) && !empty($record) && !empty($cond)) {
             $common = $this->load->database($database, TRUE);
             if ($doNotEscape) {
@@ -67,6 +72,7 @@ class CommonModel extends CI_Model {
             } else {
                 $res = $common->update($tbl, $record, $cond);
             }
+
             return $res;
         } else {
             return FALSE;
@@ -78,7 +84,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function multipleEdit($database = NULL, $tbl = NULL, $record = NULL, $col = NULL) {
+    public function multipleEdit($database = NULL, $tbl = NULL, $record = NULL, $col = NULL)
+    {
         if (!empty($database) && !empty($tbl) && !empty($record)) {
             $common = $this->load->database($database, TRUE);
             $res = $common->update_batch($tbl, $record, $col);
@@ -94,7 +101,8 @@ class CommonModel extends CI_Model {
       EXAMPLE : $this->CommonModel->delete('default','oauth_token', array('ppm_id' => $post['user_id']));
      */
 
-    public function delete($database = NULL, $tbl = NULL, $cond = NULL) {
+    public function delete($database = NULL, $tbl = NULL, $cond = NULL)
+    {
         if (!empty($database) && !empty($tbl) && !empty($cond)) {
             $common = $this->load->database($database, TRUE);
             $common->where($cond);
@@ -110,7 +118,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function multipleDelete($database = NULL, $tbl = NULL, $column = NULL, $value = NULL) {
+    public function multipleDelete($database = NULL, $tbl = NULL, $column = NULL, $value = NULL)
+    {
         if (!empty($database) && !empty($tbl) && !empty($column) && !empty($value)) {
             $common = $this->load->database($database, TRUE);
             $common->where_in($column, $value);
@@ -127,7 +136,8 @@ class CommonModel extends CI_Model {
       EXAMPLE : $this->CommonModel->getRow('default','messages', array('page_name' => $post['page_name']), 'page_name');
      */
 
-    public function getRow($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $order_col = NULL, $order_by = NULL) {
+    public function getRow($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $order_col = NULL, $order_by = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -153,7 +163,8 @@ class CommonModel extends CI_Model {
       EXAMPLE : $this->CommonModel->getRecords('default','messages', array());
      */
 
-    public function getRecords($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL) {
+    public function getRecords($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -184,7 +195,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getRecordsFullIn($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL, $column = NULL, $value = NULL) {
+    public function getRecordsFullIn($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL, $column = NULL, $value = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -217,7 +229,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getRecordsByOffset($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $offset = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL) {
+    public function getRecordsByOffset($database = NULL, $tbl = NULL, $cond = NULL, $cols = NULL, $limit = NULL, $offset = NULL, $order_col = NULL, $order_by = NULL, $group_by = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -247,7 +260,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getRecordsIn($database = NULL, $tbl = NULL, $cols = NULL, $column = NULL, $value = NULL) {
+    public function getRecordsIn($database = NULL, $tbl = NULL, $cols = NULL, $column = NULL, $value = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -268,7 +282,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getRecordsInWhere($database = NULL, $tbl = NULL, $cols = NULL, $cond = NULL, $column = NULL, $value = NULL) {
+    public function getRecordsInWhere($database = NULL, $tbl = NULL, $cols = NULL, $cond = NULL, $column = NULL, $value = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -292,7 +307,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function searchByLike($database = NULL, $tbl = NULL, $column = NULL, $match = NULL, $cols = NULL, $cond = NULL, $limit = NULL) {
+    public function searchByLike($database = NULL, $tbl = NULL, $column = NULL, $match = NULL, $cols = NULL, $cond = NULL, $limit = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -319,7 +335,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getRecordCount($database = NULL, $tbl = NULL, $cond = NULL) {
+    public function getRecordCount($database = NULL, $tbl = NULL, $cond = NULL)
+    {
         $common = $this->load->database($database, TRUE);
         if (!empty($cond)) {
             $common->where($cond);
@@ -333,7 +350,8 @@ class CommonModel extends CI_Model {
       LOAD MODEL : $this->load->model('CommonModel');
      */
 
-    public function getLastRecord($database = NULL, $tbl = NULL, $cols = NULL) {
+    public function getLastRecord($database = NULL, $tbl = NULL, $cols = NULL)
+    {
         if (!empty($database) && !empty($tbl)) {
             $common = $this->load->database($database, TRUE);
             if (!empty($cols)) {
@@ -349,7 +367,8 @@ class CommonModel extends CI_Model {
         }
     }
 
-    public function status($database = NULL, $tbl = NULL, $cols = NULL, $id = NULL) {
+    public function status($database = NULL, $tbl = NULL, $cols = NULL, $id = NULL)
+    {
         $common = $this->load->database($database, TRUE);
         $common->select('*');
         $common->from($tbl);
@@ -374,7 +393,8 @@ class CommonModel extends CI_Model {
         }
     }
 
-    public function soft_delete($database = NULL, $tbl = NULL, $cols = NULL, $id = NULL) {
+    public function soft_delete($database = NULL, $tbl = NULL, $cols = NULL, $id = NULL)
+    {
         $common = $this->load->database($database, TRUE);
         $row = [
             'status' => 2
