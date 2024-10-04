@@ -68,7 +68,7 @@
 					<!--<li class="position-relative">-->
 					<?php if ($sub_cat_count == 1) { ?>
 						<div class="col-lg-4 col-md-6">
-							<div class="service-single-box" style="height:550px">
+							<div class="service-single-box" style="height:590px">
 								<div class="service-icon">
 									<!-- <img src="assets/images/. $category['category_image']);" alt="Icon"> -->
 									<img src="<?php echo base_url('uploads/product/image/' . $product['cat_image']); ?>" alt="Icon"
@@ -93,7 +93,7 @@
 					<!--</li>-->
 				<?php } else { ?>
 					<div class="col-lg-4 col-md-6">
-						<div class="service-single-box"style="height:550px">
+						<div class="service-single-box"style="height:590px">
 							<div class="service-icon">
 								<!-- <img src="assets/images/. $category['category_image']);" alt="Icon"> -->
 								<img src="<?php echo base_url('uploads/product/image/' . $product['cat_image']); ?>" alt="Icon"style="height:300px">

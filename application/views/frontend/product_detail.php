@@ -32,8 +32,8 @@
 <div class="all-products-section">
 	<?php
 	//    echo "<pre>";
-//    print_r($product_detail_data);
-//    exit;
+	//    print_r($product_detail_data);
+	//    exit;
 	?>
 	<?php if (!empty($product_detail_data)): ?>
 		<?php foreach ($product_detail_data as $product): ?>
@@ -80,7 +80,7 @@
 							<?php
 							$images_string = $product['images'];
 							$images = explode(',', $images_string)
-								?>
+							?>
 							<div class=" position-relative p-1 " style='background-color:#A6C438'>
 								<div class="main-carousel owl-carousel">
 									<?php foreach ($images as $image) { ?>
@@ -155,16 +155,16 @@
 				</div>
 			</div>
 			<!----------------------------->
-	<?php if ($product['page_type'] == 1) { ?>
-	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-		<p style="text-align: center;">
-		<h2 style="text-align: center;" class="textNavy">
-			<?php echo $product['advantages_title']; ?>
-		</h2>
-		</p>
-		<div class="">
-			<div class="row justify-content-center gap-5">
-				<!--			<div class="col-lg-2 col-md-6">
+			<?php if ($product['page_type'] == 1) { ?>
+				<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+					<p style="text-align: center;">
+					<h2 style="text-align: center;" class="textNavy">
+						<?php echo $product['advantages_title']; ?>
+					</h2>
+					</p>
+					<div class="">
+						<div class="row justify-content-center gap-5">
+							<!--			<div class="col-lg-2 col-md-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>-->
 							<div class="col-lg-5 col-md-12 col-sm-12  card shadow p-3 rounded">
@@ -214,16 +214,16 @@
 			<?php } ?>
 			<!------------------------>
 			<!----------------------------->
-	<?php if ($product['page_type'] == 2) { ?>
-	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-		<p style="text-align: center;">
-		<h2 style="text-align: center;" class="textNavy">
-			<?php echo $product['advantages_title']; ?>
-		</h2>
-		</p>
-		<div class="">
-			<div class="row justify-content-center gap-5">
-				<!--			<div class="col-lg-2 col-md-6">
+			<?php if ($product['page_type'] == 2) { ?>
+				<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+					<p style="text-align: center;">
+					<h2 style="text-align: center;" class="textNavy">
+						<?php echo $product['advantages_title']; ?>
+					</h2>
+					</p>
+					<div class="">
+						<div class="row justify-content-center gap-5">
+							<!--			<div class="col-lg-2 col-md-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>-->
 							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
@@ -271,221 +271,12 @@
 			<?php } ?>
 			<!------------------------>
 			<!----------------------------->
-	<?php if ($product['page_type'] == 3 || $product['page_type'] == 4) { ?>
-	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-		<p style="text-align: center;">
-		<h2 style="text-align: center;" class="textNavy">
-			<?php echo $product['key_features']; ?>
-		</h2>
-		</p>
-		<div class="">
-			<div class="row justify-content-center gap-3">
-				<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
-								<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
-
-							</div>
-							<!--<div class="row justify-content-center mt-5">-->
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
-								<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
-
-							</div>
-							<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-							<!--</div>-->
-
-							<!--                        			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
-								<p class="text-black"><?php echo $product['key_features3_para']; ?></p>
-
-							</div>
-							<!--<div class="row justify-content-center mt-5">-->
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
-								<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
-
-							</div>
-							<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						</div>
-					</div>
-				</div>
-				
-			</div>
-
-			<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-				<p style="text-align: center;">
-				<h2 style="text-align: center;" class="textNavy"><?php echo $product['why_choose']; ?></h2>
-				</p>
-				<div class="">
-					<div class="row justify-content-center gap-3">
-						<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose1']; ?></h2>
-							<p class="text-black"><?php echo $product['why_choose1_para']; ?></p>
-
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose2']; ?></h2>
-							<p class="text-black "><?php echo $product['why_choose2_para']; ?></p>
-
-						</div>
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						<!--</div>-->
-
-						<!--                        			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose3']; ?></h2>
-							<p class="text-black"><?php echo $product['why_choose3_para']; ?></p>
-
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded" style="display:none;">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php //echo $product['why_choose4']; ?></h2>
-							<p class="text-black "><?php //echo $product['why_choose4_para']; ?></p>
-
-						</div>
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-					</div>
-				</div>
-			</div>
-			
-			</div>
-		<?php } ?>
-		<!------------------------>
-		<!----------------------------->
-<?php if ($product['page_type'] == 5) { ?>
-<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-	<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
-				<div class="">
-					<div class="row justify-content-center gap-5">
-						<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2">Technology</h2>
-							<p class="text-black"><?php echo $product['technology']; ?></p>
-
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2">Benefits Of System</h2>
-							<p class="text-black "><?php echo $product['benefits']; ?></p>
-
-						</div>
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						<!--</div>-->
-
-						<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<!--			<div class="col-lg-6 col-md-12 col-sm-12">
-				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
-				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
-
-			</div>-->
-						<!--<div class="row justify-content-center mt-5">-->
-						<!--				<div class="col-lg-6 col-md-12 col-sm-12">
-					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
-					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
-
-				</div>-->
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						<!--</div>-->
-					</div>
-				</div>
-				
-			</div>
-		<?php } ?>
-		<!------------------------>
-		<!----------------------------->
-<?php if ($product['page_type'] == 6) { ?>
-<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-	<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
-				<div class="">
-					<div class="row justify-content-center gap-5">
-						<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['need_title']; ?></h2>
-							<p class="text-black"><?php echo $product['need_para']; ?></p>
-
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features_title']; ?></h2>
-							<p class="text-black "><?php echo $product['key_features_para']; ?></p>
-
-						</div>
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						<!--</div>-->
-
-						<!--			<div class="col-lg-2 col-md-6">
-				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
-			</div>-->
-						<!--			<div class="col-lg-6 col-md-12 col-sm-12">
-				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
-				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
-
-			</div>-->
-						<!--<div class="row justify-content-center mt-5">-->
-						<!--				<div class="col-lg-6 col-md-12 col-sm-12">
-					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
-					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
-
-				</div>-->
-						<!--				<div class="col-lg-2 col-md-6">
-					 <div class="w-50"> 
-					<img src="assets/images/MIssion.gif" alt="" class="w-100">
-					 </div> 
-				</div>-->
-						<!--</div>-->
-					</div>
-				</div>
-				
-
+			<?php if ($product['page_type'] == 3 || $product['page_type'] == 4) { ?>
 				<div class="call-do-action-abou style-two" style="padding-top: 30px;">
 					<p style="text-align: center;">
-					<h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2>
+					<h2 style="text-align: center;" class="textNavy">
+						<?php echo $product['key_features']; ?>
+					</h2>
 					</p>
 					<div class="">
 						<div class="row justify-content-center gap-3">
@@ -529,158 +320,347 @@
 					<img src="assets/images/MIssion.gif" alt="" class="w-100">
 					 </div> 
 				</div>-->
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
-								<p class="text-black"><?php echo $product['key_features5_para']; ?></p>
-
-							</div>
-							<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-								<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['choose_title']; ?></h2>
-								<p class="text-black"><?php echo $product['choose_para']; ?></p>
-
-							</div>
 						</div>
 					</div>
 				</div>
-				
-			</div>
-		<?php } ?>
-		<!------------------------>
-		<!----------------------------->
-<?php if ($product['page_type'] == 7) { ?>
+
+</div>
+
 <div class="call-do-action-abou style-two" style="padding-top: 30px;">
-	<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2></p>-->
-				<div class="">
-					<div class="row justify-content-center gap-5">
-						<!--			<div class="col-lg-2 col-md-6">
+	<p style="text-align: center;">
+	<h2 style="text-align: center;" class="textNavy"><?php echo $product['why_choose']; ?></h2>
+	</p>
+	<div class="">
+		<div class="row justify-content-center gap-3">
+			<!--			<div class="col-lg-2 col-md-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
-							<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose1']; ?></h2>
+				<p class="text-black"><?php echo $product['why_choose1_para']; ?></p>
 
-						</div>
-						<!--<div class="row justify-content-center mt-5">-->
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
-							<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose2']; ?></h2>
+				<p class="text-black "><?php echo $product['why_choose2_para']; ?></p>
 
-						</div>
-
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
-							<p class="text-black "><?php echo $product['key_features3_para']; ?></p>
-
-						</div>
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
-							<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
-
-						</div>
-						<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-							<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
-							<p class="text-black "><?php echo $product['key_features5_para']; ?></p>
-
-						</div>
-						<!--				<div class="col-lg-2 col-md-6">
+			</div>
+			<!--				<div class="col-lg-2 col-md-6">
 					 <div class="w-50"> 
 					<img src="assets/images/MIssion.gif" alt="" class="w-100">
 					 </div> 
 				</div>-->
-						<!--</div>-->
+			<!--</div>-->
 
-						<!--			<div class="col-lg-2 col-md-6">
+			<!--                        			<div class="col-lg-2 col-md-6">
 				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
 			</div>-->
-						<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['why_choose3']; ?></h2>
+				<p class="text-black"><?php echo $product['why_choose3_para']; ?></p>
+
+			</div>
+			<!--<div class="row justify-content-center mt-5">-->
+			<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded" style="display:none;">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php //echo $product['why_choose4']; 
+															?></h2>
+				<p class="text-black "><?php //echo $product['why_choose4_para']; 
+										?></p>
+
+			</div>
+			<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+		</div>
+	</div>
+</div>
+
+</div>
+<?php } ?>
+<!------------------------>
+<!----------------------------->
+<?php if ($product['page_type'] == 5) { ?>
+	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+		<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
+		<div class="">
+			<div class="row justify-content-center gap-5">
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2">Technology</h2>
+					<p class="text-black"><?php echo $product['technology']; ?></p>
+
+				</div>
+				<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2">Benefits Of System</h2>
+					<p class="text-black "><?php echo $product['benefits']; ?></p>
+
+				</div>
+				<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+				<!--</div>-->
+
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<!--			<div class="col-lg-6 col-md-12 col-sm-12">
 				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
 				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
 
 			</div>-->
-						<!--<div class="row justify-content-center mt-5">-->
-						<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+				<!--<div class="row justify-content-center mt-5">-->
+				<!--				<div class="col-lg-6 col-md-12 col-sm-12">
 					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
 					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
 
 				</div>-->
-						<!--				<div class="col-lg-2 col-md-6">
+				<!--				<div class="col-lg-2 col-md-6">
 					 <div class="w-50"> 
 					<img src="assets/images/MIssion.gif" alt="" class="w-100">
 					 </div> 
 				</div>-->
-						<!--</div>-->
-					</div>
-				</div>
-			
-
+				<!--</div>-->
 			</div>
-		<?php } ?>
-		<!------------------------>
+		</div>
 
-		<div class="tab-container mt-5">
-			<div class="tabs">
-				<!--<div class="tab active" data-tab="description">Description</div>-->
-				<!-- <div class="tab active" data-tab="description">Conclusion</div> -->
-				<?php if (!empty($product['product_diversity_matrix'])) { ?>
-					<div class="tab active" data-tab="additional-info">Product Diversity Matrix</div>
-				<?php } ?>
-				<div class="tab" data-tab="videos">Gallery</div>
+	</div>
+<?php } ?>
+<!------------------------>
+<!----------------------------->
+<?php if ($product['page_type'] == 6) { ?>
+	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+		<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['advantages_title']; ?></h2></p>-->
+		<div class="">
+			<div class="row justify-content-center gap-5">
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['need_title']; ?></h2>
+					<p class="text-black"><?php echo $product['need_para']; ?></p>
 
-			</div>
-			<div class="tab-content">
-				<div id="description" class="tab-pane ">
-					<!--			<p class="fw-bold">The Duztec Double Barrel-DB boasts dual functionality, deploying Mist cannons or fog
-				cannons at identical
-				angles to simultaneously address two crucial aspects of slag management. One barrel efficiently cools
-				the heated slag, promoting effective quenching, while the other focuses on suppressing the dust
-				generated during the process. This dual-action approach not only enhances the overall efficiency of slag
-				management but also contributes to a cleaner and safer working environment.</p>-->
-					<p class="fw-bold"><?php echo $product['conclusion']; ?></p>
 				</div>
-				<?php if (!empty($product['product_diversity_matrix'])) { ?>
-					<div id="additional-info" class="tab-pane active">
-						<!--<p>Here is some additional information.</p>-->
-						<p><?php echo $product['product_diversity_matrix']; ?></p>
+				<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features_title']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features_para']; ?></p>
+
+				</div>
+				<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+				<!--</div>-->
+
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
+				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
+
+			</div>-->
+				<!--<div class="row justify-content-center mt-5">-->
+				<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
+					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
+
+				</div>-->
+				<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+				<!--</div>-->
+			</div>
+		</div>
+
+
+		<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+			<p style="text-align: center;">
+			<h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2>
+			</p>
+			<div class="">
+				<div class="row justify-content-center gap-3">
+					<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
+						<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
+
 					</div>
-				<?php } ?>
-				<div id="videos" class="tab-pane">
-					<!--<p>Here are some videos.</p>-->
-					<div class="call-do-action-abou style-two" style="padding-top: 30px;">
-						<div class="">
-							<div class="row justify-content-center gap-5">
+					<!--<div class="row justify-content-center mt-5">-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
+						<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
 
-								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-									<!--<h2 class="fw-bold about-title fs-1 py-2">A</h2>-->
-									<!--<p class="text-black">ASDF</p>-->
-									<iframe width="400" height="260" src="https://www.youtube.com/embed/x4SmLxxH5gc"
-										frameborder="0" allowfullscreen></iframe>
+					</div>
+					<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+					<!--</div>-->
 
-								</div>
-								<!--<div class="row justify-content-center mt-5">-->
-								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-									<!--<h2 class="fw-bold about-title fs-1 py-2">B</h2>-->
-									<!--<p class="text-black ">ZXCV</p>-->
-									<iframe width="400" height="260" src="https://www.youtube.com/embed/HAIP1RNg4zA"
-										frameborder="0" allowfullscreen></iframe>
+					<!--                        			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
+						<p class="text-black"><?php echo $product['key_features3_para']; ?></p>
 
-								</div>
+					</div>
+					<!--<div class="row justify-content-center mt-5">-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
+						<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
 
-							</div>
-						</div>
+					</div>
+					<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
+						<p class="text-black"><?php echo $product['key_features5_para']; ?></p>
+
+					</div>
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['choose_title']; ?></h2>
+						<p class="text-black"><?php echo $product['choose_para']; ?></p>
+
 					</div>
 				</div>
 			</div>
 		</div>
-	<?php endforeach; ?>
+
+	</div>
+<?php } ?>
+<!------------------------>
+<!----------------------------->
+<?php if ($product['page_type'] == 7) { ?>
+	<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+		<!--<p style="text-align: center;"><h2 style="text-align: center;" class="textNavy"><?php echo $product['key_features']; ?></h2></p>-->
+		<div class="">
+			<div class="row justify-content-center gap-5">
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features1']; ?></h2>
+					<p class="text-black"><?php echo $product['key_features1_para']; ?></p>
+
+				</div>
+				<!--<div class="row justify-content-center mt-5">-->
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features2']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features2_para']; ?></p>
+
+				</div>
+
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features3']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features3_para']; ?></p>
+
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features4']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features4_para']; ?></p>
+
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['key_features5']; ?></h2>
+					<p class="text-black "><?php echo $product['key_features5_para']; ?></p>
+
+				</div>
+				<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+				<!--</div>-->
+
+				<!--			<div class="col-lg-2 col-md-6">
+				<img src="assets/images/About Us Icon/About Us Icon/Vision.gif" alt="" class="w-100">
+			</div>-->
+				<!--			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_3']; ?></h2>
+				<p class="text-white"><?php echo $product['advantages3_para']; ?></p>
+
+			</div>-->
+				<!--<div class="row justify-content-center mt-5">-->
+				<!--				<div class="col-lg-6 col-md-12 col-sm-12">
+					<h2 class="fw-bold about-title fs-1 py-2"><?php echo $product['advantages_4']; ?></h2>
+					<p class="text-white "><?php echo $product['advantages4_para']; ?></p>
+
+				</div>-->
+				<!--				<div class="col-lg-2 col-md-6">
+					 <div class="w-50"> 
+					<img src="assets/images/MIssion.gif" alt="" class="w-100">
+					 </div> 
+				</div>-->
+				<!--</div>-->
+			</div>
+		</div>
+
+
+	</div>
+<?php } ?>
+<!------------------------>
+
+<div class="tab-container mt-5">
+	<div class="tabs">
+		<!--<div class="tab active" data-tab="description">Description</div>-->
+		<!-- <div class="tab active" data-tab="description">Conclusion</div> -->
+		<div class="tab active" data-tab="1">1</div>
+		<div class="tab " data-tab="2">2</div>
+		<div class="tab " data-tab="3">3</div>
+		<?php if (!empty($product['product_diversity_matrix'])) { ?>
+			<div class="tab" data-tab="additional-info">Product Diversity Matrix</div>
+		<?php } ?>
+
+
+	</div>
+	<div class="tab-content">
+		
+		<?php if (!empty($product['product_diversity_matrix'])) { ?>
+			<div id="additional-info" class="tab-pane ">
+				<!--<p>Here is some additional information.</p>-->
+				<p><?php echo $product['product_diversity_matrix']; ?></p>
+			</div>
+		<?php } ?>
+		<div id="1" class="tab-pane active">
+			<h1>1</h1>
+		</div>
+		<div id="2" class="tab-pane">
+			<h1>2</h1>
+		</div>
+		<div id="3" class="tab-pane">
+			<h1>3</h1>
+		</div>
+
+	</div>
+</div>
+<?php endforeach; ?>
 <?php else: ?>
 	<div class="col-lg-12">
 		<p>No product found.</p>
 	</div>
 <?php endif; ?>
 </div>
-
 <!-- ============================================================== -->
-<!-- Start -our product -->
+<!-- Videos -->
 <!-- ============================================================= -->
 <div class="service-section p-0 p-md-5 p-lg-5">
 	<div class="container">
@@ -688,32 +668,72 @@
 			<div class="col-lg-12 col-md-12">
 				<div class="section-title text-center">
 					<!-- <h5>// WHAT WE Do</h5> -->
-					<h1>OUR PRODUCTS</h1>
+					<h1>Gallery</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="service_list owl-carousel">
-				<?php foreach ($product_with_cat_sub_cat as $product) {
-					$images = explode(',', $product['images']);
-					?>
-					<div class="service-single-box rounded" style="height:500px">
-						<div class="service-thumb">
-							<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
-								style="height:300px">
-						</div>
-						<!-- <div class="service-icon">
-						<i class="flaticon-business-and-finance"></i>
-					</div> -->
-						<div class="service-content">
-							<h2><?php echo $product['name']; ?></h2>
-							<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
-							<!--<p><?php echo $product['conclusion']; ?></p>-->
-							<a href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>">Learn More</a>
+		<div class="call-do-action-abou style-two" style="padding-top: 30px;">
+			<div class="">
+				<div class="row justify-content-center gap-5">
+
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<!--<h2 class="fw-bold about-title fs-1 py-2">A</h2>-->
+						<!--<p class="text-black">ASDF</p>-->
+						<iframe width="400" height="260" src="https://www.youtube.com/embed/x4SmLxxH5gc"
+							frameborder="0" allowfullscreen></iframe>
+
+					</div>
+					<!--<div class="row justify-content-center mt-5">-->
+					<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
+						<!--<h2 class="fw-bold about-title fs-1 py-2">B</h2>-->
+						<!--<p class="text-black ">ZXCV</p>-->
+						<iframe width="400" height="260" src="https://www.youtube.com/embed/HAIP1RNg4zA"
+							frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<!-- ============================================================== -->
+		<!-- Start -our product -->
+		<!-- ============================================================= -->
+		<div class="service-section p-0 p-md-5 p-lg-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="section-title text-center">
+							<!-- <h5>// WHAT WE Do</h5> -->
+							<h1>OUR PRODUCTS</h1>
 						</div>
 					</div>
-				<?php } ?>
-				<!--				<div class="service-single-box">
+				</div>
+				<div class="row">
+					<div class="service_list owl-carousel">
+						<?php foreach ($product_with_cat_sub_cat as $product) {
+							$images = explode(',', $product['images']);
+						?>
+							<div class="service-single-box rounded" style="height:500px">
+								<div class="service-thumb">
+									<img src="<?php echo base_url() ?>uploads/product/image/<?php echo $images[0]; ?>" alt=""
+										style="height:300px">
+								</div>
+								<!-- <div class="service-icon">
+						<i class="flaticon-business-and-finance"></i>
+					</div> -->
+								<div class="service-content">
+									<h2><?php echo $product['name']; ?></h2>
+									<!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>-->
+									<!--<p><?php echo $product['conclusion']; ?></p>-->
+									<a href="<?php echo base_url() . 'product-detail/' . $product['p_id'] ?>">Learn More</a>
+								</div>
+							</div>
+						<?php } ?>
+						<!--				<div class="service-single-box">
 					<div class="service-thumb">
 						<img src="<?php echo base_url() ?>assets/images/products/ProductImageSection.webp" alt="">
 					</div>
@@ -740,26 +760,26 @@
 					</div>
 				</div>-->
 
+					</div>
+				</div>
+			</div>
+
+			<div class="shape-thumb">
+				<div class="service-shape-thumb bounce-animate">
+					<img src="<?php echo base_url() ?>assets/images/shape2.png" alt="">
+				</div>
+				<div class="service-shape-thumb2 bounce-animate">
+					<img src="<?php echo base_url() ?>assets/images/shape4.png" alt="">
+				</div>
+				<div class="service-shape-thumb3 rotateme">
+					<img src="<?php echo base_url() ?>assets/images/service-shape.png" alt="">
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="shape-thumb">
-		<div class="service-shape-thumb bounce-animate">
-			<img src="<?php echo base_url() ?>assets/images/shape2.png" alt="">
-		</div>
-		<div class="service-shape-thumb2 bounce-animate">
-			<img src="<?php echo base_url() ?>assets/images/shape4.png" alt="">
-		</div>
-		<div class="service-shape-thumb3 rotateme">
-			<img src="<?php echo base_url() ?>assets/images/service-shape.png" alt="">
-		</div>
-	</div>
-</div>
 
 
 
 
-<!-- Footer start  -->
-<?php $this->load->view('layout/footer'); ?>
-<!-- Footer end  -->
+		<!-- Footer start  -->
+		<?php $this->load->view('layout/footer'); ?>
+		<!-- Footer end  -->

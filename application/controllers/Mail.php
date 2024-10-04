@@ -20,7 +20,7 @@ class Mail extends CI_Controller{
         $mail->Host     = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'aishwarya@crezvatic.com'; // Your Gmail address
-        $mail->Password = 'vpcq bljp hxsj iple'; // App Password or Gmail password
+        $mail->Password = 'evas mnsr suxv ucti'; // App Password or Gmail password
         $mail->SMTPSecure = 'tls';  
         $mail->Port     = 587; // TLS port for Gmail
         
@@ -52,15 +52,27 @@ class Mail extends CI_Controller{
         $mail->isHTML(true);
         $mail->Body = $mailContent;
        
-        // Send email
+        // Send email to admin
         if(!$mail->send()){
             echo 'Mail could not be sent.';
-            // echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
-            // Redirect to the thank you page after sending the email
+            // Send thank you email to the form submitter
+            $mail->clearAddresses(); // Clear previous recipient
+            $mail->addAddress($formData['email']); // Send to the user's email
+            $mail->Subject = 'Thank You for Your Request';
+            $mail->Body = "<p>Dear " . htmlspecialchars($formData['name']) . ",</p>";
+            $mail->Body .= "<p>Thank you for reaching out to us. We have received your request and will get back to you soon.</p>";
+            $mail->Body .= "<p>Best regards,<br>Company Name</p>";
+    
+            if(!$mail->send()){
+                echo 'Thank you email could not be sent.';
+            }
+    
+            // Redirect to the thank you page
             redirect('thankyou');
         }
     }
+    
 
     // Method to display the Thank You page
     public function thankyou(){

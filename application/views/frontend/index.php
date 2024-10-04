@@ -21,15 +21,15 @@ if (!empty($home_page_data)): ?>
 				<div class="swiper-wrapper">
 					<?php
 					$image_array = [
-						'contact-us-banner.png',
-						'contact-us-banner.png',
-						'contact-us-banner.png',
-						'contact-us-banner.png',
-						'contact-us-banner.png',
+						'IndustriesProductsHomePageBannerimage1.webp',
+						'ProductHomePageBannerimage2.webp',
+						'SlagSystemHomePageBannerimage1.webp',
+						'SlagSystemHomePageBannerimage2.webp',
+						// 'IndustriesProductsHomePageBannerimage1.webp',
 					]; // Dummy array of images
 					foreach ($image_array as $image): ?>
 						<div class="swiper-slide">
-							<img class="w-100" src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $image; ?>" alt="">
+							<img style="height: 100% " src="<?php echo base_url(); ?>uploads/heroBanner/<?php echo $image; ?>" alt="">
 						</div>
 					<?php endforeach; ?>
 				</div>
@@ -42,25 +42,26 @@ if (!empty($home_page_data)): ?>
 			<script>
 				const swiper2 = new Swiper('.unique', {
 					loop: true,
+					slidesPerView: 1, // Ensure only one slide is visible
+					autoplay: {
+						delay: 3500,
+						disableOnInteraction: true,
+					},
 					pagination: {
-						el: '.unique .swiper-pagination', // Scoped to this Swiper instance
+						el: '.unique .swiper-pagination',
 						clickable: true,
 					},
 					navigation: {
-						nextEl: '.unique .swiper-button-next', // Corrected selector
-						prevEl: '.unique .swiper-button-prev', // Corrected selector
-					},
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
+						nextEl: '.unique .swiper-button-next',
+						prevEl: '.unique .swiper-button-prev',
 					},
 				});
 			</script>
 
 
-			<div class="overlay"></div>
+			<!-- <div class="overlay"></div> -->
 
-			<div class="HomeTextContaine container">
+			<!-- <div class="HomeTextContaine container">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="slider-content text-center">
@@ -78,7 +79,7 @@ if (!empty($home_page_data)): ?>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
@@ -131,7 +132,7 @@ if (!empty($home_page_data)): ?>
 		<!-- ============================================================== -->
 		<!-- Start -our product -->
 		<!-- ============================================================= -->
-		<div class="service-section p-0 p-md-5 p-lg-5">
+		<div class="service-section p-4 p-md-5 p-lg-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
@@ -344,7 +345,7 @@ if (!empty($home_page_data)): ?>
 								</div>
 							</a>
 						<?php } ?>
-						 
+
 					</div>
 				</div>
 			</div>
