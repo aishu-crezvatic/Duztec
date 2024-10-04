@@ -110,7 +110,7 @@ class Frontend_model extends CI_Model
     public function product_with_cat_sub_cat() //not used yet
     {
         //$this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image,  sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
-        $this->db->select('product.*, category.name as cat_name,category.description as cat_description,category.category_image as cat_image, sub_category.name as sub_cat_name,sub_category.description as sub_cat_description');
+        $this->db->select('product.*, category.name as cat_name, category.description as cat_description, category.category_image as cat_image, sub_category.name as sub_cat_name, sub_category.description as sub_cat_description');
         $this->db->from('product');
         $this->db->join('category', 'product.c_id = category.c_id', 'left');
         $this->db->join('sub_category', 'product.sc_id = sub_category.sc_id', 'left');
@@ -123,6 +123,8 @@ class Frontend_model extends CI_Model
         );
         //        $this->db->limit(24,  $start);
 //        $this->db->order_by('dv_id', 'DESC');
+        $this->db->distinct();
+
         $query = $this->db->get();
         // print_r($query);
 
@@ -192,6 +194,30 @@ class Frontend_model extends CI_Model
         // print_r($data);
         return $data;
     }
+
+    public function subcat($c_id, $sc_id, $exclude_product_name = null)
+    {
+        // Build the query
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->where('c_id', $c_id);
+        $this->db->where('sc_id', $sc_id);
+
+        if ($exclude_product_name) {
+            $this->db->where('name !=', $exclude_product_name);
+        }
+
+        $query = $this->db->get();
+
+        $data['results'] = $query->result_array();
+
+        $data['sql_query'] = $this->db->last_query(); // Store the last executed SQL query
+
+        // print_r($data);
+
+        return $data['results'];
+    }
+
     public function about_us()
     {
         $data = $this->db->select('*')
