@@ -623,11 +623,11 @@
 	<div class="tabs">
 		<!--<div class="tab active" data-tab="description">Description</div>-->
 		<!-- <div class="tab active" data-tab="description">Conclusion</div> -->
-		<div class="tab active" data-tab="1">1</div>
-		<div class="tab " data-tab="2">2</div>
-		<div class="tab " data-tab="3">3</div>
+		<div class="tab active" data-tab="1">Mosquito Mini M5</div>
+		<div class="tab " data-tab="2">Mosquito MHP4</div>
+		<div class="tab " data-tab="3">Mosquito Godust</div>
 		<?php if (!empty($product['product_diversity_matrix'])) { ?>
-			<div class="tab" data-tab="additional-info">Product Diversity Matrix</div>
+			<div class="tab" data-tab="additional-info">Mosquito Dust Master</div>
 		<?php } ?>
 
 
@@ -636,18 +636,19 @@
 		
 		<?php if (!empty($product['product_diversity_matrix'])) { ?>
 			<div id="additional-info" class="tab-pane ">
+				<h1>Mosquito Dust Master</h1>
 				<!--<p>Here is some additional information.</p>-->
 				<p><?php echo $product['product_diversity_matrix']; ?></p>
 			</div>
 		<?php } ?>
 		<div id="1" class="tab-pane active">
-			<h1>1</h1>
+			<h1>Mosquito MHP4 </h1>
 		</div>
 		<div id="2" class="tab-pane">
-			<h1>2</h1>
+			<h1>Mosquito Godust </h1>
 		</div>
 		<div id="3" class="tab-pane">
-			<h1>3</h1>
+			<h1>Mosquito Mini M5</h1>
 		</div>
 
 	</div>
