@@ -620,6 +620,7 @@
 <!------------------------>
 
 <div class="tab-container mt-5">
+<<<<<<< HEAD
 	<div class="tabs">
 		<!--<div class="tab active" data-tab="description">Description</div>-->
 		<!-- <div class="tab active" data-tab="description">Conclusion</div> -->
@@ -629,8 +630,44 @@
 		<?php if (!empty($product['product_diversity_matrix'])) { ?>
 			<div class="tab" data-tab="additional-info">Mosquito Dust Master</div>
 		<?php } ?>
+=======
+    <div class="tabs">
+        <?php if (!empty($sub_category)) { ?>
+            <?php foreach ($sub_category as $index => $item) { ?>
+                <div class="tab <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="tab-<?php echo $index; ?>">
+                    <?php echo $item['name']; ?> <!-- Display product name in tabs -->
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <!-- Only show the Product Diversity Matrix tab if there are no sub-category products -->
+            <?php if (!empty($product['product_diversity_matrix'])) { ?>
+                <div class="tab active" data-tab="additional-info">Product Diversity Matrix</div>
+            <?php } ?>
+        <?php } ?>
+    </div>
+>>>>>>> 53e293e9e2f28e9b6fa48d2332590ebc4e581671
 
+    <div class="tab-content">
+        <?php if (empty($sub_category)) { ?>
+            <!-- Only display the Product Diversity Matrix if there are no sub-category products -->
+            <?php if (!empty($product['product_diversity_matrix'])) { ?>
+                <div id="additional-info" class="tab-pane active">
+                    <p><?php echo $product['product_diversity_matrix']; ?></p>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <?php foreach ($sub_category as $index => $item) { ?>
+                <div id="tab-<?php echo $index; ?>" class="tab-pane <?php echo $index === 0 ? 'active' : ''; ?>">
+                    <h2><?php echo $item['name']; ?></h2> <!-- Display product name -->
+                    <img class="w-25 mx-auto" src="<?php echo base_url('uploads/product/image/' . $item['images']); ?>" alt="<?php echo $item['name']; ?>" /> <!-- Display product image -->
+                    <p><?php echo $item['product_diversity_matrix']; ?></p> <!-- Display product diversity matrix -->
+                </div>
+            <?php } ?>
+        <?php } ?>
+    </div>
+</div>
 
+<<<<<<< HEAD
 	</div>
 	<div class="tab-content">
 		
@@ -652,6 +689,8 @@
 		</div>
 
 	</div>
+=======
+>>>>>>> 53e293e9e2f28e9b6fa48d2332590ebc4e581671
 </div>
 <?php endforeach; ?>
 <?php else: ?>

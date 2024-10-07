@@ -264,6 +264,7 @@
                                                             <?php //  foreach ($product_sub_category as $sub_category) { ?>
                                                             <?php 
                                                             $search_c_id = $product['c_id'];
+                                                            $shown_sub_categories = [];
                                                             foreach ($product_sub_category as $sub_category2) { 
                                                                 if($sub_category2['sc_id'] == $search_c_id && $search_sc_id > 0) {
 //                                                                    echo "Value exists in sc_id_exists key.".$search_sc_id.' product name '.$product['name'].'</br>';
@@ -271,10 +272,14 @@
                                                                         $search_sc_id2 = $product2['sc_id'];
                                                                     //    echo "<pre> shankar ".$search_sc_id2.' </br>';
                                                                         if($search_sc_id2 > 0 ) {
-                                                                ?>
+                                                                            if (!in_array($product2['sub_cat_name'], $shown_sub_categories)) {
+                                                                                $shown_sub_categories[] = $product2['sub_cat_name']; // Add to the array
+                                                                                ?>
+                                                                            
                                                                 <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
-                                                                <li><a href="<?php echo base_url() . 'product-detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
+                                                                  <li><a href="<?php echo base_url() . 'product-detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
                                                             <?php 
+                                                                            }
                                                                 
                                                                         }
                                                                         }
