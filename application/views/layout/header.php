@@ -110,9 +110,9 @@
 
     <div id="loader">
         <video id="loader-video" autoplay muted loop class="w-100">
-<!--<<<<<<< HEAD-->
+
             <source src="<?php echo base_url()?>assets/video/DuztecPreloaderForWebsite.mp4" type="video/mp4" w-100>
-<!--=======-->
+
             <!--<source src="<?php echo base_url()?>assets/video/DUZtech_New_Preloader_Video.mp4" type="video/mp4">-->
 <!-- >>>>>> b105e90a7770fe1eb4853df2dc075f4c56f9a544-->
             Your browser does not support the video tag.
@@ -123,7 +123,7 @@
             // JavaScript to hide the loader after at least 4 seconds
             window.addEventListener('load', function () {
                 // Minimum display time for the loader (in milliseconds)
-                const minLoaderTime = 2000;
+                const minLoaderTime = 0000;
 
                 // Get the loader and content elements
                 var loader = document.getElementById('loader');
@@ -136,46 +136,6 @@
                 }, minLoaderTime);
             });
         </script>
-
-        <!-- ============================================================== -->
-        <!-- Start - Header-Top- Section -->
-        <!-- ============================================================= -->
-        <!-- <div class="header-top-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 col-md-8">
-                        <div class="dreamit-top-address">
-                            <span>Call Us: +91 9137657039 </span>
-                            <span>-</span>
-                            <span>Mail Us: sales@duztec.in </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 right-side">
-                        <form class="d-inline">
-                            <input type="text" name="search" placeholder="Search..">
-                        </form>
-
-                   <div class="social-icon">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-behance-square"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                        <span></span>
-                    </div> 
-                    <div class="option-form-thumb">
-                        <img src="<?php echo base_url()?>assets/images/flag.png" alt="">
-                    </div>-->
-                    <!-- <div class="option-form">
-                        <form action="action">
-                            <select class="option">
-                                <option class="form-option" value="volvo">EN</option>
-                                <option class="form-option" value="saab">SP</option>
-                                <option class="form-option" value="fiat">RS</option>
-                                <option class="form-option" value="audi">AR</option>
-                            </select>
-                        </form>
-                    </div> -->
                 </div>
             </div>
         </div> 
@@ -219,84 +179,79 @@
                                     </ul>
                                 </li>
 
+                                
+
                                 <li class="position-relative">
-                                        <a href="<?php echo base_url(); ?>product-category">Products <i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            
-                                             <!--<li class="position-relative">
-                                                    <div class="drop-cat">
-                                                    <a href="">A<i class="fa fa-angle-down"></i></a>
-                                                </div>
-                                                <ul class="sub-prod">
-                                                    <li><a href="">B</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="">C</a></li>-->
-                                                  <?php 
-                                             $sub_cat_count = 0; 
-                                            foreach ($product_with_cat_sub_cat as $product) { ?>
+                                    <a href="<?php echo base_url(); ?>product-category">Products <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <?php 
+                                        // Array to keep track of processed categories
+                                        $processed_categories = [];
 
-                                                <?php
-                                                $search_c_id = $product['c_id'];
-                                                $search_sc_id = $product['sc_id'];
-                                                $c_id_exists = false;
-                                                      
-                                                foreach ($product_sub_category as $sub_category) {
-                                                    if ($sub_category['c_id'] == $search_c_id) {
-                                                        $c_id_exists = true;
-                                                        $sub_cat_count++;
-                                                        break;  // Stop the loop if found
-                                                    }
+                                        foreach ($product_with_cat_sub_cat as $product) {
+                                            $c_id = $product['c_id'];
+
+                                            // Skip already processed categories
+                                            if (in_array($c_id, $processed_categories)) {
+                                                continue;
+                                            }
+
+                                            // Check if there are subcategories for the current category
+                                            $has_subcategory = false;
+                                            foreach ($product_sub_category as $sub_category) {
+                                                if ($sub_category['c_id'] == $c_id) {
+                                                    $has_subcategory = true;
+                                                    break;
                                                 }
+                                            }
 
-                                                    //echo "Value exists in c_id_exists key.".$c_id_exists.' product name '.$product['name'].'</br>';
-                                                   //exit;
-                                                if ($c_id_exists) {
-                                                    // echo "Value exists in c_id key.";
-                                                    ?>
-                                                    <li class="position-relative">
-                                                        <?php if ($sub_cat_count == 1) { ?>
-                                                        <div class="drop-cat">
-                                                            <a href="<?php echo base_url() . 'product-sub-category/' . $product['p_id']; ?>"><?php echo $product['cat_name'].' '; ?><i class="fa fa-angle-down"></i></a>
-                                                        </div>
-                                                    <?php // }else{ ?>
-                                                        <ul class="sub-prod">
-                                                            <?php //  foreach ($product_sub_category as $sub_category) { ?>
-                                                            <?php 
-                                                            $search_c_id = $product['c_id'];
-                                                            $shown_sub_categories = [];
-                                                            foreach ($product_sub_category as $sub_category2) { 
-                                                                if($sub_category2['sc_id'] == $search_c_id && $search_sc_id > 0) {
-//                                                                    echo "Value exists in sc_id_exists key.".$search_sc_id.' product name '.$product['name'].'</br>';
-                                                                    foreach ($product_with_cat_sub_cat as $product2) {
-                                                                        $search_sc_id2 = $product2['sc_id'];
-                                                                    //    echo "<pre> shankar ".$search_sc_id2.' </br>';
-                                                                        if($search_sc_id2 > 0 ) {
-                                                                            if (!in_array($product2['sub_cat_name'], $shown_sub_categories)) {
-                                                                                $shown_sub_categories[] = $product2['sub_cat_name']; // Add to the array
-                                                                                ?>
-                                                                            
-                                                                <!--<li><a href="<?php // echo base_url() . 'product_detail/' . $sub_category['c_id']; ?>"><?php echo $sub_category['name']; ?></a></li>-->
-                                                                  <li><a href="<?php echo base_url() . 'product-detail/' . $product2['p_id']; ?>"><?php echo $product2['sub_cat_name']; ?></a></li>
-                                                            <?php 
-                                                                            }
-                                                                
-                                                                        }
-                                                                        }
+                                            // Add the category to the processed list
+                                            $processed_categories[] = $c_id;
+
+                                            // Render the category and its subcategories
+                                            ?>
+                                            <li class="position-relative">
+                                                <?php if ($has_subcategory) { ?>
+                                                    <div class="drop-cat">
+                                                        <a href="<?php echo base_url() . 'product-sub-category/' . $product['p_id']; ?>">
+                                                            <?php echo $product['cat_name']; ?> <i class="fa fa-angle-down"></i>
+                                                        </a>
+                                                    </div>
+                                                    <ul class="sub-prod">
+                                                        <?php
+                                                        // Display the subcategories for this category
+                                                        $shown_sub_categories = [];
+                                                        foreach ($product_sub_category as $sub_category) {
+                                                            if ($sub_category['c_id'] == $c_id) {
+                                                                // Only show unique subcategory names
+                                                                if (!in_array($sub_category['sub_cat_name'], $shown_sub_categories)) {
+                                                                    $shown_sub_categories[] = $sub_category['name'];
+                                                                    // print_r($sub_category)
+                                                                    ?>
+                                                                    <li>
+                                                                        <a href="<?php echo base_url() . 'product-detail/' . $sub_category['sc_id']; ?>">
+                                                                            <?php echo $sub_category['name']; ?>
+                                                                        </a>
+                                                                    </li>
+                                                                    <?php
                                                                 }
-                                                                } ?>
-                                                        </ul>
-                                                    <?php } ?>
-                                                    </li>
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </ul>
                                                 <?php } else { ?>
-                                                    <li><a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>"><?php echo $product['name']; ?></a></li>
-                                                     <!-- <li>test</li> -->
+                                                    <a href="<?php echo base_url() . 'product-detail/' . $product['p_id']; ?>">
+                                                        <?php echo $product['name']; ?>
+                                                    </a>
                                                 <?php } ?>
-                                            <?php } ?> 
-                                         
-                                                    
-                                        </ul>
+                                            </li>
+                                        <?php } ?>
+                                    </ul>
                                 </li>
+
+
+
+
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
 
                                 <li><a href="<?php echo base_url() ?>about">About Us</a>

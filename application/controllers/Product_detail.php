@@ -46,7 +46,7 @@ class Product_detail extends CI_Controller
         $current_product_name = $data['product_detail_data'][0]['name']; // Assuming the product name is stored in 'name'
 
         // Debugging output
-        print_r($data['product_detail_data'][0]['c_id']);
+        // print_r($data['product_detail_data'][0]['c_id']);
 
         // Pass the current product name to the subcat method
         $data['sub_category'] = $this->frontend_model->subcat($c_id, $sc_id, $current_product_name);
