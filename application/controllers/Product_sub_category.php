@@ -29,7 +29,7 @@ class Product_sub_category extends CI_Controller {
 //        $data['product_category'] = $this->frontend_model->productCategory();
         $data['product_sub_category'] = $this->frontend_model->productSubCategory();
         $data['product_with_cat_sub_cat'] = $this->frontend_model->product_with_cat_sub_cat();
-        $data['product_with_cat_sub_cat2'] = $this->frontend_model->product_with_cat_sub_cat2($c_id);
+        $data['product_with_cat_sub_cat2'] = $this->frontend_model->product_with_cat_sub_cat2($c_id );
         $data['clientele'] = $this->frontend_model->get_clientele();
         $data['sectors'] = $this->frontend_model->get_sectors();
         $data['blog_categories'] = $this->frontend_model->get_blog_categories();

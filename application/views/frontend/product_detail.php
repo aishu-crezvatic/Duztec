@@ -403,7 +403,7 @@
 <!-- ============================================================== -->
 <!-- Videos -->
 <!-- ============================================================= -->
-<div class="service-section p-0 p-md-5 p-lg-5">
+<div class="service-section p-0 px-md-5 px-lg-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
