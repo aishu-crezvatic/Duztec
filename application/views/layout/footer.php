@@ -135,9 +135,9 @@
 					<!-- <img src="assets/images/fav-icon/transparent-logo.png" alt=""> -->
 
 				</div>
-				<div class="footer-right-text">
+				<!-- <div class="footer-right-text">
 					<p>We are experienced professionals who understand that It services is</p>
-				</div>
+				</div> -->
 				<div class="footer-right-side">
 					<span><i class="fas fa fa-map-marker d-inline"></i>
 						<?php if (!empty($contact)): ?>

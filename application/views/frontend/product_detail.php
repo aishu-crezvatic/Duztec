@@ -1,7 +1,22 @@
 <!-- header start  -->
-<?php $this->load->view('layout/header');
-?>
+<?php $this->load->view('layout/header'); ?>
+<style>
+	.card {
+		display: flex;
+		flex-direction: column;
+	}
 
+	.card1 {
+		height: 500px;
+		overflow-y: scroll;
+		background-color: white;
+	}
+
+	.overflow-auto {
+		overflow-y: auto;
+		/* Enable vertical scrolling */
+	}
+</style>
 <!-- header end  -->
 
 <!-- ============================================================== -->
@@ -302,25 +317,34 @@
 
 	<!-- Add similar checks for other page types... -->
 
-			<?php if ($product['page_type'] == 5 && !empty($product['technology']) && !empty($product['benefits'])) { ?>
+			<?php if ($product['page_type'] == 5 || !empty($product['technology']) || !empty($product['benefits'])) { ?>
 				<div class="call-do-action-abou style-two" style="padding-top: 30px;">
 					<div class="">
-						<div class="row justify-content-center gap-5">
+						<div class="row justify-content-center gap-5 align-items-stretch">
 							<?php if (!empty($product['technology'])) { ?>
-								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-									<h2 class="fw-bold about-title fs-1 py-2">Technology</h2>
-									<p class="text-black"><?php echo $product['technology']; ?></p>
+								<div class="col-lg-5 col-md-5 col-sm-12 d-flex ">
+									<div class="card card1 shadow p-3 rounded flex-fill">
+										<h2 class="fw-bold about-title fs-1 py-2">Applications</h2>
+										<p class="text-black overflow-auto" style="max-height: 300px;">
+											<?php echo $product['technology']; ?>
+										</p>
+									</div>
 								</div>
 							<?php } ?>
 							<?php if (!empty($product['benefits'])) { ?>
-								<div class="col-lg-5 col-md-5 col-sm-12 card shadow p-3 rounded">
-									<h2 class="fw-bold about-title fs-1 py-2">Benefits Of System</h2>
-									<p class="text-black"><?php echo $product['benefits']; ?></p>
+								<div class="col-lg-5 col-md-5 col-sm-12 d-flex">
+									<div class="card shadow p-3 rounded flex-fill">
+										<h2 class="fw-bold about-title fs-1 py-2">Benefits Of System</h2>
+										<p class="text-black overflow-auto" style="max-height: 300px;">
+											<?php echo $product['benefits']; ?>
+										</p>
+									</div>
 								</div>
 							<?php } ?>
 						</div>
 					</div>
 				</div>
+
 			<?php } ?>
 
 			<?php if ($product['page_type'] == 6 && !empty($product['need_title']) && !empty($product['key_features_title'])) { ?>

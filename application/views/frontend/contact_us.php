@@ -7,12 +7,12 @@
 <style>
     .breadcumn-section-contac {
         position: relative;
-        background: url(assets/images/contact-us-banner.png);
+        background: url(assets/images/contact-us-banner-1.png);
+        padding-top: 150px;
         padding-top: 400px;
-        padding-bottom: 300px;
         background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-position: center !important;
+        background-size: initial !important;
+        /* background-position: center !important; */
     }
 </style>
 
@@ -21,14 +21,14 @@
 <!-- Start - Slider- Section -->
 <!-- ============================================================= -->
 <div class="breadcumn-section-contac d-flex align-items-center"
-     style="background: url('<?php echo htmlspecialchars('uploads/heroBanner/' . $heroBanner_img); ?>');">
+    style="background: url('<?php echo htmlspecialchars('uploads/heroBanner/' . $heroBanner_img); ?>');">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="breadcumn-content text-left" class="wow slideInLeft" data-wow-duration="2s"
-                     data-wow-delay=".5s">
-                         <?php if (!empty($contact)): ?>
-                             <?php foreach ($contact as $item): ?>
+                    data-wow-delay=".5s">
+                    <?php if (!empty($contact)): ?>
+                        <?php foreach ($contact as $item): ?>
                             <h2 class="about-title"><?php echo htmlspecialchars($item['content']); ?></h2>
                         <?php endforeach; ?>
                     <?php else: ?>
@@ -82,7 +82,7 @@
                         <h2>Phone Number:</h2>
                         <?php if (!empty($contact)): ?>
                             <?php foreach ($contact as $item): ?>
-                                                <!-- <p>+91 9137657039</p> -->
+                                <!-- <p>+91 9137657039</p> -->
                                 <p><?php echo htmlspecialchars($item['phone_no']) ?></p>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -98,7 +98,7 @@
                         <h2>Mail Address:</h2>
                         <?php if (!empty($contact)): ?>
                             <?php foreach ($contact as $item): ?>
-                                                <!-- <p>sales@duztec.in</p> -->
+                                <!-- <p>sales@duztec.in</p> -->
                                 <p><?php echo htmlspecialchars($item['email_id']) ?></p>
                             <?php endforeach; ?>
                         <?php else: ?>
@@ -115,12 +115,12 @@
                             <div class="form-group col-12 col-md-6 col-lg-6 mt-3">
                                 <label for="name" class="navyText fw-bold">Name:</label>
                                 <input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>"
-                                       class="form-control" required>
+                                    class="form-control" required>
                             </div>
                             <div class="form-group col-12 col-md-6 col-lg-6 mt-3">
                                 <label for="email" class="navyText fw-bold">Email:</label>
                                 <input type="email" id="email" name="email" value="<?php echo set_value('email') ?>"
-                                       class="form-control" required>
+                                    class="form-control" required>
                             </div>
                             <div class="form-group col-12 col-md-6 col-lg-6 mt-3">
                                 <label for="product" class="navyText fw-bold">Product:</label>
@@ -140,8 +140,8 @@
                             <div class="form-group col-12 col-md-6 col-lg-6 mt-3">
                                 <label for="phone" class="navyText fw-bold">Phone:</label>
                                 <input type="tel" id="phone" name="phone" class="form-control"
-                                       placeholder="+91 9876543210" pattern="\d{10}"
-                                       title="Please enter a 10-digit phone number without any spaces or special characters.">
+                                    placeholder="+91 9876543210" pattern="\d{10}"
+                                    title="Please enter a 10-digit phone number without any spaces or special characters.">
                             </div>
                             <div class="form-group col-12 mt-3">
                                 <label for="comment" class="navyText fw-bold">Comment:</label>
@@ -157,19 +157,19 @@
                             <div class="form-group col-12 mt-2 mt-5">
                                 <button class="btn btn-success w-100" type="submit">Submit</button>
                             </div>
-                        </form>   
+                        </form>
 
 
                         <form id="quoteForm" class="row d-none" method="post" action="<?php echo site_url('mail'); ?>">
                             <div class="form-group col-12 col-md-6 col-lg-6">
                                 <label for="name" class="navyText fw-bold">Name:</label>
                                 <input type="text" id="name" name="name" value="<?php echo set_value('name'); ?>"
-                                       class="form-control" required>
+                                    class="form-control" required>
                             </div>
                             <div class="form-group col-12 col-md-6 col-lg-6">
                                 <label for="email" class="navyText fw-bold">Email:</label>
                                 <input type="email" id="email" name="email" value="<?php echo set_value('email') ?>"
-                                       class="form-control" required>
+                                    class="form-control" required>
                             </div>
                             <div class="form-group col-12 col-md-6 col-lg-6">
                                 <label for="product" class="navyText fw-bold">Product:</label>
@@ -189,8 +189,8 @@
                             <div class="form-group col-12 col-md-6 col-lg-6">
                                 <label for="phone" class="navyText fw-bold">Phone:</label>
                                 <input type="tel" id="phone" name="phone" class="form-control"
-                                       placeholder="+91 9876543210" pattern="\d{10}"
-                                       title="Please enter a 10-digit phone number without any spaces or special characters.">
+                                    placeholder="+91 9876543210" pattern="\d{10}"
+                                    title="Please enter a 10-digit phone number without any spaces or special characters.">
                             </div>
                             <div class="form-group col-12">
                                 <label for="comment" class="navyText fw-bold">Comment:</label>
@@ -221,7 +221,7 @@
 <div class="row position-relative">
     <?php if (!empty($contact) && isset($contact[0]['map_url'])): ?>
         <iframe src="<?php echo htmlspecialchars($contact[0]['map_url']); ?>" width="100%" height="600" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     <?php else: ?>
         <p>No map available</p>

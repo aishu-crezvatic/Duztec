@@ -77,7 +77,7 @@
 								<div class="service-content">
 									<h2><?php echo $product['cat_name']; ?></h2>
 									<p><?php echo $product['cat_description']; ?></p>
-									<a href="<?php echo base_url() .'product-sub-category/'. $product['c_id']; ?>">Read More <i
+									<a href="<?php echo base_url() . 'product-sub-category/' . $product['c_id']; ?>">Read More <i
 											class="fas fa-long-arrow-alt-right"></i></a>
 								</div>
 							</div>
@@ -93,10 +93,11 @@
 					<!--</li>-->
 				<?php } else { ?>
 					<div class="col-lg-4 col-md-6">
-						<div class="service-single-box"style="height:590px">
+						<div class="service-single-box" style="height:590px">
 							<div class="service-icon">
 								<!-- <img src="assets/images/. $category['category_image']);" alt="Icon"> -->
-								<img src="<?php echo base_url('uploads/product/image/' . $product['cat_image']); ?>" alt="Icon"style="height:300px">
+								<img src="<?php echo base_url('uploads/product/image/' . $product['cat_image']); ?>" alt="Icon"
+									style="height:300px">
 							</div>
 							<div class="service-content">
 								<h2><?php echo $product['cat_name']; ?></h2>
@@ -125,3 +126,6 @@
 <!-- Footer start  -->
 <?php $this->load->view('layout/footer'); ?>
 <!-- Footer end  -->
+
+
+
