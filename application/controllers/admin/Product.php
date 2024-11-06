@@ -325,6 +325,8 @@ class Product extends CI_Controller
 
     public function update() {
         // Get product ID
+        $post_data = $this->input->post();
+;
         $p_id = trim($this->input->post('p_id'));
     
         // Fetch existing product data
@@ -372,30 +374,33 @@ class Product extends CI_Controller
     
         // Prepare data based on page type
         $page_type = trim($this->input->post('page_type'));
-        $data_fields = [];
-    
+        // $data_fields = [];
+        $post_data = $this->input->post();
+    $data_fields = array_map('trim', $post_data);
         // Example of how to set up different fields for different page types
-        if ($page_type == 1) {
-            $data_fields = [
-                'name' => trim($this->input->post('name')),
-                'c_id' => trim($this->input->post('c_id')),
-                // Add other specific fields
-            ];
-        }
+        // if ($page_type == 1) {
+        //     $data_fields = [
+        //         'name' => trim($this->input->post('name')),
+        //         'c_id' => trim($this->input->post('c_id')),
+        //         // Add other specific fields
+        //     ];
+        // }
         // Add additional page type handling here...
     
         // Merge uploaded image/video paths
         $data_fields['images'] = $product_imgs;
         $data_fields['videos'] = $product_vids;
-        $data_fields['description'] = trim($this->input->post('description'));
+        // $data_fields['description'] = trim($this->input->post('description'));
+        
     
+
         // Update the database
         if ($this->CommonModel->edit(DATABASE, $this->_table, $data_fields, ['p_id' => $p_id])) {
             $this->session->set_flashdata('success', 'Product Updated');
         } else {
             $this->session->set_flashdata('error', 'Failed to update product');
         }
-    
+        
         redirect(base_url($this->_view_folder));
     }
     

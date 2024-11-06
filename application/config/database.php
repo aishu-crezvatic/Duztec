@@ -76,13 +76,13 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'duztec',
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'duztec',
 
-    // 'username' => 'digitallab_duztec',
-	// 'password' => 'mKzxRgkx]A~@',
-	// 'database' => 'digitallab_duztec',
+    'username' => 'digitallab_duztec',
+	'password' => 'mKzxRgkx]A~@',
+	'database' => 'digitallab_duztec',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

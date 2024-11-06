@@ -560,105 +560,11 @@ $this->load->view('admin/layout/sidebar');
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="form-group border rounded p-2">
-                                <label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>
-                                <label class="text-black font-w500">Upload Videos</label>
-                                <img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                        required
-                                        <input name="videos[]" type="file" class="custom-file-input" > 
-                                        <label class="custom-file-label selected">Choose File</label>
-                                    </div>
-                                </div>
-                            </div> -->
-                            
-                            <!--<div class="form-group">-->
 
-                                <!--<label class="text-black font-w500">Upload Category Image (400*200px)</label>-->
-
-<!--                                <div class="input-group">
-
-                                     <img style="width:300px;" id="blogeditModalImage" class="my-2 border rounded" src="<?php echo base_url() . $blog['image'] ?>" alt="banner"> 
-
-                                    <?php
-//                                    $image = explode(',',$data['category_image']);
-//                                    $image = $data['category_image'];
-
-// var_dump($data);
-//                                    foreach($image as $img){
-                                    ?>
-
-                                    <img style="padding:5px;" width="100" src="<?php //echo base_url() . "uploads/" . $image ?>" alt="">
-
-                                    <?php
-//                                    }
-                                    ?>
-
-                                </div>-->
-
-<!--                                <div class="input-group mb-3">
-
-                                    <div class="input-group-prepend">
-
-                                        <span class="input-group-text">Upload</span>
-
-                                    </div>
-
-                                    <div class="custom-file">
-
-                                        <input name="category_image" multiple accept=".jpg,.jpeg,.png,.webp,.avif" type="file" class="custom-file-input">
-
-                                        <label class="custom-file-label selected">Choose File</label>
-
-                                    </div>
-
-                                </div>-->
-
-                            <!--</div>-->
-
-<!--                            <div class="form-group col-12">
-
-                                <label>Name*</label>
-
-                                <input name="name" type="text" class="form-control editModalTitle" placeholder="Enter Name" value="<?php //echo $data['name'] ?>" required>
-
-                            </div>
-
-                            <div class="form-group col-12">
-
-                                <label>Description*</label>
-
-                                <textarea name="description" class="summernote editModalDescription" required>
-
-                                    <?php //echo $data['description'] ?>
-
-                                </textarea>
-
-                            </div>-->
-
-                            <!--                            <div class="form-group col-12">
-                            
-                                                            <label>Price (₹)*</label>
-                            
-                                                            <input name="price" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['price'] ?>" required>
-                            
-                                                        </div>-->
-
-                            <!--                            <div class="form-group col-12">
-                            
-                                                            <label>Discount (%)*</label>
-                            
-                                                            <input name="discount" type="number" class="form-control editModalTitle" placeholder="Enter Title" value="<?php echo $data['discount'] ?>" required>
-                            
-                                                        </div>-->
 
                             <div class="form-group">
 
-                                <button name="submit" type="submit" class="btn btn-primary btn-block">Update</button>
+                                <button type="submit" class="btn btn-primary btn-block">Update</button>
 
                             </div>
 
