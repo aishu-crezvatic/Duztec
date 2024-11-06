@@ -560,21 +560,21 @@ $this->load->view('admin/layout/sidebar');
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group border rounded p-2">
-                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                            <!-- <div class="form-group border rounded p-2">
+                                <label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>
                                 <label class="text-black font-w500">Upload Videos</label>
-                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                     <div class="custom-file">
-                                        <!--required-->
+                                        required
                                         <input name="videos[]" type="file" class="custom-file-input" > 
                                         <label class="custom-file-label selected">Choose File</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!--<div class="form-group">-->
 

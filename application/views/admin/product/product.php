@@ -479,21 +479,21 @@ $this->load->view('admin/layout/sidebar');
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group border rounded p-2">
-                                <!--<label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>-->
+                            <!-- <div class="form-group border rounded p-2">
+                                <label class="text-black font-w500">Upload Image for mobile size (500*400px)</label>
                                 <label class="text-black font-w500">Upload Videos</label>
-                                <!--<img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">-->
+                                <img style="width:100%;" id="editModalMobileImage" class="my-2 border rounded" src="http://localhost/wayam/uploads/1st.jpg" alt="banner">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                     <div class="custom-file">
-                                        <!--required-->
+                                        required
                                         <input name="videos[]" type="file" class="custom-file-input" > 
                                         <label class="custom-file-label selected">Choose File</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 <button name="submit" type="submit" class="btn btn-primary btn-block">Create</button>
@@ -630,8 +630,7 @@ $this->load->view('admin/layout/sidebar');
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <div id="example3_wrapper" class="dataTables_wrapper no-footer">
-                                <table id="example3" class="display min-w850 dataTable no-footer" role="grid" aria-describedby="example3_info">
+                                <table id="example3_wrapper" class="display min-w850 dataTable no-footer" role="grid" aria-describedby="example3_info">
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 152.594px;">Sr No</th>
@@ -639,10 +638,7 @@ $this->load->view('admin/layout/sidebar');
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Category</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Sub Category</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Page Type</th>
-                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Name</th>-->
-                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 182.703px;">Description</th>-->
-                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Price (₹)</th>-->
-                                            <!--<th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Discount (%)</th>-->
+                                
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Status</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 94.2344px;">Created Date</th>
                                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 84.9219px;">Action</th>
@@ -710,7 +706,6 @@ $this->load->view('admin/layout/sidebar');
                                         ?>
                                     </tbody>
                                 </table>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -757,4 +752,15 @@ $this->load->view('admin/layout/sidebar');
 //                }
 //        );
 //    });
+$(document).ready(function() {
+    $('#example3_wrapper').DataTable({
+        paging: false,          // Disable pagination
+        info: false,            // Remove "Showing X of Y entries" text
+        searching: true,        // Keep search functionality
+        ordering: true,         // Keep sorting functionality
+        responsive: true,       // Make table responsive
+        lengthChange: false,    // Remove "Show X entries" dropdown
+        autoWidth: false,       // Disable auto-width calculatio
+    });
+});
 </script>

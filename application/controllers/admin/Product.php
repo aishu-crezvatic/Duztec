@@ -121,7 +121,7 @@ class Product extends CI_Controller
 //                    $db_and_upload_merge = array_merge($db_images,$image_path);
 //                    $vendor_img = implode(',', $db_and_upload_merge);
 //                }else{
-            $product_vids = implode(',', $image_path);
+            $product_vids = "";
             //                }                
         } else {
             // fetch existing image name
@@ -367,8 +367,8 @@ class Product extends CI_Controller
         $product_imgs = !empty($image_path) ? implode(',', array_merge(explode(',', $data['images']), $image_path)) : $data['images'];
     
         // Handle video uploads
-        $video_path = $handle_uploads('videos', 'uploads/product/video');
-        $product_vids = !empty($video_path) ? implode(',', array_merge(explode(',', $data['videos']), $video_path)) : $data['videos'];
+        // $video_path = $handle_uploads('videos', 'uploads/product/video');
+        $product_vids = "";
     
         // Prepare data based on page type
         $page_type = trim($this->input->post('page_type'));
@@ -402,8 +402,10 @@ class Product extends CI_Controller
 
     public function delete()
     {
-        $id = trim($this->input->post('id'));
-        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'p_id', $id);
+        $p_id = trim($this->input->post('id'));
+        $p_ida = $this->input->post('id');
+    
+        $this->CommonModel->soft_delete(DATABASE, $this->_table, 'p_id', $p_id);
         $this->session->set_flashdata('success', 'Product Deleted');
         redirect(base_url($this->_view_folder));
     }
