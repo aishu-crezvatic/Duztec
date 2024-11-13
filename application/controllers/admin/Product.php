@@ -367,32 +367,18 @@ class Product extends CI_Controller
         // Handle image uploads
         $image_path = $handle_uploads('images', 'uploads/product/image');
         $product_imgs = !empty($image_path) ? implode(',', array_merge(explode(',', $data['images']), $image_path)) : $data['images'];
-    
-        // Handle video uploads
-        // $video_path = $handle_uploads('videos', 'uploads/product/video');
         $product_vids = "";
-    
-        // Prepare data based on page type
         $page_type = trim($this->input->post('page_type'));
-        // $data_fields = [];
         $post_data = $this->input->post();
     $data_fields = array_map('trim', $post_data);
-        // Example of how to set up different fields for different page types
-        // if ($page_type == 1) {
-        //     $data_fields = [
-        //         'name' => trim($this->input->post('name')),
-        //         'c_id' => trim($this->input->post('c_id')),
-        //         // Add other specific fields
-        //     ];
-        // }
-        // Add additional page type handling here...
-    
-        // Merge uploaded image/video paths
+
+
         $data_fields['images'] = $product_imgs;
+        $data_fields = array_filter($data_fields, function($value) {
+            return $value !== null && $value !== '';
+        });
         $data_fields['videos'] = $product_vids;
-        // $data_fields['description'] = trim($this->input->post('description'));
-        
-    
+ 
 
         // Update the database
         if ($this->CommonModel->edit(DATABASE, $this->_table, $data_fields, ['p_id' => $p_id])) {
